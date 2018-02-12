@@ -10,6 +10,5 @@ Module modulo
         Catch exce As Exception
 
         End Try
-
     End Sub
 End Module
