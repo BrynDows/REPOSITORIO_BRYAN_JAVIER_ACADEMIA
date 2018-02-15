@@ -2,7 +2,7 @@ CREATE TABLE empleados(
 	_dni CHAR(9) NOT NULL PRIMARY KEY,
     nombre VARCHAR(50) NOT NULL,
     cuenta INTEGER UNIQUE,
-    puesto INTEGER UNIQUE,
+    puesto INTEGER,
     apellido VARCHAR(50) NOT NULL,
     telefono VARCHAR(50),
     direccion VARCHAR(50),
@@ -30,7 +30,7 @@ CREATE TABLE cuentasUsuario(
 	_id INTEGER NOT NULL IDENTITY PRIMARY KEY,
     nombre_usuario VARCHAR(80) NOT NULL,
     contrasenya VARCHAR(50) NOT NULL,
-    puesto VARCHAR(50) NOT NULL
+    rol VARCHAR(50) NOT NULL
 );
 
 CREATE TABLE alumnos(

@@ -6,7 +6,7 @@ CREATE TABLE IF NOT EXISTS empleados(
 	_dni CHAR(9) NOT NULL PRIMARY KEY,
     nombre VARCHAR(50) NOT NULL,
     cuenta INTEGER UNIQUE KEY,
-    puesto INTEGER UNIQUE KEY,
+    puesto INTEGER,
     apellido VARCHAR(50) NOT NULL,
     telefono VARCHAR(50),
     direccion VARCHAR(50),
@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS cuentasUsuario(
 	_id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
     nombre_usuario VARCHAR(80) NOT NULL,
     contrasenya VARCHAR(50) NOT NULL,
-    puesto VARCHAR(50) NOT NULL
+    rol VARCHAR(50) NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS alumnos(
