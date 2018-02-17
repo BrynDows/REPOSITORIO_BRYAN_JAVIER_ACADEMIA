@@ -25,78 +25,83 @@ Partial Class FormManagement
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.bAdd = New System.Windows.Forms.Button()
+        Me.bMod = New System.Windows.Forms.Button()
+        Me.bDel = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(113, 102)
+        Me.Label1.Location = New System.Drawing.Point(127, 128)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(76, 17)
+        Me.Label1.Size = New System.Drawing.Size(85, 20)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "profesores"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(240, 102)
+        Me.Label2.Location = New System.Drawing.Point(270, 128)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(61, 17)
+        Me.Label2.Size = New System.Drawing.Size(69, 20)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "alumnos"
         '
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(116, 152)
+        Me.DataGridView1.Location = New System.Drawing.Point(130, 190)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(690, 387)
+        Me.DataGridView1.Size = New System.Drawing.Size(776, 484)
         Me.DataGridView1.TabIndex = 2
         '
-        'Button1
+        'bAdd
         '
-        Me.Button1.Location = New System.Drawing.Point(885, 173)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 3
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.bAdd.Location = New System.Drawing.Point(996, 216)
+        Me.bAdd.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.bAdd.Name = "bAdd"
+        Me.bAdd.Size = New System.Drawing.Size(84, 29)
+        Me.bAdd.TabIndex = 3
+        Me.bAdd.Text = "Añadir"
+        Me.bAdd.UseVisualStyleBackColor = True
         '
-        'Button2
+        'bMod
         '
-        Me.Button2.Location = New System.Drawing.Point(885, 223)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 4
-        Me.Button2.Text = "Button2"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.bMod.Location = New System.Drawing.Point(996, 279)
+        Me.bMod.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.bMod.Name = "bMod"
+        Me.bMod.Size = New System.Drawing.Size(84, 29)
+        Me.bMod.TabIndex = 4
+        Me.bMod.Text = "Modificar"
+        Me.bMod.UseVisualStyleBackColor = True
         '
-        'Button3
+        'bDel
         '
-        Me.Button3.Location = New System.Drawing.Point(885, 280)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 5
-        Me.Button3.Text = "Button3"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.bDel.Location = New System.Drawing.Point(996, 350)
+        Me.bDel.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.bDel.Name = "bDel"
+        Me.bDel.Size = New System.Drawing.Size(84, 29)
+        Me.bDel.TabIndex = 5
+        Me.bDel.Text = "Eliminar"
+        Me.bDel.UseVisualStyleBackColor = True
         '
         'FormManagement
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.SteelBlue
-        Me.ClientSize = New System.Drawing.Size(1039, 729)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.ClientSize = New System.Drawing.Size(1169, 911)
+        Me.Controls.Add(Me.bDel)
+        Me.Controls.Add(Me.bMod)
+        Me.Controls.Add(Me.bAdd)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "FormManagement"
         Me.Text = "FormManagement"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -108,7 +113,7 @@ Partial Class FormManagement
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
+    Friend WithEvents bAdd As Button
+    Friend WithEvents bMod As Button
+    Friend WithEvents bDel As Button
 End Class

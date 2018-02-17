@@ -1,4 +1,6 @@
-﻿Public Class FormLogin
+﻿Imports idiomasDLL.Errores
+
+Public Class FormLogin
 
     Private Sub FormLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -19,7 +21,7 @@
         ima.Size = New Size(70, 70)
         ima.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Dim label As New Label
-        label.Text = user.getName
+        label.Text = user.Name
         label.AutoSize = True
         label.Padding = New Padding(15, 0, 0, 0)
         Try
@@ -43,17 +45,16 @@
     End Sub
 
     Private Sub clickUser(sender As Object, e As EventArgs)
-        If (sender.tag.getRol.Equals("profesor")) Then
-            Me.Dispose()
+        If sender.Tag.Rol.Equals("profesor") Then
             '0 = jefe, 1 = profesor
-            FormManagement.setMode(1)
+            FormManagement.Mode = 1
             FormManagement.Show()
         Else
-            Me.Dispose()
             '0 = jefe, 1 = profesor
-            FormManagement.setMode(0)
+            FormManagement.Mode = 0
             FormManagement.Show()
         End If
+        Me.Close()
     End Sub
 
 

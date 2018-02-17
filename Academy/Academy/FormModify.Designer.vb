@@ -22,6 +22,7 @@ Partial Class FormModify
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -35,6 +36,7 @@ Partial Class FormModify
         Me.mtbDireccion = New System.Windows.Forms.MaskedTextBox()
         Me.bDone = New System.Windows.Forms.Button()
         Me.cbIdioma = New System.Windows.Forms.ComboBox()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.SuspendLayout()
         '
         'Label1
@@ -203,4 +205,5 @@ Partial Class FormModify
     Friend WithEvents mtbDireccion As MaskedTextBox
     Friend WithEvents bDone As Button
     Friend WithEvents cbIdioma As ComboBox
+    Friend WithEvents ToolTip1 As ToolTip
 End Class

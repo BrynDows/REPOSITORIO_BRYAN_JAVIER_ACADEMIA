@@ -1,25 +1,16 @@
 ﻿Imports Academy
 
 Public Class User
-    Private name As String
-    Private rol As String
+    Public ReadOnly Property Name As String
+    Public ReadOnly Property Rol As String
 
     Public Sub New(name As String, password As String, rol As String)
-        Me.name = name
-        Me.rol = rol
+        Me.Name = name
+        Me.Rol = rol
     End Sub
 
-    Public Function getName() As String
-        Return Me.name
-    End Function
-
-
-    Public Function getRol() As String
-        Return Me.rol
-    End Function
-
     Public Overrides Function ToString() As String
-        Return String.Format("[Usuario], usuario: " & name & ", Rol: " & rol)
+        Return String.Format("[Usuario], usuario: " & Name & ", Rol: " & Rol)
     End Function
 
 End Class
