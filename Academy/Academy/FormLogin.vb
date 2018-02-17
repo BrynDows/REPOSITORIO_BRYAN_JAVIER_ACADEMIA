@@ -25,7 +25,7 @@ Public Class FormLogin
         label.AutoSize = True
         label.Padding = New Padding(15, 0, 0, 0)
         Try
-            ima.Image = Image.FromFile("user.png")
+            ima.Image = My.Resources.user
             flowPanel.Controls.Add(ima)
         Catch ex As Exception
             INSERT_IN_ERROR_LOG(ex)
