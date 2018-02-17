@@ -47,6 +47,9 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="idiomasDLL">
+      <HintPath>..\..\..\idiomasDLL\idiomasDLL\bin\Debug\idiomasDLL.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -97,7 +100,6 @@
     <Compile Include="FormModify.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="modulo.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
