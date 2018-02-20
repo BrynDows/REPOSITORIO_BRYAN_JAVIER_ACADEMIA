@@ -163,15 +163,9 @@
     <None Include="Resources\help.png" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-    <None Include="bin\Debug\academy_bd.accdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-=======
     <Content Include="bin\Debug\academy_bd.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
->>>>>>> master
     <Content Include="bin\Debug\user.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
