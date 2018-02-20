@@ -28,7 +28,7 @@ Public Class FormLogin
             ima.Image = My.Resources.user
             flowPanel.Controls.Add(ima)
         Catch ex As Exception
-            INSERT_IN_ERROR_LOG(ex)
+            'INSERT_IN_ERROR_LOG(ex)
         End Try
 
         panel.Tag = user
