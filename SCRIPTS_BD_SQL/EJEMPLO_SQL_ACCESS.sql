@@ -42,8 +42,8 @@ insert into empleados_alumnos values('88888888B', '00000050A',3);
 insert into empleados_alumnos values('22222222B', '00000060A',4);
 select * from empleados_alumnos;
 
-insert into empleados_idiomas values('22222222B',1,getdate(),getdate());
-insert into empleados_idiomas values('88888888B',2,getdate(),getdate());
-insert into empleados_idiomas values('88888888B',3,getdate(),getdate());
-insert into empleados_idiomas values('22222222B',4,getdate(),getdate());
+insert into empleados_idiomas values('22222222B',1,date(),date());
+insert into empleados_idiomas values('88888888B',2,date(),date());
+insert into empleados_idiomas values('88888888B',3,date(),date());
+insert into empleados_idiomas values('22222222B',4,date(),date());
 select * from empleados_idiomas;

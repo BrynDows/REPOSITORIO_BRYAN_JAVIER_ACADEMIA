@@ -10,24 +10,24 @@ CREATE TABLE empleados(
 );
 
 CREATE TABLE puestos(
-	_id INTEGER NOT NULL PRIMARY KEY IDENTITY,
+	_id COUNTER NOT NULL PRIMARY KEY,
     nombre VARCHAR(50) not null UNIQUE
 );
 
 CREATE TABLE idiomas(
-	_id INTEGER NOT NULL PRIMARY KEY IDENTITY,
+	_id COUNTER NOT NULL PRIMARY KEY,
     idioma VARCHAR(50) not null UNIQUE
 );
 
 CREATE TABLE empleados_idiomas(
 	_dni_empleado CHAR(9) NOT NULL,
     _id_idioma INTEGER NOT NULL,
-    hora_inicio TIME(0) NOT NULL,
-    hora_fin TIME(0) NOT NULL
+    hora_inicio VARCHAR(20) NOT NULL,
+    hora_fin VARCHAR(20) NOT NULL
 );
 
 CREATE TABLE cuentasUsuario(
-	_id INTEGER NOT NULL IDENTITY PRIMARY KEY,
+	_id COUNTER NOT NULL PRIMARY KEY,
     nombre_usuario VARCHAR(80) NOT NULL UNIQUE,
     contrasenya VARCHAR(50) NOT NULL,
     rol VARCHAR(50) NOT NULL
