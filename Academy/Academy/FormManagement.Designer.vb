@@ -22,72 +22,126 @@ Partial Class FormManagement
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.bAdd = New System.Windows.Forms.Button()
         Me.bMod = New System.Windows.Forms.Button()
         Me.bDel = New System.Windows.Forms.Button()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.tcModos = New System.Windows.Forms.TabControl()
+        Me.tabProfesores = New System.Windows.Forms.TabPage()
+        Me.tabAlumnos = New System.Windows.Forms.TabPage()
+        Me.dgvProfesores = New System.Windows.Forms.DataGridView()
+        Me.dgvAlumnos = New System.Windows.Forms.DataGridView()
+        Me.bLogout = New System.Windows.Forms.Button()
+        Me.tcModos.SuspendLayout()
+        Me.tabProfesores.SuspendLayout()
+        Me.tabAlumnos.SuspendLayout()
+        CType(Me.dgvProfesores, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvAlumnos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(127, 128)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(85, 20)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "profesores"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(270, 128)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(69, 20)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "alumnos"
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(130, 190)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(776, 484)
-        Me.DataGridView1.TabIndex = 2
         '
         'bAdd
         '
-        Me.bAdd.Location = New System.Drawing.Point(996, 216)
+        Me.bAdd.AutoSize = True
+        Me.bAdd.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.bAdd.Location = New System.Drawing.Point(981, 220)
         Me.bAdd.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.bAdd.Name = "bAdd"
-        Me.bAdd.Size = New System.Drawing.Size(84, 29)
+        Me.bAdd.Size = New System.Drawing.Size(122, 39)
         Me.bAdd.TabIndex = 3
         Me.bAdd.Text = "Añadir"
         Me.bAdd.UseVisualStyleBackColor = True
         '
         'bMod
         '
-        Me.bMod.Location = New System.Drawing.Point(996, 279)
+        Me.bMod.AutoSize = True
+        Me.bMod.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.bMod.Location = New System.Drawing.Point(981, 285)
         Me.bMod.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.bMod.Name = "bMod"
-        Me.bMod.Size = New System.Drawing.Size(84, 29)
+        Me.bMod.Size = New System.Drawing.Size(122, 39)
         Me.bMod.TabIndex = 4
         Me.bMod.Text = "Modificar"
         Me.bMod.UseVisualStyleBackColor = True
         '
         'bDel
         '
-        Me.bDel.Location = New System.Drawing.Point(996, 350)
+        Me.bDel.AutoSize = True
+        Me.bDel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.bDel.Location = New System.Drawing.Point(981, 353)
         Me.bDel.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.bDel.Name = "bDel"
-        Me.bDel.Size = New System.Drawing.Size(84, 29)
+        Me.bDel.Size = New System.Drawing.Size(122, 39)
         Me.bDel.TabIndex = 5
         Me.bDel.Text = "Eliminar"
         Me.bDel.UseVisualStyleBackColor = True
+        '
+        'tcModos
+        '
+        Me.tcModos.Controls.Add(Me.tabProfesores)
+        Me.tcModos.Controls.Add(Me.tabAlumnos)
+        Me.tcModos.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tcModos.Location = New System.Drawing.Point(130, 112)
+        Me.tcModos.Name = "tcModos"
+        Me.tcModos.SelectedIndex = 0
+        Me.tcModos.Size = New System.Drawing.Size(785, 640)
+        Me.tcModos.TabIndex = 6
+        '
+        'tabProfesores
+        '
+        Me.tabProfesores.Controls.Add(Me.dgvProfesores)
+        Me.tabProfesores.Location = New System.Drawing.Point(4, 41)
+        Me.tabProfesores.Name = "tabProfesores"
+        Me.tabProfesores.Padding = New System.Windows.Forms.Padding(3)
+        Me.tabProfesores.Size = New System.Drawing.Size(777, 595)
+        Me.tabProfesores.TabIndex = 0
+        Me.tabProfesores.Text = "Profesores"
+        Me.tabProfesores.UseVisualStyleBackColor = True
+        '
+        'tabAlumnos
+        '
+        Me.tabAlumnos.Controls.Add(Me.dgvAlumnos)
+        Me.tabAlumnos.Location = New System.Drawing.Point(4, 41)
+        Me.tabAlumnos.Name = "tabAlumnos"
+        Me.tabAlumnos.Padding = New System.Windows.Forms.Padding(3)
+        Me.tabAlumnos.Size = New System.Drawing.Size(777, 595)
+        Me.tabAlumnos.TabIndex = 1
+        Me.tabAlumnos.Text = "Alumnos"
+        Me.tabAlumnos.UseVisualStyleBackColor = True
+        '
+        'dgvProfesores
+        '
+        Me.dgvProfesores.AllowUserToAddRows = False
+        Me.dgvProfesores.AllowUserToDeleteRows = False
+        Me.dgvProfesores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvProfesores.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgvProfesores.Location = New System.Drawing.Point(3, 3)
+        Me.dgvProfesores.Name = "dgvProfesores"
+        Me.dgvProfesores.ReadOnly = True
+        Me.dgvProfesores.RowTemplate.Height = 28
+        Me.dgvProfesores.Size = New System.Drawing.Size(771, 589)
+        Me.dgvProfesores.TabIndex = 0
+        '
+        'dgvAlumnos
+        '
+        Me.dgvAlumnos.AllowUserToAddRows = False
+        Me.dgvAlumnos.AllowUserToDeleteRows = False
+        Me.dgvAlumnos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvAlumnos.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgvAlumnos.Location = New System.Drawing.Point(3, 3)
+        Me.dgvAlumnos.Name = "dgvAlumnos"
+        Me.dgvAlumnos.ReadOnly = True
+        Me.dgvAlumnos.RowTemplate.Height = 28
+        Me.dgvAlumnos.Size = New System.Drawing.Size(771, 589)
+        Me.dgvAlumnos.TabIndex = 0
+        '
+        'bLogout
+        '
+        Me.bLogout.AutoSize = True
+        Me.bLogout.Location = New System.Drawing.Point(1044, 12)
+        Me.bLogout.Name = "bLogout"
+        Me.bLogout.Size = New System.Drawing.Size(113, 30)
+        Me.bLogout.TabIndex = 7
+        Me.bLogout.Text = "Cerrar sesión"
+        Me.bLogout.UseVisualStyleBackColor = True
         '
         'FormManagement
         '
@@ -95,25 +149,30 @@ Partial Class FormManagement
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.SteelBlue
         Me.ClientSize = New System.Drawing.Size(1169, 911)
+        Me.Controls.Add(Me.bLogout)
+        Me.Controls.Add(Me.tcModos)
         Me.Controls.Add(Me.bDel)
         Me.Controls.Add(Me.bMod)
         Me.Controls.Add(Me.bAdd)
-        Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
         Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "FormManagement"
         Me.Text = "FormManagement"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.tcModos.ResumeLayout(False)
+        Me.tabProfesores.ResumeLayout(False)
+        Me.tabAlumnos.ResumeLayout(False)
+        CType(Me.dgvProfesores, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvAlumnos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents bAdd As Button
     Friend WithEvents bMod As Button
     Friend WithEvents bDel As Button
+    Friend WithEvents tcModos As TabControl
+    Friend WithEvents tabProfesores As TabPage
+    Friend WithEvents tabAlumnos As TabPage
+    Friend WithEvents dgvProfesores As DataGridView
+    Friend WithEvents dgvAlumnos As DataGridView
+    Friend WithEvents bLogout As Button
 End Class

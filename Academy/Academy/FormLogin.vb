@@ -4,7 +4,7 @@ Public Class FormLogin
 
     Private Sub FormLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        addUser(New User("bryan", "1234", "profesor"))
+        addUser(New User("bryan", "1234", "jefe"))
         addUser(New User("javier", "1234", "profesor"))
 
     End Sub
