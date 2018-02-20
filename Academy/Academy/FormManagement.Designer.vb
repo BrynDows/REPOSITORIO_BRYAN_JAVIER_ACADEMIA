@@ -27,14 +27,14 @@ Partial Class FormManagement
         Me.bDel = New System.Windows.Forms.Button()
         Me.tcModos = New System.Windows.Forms.TabControl()
         Me.tabProfesores = New System.Windows.Forms.TabPage()
-        Me.tabAlumnos = New System.Windows.Forms.TabPage()
         Me.dgvProfesores = New System.Windows.Forms.DataGridView()
+        Me.tabAlumnos = New System.Windows.Forms.TabPage()
         Me.dgvAlumnos = New System.Windows.Forms.DataGridView()
         Me.bLogout = New System.Windows.Forms.Button()
         Me.tcModos.SuspendLayout()
         Me.tabProfesores.SuspendLayout()
-        Me.tabAlumnos.SuspendLayout()
         CType(Me.dgvProfesores, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.tabAlumnos.SuspendLayout()
         CType(Me.dgvAlumnos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -96,17 +96,6 @@ Partial Class FormManagement
         Me.tabProfesores.Text = "Profesores"
         Me.tabProfesores.UseVisualStyleBackColor = True
         '
-        'tabAlumnos
-        '
-        Me.tabAlumnos.Controls.Add(Me.dgvAlumnos)
-        Me.tabAlumnos.Location = New System.Drawing.Point(4, 41)
-        Me.tabAlumnos.Name = "tabAlumnos"
-        Me.tabAlumnos.Padding = New System.Windows.Forms.Padding(3)
-        Me.tabAlumnos.Size = New System.Drawing.Size(777, 595)
-        Me.tabAlumnos.TabIndex = 1
-        Me.tabAlumnos.Text = "Alumnos"
-        Me.tabAlumnos.UseVisualStyleBackColor = True
-        '
         'dgvProfesores
         '
         Me.dgvProfesores.AllowUserToAddRows = False
@@ -120,10 +109,22 @@ Partial Class FormManagement
         Me.dgvProfesores.Size = New System.Drawing.Size(771, 589)
         Me.dgvProfesores.TabIndex = 0
         '
+        'tabAlumnos
+        '
+        Me.tabAlumnos.Controls.Add(Me.dgvAlumnos)
+        Me.tabAlumnos.Location = New System.Drawing.Point(4, 41)
+        Me.tabAlumnos.Name = "tabAlumnos"
+        Me.tabAlumnos.Padding = New System.Windows.Forms.Padding(3)
+        Me.tabAlumnos.Size = New System.Drawing.Size(777, 595)
+        Me.tabAlumnos.TabIndex = 1
+        Me.tabAlumnos.Text = "Alumnos"
+        Me.tabAlumnos.UseVisualStyleBackColor = True
+        '
         'dgvAlumnos
         '
         Me.dgvAlumnos.AllowUserToAddRows = False
         Me.dgvAlumnos.AllowUserToDeleteRows = False
+        Me.dgvAlumnos.BackgroundColor = System.Drawing.SystemColors.ButtonFace
         Me.dgvAlumnos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvAlumnos.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvAlumnos.Location = New System.Drawing.Point(3, 3)
@@ -159,8 +160,8 @@ Partial Class FormManagement
         Me.Text = "FormManagement"
         Me.tcModos.ResumeLayout(False)
         Me.tabProfesores.ResumeLayout(False)
-        Me.tabAlumnos.ResumeLayout(False)
         CType(Me.dgvProfesores, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.tabAlumnos.ResumeLayout(False)
         CType(Me.dgvAlumnos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
