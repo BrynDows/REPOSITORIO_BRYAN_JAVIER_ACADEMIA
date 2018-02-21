@@ -47,8 +47,9 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="idiomasDLL">
-      <HintPath>..\..\..\idiomasDLL\idiomasDLL\bin\Debug\idiomasDLL.dll</HintPath>
+    <Reference Include="idiomasDLL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\idiomasDLL\idiomasDLL\bin\Debug\idiomasDLL.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -163,15 +164,9 @@
     <None Include="Resources\help.png" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-    <None Include="bin\Debug\academy_bd.accdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-=======
     <Content Include="bin\Debug\academy_bd.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
->>>>>>> master
     <Content Include="bin\Debug\user.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

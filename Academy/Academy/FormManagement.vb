@@ -12,6 +12,9 @@
         If Mode = 0 Then
             dgvAlumnos.DataSource = idiomasDLL.Alumnos.SelectAllAlumnos
             dgvAlumnos.DataMember = "alumnos"
+        Else
+            dgvAlumnos.DataSource = idiomasDLL.Alumnos.SelectAlumnosByProf("22222222B")
+            dgvAlumnos.DataMember = "alumnos"
         End If
     End Sub
 
