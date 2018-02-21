@@ -1,6 +1,6 @@
 ﻿Imports System.IO
 
-Public Module modulo
+Public Module Errores
     'Método que guarda las excepciones que se dan en el LOG
     Public Sub INSERT_IN_ERROR_LOG(ex As Exception)
         Try
