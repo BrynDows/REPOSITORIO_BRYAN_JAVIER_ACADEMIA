@@ -14,7 +14,7 @@
             dgvAlumnos.DataSource = idiomasDLL.Alumnos.SelectAllAlumnos
             dgvAlumnos.DataMember = "alumnos"
             'mostrar profesores
-            crudEmployes.ShowData(dgvProfesores)
+            crudEmployes.showTeachers(dgvProfesores)
         Else
             dgvAlumnos.DataSource = idiomasDLL.Alumnos.SelectAlumnosByProf("22222222B")
             dgvAlumnos.DataMember = "alumnos"

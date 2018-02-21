@@ -19,9 +19,9 @@ Public Class CRUD_employes
     ''' </summary>
     ''' <param name="DataGrid"></param>
     ''' <param name="table"></param>
-    Public Sub ShowData(DataGrid As DataGridView)
+    Public Sub ShowTeachers(DataGrid As DataGridView)
         Dim table As String = "empleados"
-        Dim adapter As New OleDbDataAdapter("SELECT * FROM " & table, connection)
+        Dim adapter As New OleDbDataAdapter("SELECT * FROM " & table & " WHERE puesto = 1", connection)
         Dim dataset As New DataSet
 
         adapter.Fill(dataset, table)
