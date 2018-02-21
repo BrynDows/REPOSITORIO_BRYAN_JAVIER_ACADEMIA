@@ -1,8 +1,9 @@
 ﻿Public Class FormManagement
 
     Public Property Mode As Byte
-
+    Private crudEmployes As CRUD_employes
     Private Sub FormManagement_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        crudEmployes = New CRUD_employes
         tcModos.TabPages.Remove(tabProfesores)
         '0 = jefe, 1 = profesor
         If Mode = 0 Then
@@ -12,6 +13,8 @@
         If Mode = 0 Then
             dgvAlumnos.DataSource = idiomasDLL.Alumnos.SelectAllAlumnos
             dgvAlumnos.DataMember = "alumnos"
+            'mostrar profesores
+            crudEmployes.ShowData(dgvProfesores)
         Else
             dgvAlumnos.DataSource = idiomasDLL.Alumnos.SelectAlumnosByProf("22222222B")
             dgvAlumnos.DataMember = "alumnos"

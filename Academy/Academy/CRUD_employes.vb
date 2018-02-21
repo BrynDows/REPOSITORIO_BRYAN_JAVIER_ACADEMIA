@@ -19,8 +19,8 @@ Public Class CRUD_employes
     ''' </summary>
     ''' <param name="DataGrid"></param>
     ''' <param name="table"></param>
-    Private Sub ShowData(DataGrid As DataGridView, table As String)
-
+    Public Sub ShowData(DataGrid As DataGridView)
+        Dim table As String = "empleados"
         Dim adapter As New OleDbDataAdapter("SELECT * FROM " & table, connection)
         Dim dataset As New DataSet
 
@@ -59,7 +59,7 @@ Public Class CRUD_employes
 
     Public Sub updateEmployee(dniActual As String, nombre As String, cuenta As Integer, puesto As String, apellido As String, telefono As String, direccion As String, email As String)
         Dim name, account, job, surname, number_phone, address, mail As String
-        terminal.
+
     End Sub
 
     Public Sub deleteEmployee()
