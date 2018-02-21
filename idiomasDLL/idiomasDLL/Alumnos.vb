@@ -9,4 +9,11 @@ Public Class Alumnos
         adapter.Fill(midataset, "alumnos")
         Return midataset
     End Function
+
+    Public Shared Function SelectAlumnosByProf(ByVal dniprof As String) As DataSet
+        Dim adapter As New OleDbDataAdapter("SELECT * FROM alumnos WHERE _dni = (SELECT _dni_alumno FROM empleados_alumnos AS ea WHERE ea._dni_profesor = " & dniprof & ")", connection)
+        Dim midataset As New DataSet
+        adapter.Fill(midataset, "alumnos")
+        Return midataset
+    End Function
 End Class
