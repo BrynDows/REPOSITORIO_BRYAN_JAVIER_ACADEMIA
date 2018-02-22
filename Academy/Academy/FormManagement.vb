@@ -1,6 +1,18 @@
 ﻿Public Class FormManagement
 
+<<<<<<< HEAD
     Public Property user As User
+=======
+    ' Mode representa el ROl con el cual se ha accedido a este formulario,.
+    ' mode = 0: se ha accedido como jefe
+    ' mode = 1: se ha accedido como profesor
+    Public Property Mode As Byte
+
+    ' tabMode representa mediante un entero cual es la "pestañita" que está seleccionada.
+    ' tcModos_SelectedIndexChanged() es el método que altera esta variable.
+    ' esta variable es usada en el método bAdd_Click()
+    Private modeTab As String
+>>>>>>> master
 
     Private Sub FormManagement_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         tcModos.TabPages.Remove(tabProfesores)
@@ -29,7 +41,11 @@
     Private Sub bAdd_Click(sender As Object, e As EventArgs) Handles bAdd.Click
         formModify.Modo = 0 ' 0 = añadir
 
+<<<<<<< HEAD
         If modeTab.Equals("Empleados") Then ' empleados
+=======
+        If modeTab.Equals("Alumnos") Then ' alumnos
+>>>>>>> master
             formModify.flpCuenta.Visible = False
             formModify.flpPuesto.Visible = False
         Else
@@ -86,7 +102,7 @@
             idiomasDLL.Errores.INSERT_IN_ERROR_LOG(ex)
         End Try
         Try
-            formModify.mtbPuesto.Text = sender.CurrentRow.Cells("puesto").Value
+            formModify.cbPuesto.Text = sender.CurrentRow.Cells("puesto").Value
         Catch ex As InvalidCastException
             idiomasDLL.Errores.INSERT_IN_ERROR_LOG(ex)
         End Try
@@ -118,5 +134,10 @@
 
     Private Sub tcModos_SelectedIndexChanged(sender As Object, e As EventArgs) Handles tcModos.SelectedIndexChanged
 
+<<<<<<< HEAD
+=======
+        modeTab = tcModos.GetControl(sender.selectedIndex).Text
+        MsgBox(modeTab)
+>>>>>>> master
     End Sub
 End Class

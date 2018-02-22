@@ -51,23 +51,18 @@ Public Class CRUD_employes
     ''' <param name="direccion"></param>
     ''' <param name="email"></param>
     Public Sub InsertEmploye(dni As String, nombre As String, cuenta As Integer, puesto As Integer, apellido As String, telefono As String, direccion As String, email As String)
-        Dim query As String = "insert into empleados values('54351578W', 'Bryan', 1, 1, 'Tiban', '633554679', 'Calle de la luz 10 bajo 2', 'bryan_tiban@hotmail.com');"
+        Dim query As String = "insert into empleados values('" & dni & "', '" & nombre & "', " & cuenta & "," & puesto & ", '" & apellido & "', '" & telefono & "', '" & direccion & "', '" & email & "');"
         ExecuteQuery(query)
     End Sub
 
     Public Sub updateEmployee(dniActual As String, nombre As String, cuenta As Integer, puesto As String, apellido As String, telefono As String, direccion As String, email As String)
-        'Dim name, account, job, surname, number_phone, address, mail As String
+        Dim name, account, job, surname, number_phone, address, mail As String
 
     End Sub
 
     Public Sub deleteEmployee()
 
     End Sub
-
-    'Public Function getJobs() As ArrayList
-    '    Dim query As String = "Select nombre"
-    'End Function
-
 
 
 End Class

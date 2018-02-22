@@ -3,7 +3,15 @@
     Public Property Modo As Byte
 
     Private Sub FormModify_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+<<<<<<< HEAD
         mtbTel.Mask = "000000000"
+=======
+        'TODO: esta línea de código carga datos en la tabla 'Academy_bdDataSet1.idiomas' Puede moverla o quitarla según sea necesario.
+        Me.IdiomasTableAdapter.Fill(Me.Academy_bdDataSet1.idiomas)
+        'TODO: esta línea de código carga datos en la tabla 'Academy_bdDataSet.puestos' Puede moverla o quitarla según sea necesario.
+        Me.PuestosTableAdapter.Fill(Me.Academy_bdDataSet.puestos)
+        mtbTel.Mask = "000 000 000"
+>>>>>>> master
         mtbDni.Mask = "00000000>L"
         If Modo = 0 Then
             bDone.Text = "Añadir"
@@ -64,21 +72,22 @@
         End If
         'bryan
         If (sender.text.Equals("Añadir")) Then
-            Dim dni, nombre, apellido, direccion, email, telefono As String
+            Dim dni, nombre, apellido, direccion, email, telefono, password As String
             Dim cuenta, puesto As Integer
             Try
                 cuenta = CInt(mtbCuenta.Text)
-                puesto = CInt(mtbPuesto.Text)
             Catch ex As InvalidCastException
 
             End Try
+            dni = mtbDni.Text
             nombre = mtbNombre.Text
             apellido = mtbApellido.Text
-            dni = mtbDni.Text
             direccion = mtbDireccion.Text
             email = mtbEmail.Text
             telefono = mtbTel.Text
+            password = tbPass.Text
 
+            'modulo.crudEmployes.insertAccountUser(email, password, rol)
             modulo.crudEmployes.InsertEmploye(dni, nombre, cuenta, puesto, apellido, telefono, direccion, email)
 
 
