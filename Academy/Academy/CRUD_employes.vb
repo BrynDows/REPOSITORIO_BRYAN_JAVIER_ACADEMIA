@@ -18,7 +18,6 @@ Public Class CRUD_employes
     ''' Muestra los datos de una tabla en concreto en un datagridview.
     ''' </summary>
     ''' <param name="DataGrid"></param>
-    ''' <param name="table"></param>
     Public Sub ShowTeachers(DataGrid As DataGridView)
         Dim table As String = "empleados"
         Dim adapter As New OleDbDataAdapter("SELECT * FROM " & table & " WHERE puesto = 1", connection)
@@ -57,7 +56,7 @@ Public Class CRUD_employes
     End Sub
 
     Public Sub updateEmployee(dniActual As String, nombre As String, cuenta As Integer, puesto As String, apellido As String, telefono As String, direccion As String, email As String)
-        Dim name, account, job, surname, number_phone, address, mail As String
+        'Dim name, account, job, surname, number_phone, address, mail As String
 
     End Sub
 
@@ -65,9 +64,9 @@ Public Class CRUD_employes
 
     End Sub
 
-    Public Function getJobs() As ArrayList
-        Dim query As String = "Select nombre"
-    End Function
+    'Public Function getJobs() As ArrayList
+    '    Dim query As String = "Select nombre"
+    'End Function
 
 
 

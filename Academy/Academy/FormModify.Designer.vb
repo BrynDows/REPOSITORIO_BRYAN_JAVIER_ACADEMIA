@@ -136,7 +136,6 @@ Partial Class formModify
         Me.Label7.TabIndex = 33
         Me.Label7.Text = "Cuenta"
         '
-<<<<<<< HEAD
         'mtbCuenta
         '
         Me.mtbCuenta.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -146,8 +145,6 @@ Partial Class formModify
         Me.mtbCuenta.Size = New System.Drawing.Size(400, 44)
         Me.mtbCuenta.TabIndex = 34
         '
-=======
->>>>>>> Bryan
         'flpNombre
         '
         Me.flpNombre.Controls.Add(Me.Label1)
@@ -201,7 +198,6 @@ Partial Class formModify
         Me.Label8.TabIndex = 35
         Me.Label8.Text = "Puesto"
         '
-<<<<<<< HEAD
         'mtbPuesto
         '
         Me.mtbPuesto.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -211,8 +207,6 @@ Partial Class formModify
         Me.mtbPuesto.Size = New System.Drawing.Size(400, 44)
         Me.mtbPuesto.TabIndex = 36
         '
-=======
->>>>>>> Bryan
         'flpDireccion
         '
         Me.flpDireccion.Controls.Add(Me.Label5)
