@@ -17,10 +17,12 @@ Public Class Alumnos
         Return midataset
     End Function
 
-    Public Shared Sub InsertAlumno(ByVal alu As Alumno)
+    Public Shared Sub InsertAlumno(ByVal dniprof As String, ByVal alu As Alumno)
         connection.Open()
         Dim terminal As New OleDbCommand("INSERT INTO alumnos VALUES ('" & alu.DNI & "', '" & alu.Nombre & "', '" & alu.Apellido &
                                          "', '" & alu.Telefono & "', '" & alu.Email & "', '" & alu.Direccion & "')", connection)
+        terminal.ExecuteNonQuery()
+        terminal = New OleDbCommand("INSERT INTO empleados_alumnos(dni_profesor, dni_alumno) VALUES ('" & dniprof & "', '" & alu.DNI & "')", connection)
         terminal.ExecuteNonQuery()
         connection.Close()
     End Sub

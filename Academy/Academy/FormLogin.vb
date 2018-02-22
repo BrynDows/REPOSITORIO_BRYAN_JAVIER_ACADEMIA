@@ -4,8 +4,8 @@ Public Class FormLogin
 
     Private Sub FormLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        addUser(New User("bryan", "1234", "jefe"))
-        addUser(New User("javier", "1234", "profesor"))
+        addUser(New User("bryan", "22222222B", "jefe"))
+        addUser(New User("javier", "22222222B", "profesor"))
 
     End Sub
 
@@ -45,15 +45,8 @@ Public Class FormLogin
     End Sub
 
     Private Sub clickUser(sender As Object, e As EventArgs)
-        If sender.Tag.Rol.Equals("profesor") Then
-            '0 = jefe, 1 = profesor
-            FormManagement.Mode = 1
-            FormManagement.Show()
-        Else
-            '0 = jefe, 1 = profesor
-            FormManagement.Mode = 0
-            FormManagement.Show()
-        End If
+        FormManagement.user = sender.Tag
+        FormManagement.Show()
         Me.Close()
     End Sub
 

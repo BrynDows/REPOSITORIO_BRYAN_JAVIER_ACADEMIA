@@ -3,7 +3,7 @@
     Public Property Modo As Byte
 
     Private Sub FormModify_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        mtbTel.Mask = "000 000 000"
+        mtbTel.Mask = "000000000"
         mtbDni.Mask = "00000000>L"
         If Modo = 0 Then
             bDone.Text = "Añadir"
@@ -35,7 +35,7 @@
             If mtbNombre.Text.Length > 0 And mtbApellido.Text.Length > 0 And mtbEmail.Text.Length > 0 AndAlso mtbDireccion.Text.Length > 0 Then
                 If idiomasDLL.Validaciones.isValidEmail(mtbEmail.Text) Then
                     Try
-                        idiomasDLL.Alumnos.InsertAlumno(New idiomasDLL.Alumno(mtbDni.Text, mtbNombre.Text, mtbApellido.Text, mtbTel.Text, mtbEmail.Text, mtbDireccion.Text))
+                        idiomasDLL.Alumnos.InsertAlumno(FormManagement.user.dni, New idiomasDLL.Alumno(mtbDni.Text, mtbNombre.Text, mtbApellido.Text, mtbTel.Text, mtbEmail.Text, mtbDireccion.Text))
                         FormManagement.LoadDataGrids()
                         Me.Close()
                     Catch ex As System.Data.OleDb.OleDbException
@@ -82,6 +82,6 @@
             modulo.crudEmployes.InsertEmploye(dni, nombre, cuenta, puesto, apellido, telefono, direccion, email)
 
 
-            End If
+        End If
     End Sub
 End Class

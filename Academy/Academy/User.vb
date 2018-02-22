@@ -2,7 +2,7 @@
 
 Public Class User
     Public ReadOnly Property Name As String
-    Public ReadOnly dni As String
+    Public ReadOnly Property dni As String
     Public ReadOnly Property Rol As String
 
     Public Sub New(name As String, dni As String, rol As String)

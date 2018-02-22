@@ -1,34 +1,27 @@
 ﻿Public Class FormManagement
 
-    ' Mode representa el ROl con el cual se ha accedido a este formulario,.
-    ' mode = 0: se ha accedido como jefe
-    ' mode = 1: se ha accedido como profesor
-    Public Property Mode As Byte
-
-    ' tabMode representa mediante un entero cual es la "pestañita" que está seleccionada.
-    ' tcModos_SelectedIndexChanged() es el método que altera esta variable.
-    ' esta variable es usada en el método bAdd_Click()
-    Private modeTab As Integer
+    Public Property user As User
 
     Private Sub FormManagement_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
         tcModos.TabPages.Remove(tabProfesores)
-        '0 = jefe, 1 = profesor
-        If Mode = 0 Then
+        If user.Rol.Equals("jefe") Then
             'soy jefe y muesro las dos pestañas, profesor y alumnos
             tcModos.TabPages.Insert(0, tabProfesores)
         End If
         LoadDataGrids()
     End Sub
 
+    ''' <summary>
+    ''' Cargar datos en los datagrid
+    ''' </summary>
     Public Sub LoadDataGrids()
-        If Mode = 0 Then
+        If user.Rol.Equals("jefe") Then
             dgvAlumnos.DataSource = idiomasDLL.Alumnos.SelectAllAlumnos
             dgvAlumnos.DataMember = "alumnos"
             'mostrar profesores
             modulo.crudEmployes.ShowTeachers(dgvProfesores)
         Else
-            dgvAlumnos.DataSource = idiomasDLL.Alumnos.SelectAlumnosByProf("22222222B")
+            dgvAlumnos.DataSource = idiomasDLL.Alumnos.SelectAlumnosByProf(user.dni)
             dgvAlumnos.DataMember = "alumnos"
         End If
     End Sub
@@ -36,7 +29,7 @@
     Private Sub bAdd_Click(sender As Object, e As EventArgs) Handles bAdd.Click
         formModify.Modo = 0 ' 0 = añadir
 
-        If modeTab = 1 Then ' empleados
+        If modeTab.Equals("Empleados") Then ' empleados
             formModify.flpCuenta.Visible = False
             formModify.flpPuesto.Visible = False
         Else
@@ -49,7 +42,6 @@
 
     Private Sub bMod_Click(sender As Object, e As EventArgs) Handles bMod.Click
         formModify.Modo = 1 ' 1 = modificar
-
         formModify.ShowDialog()
     End Sub
 
@@ -118,8 +110,6 @@
         Catch ex As InvalidCastException
             idiomasDLL.Errores.INSERT_IN_ERROR_LOG(ex)
         End Try
-
-
     End Sub
 
     Private Sub dgvProfesores_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvProfesores.CellContentClick
@@ -127,6 +117,6 @@
     End Sub
 
     Private Sub tcModos_SelectedIndexChanged(sender As Object, e As EventArgs) Handles tcModos.SelectedIndexChanged
-        modeTab = sender.selectedIndex()
+
     End Sub
 End Class
