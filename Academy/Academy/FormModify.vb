@@ -4,6 +4,7 @@
 
     Private Sub FormModify_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         mtbTel.Mask = "000 000 000"
+        mtbDni.Mask = "00000000>L"
         If Modo = 0 Then
             bDone.Text = "Añadir"
         Else
@@ -12,7 +13,7 @@
     End Sub
 
     Private Sub mtbTel_MaskInputRejected(sender As Object, e As MaskInputRejectedEventArgs)
-        If (mtbTel.MaskFull) Then
+        If mtbTel.MaskFull Then
             ToolTip1.ToolTipTitle = "Teléfono demasiado largo"
             ToolTip1.Show("El teléfono es demasiado largo.", mtbTel, 5000)
         ElseIf (e.Position = mtbTel.Mask.Length) Then
@@ -28,4 +29,37 @@
         FormManagement.bMod.Enabled = False
     End Sub
 
+    Private Sub bDone_Click(sender As Object, e As EventArgs) Handles bDone.Click
+        If Modo = 0 Then
+            If mtbNombre.Text.Length > 0 And mtbApellido.Text.Length > 0 And mtbEmail.Text.Length > 0 AndAlso mtbDireccion.Text.Length > 0 Then
+                If idiomasDLL.Validaciones.isValidEmail(mtbEmail.Text) Then
+                    Try
+                        idiomasDLL.Alumnos.InsertAlumno(New idiomasDLL.Alumno(mtbDni.Text, mtbNombre.Text, mtbApellido.Text, mtbTel.Text, mtbEmail.Text, mtbDireccion.Text))
+                        FormManagement.LoadDataGrids()
+                        Me.Close()
+                    Catch ex As System.Data.OleDb.OleDbException
+                        MsgBox("Este alumno ya existe en la base de datos.", MsgBoxStyle.OkOnly + MsgBoxStyle.Exclamation, "ERROR")
+                        idiomasDLL.Alumnos.CloseConnection()
+                    End Try
+                Else
+                    MsgBox("La dirección de email no es válida. Revísala.", MsgBoxStyle.OkOnly + MsgBoxStyle.Exclamation, "Email incorrecto")
+                End If
+            Else
+                MsgBox("Todos los campos son necesarios.", MsgBoxStyle.OkOnly + MsgBoxStyle.Exclamation, "Campos requeridos")
+            End If
+        End If
+    End Sub
+
+    Private Sub mtbDni_MaskInputRejected(sender As Object, e As MaskInputRejectedEventArgs) Handles mtbDni.MaskInputRejected
+        If mtbDni.MaskFull Then
+            ToolTip1.ToolTipTitle = "DNI demasiado largo"
+            ToolTip1.Show("El DNI es demasiado largo.", mtbDni, 5000)
+        ElseIf (e.Position = mtbDni.Mask.Length) Then
+            ToolTip1.ToolTipTitle = "Fuera de rango"
+            ToolTip1.Show("Este DNI está fuera de rango.", mtbDni, 5000)
+        Else
+            ToolTip1.ToolTipTitle = "Carácter no válido"
+            ToolTip1.Show("Formato de DNI no válido.", mtbDni, 5000)
+        End If
+    End Sub
 End Class
