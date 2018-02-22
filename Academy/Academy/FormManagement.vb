@@ -8,7 +8,7 @@
     ' tabMode representa mediante un entero cual es la "pestañita" que está seleccionada.
     ' tcModos_SelectedIndexChanged() es el método que altera esta variable.
     ' esta variable es usada en el método bAdd_Click()
-    Private modeTab As Integer
+    Private modeTab As String
 
     Private Sub FormManagement_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -36,7 +36,7 @@
     Private Sub bAdd_Click(sender As Object, e As EventArgs) Handles bAdd.Click
         formModify.Modo = 0 ' 0 = añadir
 
-        If modeTab = 1 Then ' empleados
+        If modeTab.Equals("Alumnos") Then ' alumnos
             formModify.flpCuenta.Visible = False
             formModify.flpPuesto.Visible = False
         Else
@@ -94,7 +94,7 @@
             idiomasDLL.Errores.INSERT_IN_ERROR_LOG(ex)
         End Try
         Try
-            formModify.mtbPuesto.Text = sender.CurrentRow.Cells("puesto").Value
+            formModify.cbPuesto.Text = sender.CurrentRow.Cells("puesto").Value
         Catch ex As InvalidCastException
             idiomasDLL.Errores.INSERT_IN_ERROR_LOG(ex)
         End Try
@@ -127,6 +127,8 @@
     End Sub
 
     Private Sub tcModos_SelectedIndexChanged(sender As Object, e As EventArgs) Handles tcModos.SelectedIndexChanged
-        modeTab = sender.selectedIndex()
+
+        modeTab = tcModos.GetControl(sender.selectedIndex).Text
+        MsgBox(modeTab)
     End Sub
 End Class
