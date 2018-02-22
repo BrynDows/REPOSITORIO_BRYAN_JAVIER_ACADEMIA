@@ -16,4 +16,10 @@ Public Class Alumnos
         adapter.Fill(midataset, "alumnos")
         Return midataset
     End Function
+
+    Public Shared Sub InsertAlumno(ByVal alu As Alumno)
+        Dim terminal As New OleDbCommand("INSERT INTO alumnos VALUES ('" & alu.DNI & "', '" & alu.Nombre & "', '" & alu.Apellido &
+                                         "', '" & alu.Telefono & "', '" & alu.Email & "', '" & alu.Direccion & "')", connection)
+        terminal.ExecuteNonQuery()
+    End Sub
 End Class

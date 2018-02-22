@@ -63,6 +63,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Alumno.vb" />
     <Compile Include="Alumnos.vb" />
     <Compile Include="Error.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
