@@ -16,4 +16,8 @@ Public Class Alumnos
         adapter.Fill(midataset, "alumnos")
         Return midataset
     End Function
+
+    Public Shared Sub InsertAlumno(ByVal alu As Alumno)
+
+    End Sub
 End Class

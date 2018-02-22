@@ -9,6 +9,10 @@
             'soy jefe y muesro las dos pestañas, profesor y alumnos
             tcModos.TabPages.Insert(0, tabProfesores)
         End If
+        LoadDataGrids()
+    End Sub
+
+    Public Sub LoadDataGrids()
         If Mode = 0 Then
             dgvAlumnos.DataSource = idiomasDLL.Alumnos.SelectAllAlumnos
             dgvAlumnos.DataMember = "alumnos"
