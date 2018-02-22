@@ -3,15 +3,12 @@
     Public Property Modo As Byte
 
     Private Sub FormModify_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-<<<<<<< HEAD
         mtbTel.Mask = "000000000"
-=======
         'TODO: esta línea de código carga datos en la tabla 'Academy_bdDataSet1.idiomas' Puede moverla o quitarla según sea necesario.
         Me.IdiomasTableAdapter.Fill(Me.Academy_bdDataSet1.idiomas)
         'TODO: esta línea de código carga datos en la tabla 'Academy_bdDataSet.puestos' Puede moverla o quitarla según sea necesario.
         Me.PuestosTableAdapter.Fill(Me.Academy_bdDataSet.puestos)
         mtbTel.Mask = "000 000 000"
->>>>>>> master
         mtbDni.Mask = "00000000>L"
         If Modo = 0 Then
             bDone.Text = "Añadir"
