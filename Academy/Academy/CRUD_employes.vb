@@ -52,8 +52,7 @@ Public Class CRUD_employes
     ''' <param name="direccion"></param>
     ''' <param name="email"></param>
     Public Sub InsertEmploye(dni As String, nombre As String, cuenta As Integer, puesto As Integer, apellido As String, telefono As String, direccion As String, email As String)
-        Dim query As String = "INSERT INTO empleados VALUES (" &
-            "'" & dni & "'," & nombre & "','" & cuenta & "','" & puesto & "','" & apellido & "','" & telefono & "','" & direccion & "','" & email & "')"
+        Dim query As String = "insert into empleados values('54351578W', 'Bryan', 1, 1, 'Tiban', '633554679', 'Calle de la luz 10 bajo 2', 'bryan_tiban@hotmail.com');"
         ExecuteQuery(query)
     End Sub
 
@@ -65,6 +64,10 @@ Public Class CRUD_employes
     Public Sub deleteEmployee()
 
     End Sub
+
+    Public Function getJobs() As ArrayList
+        Dim query As String = "Select nombre"
+    End Function
 
 
 

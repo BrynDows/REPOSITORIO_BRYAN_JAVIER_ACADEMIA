@@ -28,4 +28,25 @@
         FormManagement.bMod.Enabled = False
     End Sub
 
+    Private Sub bDone_Click(sender As Object, e As EventArgs) Handles bDone.Click
+        If (sender.text.Equals("Añadir")) Then
+            Dim dni, nombre, apellido, direccion, email, telefono As String
+            Dim cuenta, puesto As Integer
+            Try
+                cuenta = CInt(mtbCuenta.Text)
+                puesto = CInt(mtbPuesto.Text)
+            Catch ex As InvalidCastException
+
+            End Try
+            nombre = mtbNombre.Text
+            apellido = mtbApellido.Text
+            dni = mtbDni.Text
+            direccion = mtbDireccion.Text
+            email = mtbEmail.Text
+            telefono = mtbTel.Text
+
+            modulo.crudEmployes.InsertEmploye(dni, nombre, cuenta, puesto, apellido, telefono, direccion, email)
+
+        End If
+    End Sub
 End Class

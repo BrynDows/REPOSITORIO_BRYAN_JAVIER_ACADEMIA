@@ -30,13 +30,11 @@ Partial Class formModify
         Me.mtbDni = New System.Windows.Forms.MaskedTextBox()
         Me.flpCuenta = New System.Windows.Forms.FlowLayoutPanel()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.mtbCuenta = New System.Windows.Forms.MaskedTextBox()
         Me.flpNombre = New System.Windows.Forms.FlowLayoutPanel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.mtbNombre = New System.Windows.Forms.MaskedTextBox()
         Me.flpPuesto = New System.Windows.Forms.FlowLayoutPanel()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.mtbPuesto = New System.Windows.Forms.MaskedTextBox()
         Me.flpDireccion = New System.Windows.Forms.FlowLayoutPanel()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.mtbDireccion = New System.Windows.Forms.MaskedTextBox()
@@ -53,6 +51,8 @@ Partial Class formModify
         Me.Label3 = New System.Windows.Forms.Label()
         Me.mtbTel = New System.Windows.Forms.MaskedTextBox()
         Me.bDone = New System.Windows.Forms.Button()
+        Me.mtbPuesto = New System.Windows.Forms.MaskedTextBox()
+        Me.mtbCuenta = New System.Windows.Forms.MaskedTextBox()
         Me.flpPricipal.SuspendLayout()
         Me.flpDni.SuspendLayout()
         Me.flpCuenta.SuspendLayout()
@@ -133,15 +133,6 @@ Partial Class formModify
         Me.Label7.TabIndex = 33
         Me.Label7.Text = "Cuenta"
         '
-        'mtbCuenta
-        '
-        Me.mtbCuenta.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.mtbCuenta.Location = New System.Drawing.Point(463, 0)
-        Me.mtbCuenta.Margin = New System.Windows.Forms.Padding(150, 0, 0, 0)
-        Me.mtbCuenta.Name = "mtbCuenta"
-        Me.mtbCuenta.Size = New System.Drawing.Size(356, 38)
-        Me.mtbCuenta.TabIndex = 34
-        '
         'flpNombre
         '
         Me.flpNombre.Controls.Add(Me.Label1)
@@ -192,15 +183,6 @@ Partial Class formModify
         Me.Label8.Size = New System.Drawing.Size(304, 32)
         Me.Label8.TabIndex = 35
         Me.Label8.Text = "Puesto"
-        '
-        'mtbPuesto
-        '
-        Me.mtbPuesto.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.mtbPuesto.Location = New System.Drawing.Point(468, 0)
-        Me.mtbPuesto.Margin = New System.Windows.Forms.Padding(158, 0, 0, 0)
-        Me.mtbPuesto.Name = "mtbPuesto"
-        Me.mtbPuesto.Size = New System.Drawing.Size(356, 38)
-        Me.mtbPuesto.TabIndex = 36
         '
         'flpDireccion
         '
@@ -358,6 +340,24 @@ Partial Class formModify
         Me.bDone.Text = "Modificar"
         Me.bDone.UseVisualStyleBackColor = True
         '
+        'mtbPuesto
+        '
+        Me.mtbPuesto.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.mtbPuesto.Location = New System.Drawing.Point(468, 0)
+        Me.mtbPuesto.Margin = New System.Windows.Forms.Padding(158, 0, 0, 0)
+        Me.mtbPuesto.Name = "mtbPuesto"
+        Me.mtbPuesto.Size = New System.Drawing.Size(356, 38)
+        Me.mtbPuesto.TabIndex = 36
+        '
+        'mtbCuenta
+        '
+        Me.mtbCuenta.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.mtbCuenta.Location = New System.Drawing.Point(463, 0)
+        Me.mtbCuenta.Margin = New System.Windows.Forms.Padding(150, 0, 0, 0)
+        Me.mtbCuenta.Name = "mtbCuenta"
+        Me.mtbCuenta.Size = New System.Drawing.Size(356, 38)
+        Me.mtbCuenta.TabIndex = 34
+        '
         'formModify
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -397,8 +397,6 @@ Partial Class formModify
     Friend WithEvents mtbDni As MaskedTextBox
     Friend WithEvents flpCuenta As FlowLayoutPanel
     Friend WithEvents Label7 As Label
-    Friend WithEvents mtbCuenta As MaskedTextBox
-    Friend WithEvents mtbPuesto As MaskedTextBox
     Friend WithEvents Label8 As Label
     Friend WithEvents cbIdioma As ComboBox
     Friend WithEvents bDone As Button
@@ -420,4 +418,6 @@ Partial Class formModify
     Friend WithEvents flpApellido As FlowLayoutPanel
     Friend WithEvents flpEmail As FlowLayoutPanel
     Friend WithEvents flpTel As FlowLayoutPanel
+    Friend WithEvents mtbCuenta As MaskedTextBox
+    Friend WithEvents mtbPuesto As MaskedTextBox
 End Class

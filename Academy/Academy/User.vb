@@ -2,10 +2,12 @@
 
 Public Class User
     Public ReadOnly Property Name As String
+    Public ReadOnly dni As String
     Public ReadOnly Property Rol As String
 
-    Public Sub New(name As String, password As String, rol As String)
+    Public Sub New(name As String, dni As String, rol As String)
         Me.Name = name
+        Me.dni = dni
         Me.Rol = rol
     End Sub
 
