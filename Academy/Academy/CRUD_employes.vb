@@ -67,8 +67,9 @@ Public Class CRUD_employes
         '  Dim name, account, job, surname, number_phone, address, mail As String
     End Sub
 
-    Public Sub deleteEmployee()
-
+    Public Sub deleteEmployee(dni As String)
+        Dim query As String = "Delete from empleados where dni = '" & dni & "'"
+        ExecuteQuery(query)
     End Sub
 
     Public Sub loadComboBoxPuestos(comboBox As ComboBox)
