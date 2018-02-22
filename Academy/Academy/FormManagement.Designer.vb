@@ -22,7 +22,6 @@ Partial Class FormManagement
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.bAdd = New System.Windows.Forms.Button()
         Me.bMod = New System.Windows.Forms.Button()
         Me.bDel = New System.Windows.Forms.Button()
         Me.tcModos = New System.Windows.Forms.TabControl()
@@ -31,42 +30,42 @@ Partial Class FormManagement
         Me.tabAlumnos = New System.Windows.Forms.TabPage()
         Me.dgvAlumnos = New System.Windows.Forms.DataGridView()
         Me.bLogout = New System.Windows.Forms.Button()
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.bAdd = New System.Windows.Forms.Button()
         Me.tcModos.SuspendLayout()
         Me.tabProfesores.SuspendLayout()
         CType(Me.dgvProfesores, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tabAlumnos.SuspendLayout()
         CType(Me.dgvAlumnos, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TableLayoutPanel1.SuspendLayout()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'bAdd
-        '
-        Me.bAdd.AutoSize = True
-        Me.bAdd.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.bAdd.Location = New System.Drawing.Point(872, 176)
-        Me.bAdd.Name = "bAdd"
-        Me.bAdd.Size = New System.Drawing.Size(108, 35)
-        Me.bAdd.TabIndex = 3
-        Me.bAdd.Text = "Añadir"
-        Me.bAdd.UseVisualStyleBackColor = True
         '
         'bMod
         '
+        Me.bMod.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.bMod.AutoSize = True
         Me.bMod.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.bMod.Location = New System.Drawing.Point(872, 228)
+        Me.bMod.Location = New System.Drawing.Point(17, 174)
+        Me.bMod.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.bMod.Name = "bMod"
-        Me.bMod.Size = New System.Drawing.Size(108, 35)
+        Me.bMod.Size = New System.Drawing.Size(194, 44)
         Me.bMod.TabIndex = 4
         Me.bMod.Text = "Modificar"
         Me.bMod.UseVisualStyleBackColor = True
         '
         'bDel
         '
+        Me.bDel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.bDel.AutoSize = True
         Me.bDel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.bDel.Location = New System.Drawing.Point(872, 282)
+        Me.bDel.Location = New System.Drawing.Point(17, 257)
+        Me.bDel.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.bDel.Name = "bDel"
-        Me.bDel.Size = New System.Drawing.Size(108, 35)
+        Me.bDel.Size = New System.Drawing.Size(194, 44)
         Me.bDel.TabIndex = 5
         Me.bDel.Text = "Eliminar"
         Me.bDel.UseVisualStyleBackColor = True
@@ -75,23 +74,24 @@ Partial Class FormManagement
         '
         Me.tcModos.Controls.Add(Me.tabProfesores)
         Me.tcModos.Controls.Add(Me.tabAlumnos)
+        Me.tcModos.Dock = System.Windows.Forms.DockStyle.Fill
         Me.tcModos.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tcModos.Location = New System.Drawing.Point(116, 90)
+        Me.tcModos.Location = New System.Drawing.Point(3, 2)
         Me.tcModos.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.tcModos.Name = "tcModos"
         Me.tcModos.SelectedIndex = 0
-        Me.tcModos.Size = New System.Drawing.Size(698, 512)
+        Me.tcModos.Size = New System.Drawing.Size(1018, 697)
         Me.tcModos.TabIndex = 6
         Me.tcModos.Tag = ""
         '
         'tabProfesores
         '
         Me.tabProfesores.Controls.Add(Me.dgvProfesores)
-        Me.tabProfesores.Location = New System.Drawing.Point(4, 38)
+        Me.tabProfesores.Location = New System.Drawing.Point(4, 41)
         Me.tabProfesores.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.tabProfesores.Name = "tabProfesores"
         Me.tabProfesores.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.tabProfesores.Size = New System.Drawing.Size(690, 470)
+        Me.tabProfesores.Size = New System.Drawing.Size(1010, 652)
         Me.tabProfesores.TabIndex = 0
         Me.tabProfesores.Text = "Empleados"
         Me.tabProfesores.UseVisualStyleBackColor = True
@@ -108,20 +108,21 @@ Partial Class FormManagement
         Me.dgvProfesores.MultiSelect = False
         Me.dgvProfesores.Name = "dgvProfesores"
         Me.dgvProfesores.ReadOnly = True
+        Me.dgvProfesores.RowHeadersWidth = 50
         Me.dgvProfesores.RowTemplate.Height = 28
         Me.dgvProfesores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvProfesores.ShowEditingIcon = False
-        Me.dgvProfesores.Size = New System.Drawing.Size(684, 466)
+        Me.dgvProfesores.Size = New System.Drawing.Size(1004, 648)
         Me.dgvProfesores.TabIndex = 0
         '
         'tabAlumnos
         '
         Me.tabAlumnos.Controls.Add(Me.dgvAlumnos)
-        Me.tabAlumnos.Location = New System.Drawing.Point(4, 38)
+        Me.tabAlumnos.Location = New System.Drawing.Point(4, 41)
         Me.tabAlumnos.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.tabAlumnos.Name = "tabAlumnos"
         Me.tabAlumnos.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.tabAlumnos.Size = New System.Drawing.Size(690, 470)
+        Me.tabAlumnos.Size = New System.Drawing.Size(1010, 652)
         Me.tabAlumnos.TabIndex = 1
         Me.tabAlumnos.Text = "Alumnos"
         Me.tabAlumnos.UseVisualStyleBackColor = True
@@ -138,46 +139,94 @@ Partial Class FormManagement
         Me.dgvAlumnos.MultiSelect = False
         Me.dgvAlumnos.Name = "dgvAlumnos"
         Me.dgvAlumnos.ReadOnly = True
+        Me.dgvAlumnos.RowHeadersWidth = 50
         Me.dgvAlumnos.RowTemplate.Height = 28
         Me.dgvAlumnos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvAlumnos.ShowEditingIcon = False
-        Me.dgvAlumnos.Size = New System.Drawing.Size(684, 466)
+        Me.dgvAlumnos.Size = New System.Drawing.Size(1004, 648)
         Me.dgvAlumnos.TabIndex = 0
         '
         'bLogout
         '
+        Me.bLogout.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.bLogout.AutoSize = True
-        Me.bLogout.Location = New System.Drawing.Point(928, 10)
+        Me.bLogout.Location = New System.Drawing.Point(1150, 11)
         Me.bLogout.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.bLogout.Name = "bLogout"
-        Me.bLogout.Size = New System.Drawing.Size(103, 27)
+        Me.bLogout.Size = New System.Drawing.Size(116, 34)
         Me.bLogout.TabIndex = 7
         Me.bLogout.Text = "Cerrar sesión"
         Me.bLogout.UseVisualStyleBackColor = True
         '
+        'TableLayoutPanel1
+        '
+        Me.TableLayoutPanel1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TableLayoutPanel1.BackColor = System.Drawing.Color.SteelBlue
+        Me.TableLayoutPanel1.ColumnCount = 2
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 81.33971!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.66029!))
+        Me.TableLayoutPanel1.Controls.Add(Me.tcModos, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.Panel1, 1, 0)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(12, 79)
+        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
+        Me.TableLayoutPanel1.RowCount = 1
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1260, 701)
+        Me.TableLayoutPanel1.TabIndex = 8
+        '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.bAdd)
+        Me.Panel1.Controls.Add(Me.bDel)
+        Me.Panel1.Controls.Add(Me.bMod)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel1.Location = New System.Drawing.Point(1027, 3)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(230, 695)
+        Me.Panel1.TabIndex = 7
+        '
+        'bAdd
+        '
+        Me.bAdd.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.bAdd.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.bAdd.Location = New System.Drawing.Point(17, 95)
+        Me.bAdd.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.bAdd.Name = "bAdd"
+        Me.bAdd.Size = New System.Drawing.Size(194, 44)
+        Me.bAdd.TabIndex = 3
+        Me.bAdd.Text = "Añadir"
+        Me.bAdd.UseVisualStyleBackColor = True
+        '
         'FormManagement
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.SteelBlue
-        Me.ClientSize = New System.Drawing.Size(1039, 729)
+        Me.ClientSize = New System.Drawing.Size(1278, 914)
         Me.Controls.Add(Me.bLogout)
-        Me.Controls.Add(Me.tcModos)
-        Me.Controls.Add(Me.bDel)
-        Me.Controls.Add(Me.bMod)
-        Me.Controls.Add(Me.bAdd)
+        Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "FormManagement"
-        Me.Text = "FormManagement"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Panel de gestión"
         Me.tcModos.ResumeLayout(False)
         Me.tabProfesores.ResumeLayout(False)
         CType(Me.dgvProfesores, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tabAlumnos.ResumeLayout(False)
         CType(Me.dgvAlumnos, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TableLayoutPanel1.ResumeLayout(False)
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents bAdd As Button
     Friend WithEvents bMod As Button
     Friend WithEvents bDel As Button
     Friend WithEvents tcModos As TabControl
@@ -186,4 +235,7 @@ Partial Class FormManagement
     Friend WithEvents dgvProfesores As DataGridView
     Friend WithEvents dgvAlumnos As DataGridView
     Friend WithEvents bLogout As Button
+    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents bAdd As Button
 End Class
