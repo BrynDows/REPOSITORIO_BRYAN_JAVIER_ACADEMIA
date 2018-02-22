@@ -30,11 +30,13 @@ Partial Class formModify
         Me.mtbDni = New System.Windows.Forms.MaskedTextBox()
         Me.flpCuenta = New System.Windows.Forms.FlowLayoutPanel()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.mtbCuenta = New System.Windows.Forms.MaskedTextBox()
         Me.flpNombre = New System.Windows.Forms.FlowLayoutPanel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.mtbNombre = New System.Windows.Forms.MaskedTextBox()
         Me.flpPuesto = New System.Windows.Forms.FlowLayoutPanel()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.cbPuesto = New System.Windows.Forms.ComboBox()
         Me.flpDireccion = New System.Windows.Forms.FlowLayoutPanel()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.mtbDireccion = New System.Windows.Forms.MaskedTextBox()
@@ -47,24 +49,19 @@ Partial Class formModify
         Me.flpIdioma = New System.Windows.Forms.FlowLayoutPanel()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.cbIdioma = New System.Windows.Forms.ComboBox()
+        Me.IdiomasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Academy_bdDataSet1 = New Academy.academy_bdDataSet1()
         Me.flpTel = New System.Windows.Forms.FlowLayoutPanel()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.mtbTel = New System.Windows.Forms.MaskedTextBox()
-        Me.bDone = New System.Windows.Forms.Button()
-        Me.mtbCuenta = New System.Windows.Forms.MaskedTextBox()
-        Me.cbPuesto = New System.Windows.Forms.ComboBox()
-        Me.Academy_bdDataSet = New Academy.academy_bdDataSet()
-        Me.PuestosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.PuestosTableAdapter = New Academy.academy_bdDataSetTableAdapters.puestosTableAdapter()
-        Me.AcademybdDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.AcademybdDataSetBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.PuestosBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Academy_bdDataSet1 = New Academy.academy_bdDataSet1()
-        Me.IdiomasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.IdiomasTableAdapter = New Academy.academy_bdDataSet1TableAdapters.idiomasTableAdapter()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.tbPass = New System.Windows.Forms.TextBox()
+        Me.Academy_bdDataSet = New Academy.academy_bdDataSet()
+        Me.bDone = New System.Windows.Forms.Button()
+        Me.AcademybdDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.AcademybdDataSetBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.IdiomasTableAdapter = New Academy.academy_bdDataSet1TableAdapters.idiomasTableAdapter()
         Me.flpPricipal.SuspendLayout()
         Me.flpDni.SuspendLayout()
         Me.flpCuenta.SuspendLayout()
@@ -74,15 +71,13 @@ Partial Class formModify
         Me.flpApellido.SuspendLayout()
         Me.flpEmail.SuspendLayout()
         Me.flpIdioma.SuspendLayout()
+        CType(Me.IdiomasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Academy_bdDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.flpTel.SuspendLayout()
+        Me.FlowLayoutPanel1.SuspendLayout()
         CType(Me.Academy_bdDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PuestosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AcademybdDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AcademybdDataSetBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PuestosBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Academy_bdDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.IdiomasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.FlowLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'flpPricipal
@@ -154,6 +149,15 @@ Partial Class formModify
         Me.Label7.TabIndex = 33
         Me.Label7.Text = "Cuenta"
         '
+        'mtbCuenta
+        '
+        Me.mtbCuenta.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.mtbCuenta.Location = New System.Drawing.Point(446, 0)
+        Me.mtbCuenta.Margin = New System.Windows.Forms.Padding(133, 0, 0, 0)
+        Me.mtbCuenta.Name = "mtbCuenta"
+        Me.mtbCuenta.Size = New System.Drawing.Size(317, 38)
+        Me.mtbCuenta.TabIndex = 34
+        '
         'flpNombre
         '
         Me.flpNombre.Controls.Add(Me.Label1)
@@ -204,6 +208,14 @@ Partial Class formModify
         Me.Label8.Size = New System.Drawing.Size(304, 32)
         Me.Label8.TabIndex = 35
         Me.Label8.Text = "Puesto"
+        '
+        'cbPuesto
+        '
+        Me.cbPuesto.FormattingEnabled = True
+        Me.cbPuesto.Location = New System.Drawing.Point(313, 3)
+        Me.cbPuesto.Name = "cbPuesto"
+        Me.cbPuesto.Size = New System.Drawing.Size(356, 24)
+        Me.cbPuesto.TabIndex = 36
         '
         'flpDireccion
         '
@@ -325,6 +337,16 @@ Partial Class formModify
         Me.cbIdioma.TabIndex = 32
         Me.cbIdioma.ValueMember = "idioma"
         '
+        'IdiomasBindingSource
+        '
+        Me.IdiomasBindingSource.DataMember = "idiomas"
+        Me.IdiomasBindingSource.DataSource = Me.Academy_bdDataSet1
+        '
+        'Academy_bdDataSet1
+        '
+        Me.Academy_bdDataSet1.DataSetName = "academy_bdDataSet1"
+        Me.Academy_bdDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'flpTel
         '
         Me.flpTel.Controls.Add(Me.Label3)
@@ -354,79 +376,6 @@ Partial Class formModify
         Me.mtbTel.Size = New System.Drawing.Size(356, 38)
         Me.mtbTel.TabIndex = 28
         '
-        'bDone
-        '
-        Me.bDone.Font = New System.Drawing.Font("Modern No. 20", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.bDone.Location = New System.Drawing.Point(430, 656)
-        Me.bDone.Name = "bDone"
-        Me.bDone.Size = New System.Drawing.Size(161, 61)
-        Me.bDone.TabIndex = 31
-        Me.bDone.Text = "Modificar"
-        Me.bDone.UseVisualStyleBackColor = True
-        '
-        'mtbCuenta
-        '
-        Me.mtbCuenta.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.mtbCuenta.Location = New System.Drawing.Point(446, 0)
-        Me.mtbCuenta.Margin = New System.Windows.Forms.Padding(133, 0, 0, 0)
-        Me.mtbCuenta.Name = "mtbCuenta"
-        Me.mtbCuenta.Size = New System.Drawing.Size(317, 38)
-        Me.mtbCuenta.TabIndex = 34
-        '
-        'cbPuesto
-        '
-        Me.cbPuesto.DataSource = Me.PuestosBindingSource
-        Me.cbPuesto.DisplayMember = "nombre"
-        Me.cbPuesto.FormattingEnabled = True
-        Me.cbPuesto.Location = New System.Drawing.Point(313, 3)
-        Me.cbPuesto.Name = "cbPuesto"
-        Me.cbPuesto.Size = New System.Drawing.Size(356, 24)
-        Me.cbPuesto.TabIndex = 36
-        Me.cbPuesto.ValueMember = "nombre"
-        '
-        'Academy_bdDataSet
-        '
-        Me.Academy_bdDataSet.DataSetName = "academy_bdDataSet"
-        Me.Academy_bdDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'PuestosBindingSource
-        '
-        Me.PuestosBindingSource.DataMember = "puestos"
-        Me.PuestosBindingSource.DataSource = Me.Academy_bdDataSet
-        '
-        'PuestosTableAdapter
-        '
-        Me.PuestosTableAdapter.ClearBeforeFill = True
-        '
-        'AcademybdDataSetBindingSource
-        '
-        Me.AcademybdDataSetBindingSource.DataSource = Me.Academy_bdDataSet
-        Me.AcademybdDataSetBindingSource.Position = 0
-        '
-        'AcademybdDataSetBindingSource1
-        '
-        Me.AcademybdDataSetBindingSource1.DataSource = Me.Academy_bdDataSet
-        Me.AcademybdDataSetBindingSource1.Position = 0
-        '
-        'PuestosBindingSource1
-        '
-        Me.PuestosBindingSource1.DataMember = "puestos"
-        Me.PuestosBindingSource1.DataSource = Me.AcademybdDataSetBindingSource
-        '
-        'Academy_bdDataSet1
-        '
-        Me.Academy_bdDataSet1.DataSetName = "academy_bdDataSet1"
-        Me.Academy_bdDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'IdiomasBindingSource
-        '
-        Me.IdiomasBindingSource.DataMember = "idiomas"
-        Me.IdiomasBindingSource.DataSource = Me.Academy_bdDataSet1
-        '
-        'IdiomasTableAdapter
-        '
-        Me.IdiomasTableAdapter.ClearBeforeFill = True
-        '
         'FlowLayoutPanel1
         '
         Me.FlowLayoutPanel1.Controls.Add(Me.Label9)
@@ -455,6 +404,35 @@ Partial Class formModify
         Me.tbPass.Size = New System.Drawing.Size(331, 37)
         Me.tbPass.TabIndex = 23
         '
+        'Academy_bdDataSet
+        '
+        Me.Academy_bdDataSet.DataSetName = "academy_bdDataSet"
+        Me.Academy_bdDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'bDone
+        '
+        Me.bDone.Font = New System.Drawing.Font("Modern No. 20", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.bDone.Location = New System.Drawing.Point(430, 656)
+        Me.bDone.Name = "bDone"
+        Me.bDone.Size = New System.Drawing.Size(161, 61)
+        Me.bDone.TabIndex = 31
+        Me.bDone.Text = "Modificar"
+        Me.bDone.UseVisualStyleBackColor = True
+        '
+        'AcademybdDataSetBindingSource
+        '
+        Me.AcademybdDataSetBindingSource.DataSource = Me.Academy_bdDataSet
+        Me.AcademybdDataSetBindingSource.Position = 0
+        '
+        'AcademybdDataSetBindingSource1
+        '
+        Me.AcademybdDataSetBindingSource1.DataSource = Me.Academy_bdDataSet
+        Me.AcademybdDataSetBindingSource1.Position = 0
+        '
+        'IdiomasTableAdapter
+        '
+        Me.IdiomasTableAdapter.ClearBeforeFill = True
+        '
         'formModify
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -482,17 +460,15 @@ Partial Class formModify
         Me.flpEmail.PerformLayout()
         Me.flpIdioma.ResumeLayout(False)
         Me.flpIdioma.PerformLayout()
+        CType(Me.IdiomasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Academy_bdDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.flpTel.ResumeLayout(False)
         Me.flpTel.PerformLayout()
-        CType(Me.Academy_bdDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PuestosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.AcademybdDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.AcademybdDataSetBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PuestosBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Academy_bdDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.IdiomasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.FlowLayoutPanel1.ResumeLayout(False)
         Me.FlowLayoutPanel1.PerformLayout()
+        CType(Me.Academy_bdDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AcademybdDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AcademybdDataSetBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -525,11 +501,7 @@ Partial Class formModify
     Friend WithEvents flpEmail As FlowLayoutPanel
     Friend WithEvents flpTel As FlowLayoutPanel
     Friend WithEvents mtbCuenta As MaskedTextBox
-    Friend WithEvents cbPuesto As ComboBox
     Friend WithEvents Academy_bdDataSet As academy_bdDataSet
-    Friend WithEvents PuestosBindingSource As BindingSource
-    Friend WithEvents PuestosTableAdapter As academy_bdDataSetTableAdapters.puestosTableAdapter
-    Friend WithEvents PuestosBindingSource1 As BindingSource
     Friend WithEvents AcademybdDataSetBindingSource As BindingSource
     Friend WithEvents AcademybdDataSetBindingSource1 As BindingSource
     Friend WithEvents Academy_bdDataSet1 As academy_bdDataSet1
@@ -538,4 +510,5 @@ Partial Class formModify
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
     Friend WithEvents Label9 As Label
     Friend WithEvents tbPass As TextBox
+    Friend WithEvents cbPuesto As ComboBox
 End Class

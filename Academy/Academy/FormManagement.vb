@@ -39,7 +39,7 @@
     End Sub
 
     Private Sub bAdd_Click(sender As Object, e As EventArgs) Handles bAdd.Click
-        formModify.Modo = 0 ' 0 = añadir
+        formModify.Modo = INSERTAR
 
         If modeTab.Equals("Alumnos") Then ' alumnos
             formModify.flpCuenta.Visible = False
@@ -53,6 +53,7 @@
     End Sub
 
     Private Sub bMod_Click(sender As Object, e As EventArgs) Handles bMod.Click
+<<<<<<< HEAD
         formModify.Modo = 1 ' 1 = modificar
         Dim selected = dgvAlumnos.SelectedRows(0)
         formModify.alu = New idiomasDLL.Alumno(selected.Cells(0).Value.ToString,
@@ -61,7 +62,21 @@
                                                selected.Cells(3).Value.ToString,
                                                selected.Cells(4).Value.ToString,
                                                selected.Cells(5).Value.ToString)
+=======
+        formModify.Modo = MODIFICAR
+        If modeTab.Equals("Profesores") Then
+            formModify.alum_OR_Emple = EMPLEADOS
+            Dim row = dgvProfesores.SelectedRows(0)
+            'formModify.mtbDni.Text = row.Cells(0).Value.ToString
+            'formModify.mtbNombre.Text = row.Cells(1).Value.ToString
+            'formModify.mtbApellido.Text = row.Cells(1).Value.ToString
+            'formModify.mtb
+        End If
+>>>>>>> Bryan
         formModify.ShowDialog()
+
+
+
     End Sub
 
     Private Sub bLogout_Click(sender As Object, e As EventArgs) Handles bLogout.Click
@@ -88,52 +103,10 @@
     ' Este evento captura los valores de la celda en la cal se ha hecho click y rellena los campos del formulario FormModify,
     ' cada obtención de dato de cada campo está rodeado de un tryCatch
     '
-    Private Sub dgvProfesores_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvProfesores.CellClick
-        Try
-            formModify.mtbDni.Text = sender.CurrentRow.Cells("dni").Value
-        Catch ex As InvalidCastException
-            idiomasDLL.Errores.INSERT_IN_ERROR_LOG(ex)
-        End Try
-        Try
-            formModify.mtbNombre.Text = sender.CurrentRow.Cells("nombre").Value
-        Catch ex As InvalidCastException
-            idiomasDLL.Errores.INSERT_IN_ERROR_LOG(ex)
-        End Try
-        Try
-            formModify.mtbCuenta.Text = sender.CurrentRow.Cells("cuenta").Value
-        Catch ex As InvalidCastException
-            idiomasDLL.Errores.INSERT_IN_ERROR_LOG(ex)
-        End Try
-        Try
-            formModify.cbPuesto.Text = sender.CurrentRow.Cells("puesto").Value
-        Catch ex As InvalidCastException
-            idiomasDLL.Errores.INSERT_IN_ERROR_LOG(ex)
-        End Try
-        Try
-            formModify.mtbApellido.Text = sender.CurrentRow.Cells("apellido").Value
-        Catch ex As InvalidCastException
-            idiomasDLL.Errores.INSERT_IN_ERROR_LOG(ex)
-        End Try
-        Try
-            formModify.mtbTel.Text = sender.CurrentRow.Cells("telefono").Value
-        Catch ex As InvalidCastException
-            idiomasDLL.Errores.INSERT_IN_ERROR_LOG(ex)
-        End Try
-        Try
-            formModify.mtbDireccion.Text = sender.CurrentRow.Cells("direccion").Value
-        Catch ex As InvalidCastException
-            idiomasDLL.Errores.INSERT_IN_ERROR_LOG(ex)
-        End Try
-        Try
-            formModify.mtbEmail.Text = sender.CurrentRow.Cells("email").Value
-        Catch ex As InvalidCastException
-            idiomasDLL.Errores.INSERT_IN_ERROR_LOG(ex)
-        End Try
-    End Sub
+
 
     Private Sub tcModos_SelectedIndexChanged(sender As Object, e As EventArgs) Handles tcModos.SelectedIndexChanged
         modeTab = tcModos.GetControl(sender.selectedIndex).Text
-        MsgBox(modeTab)
     End Sub
 
     Private Sub dgvAlumnos_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvAlumnos.CellClick
