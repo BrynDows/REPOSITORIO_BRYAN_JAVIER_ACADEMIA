@@ -1,8 +1,12 @@
-﻿Public Class formModify
+﻿Imports idiomasDLL
+
+Public Class formModify
 
     Public Property Modo As Byte
+    Public Property alu As Alumno
 
     Private Sub FormModify_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ToolTip1.IsBalloon = True
         mtbTel.Mask = "000000000"
         'TODO: esta línea de código carga datos en la tabla 'Academy_bdDataSet1.idiomas' Puede moverla o quitarla según sea necesario.
         Me.IdiomasTableAdapter.Fill(Me.Academy_bdDataSet1.idiomas)
@@ -11,8 +15,16 @@
         mtbDni.Mask = "00000000>L"
         If Modo = 0 Then
             bDone.Text = "Añadir"
+            mtbDni.Enabled = True
         Else
             bDone.Text = "Modificar"
+            mtbDni.Text = alu.DNI
+            mtbNombre.Text = alu.Nombre
+            mtbApellido.Text = alu.Apellido
+            mtbTel.Text = alu.Telefono
+            mtbEmail.Text = alu.Email
+            mtbDireccion.Text = alu.Direccion
+            mtbDni.Enabled = False
         End If
     End Sub
 
@@ -34,24 +46,34 @@
     End Sub
 
     Private Sub bDone_Click(sender As Object, e As EventArgs) Handles bDone.Click
-        If Modo = 0 Then
-            If mtbNombre.Text.Length > 0 And mtbApellido.Text.Length > 0 And mtbEmail.Text.Length > 0 AndAlso mtbDireccion.Text.Length > 0 Then
-                If idiomasDLL.Validaciones.isValidEmail(mtbEmail.Text) Then
+        If mtbNombre.Text.Length > 0 And mtbApellido.Text.Length > 0 And mtbEmail.Text.Length > 0 AndAlso mtbDireccion.Text.Length > 0 Then
+            If idiomasDLL.Validaciones.isValidEmail(mtbEmail.Text) Then
+                If Modo = 0 Then
                     Try
                         idiomasDLL.Alumnos.InsertAlumno(FormManagement.user.dni, New idiomasDLL.Alumno(mtbDni.Text, mtbNombre.Text, mtbApellido.Text, mtbTel.Text, mtbEmail.Text, mtbDireccion.Text))
                         FormManagement.LoadDataGrids()
                         Me.Close()
                     Catch ex As System.Data.OleDb.OleDbException
-                        MsgBox("Este alumno ya existe en la base de datos.", MsgBoxStyle.OkOnly + MsgBoxStyle.Exclamation, "ERROR")
+                        MsgBox("Este alumno ya existe en la base de datos.", MsgBoxStyle.OkOnly + MsgBoxStyle.Critical, "ERROR")
                         idiomasDLL.Alumnos.CloseConnection()
                         idiomasDLL.Errores.INSERT_IN_ERROR_LOG(ex)
                     End Try
                 Else
-                    MsgBox("La dirección de email no es válida. Revísala.", MsgBoxStyle.OkOnly + MsgBoxStyle.Exclamation, "Email incorrecto")
+                    Try
+                        idiomasDLL.Alumnos.UpdateAlumno(New idiomasDLL.Alumno(mtbDni.Text, mtbNombre.Text, mtbApellido.Text, mtbTel.Text, mtbEmail.Text, mtbDireccion.Text))
+                        FormManagement.LoadDataGrids()
+                        Me.Close()
+                    Catch ex As Exception
+                        MsgBox("Error al actualizar el registro.", MsgBoxStyle.OkOnly + MsgBoxStyle.Critical, "ERROR")
+                        idiomasDLL.Alumnos.CloseConnection()
+                        idiomasDLL.Errores.INSERT_IN_ERROR_LOG(ex)
+                    End Try
                 End If
             Else
-                MsgBox("Todos los campos son necesarios.", MsgBoxStyle.OkOnly + MsgBoxStyle.Exclamation, "Campos requeridos")
+                MsgBox("La dirección de email no es válida. Revísala.", MsgBoxStyle.OkOnly + MsgBoxStyle.Exclamation, "Email incorrecto")
             End If
+        Else
+            MsgBox("Todos los campos son necesarios.", MsgBoxStyle.OkOnly + MsgBoxStyle.Exclamation, "Campos requeridos")
         End If
     End Sub
 

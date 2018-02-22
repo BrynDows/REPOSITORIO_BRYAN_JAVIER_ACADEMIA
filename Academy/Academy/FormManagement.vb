@@ -54,6 +54,13 @@
 
     Private Sub bMod_Click(sender As Object, e As EventArgs) Handles bMod.Click
         formModify.Modo = 1 ' 1 = modificar
+        Dim selected = dgvAlumnos.SelectedRows(0)
+        formModify.alu = New idiomasDLL.Alumno(selected.Cells(0).Value.ToString,
+                                               selected.Cells(1).Value.ToString,
+                                               selected.Cells(2).Value.ToString,
+                                               selected.Cells(3).Value.ToString,
+                                               selected.Cells(4).Value.ToString,
+                                               selected.Cells(5).Value.ToString)
         formModify.ShowDialog()
     End Sub
 
@@ -124,12 +131,26 @@
         End Try
     End Sub
 
-    Private Sub dgvProfesores_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvProfesores.CellContentClick
-        bMod.Enabled = True
-    End Sub
-
     Private Sub tcModos_SelectedIndexChanged(sender As Object, e As EventArgs) Handles tcModos.SelectedIndexChanged
         modeTab = tcModos.GetControl(sender.selectedIndex).Text
         MsgBox(modeTab)
+    End Sub
+
+    Private Sub dgvAlumnos_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvAlumnos.CellClick
+        bMod.Enabled = True
+    End Sub
+
+    Private Sub bDel_Click(sender As Object, e As EventArgs) Handles bDel.Click
+        Dim response = MsgBox("¿Estás seguro de que deseas eliminar este alumno?" & vbCrLf & vbCrLf & "NOTA: Esta operación no se puede deshacer.", MsgBoxStyle.YesNo + MsgBoxStyle.Exclamation, "Eliminar alumno")
+        If response = MsgBoxResult.Yes Then
+            Try
+                idiomasDLL.Alumnos.DeleteAlumno(dgvAlumnos.SelectedCells(0).Value.ToString)
+                LoadDataGrids()
+            Catch ex As Exception
+                MsgBox("Error al borrar el registro.", MsgBoxStyle.OkOnly + MsgBoxStyle.Critical, "ERROR")
+                idiomasDLL.Alumnos.CloseConnection()
+                idiomasDLL.Errores.INSERT_IN_ERROR_LOG(ex)
+            End Try
+        End If
     End Sub
 End Class

@@ -104,6 +104,7 @@ Partial Class FormManagement
         '
         Me.dgvProfesores.AllowUserToAddRows = False
         Me.dgvProfesores.AllowUserToDeleteRows = False
+        Me.dgvProfesores.BackgroundColor = System.Drawing.SystemColors.ButtonFace
         Me.dgvProfesores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvProfesores.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvProfesores.Location = New System.Drawing.Point(3, 2)

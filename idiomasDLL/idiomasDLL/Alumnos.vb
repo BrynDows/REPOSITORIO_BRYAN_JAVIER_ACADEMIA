@@ -27,6 +27,23 @@ Public Class Alumnos
         connection.Close()
     End Sub
 
+    Public Shared Sub UpdateAlumno(ByVal alu As Alumno)
+        connection.Open()
+        Dim terminal As New OleDbCommand("UPDATE alumnos SET nombre = '" & alu.Nombre & "', apellido = '" & alu.Apellido &
+                                         "', telefono = '" & alu.Telefono & "', email = '" & alu.Email & "', direccion = '" & alu.Direccion & "' WHERE dni = '" & alu.DNI & "'", connection)
+        terminal.ExecuteNonQuery()
+        connection.Close()
+    End Sub
+
+    Public Shared Sub DeleteAlumno(ByVal dni As String)
+        connection.Open()
+        Dim terminal As New OleDbCommand("DELETE * FROM empleados_alumnos WHERE dni_alumno = '" & dni & "'", connection)
+        terminal.ExecuteNonQuery()
+        terminal = New OleDbCommand("DELETE * FROM alumnos WHERE dni = '" & dni & "'", connection)
+        terminal.ExecuteNonQuery()
+        connection.Close()
+    End Sub
+
     Public Shared Sub CloseConnection()
         connection.Close()
     End Sub
