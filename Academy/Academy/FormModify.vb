@@ -30,6 +30,7 @@
     End Sub
 
     Private Sub bDone_Click(sender As Object, e As EventArgs) Handles bDone.Click
+<<<<<<< HEAD
         If Modo = 0 Then
             If mtbNombre.Text.Length > 0 And mtbApellido.Text.Length > 0 And mtbEmail.Text.Length > 0 AndAlso mtbDireccion.Text.Length > 0 Then
                 If idiomasDLL.Validaciones.isValidEmail(mtbEmail.Text) Then
@@ -60,6 +61,26 @@
         Else
             ToolTip1.ToolTipTitle = "Carácter no válido"
             ToolTip1.Show("Formato de DNI no válido.", mtbDni, 5000)
+=======
+        If (sender.text.Equals("Añadir")) Then
+            Dim dni, nombre, apellido, direccion, email, telefono As String
+            Dim cuenta, puesto As Integer
+            Try
+                cuenta = CInt(mtbCuenta.Text)
+                puesto = CInt(mtbPuesto.Text)
+            Catch ex As InvalidCastException
+
+            End Try
+            nombre = mtbNombre.Text
+            apellido = mtbApellido.Text
+            dni = mtbDni.Text
+            direccion = mtbDireccion.Text
+            email = mtbEmail.Text
+            telefono = mtbTel.Text
+
+            modulo.crudEmployes.InsertEmploye(dni, nombre, cuenta, puesto, apellido, telefono, direccion, email)
+
+>>>>>>> Bryan
         End If
     End Sub
 End Class

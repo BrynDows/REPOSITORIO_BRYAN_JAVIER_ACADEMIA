@@ -8,11 +8,10 @@
     ' tabMode representa mediante un entero cual es la "pestañita" que está seleccionada.
     ' tcModos_SelectedIndexChanged() es el método que altera esta variable.
     ' esta variable es usada en el método bAdd_Click()
-    Private modeTab As Integer = 1
+    Private modeTab As Integer
 
-    Private crudEmployes As CRUD_employes
     Private Sub FormManagement_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        crudEmployes = New CRUD_employes
+
         tcModos.TabPages.Remove(tabProfesores)
         '0 = jefe, 1 = profesor
         If Mode = 0 Then
@@ -27,7 +26,7 @@
             dgvAlumnos.DataSource = idiomasDLL.Alumnos.SelectAllAlumnos
             dgvAlumnos.DataMember = "alumnos"
             'mostrar profesores
-            crudEmployes.showTeachers(dgvProfesores)
+            modulo.crudEmployes.ShowTeachers(dgvProfesores)
         Else
             dgvAlumnos.DataSource = idiomasDLL.Alumnos.SelectAlumnosByProf("22222222B")
             dgvAlumnos.DataMember = "alumnos"
@@ -36,10 +35,13 @@
 
     Private Sub bAdd_Click(sender As Object, e As EventArgs) Handles bAdd.Click
         formModify.Modo = 0 ' 0 = añadir
-        MsgBox(modeTab)
+
         If modeTab = 1 Then ' empleados
             formModify.flpCuenta.Visible = False
             formModify.flpPuesto.Visible = False
+        Else
+            formModify.flpCuenta.Visible = True
+            formModify.flpPuesto.Visible = True
         End If
         SetTextEmpty()
         formModify.ShowDialog()
@@ -124,4 +126,7 @@
         bMod.Enabled = True
     End Sub
 
+    Private Sub tcModos_SelectedIndexChanged(sender As Object, e As EventArgs) Handles tcModos.SelectedIndexChanged
+        modeTab = sender.selectedIndex()
+    End Sub
 End Class
