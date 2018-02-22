@@ -8,7 +8,6 @@
         Me.IdiomasTableAdapter.Fill(Me.Academy_bdDataSet1.idiomas)
         'TODO: esta línea de código carga datos en la tabla 'Academy_bdDataSet.puestos' Puede moverla o quitarla según sea necesario.
         Me.PuestosTableAdapter.Fill(Me.Academy_bdDataSet.puestos)
-        mtbTel.Mask = "000 000 000"
         mtbDni.Mask = "00000000>L"
         If Modo = 0 Then
             bDone.Text = "Añadir"
@@ -35,7 +34,6 @@
     End Sub
 
     Private Sub bDone_Click(sender As Object, e As EventArgs) Handles bDone.Click
-
         If Modo = 0 Then
             If mtbNombre.Text.Length > 0 And mtbApellido.Text.Length > 0 And mtbEmail.Text.Length > 0 AndAlso mtbDireccion.Text.Length > 0 Then
                 If idiomasDLL.Validaciones.isValidEmail(mtbEmail.Text) Then
@@ -46,6 +44,7 @@
                     Catch ex As System.Data.OleDb.OleDbException
                         MsgBox("Este alumno ya existe en la base de datos.", MsgBoxStyle.OkOnly + MsgBoxStyle.Exclamation, "ERROR")
                         idiomasDLL.Alumnos.CloseConnection()
+                        idiomasDLL.Errores.INSERT_IN_ERROR_LOG(ex)
                     End Try
                 Else
                     MsgBox("La dirección de email no es válida. Revísala.", MsgBoxStyle.OkOnly + MsgBoxStyle.Exclamation, "Email incorrecto")

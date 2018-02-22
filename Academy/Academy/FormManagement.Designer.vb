@@ -108,9 +108,12 @@ Partial Class FormManagement
         Me.dgvProfesores.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvProfesores.Location = New System.Drawing.Point(3, 2)
         Me.dgvProfesores.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.dgvProfesores.MultiSelect = False
         Me.dgvProfesores.Name = "dgvProfesores"
         Me.dgvProfesores.ReadOnly = True
         Me.dgvProfesores.RowTemplate.Height = 28
+        Me.dgvProfesores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvProfesores.ShowEditingIcon = False
         Me.dgvProfesores.Size = New System.Drawing.Size(771, 591)
         Me.dgvProfesores.TabIndex = 0
         '
@@ -135,9 +138,12 @@ Partial Class FormManagement
         Me.dgvAlumnos.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvAlumnos.Location = New System.Drawing.Point(3, 2)
         Me.dgvAlumnos.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.dgvAlumnos.MultiSelect = False
         Me.dgvAlumnos.Name = "dgvAlumnos"
         Me.dgvAlumnos.ReadOnly = True
         Me.dgvAlumnos.RowTemplate.Height = 28
+        Me.dgvAlumnos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvAlumnos.ShowEditingIcon = False
         Me.dgvAlumnos.Size = New System.Drawing.Size(771, 591)
         Me.dgvAlumnos.TabIndex = 0
         '

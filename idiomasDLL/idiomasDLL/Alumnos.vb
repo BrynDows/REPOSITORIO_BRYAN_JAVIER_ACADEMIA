@@ -22,7 +22,7 @@ Public Class Alumnos
         Dim terminal As New OleDbCommand("INSERT INTO alumnos VALUES ('" & alu.DNI & "', '" & alu.Nombre & "', '" & alu.Apellido &
                                          "', '" & alu.Telefono & "', '" & alu.Email & "', '" & alu.Direccion & "')", connection)
         terminal.ExecuteNonQuery()
-        terminal = New OleDbCommand("INSERT INTO empleados_alumnos(dni_profesor, dni_alumno) VALUES ('" & dniprof & "', '" & alu.DNI & "')", connection)
+        terminal = New OleDbCommand("INSERT INTO empleados_alumnos VALUES ('" & dniprof & "', '" & alu.DNI & "', NULL, NULL, NULL)", connection)
         terminal.ExecuteNonQuery()
         connection.Close()
     End Sub
