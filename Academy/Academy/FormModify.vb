@@ -1,20 +1,22 @@
 ﻿Public Class formModify
 
     Public Property Modo As Byte
+    Public Property alum_OR_Emple As Byte
 
     Private Sub FormModify_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         mtbTel.Mask = "000000000"
         'TODO: esta línea de código carga datos en la tabla 'Academy_bdDataSet1.idiomas' Puede moverla o quitarla según sea necesario.
         Me.IdiomasTableAdapter.Fill(Me.Academy_bdDataSet1.idiomas)
-        'TODO: esta línea de código carga datos en la tabla 'Academy_bdDataSet.puestos' Puede moverla o quitarla según sea necesario.
-        Me.PuestosTableAdapter.Fill(Me.Academy_bdDataSet.puestos)
+
         mtbTel.Mask = "000 000 000"
         mtbDni.Mask = "00000000>L"
-        If Modo = 0 Then
+        If Modo = INSERTAR Then
             bDone.Text = "Añadir"
         Else
             bDone.Text = "Modificar"
         End If
+        'cargar comboBox: cbPuesto
+        modulo.crudEmployes.loadComboBoxPuestos(cbPuesto)
     End Sub
 
     Private Sub mtbTel_MaskInputRejected(sender As Object, e As MaskInputRejectedEventArgs)
@@ -33,10 +35,12 @@
     Private Sub formModify_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         FormManagement.bMod.Enabled = False
     End Sub
-
+    '
+    'Button Done
+    '
     Private Sub bDone_Click(sender As Object, e As EventArgs) Handles bDone.Click
 
-        If Modo = 0 Then
+        If Modo = INSERTAR And alum_OR_Emple = ALUMNOS Then
             If mtbNombre.Text.Length > 0 And mtbApellido.Text.Length > 0 And mtbEmail.Text.Length > 0 AndAlso mtbDireccion.Text.Length > 0 Then
                 If idiomasDLL.Validaciones.isValidEmail(mtbEmail.Text) Then
                     Try
@@ -54,8 +58,11 @@
                 MsgBox("Todos los campos son necesarios.", MsgBoxStyle.OkOnly + MsgBoxStyle.Exclamation, "Campos requeridos")
             End If
         End If
+        'CODIGO JAVIER MODIFICAR
     End Sub
-
+    '
+    'masked DNI
+    '
     Private Sub mtbDni_MaskInputRejected(sender As Object, e As MaskInputRejectedEventArgs) Handles mtbDni.MaskInputRejected
         If mtbDni.MaskFull Then
             ToolTip1.ToolTipTitle = "DNI demasiado largo"
@@ -70,11 +77,11 @@
         'bryan
         If (sender.text.Equals("Añadir")) Then
             Dim dni, nombre, apellido, direccion, email, telefono, password As String
-            Dim cuenta, puesto As Integer
+            Dim cuenta As Integer
             Try
                 cuenta = CInt(mtbCuenta.Text)
             Catch ex As InvalidCastException
-
+                idiomasDLL.INSERT_IN_ERROR_LOG(ex)
             End Try
             dni = mtbDni.Text
             nombre = mtbNombre.Text
@@ -84,10 +91,7 @@
             telefono = mtbTel.Text
             password = tbPass.Text
 
-            'modulo.crudEmployes.insertAccountUser(email, password, rol)
-            modulo.crudEmployes.InsertEmploye(dni, nombre, cuenta, puesto, apellido, telefono, direccion, email)
-
-
         End If
     End Sub
+
 End Class
