@@ -50,8 +50,10 @@
     End Sub
 
     Private Sub bMod_Click(sender As Object, e As EventArgs) Handles bMod.Click
+
         If modeTab.Equals(str_ALUMNOS) Then
             formModify.Modo = ACTUALIZAR
+            formModify.alum_OR_Emple = ALUMNOS
             Dim selected = dgvAlumnos.SelectedRows(0)
             formModify.alu = New idiomasDLL.Alumno(selected.Cells(0).Value.ToString,
                                                    selected.Cells(1).Value.ToString,

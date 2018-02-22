@@ -146,6 +146,7 @@ Public Class formModify
     End Sub
 
     Private Sub cbPuesto_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbPuesto.SelectedIndexChanged
+
         If cbPuesto.SelectedItem.id = 1 Then
             flpPassword.Visible = True
         Else
