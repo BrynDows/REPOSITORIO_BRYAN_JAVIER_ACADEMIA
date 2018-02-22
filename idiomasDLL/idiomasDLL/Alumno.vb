@@ -1,13 +1,13 @@
 ﻿Public Class Alumno
-    Public Property DN As String
+    Public Property DNI As String
     Public Property Nombre As String
     Public Property Apellido As String
     Public Property Telefono As String
     Public Property Email As String
     Public Property Direccion As String
 
-    Public Sub New(dN As String, nombre As String, apellido As String, telefono As String, email As String, direccion As String)
-        Me.DN = dN
+    Public Sub New(dni As String, nombre As String, apellido As String, telefono As String, email As String, direccion As String)
+        Me.DNI = dni
         Me.Nombre = nombre
         Me.Apellido = apellido
         Me.Telefono = telefono

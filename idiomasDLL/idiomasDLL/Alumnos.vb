@@ -18,6 +18,8 @@ Public Class Alumnos
     End Function
 
     Public Shared Sub InsertAlumno(ByVal alu As Alumno)
-
+        Dim terminal As New OleDbCommand("INSERT INTO alumnos VALUES ('" & alu.DNI & "', '" & alu.Nombre & "', '" & alu.Apellido &
+                                         "', '" & alu.Telefono & "', '" & alu.Email & "', '" & alu.Direccion & "')", connection)
+        terminal.ExecuteNonQuery()
     End Sub
 End Class
