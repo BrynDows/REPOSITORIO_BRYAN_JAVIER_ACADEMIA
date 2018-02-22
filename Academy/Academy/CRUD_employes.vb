@@ -59,15 +59,25 @@ Public Class CRUD_employes
         ExecuteQuery(insertTeacher)
     End Sub
 
-    Public Sub InsertEmploye(dni As String, nombre As String, puesto As Integer, apellido As String, telefono As String, direccion As String, email As String)
-        Dim query As String = "Insert into empleados value"
+    Public Sub InsertEmploye(dni As String, nombre As String, puesto As Puesto, apellido As String, telefono As String, direccion As String, email As String)
+        Dim query As String = "INSERT INTO empleados (dni, nombre, puesto, apellido, telefono, direccion, email) VALUES ('" & dni & "','" & nombre & "'," & puesto.id & ",'" & apellido & "','" & telefono & "','" & direccion & "','" & email & "')"
+        ExecuteQuery(query)
     End Sub
 
-    Public Sub updateEmployee(dniActual As String, nombre As String, cuenta As Integer, puesto As String, apellido As String, telefono As String, direccion As String, email As String)
-        '  Dim name, account, job, surname, number_phone, address, mail As String
+    Public Sub UpdateEmployee(newEmploye As Employe)
+        Dim query As String = "UPDATE FROM empleados SET nombre =" & newEmploye.name &
+                                                  ", SET apellido =" & newEmploye.surname &
+                                                  ", SET puesto = " & newEmploye.job &
+                                                  ", SET telefono = " & newEmploye.tel &
+                                                  ", SET direccion = " & newEmploye.address &
+                                                  ", SET email = " & newEmploye.email &
+                                                  "  WHERE dni = " & newEmploye.dni
+        ExecuteQuery(query)
     End Sub
+
 
     Public Sub deleteEmployee(dni As String)
+        Dim deleteFROM_empleadosAlumnos
         Dim query As String = "Delete from empleados where dni = '" & dni & "'"
         ExecuteQuery(query)
     End Sub

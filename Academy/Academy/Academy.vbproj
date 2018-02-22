@@ -87,6 +87,7 @@
       <DependentUpon>academy_bdDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="CRUD_employes.vb" />
+    <Compile Include="Employe.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
