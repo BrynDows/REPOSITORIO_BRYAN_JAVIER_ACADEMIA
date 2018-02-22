@@ -4,5 +4,11 @@
     Public Const ALUMNOS As Integer = 0
 
     Public Const INSERTAR As Integer = 0
-    Public Const MODIFICAR As Integer = 1
+    Public Const ACTUALIZAR As Integer = 1
+
+    Public Const INSERTAR_EMPLEADO = 0
+    Public Const INSERTAR_PROFESOR = 1
+
+    Public Const str_EMPLEADOS = "Empleados"
+    Public Const str_ALUMNOS = "Alumnos"
 End Module

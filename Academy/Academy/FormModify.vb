@@ -8,6 +8,7 @@ Public Class formModify
 
     Public Property alum_OR_Emple As Byte
 
+    Public Property prof_OR_emple As Byte
 
     Private Sub FormModify_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ToolTip1.IsBalloon = True
@@ -17,12 +18,17 @@ Public Class formModify
 
 
         mtbTel.Mask = "000 000 000"
-
         mtbDni.Mask = "00000000>L"
+
         If Modo = INSERTAR Then
             bDone.Text = "Añadir"
             mtbDni.Enabled = True
-        Else
+        End If
+
+        If alum_OR_Emple = ALUMNOS And Modo = ACTUALIZAR Then
+            flpCuenta.Visible = False
+            flpPuesto.Visible = False
+            flpPassword.Visible = False
             bDone.Text = "Modificar"
             mtbDni.Text = alu.DNI
             mtbNombre.Text = alu.Nombre
@@ -30,6 +36,10 @@ Public Class formModify
             mtbTel.Text = alu.Telefono
             mtbEmail.Text = alu.Email
             mtbDireccion.Text = alu.Direccion
+            mtbDni.Enabled = False
+        End If
+
+        If alum_OR_Emple = EMPLEADOS And Modo = ACTUALIZAR Then
             mtbDni.Enabled = False
         End If
         'cargar comboBox: cbPuesto
@@ -48,20 +58,17 @@ Public Class formModify
             ToolTip1.Show("Sólo se aceptan números en este caampo.", mtbTel, 5000)
         End If
     End Sub
-
-    Private Sub formModify_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
-        FormManagement.bMod.Enabled = False
-    End Sub
     '
     'Button Done
     '
     Private Sub bDone_Click(sender As Object, e As EventArgs) Handles bDone.Click
 
-
-
         If mtbNombre.Text.Length > 0 And mtbApellido.Text.Length > 0 And mtbEmail.Text.Length > 0 AndAlso mtbDireccion.Text.Length > 0 Then
             If idiomasDLL.Validaciones.isValidEmail(mtbEmail.Text) Then
-                If Modo = INSERTAR Then
+                '
+                'Alumnos
+                '
+                If Modo = INSERTAR And alum_OR_Emple = ALUMNOS Then
                     Try
                         idiomasDLL.Alumnos.InsertAlumno(FormManagement.user.dni, New idiomasDLL.Alumno(mtbDni.Text, mtbNombre.Text, mtbApellido.Text, mtbTel.Text, mtbEmail.Text, mtbDireccion.Text))
                         FormManagement.LoadDataGrids()
@@ -71,7 +78,7 @@ Public Class formModify
                         idiomasDLL.Alumnos.CloseConnection()
                         idiomasDLL.Errores.INSERT_IN_ERROR_LOG(ex)
                     End Try
-                Else
+                ElseIf Modo = ACTUALIZAR And alum_OR_Emple = ALUMNOS Then
                     Try
                         idiomasDLL.Alumnos.UpdateAlumno(New idiomasDLL.Alumno(mtbDni.Text, mtbNombre.Text, mtbApellido.Text, mtbTel.Text, mtbEmail.Text, mtbDireccion.Text))
                         FormManagement.LoadDataGrids()
@@ -82,13 +89,27 @@ Public Class formModify
                         idiomasDLL.Errores.INSERT_IN_ERROR_LOG(ex)
                     End Try
                 End If
+                '
+                'Empleados
+                '
+                If Modo = INSERTAR And alum_OR_Emple = EMPLEADOS And prof_OR_emple = INSERTAR_PROFESOR Then
+                    Try
+                        crudEmployes.InsertTeacher(mtbDni.Text, mtbNombre.Text, mtbApellido.Text, mtbEmail.Text, tbPass.Text, cbPuesto.SelectedItem, mtbTel.Text, mtbDireccion.Text)
+                        FormManagement.LoadDataGrids()
+                        Me.Close()
+                    Catch ex As Exception
+                        MsgBox("Error al actualizar el registro.", MsgBoxStyle.OkOnly + MsgBoxStyle.Critical, "ERROR")
+                        idiomasDLL.INSERT_IN_ERROR_LOG(ex)
+                    End Try
+                ElseIf Modo = ACTUALIZAR And alum_OR_Emple = EMPLEADOS And prof_OR_emple = INSERTAR_EMPLEADO Then
+                    '  crudEmployes.InsertEmploye()
+                End If
             Else
                 MsgBox("La dirección de email no es válida. Revísala.", MsgBoxStyle.OkOnly + MsgBoxStyle.Exclamation, "Email incorrecto")
             End If
         Else
             MsgBox("Todos los campos son necesarios.", MsgBoxStyle.OkOnly + MsgBoxStyle.Exclamation, "Campos requeridos")
         End If
-        'CODIGO JAVIER MODIFICAR
     End Sub
     '
     'masked DNI
@@ -121,6 +142,14 @@ Public Class formModify
             telefono = mtbTel.Text
             password = tbPass.Text
 
+        End If
+    End Sub
+
+    Private Sub cbPuesto_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbPuesto.SelectedIndexChanged
+        If cbPuesto.SelectedItem.id = 1 Then
+            flpPassword.Visible = True
+        Else
+            flpPassword.Visible = False
         End If
     End Sub
 

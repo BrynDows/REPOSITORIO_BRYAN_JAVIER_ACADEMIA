@@ -40,36 +40,37 @@
 
     Private Sub bAdd_Click(sender As Object, e As EventArgs) Handles bAdd.Click
         formModify.Modo = INSERTAR
-
-        If modeTab.Equals("Alumnos") Then ' alumnos
-            formModify.flpCuenta.Visible = False
-            formModify.flpPuesto.Visible = False
+        If modeTab.Equals(str_ALUMNOS) Then ' alumnos
+            formModify.alum_OR_Emple = ALUMNOS
         Else
-            formModify.flpCuenta.Visible = True
-            formModify.flpPuesto.Visible = True
+            formModify.alum_OR_Emple = EMPLEADOS
         End If
         SetTextEmpty()
         formModify.ShowDialog()
     End Sub
 
     Private Sub bMod_Click(sender As Object, e As EventArgs) Handles bMod.Click
-        formModify.Modo = MODIFICAR
-        Dim selected = dgvAlumnos.SelectedRows(0)
-        formModify.alu = New idiomasDLL.Alumno(selected.Cells(0).Value.ToString,
-                                               selected.Cells(1).Value.ToString,
-                                               selected.Cells(2).Value.ToString,
-                                               selected.Cells(3).Value.ToString,
-                                               selected.Cells(4).Value.ToString,
-                                               selected.Cells(5).Value.ToString)
-
-        formModify.Modo = MODIFICAR
-        If modeTab.Equals("Profesores") Then
+        If modeTab.Equals(str_ALUMNOS) Then
+            formModify.Modo = ACTUALIZAR
+            Dim selected = dgvAlumnos.SelectedRows(0)
+            formModify.alu = New idiomasDLL.Alumno(selected.Cells(0).Value.ToString,
+                                                   selected.Cells(1).Value.ToString,
+                                                   selected.Cells(2).Value.ToString,
+                                                   selected.Cells(3).Value.ToString,
+                                                   selected.Cells(4).Value.ToString,
+                                                   selected.Cells(5).Value.ToString)
+        ElseIf modeTab.Equals(str_EMPLEADOS) Then
+            formModify.Modo = ACTUALIZAR
             formModify.alum_OR_Emple = EMPLEADOS
             Dim row = dgvProfesores.SelectedRows(0)
-            'formModify.mtbDni.Text = row.Cells(0).Value.ToString
-            'formModify.mtbNombre.Text = row.Cells(1).Value.ToString
-            'formModify.mtbApellido.Text = row.Cells(1).Value.ToString
-            'formModify.mtb
+            formModify.mtbDni.Text = row.Cells(0).Value.ToString
+            formModify.mtbNombre.Text = row.Cells(1).Value.ToString
+            formModify.mtbApellido.Text = row.Cells(2).Value.ToString
+            formModify.mtbTel.Text = row.Cells(3).Value.ToString
+            formModify.mtbDireccion.Text = row.Cells(4).Value.ToString
+            formModify.mtbEmail.Text = row.Cells(5).Value.ToString
+            formModify.mtbCuenta.Text = row.Cells(6).Value.ToString
+            formModify.cbPuesto.Text = row.Cells(7).Value.ToString
         End If
         formModify.ShowDialog()
 
@@ -107,10 +108,6 @@
         modeTab = tcModos.GetControl(sender.selectedIndex).Text
     End Sub
 
-    Private Sub dgvAlumnos_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvAlumnos.CellClick
-        bMod.Enabled = True
-    End Sub
-
     Private Sub bDel_Click(sender As Object, e As EventArgs) Handles bDel.Click
         Dim response = MsgBox("¿Estás seguro de que deseas eliminar este alumno?" & vbCrLf & vbCrLf & "NOTA: Esta operación no se puede deshacer.", MsgBoxStyle.YesNo + MsgBoxStyle.Exclamation, "Eliminar alumno")
         If response = MsgBoxResult.Yes Then
@@ -124,4 +121,5 @@
             End Try
         End If
     End Sub
+
 End Class

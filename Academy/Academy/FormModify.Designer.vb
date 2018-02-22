@@ -54,7 +54,7 @@ Partial Class formModify
         Me.flpTel = New System.Windows.Forms.FlowLayoutPanel()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.mtbTel = New System.Windows.Forms.MaskedTextBox()
-        Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
+        Me.flpPassword = New System.Windows.Forms.FlowLayoutPanel()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.tbPass = New System.Windows.Forms.TextBox()
         Me.Academy_bdDataSet = New Academy.academy_bdDataSet()
@@ -74,7 +74,7 @@ Partial Class formModify
         CType(Me.IdiomasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Academy_bdDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.flpTel.SuspendLayout()
-        Me.FlowLayoutPanel1.SuspendLayout()
+        Me.flpPassword.SuspendLayout()
         CType(Me.Academy_bdDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AcademybdDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AcademybdDataSetBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -91,7 +91,7 @@ Partial Class formModify
         Me.flpPricipal.Controls.Add(Me.flpEmail)
         Me.flpPricipal.Controls.Add(Me.flpIdioma)
         Me.flpPricipal.Controls.Add(Me.flpTel)
-        Me.flpPricipal.Controls.Add(Me.FlowLayoutPanel1)
+        Me.flpPricipal.Controls.Add(Me.flpPassword)
         Me.flpPricipal.Location = New System.Drawing.Point(25, 56)
         Me.flpPricipal.Name = "flpPricipal"
         Me.flpPricipal.Size = New System.Drawing.Size(942, 594)
@@ -376,14 +376,15 @@ Partial Class formModify
         Me.mtbTel.Size = New System.Drawing.Size(356, 38)
         Me.mtbTel.TabIndex = 28
         '
-        'FlowLayoutPanel1
+        'flpPassword
         '
-        Me.FlowLayoutPanel1.Controls.Add(Me.Label9)
-        Me.FlowLayoutPanel1.Controls.Add(Me.tbPass)
-        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(3, 525)
-        Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(1024, 52)
-        Me.FlowLayoutPanel1.TabIndex = 44
+        Me.flpPassword.Controls.Add(Me.Label9)
+        Me.flpPassword.Controls.Add(Me.tbPass)
+        Me.flpPassword.Location = New System.Drawing.Point(3, 525)
+        Me.flpPassword.Name = "flpPassword"
+        Me.flpPassword.Size = New System.Drawing.Size(1024, 52)
+        Me.flpPassword.TabIndex = 44
+        Me.flpPassword.Visible = False
         '
         'Label9
         '
@@ -464,8 +465,8 @@ Partial Class formModify
         CType(Me.Academy_bdDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.flpTel.ResumeLayout(False)
         Me.flpTel.PerformLayout()
-        Me.FlowLayoutPanel1.ResumeLayout(False)
-        Me.FlowLayoutPanel1.PerformLayout()
+        Me.flpPassword.ResumeLayout(False)
+        Me.flpPassword.PerformLayout()
         CType(Me.Academy_bdDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AcademybdDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AcademybdDataSetBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -507,7 +508,7 @@ Partial Class formModify
     Friend WithEvents Academy_bdDataSet1 As academy_bdDataSet1
     Friend WithEvents IdiomasBindingSource As BindingSource
     Friend WithEvents IdiomasTableAdapter As academy_bdDataSet1TableAdapters.idiomasTableAdapter
-    Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
+    Friend WithEvents flpPassword As FlowLayoutPanel
     Friend WithEvents Label9 As Label
     Friend WithEvents tbPass As TextBox
     Friend WithEvents cbPuesto As ComboBox

@@ -42,10 +42,9 @@ Partial Class FormManagement
         '
         Me.bAdd.AutoSize = True
         Me.bAdd.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.bAdd.Location = New System.Drawing.Point(981, 220)
-        Me.bAdd.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.bAdd.Location = New System.Drawing.Point(872, 176)
         Me.bAdd.Name = "bAdd"
-        Me.bAdd.Size = New System.Drawing.Size(122, 44)
+        Me.bAdd.Size = New System.Drawing.Size(108, 35)
         Me.bAdd.TabIndex = 3
         Me.bAdd.Text = "Añadir"
         Me.bAdd.UseVisualStyleBackColor = True
@@ -53,12 +52,10 @@ Partial Class FormManagement
         'bMod
         '
         Me.bMod.AutoSize = True
-        Me.bMod.Enabled = False
         Me.bMod.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.bMod.Location = New System.Drawing.Point(981, 285)
-        Me.bMod.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.bMod.Location = New System.Drawing.Point(872, 228)
         Me.bMod.Name = "bMod"
-        Me.bMod.Size = New System.Drawing.Size(122, 44)
+        Me.bMod.Size = New System.Drawing.Size(108, 35)
         Me.bMod.TabIndex = 4
         Me.bMod.Text = "Modificar"
         Me.bMod.UseVisualStyleBackColor = True
@@ -67,10 +64,9 @@ Partial Class FormManagement
         '
         Me.bDel.AutoSize = True
         Me.bDel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.bDel.Location = New System.Drawing.Point(981, 352)
-        Me.bDel.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.bDel.Location = New System.Drawing.Point(872, 282)
         Me.bDel.Name = "bDel"
-        Me.bDel.Size = New System.Drawing.Size(122, 44)
+        Me.bDel.Size = New System.Drawing.Size(108, 35)
         Me.bDel.TabIndex = 5
         Me.bDel.Text = "Eliminar"
         Me.bDel.UseVisualStyleBackColor = True
@@ -80,24 +76,24 @@ Partial Class FormManagement
         Me.tcModos.Controls.Add(Me.tabProfesores)
         Me.tcModos.Controls.Add(Me.tabAlumnos)
         Me.tcModos.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tcModos.Location = New System.Drawing.Point(130, 112)
+        Me.tcModos.Location = New System.Drawing.Point(116, 90)
         Me.tcModos.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.tcModos.Name = "tcModos"
         Me.tcModos.SelectedIndex = 0
-        Me.tcModos.Size = New System.Drawing.Size(785, 640)
+        Me.tcModos.Size = New System.Drawing.Size(698, 512)
         Me.tcModos.TabIndex = 6
         Me.tcModos.Tag = ""
         '
         'tabProfesores
         '
         Me.tabProfesores.Controls.Add(Me.dgvProfesores)
-        Me.tabProfesores.Location = New System.Drawing.Point(4, 41)
+        Me.tabProfesores.Location = New System.Drawing.Point(4, 38)
         Me.tabProfesores.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.tabProfesores.Name = "tabProfesores"
         Me.tabProfesores.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.tabProfesores.Size = New System.Drawing.Size(777, 595)
+        Me.tabProfesores.Size = New System.Drawing.Size(690, 470)
         Me.tabProfesores.TabIndex = 0
-        Me.tabProfesores.Text = "Profesores"
+        Me.tabProfesores.Text = "Empleados"
         Me.tabProfesores.UseVisualStyleBackColor = True
         '
         'dgvProfesores
@@ -115,17 +111,17 @@ Partial Class FormManagement
         Me.dgvProfesores.RowTemplate.Height = 28
         Me.dgvProfesores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvProfesores.ShowEditingIcon = False
-        Me.dgvProfesores.Size = New System.Drawing.Size(771, 591)
+        Me.dgvProfesores.Size = New System.Drawing.Size(684, 466)
         Me.dgvProfesores.TabIndex = 0
         '
         'tabAlumnos
         '
         Me.tabAlumnos.Controls.Add(Me.dgvAlumnos)
-        Me.tabAlumnos.Location = New System.Drawing.Point(4, 41)
+        Me.tabAlumnos.Location = New System.Drawing.Point(4, 38)
         Me.tabAlumnos.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.tabAlumnos.Name = "tabAlumnos"
         Me.tabAlumnos.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.tabAlumnos.Size = New System.Drawing.Size(777, 595)
+        Me.tabAlumnos.Size = New System.Drawing.Size(690, 470)
         Me.tabAlumnos.TabIndex = 1
         Me.tabAlumnos.Text = "Alumnos"
         Me.tabAlumnos.UseVisualStyleBackColor = True
@@ -145,32 +141,31 @@ Partial Class FormManagement
         Me.dgvAlumnos.RowTemplate.Height = 28
         Me.dgvAlumnos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvAlumnos.ShowEditingIcon = False
-        Me.dgvAlumnos.Size = New System.Drawing.Size(771, 591)
+        Me.dgvAlumnos.Size = New System.Drawing.Size(684, 466)
         Me.dgvAlumnos.TabIndex = 0
         '
         'bLogout
         '
         Me.bLogout.AutoSize = True
-        Me.bLogout.Location = New System.Drawing.Point(1044, 12)
+        Me.bLogout.Location = New System.Drawing.Point(928, 10)
         Me.bLogout.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.bLogout.Name = "bLogout"
-        Me.bLogout.Size = New System.Drawing.Size(116, 34)
+        Me.bLogout.Size = New System.Drawing.Size(103, 27)
         Me.bLogout.TabIndex = 7
         Me.bLogout.Text = "Cerrar sesión"
         Me.bLogout.UseVisualStyleBackColor = True
         '
         'FormManagement
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.SteelBlue
-        Me.ClientSize = New System.Drawing.Size(1169, 911)
+        Me.ClientSize = New System.Drawing.Size(1039, 729)
         Me.Controls.Add(Me.bLogout)
         Me.Controls.Add(Me.tcModos)
         Me.Controls.Add(Me.bDel)
         Me.Controls.Add(Me.bMod)
         Me.Controls.Add(Me.bAdd)
-        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "FormManagement"
         Me.Text = "FormManagement"
         Me.tcModos.ResumeLayout(False)
