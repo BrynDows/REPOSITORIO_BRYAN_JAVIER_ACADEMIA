@@ -56,16 +56,12 @@ Public Class formModify
     'Button Done
     '
     Private Sub bDone_Click(sender As Object, e As EventArgs) Handles bDone.Click
-<<<<<<< HEAD
+
+
+
         If mtbNombre.Text.Length > 0 And mtbApellido.Text.Length > 0 And mtbEmail.Text.Length > 0 AndAlso mtbDireccion.Text.Length > 0 Then
             If idiomasDLL.Validaciones.isValidEmail(mtbEmail.Text) Then
-                If Modo = 0 Then
-=======
-
-        If Modo = INSERTAR And alum_OR_Emple = ALUMNOS Then
-            If mtbNombre.Text.Length > 0 And mtbApellido.Text.Length > 0 And mtbEmail.Text.Length > 0 AndAlso mtbDireccion.Text.Length > 0 Then
-                If idiomasDLL.Validaciones.isValidEmail(mtbEmail.Text) Then
->>>>>>> Bryan
+                If Modo = INSERTAR Then
                     Try
                         idiomasDLL.Alumnos.InsertAlumno(FormManagement.user.dni, New idiomasDLL.Alumno(mtbDni.Text, mtbNombre.Text, mtbApellido.Text, mtbTel.Text, mtbEmail.Text, mtbDireccion.Text))
                         FormManagement.LoadDataGrids()

@@ -53,8 +53,7 @@
     End Sub
 
     Private Sub bMod_Click(sender As Object, e As EventArgs) Handles bMod.Click
-<<<<<<< HEAD
-        formModify.Modo = 1 ' 1 = modificar
+        formModify.Modo = MODIFICAR
         Dim selected = dgvAlumnos.SelectedRows(0)
         formModify.alu = New idiomasDLL.Alumno(selected.Cells(0).Value.ToString,
                                                selected.Cells(1).Value.ToString,
@@ -62,7 +61,7 @@
                                                selected.Cells(3).Value.ToString,
                                                selected.Cells(4).Value.ToString,
                                                selected.Cells(5).Value.ToString)
-=======
+
         formModify.Modo = MODIFICAR
         If modeTab.Equals("Profesores") Then
             formModify.alum_OR_Emple = EMPLEADOS
@@ -72,7 +71,6 @@
             'formModify.mtbApellido.Text = row.Cells(1).Value.ToString
             'formModify.mtb
         End If
->>>>>>> Bryan
         formModify.ShowDialog()
 
 
