@@ -70,7 +70,7 @@
             formModify.mtbApellido.Text = row.Cells(2).Value.ToString
             formModify.mtbTel.Text = row.Cells(3).Value.ToString
             formModify.mtbDireccion.Text = row.Cells(4).Value.ToString
-            formModify.mtbEmail.Text = row.Cells(5).Value.ToString
+            formModify.mtbCuenta.Text = row.Cells(5).Value.ToString
             formModify.mtbCuenta.Text = row.Cells(6).Value.ToString
             formModify.cbPuesto.Text = row.Cells(7).Value.ToString
         End If

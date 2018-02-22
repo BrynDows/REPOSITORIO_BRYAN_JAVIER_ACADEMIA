@@ -8,7 +8,7 @@ Public Class formModify
 
     Public Property alum_OR_Emple As Byte
 
-    Public Property prof_OR_emple As Byte
+    Public Property insert_prof_OR_emple As Byte
 
     Private Sub FormModify_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ToolTip1.IsBalloon = True
@@ -26,7 +26,6 @@ Public Class formModify
         End If
 
         If alum_OR_Emple = ALUMNOS And Modo = ACTUALIZAR Then
-            flpCuenta.Visible = False
             flpPuesto.Visible = False
             flpPassword.Visible = False
             bDone.Text = "Modificar"
@@ -34,7 +33,7 @@ Public Class formModify
             mtbNombre.Text = alu.Nombre
             mtbApellido.Text = alu.Apellido
             mtbTel.Text = alu.Telefono
-            mtbEmail.Text = alu.Email
+            mtbCuenta.Text = alu.Email
             mtbDireccion.Text = alu.Direccion
             mtbDni.Enabled = False
         End If
@@ -63,14 +62,14 @@ Public Class formModify
     '
     Private Sub bDone_Click(sender As Object, e As EventArgs) Handles bDone.Click
 
-        If mtbNombre.Text.Length > 0 And mtbApellido.Text.Length > 0 And mtbEmail.Text.Length > 0 AndAlso mtbDireccion.Text.Length > 0 Then
-            If idiomasDLL.Validaciones.isValidEmail(mtbEmail.Text) Then
+        If mtbNombre.Text.Length > 0 And mtbApellido.Text.Length > 0 And mtbCuenta.Text.Length > 0 AndAlso mtbDireccion.Text.Length > 0 Then
+            If idiomasDLL.Validaciones.isValidEmail(mtbCuenta.Text) Then
                 '
                 'Alumnos
                 '
                 If Modo = INSERTAR And alum_OR_Emple = ALUMNOS Then
                     Try
-                        idiomasDLL.Alumnos.InsertAlumno(FormManagement.user.dni, New idiomasDLL.Alumno(mtbDni.Text, mtbNombre.Text, mtbApellido.Text, mtbTel.Text, mtbEmail.Text, mtbDireccion.Text))
+                        idiomasDLL.Alumnos.InsertAlumno(FormManagement.user.dni, New idiomasDLL.Alumno(mtbDni.Text, mtbNombre.Text, mtbApellido.Text, mtbTel.Text, mtbCuenta.Text, mtbDireccion.Text))
                         FormManagement.LoadDataGrids()
                         Me.Close()
                     Catch ex As System.Data.OleDb.OleDbException
@@ -80,7 +79,7 @@ Public Class formModify
                     End Try
                 ElseIf Modo = ACTUALIZAR And alum_OR_Emple = ALUMNOS Then
                     Try
-                        idiomasDLL.Alumnos.UpdateAlumno(New idiomasDLL.Alumno(mtbDni.Text, mtbNombre.Text, mtbApellido.Text, mtbTel.Text, mtbEmail.Text, mtbDireccion.Text))
+                        idiomasDLL.Alumnos.UpdateAlumno(New idiomasDLL.Alumno(mtbDni.Text, mtbNombre.Text, mtbApellido.Text, mtbTel.Text, mtbCuenta.Text, mtbDireccion.Text))
                         FormManagement.LoadDataGrids()
                         Me.Close()
                     Catch ex As Exception
@@ -92,16 +91,16 @@ Public Class formModify
                 '
                 'Empleados
                 '
-                If Modo = INSERTAR And alum_OR_Emple = EMPLEADOS And prof_OR_emple = INSERTAR_PROFESOR Then
-                    Try
-                        crudEmployes.InsertTeacher(mtbDni.Text, mtbNombre.Text, mtbApellido.Text, mtbEmail.Text, tbPass.Text, cbPuesto.SelectedItem, mtbTel.Text, mtbDireccion.Text)
-                        FormManagement.LoadDataGrids()
-                        Me.Close()
-                    Catch ex As Exception
-                        MsgBox("Error al actualizar el registro.", MsgBoxStyle.OkOnly + MsgBoxStyle.Critical, "ERROR")
-                        idiomasDLL.INSERT_IN_ERROR_LOG(ex)
-                    End Try
-                ElseIf Modo = ACTUALIZAR And alum_OR_Emple = EMPLEADOS And prof_OR_emple = INSERTAR_EMPLEADO Then
+                If Modo = INSERTAR And alum_OR_Emple = EMPLEADOS And insert_prof_OR_emple = INSERTAR_PROFESOR Then
+                    'Try
+                    crudEmployes.InsertTeacher(mtbDni.Text, mtbNombre.Text, mtbApellido.Text, mtbCuenta.Text, tbPass.Text, cbPuesto.SelectedItem, mtbTel.Text, mtbDireccion.Text)
+                    FormManagement.LoadDataGrids()
+                    Me.Close()
+                    'Catch ex As Exception
+                    '    MsgBox("Error al actualizar el registro.", MsgBoxStyle.OkOnly + MsgBoxStyle.Critical, "ERROR")
+                    '    idiomasDLL.INSERT_IN_ERROR_LOG(ex)
+                    'End Try
+                    ' ElseIf Modo = ACTUALIZAR And alum_OR_Emple = EMPLEADOS And insert_prof_OR_emple = INSERTAR_EMPLEADO Then
                     '  crudEmployes.InsertEmploye()
                 End If
             Else
@@ -138,7 +137,7 @@ Public Class formModify
             nombre = mtbNombre.Text
             apellido = mtbApellido.Text
             direccion = mtbDireccion.Text
-            email = mtbEmail.Text
+            email = mtbCuenta.Text
             telefono = mtbTel.Text
             password = tbPass.Text
 
@@ -149,8 +148,10 @@ Public Class formModify
 
         If cbPuesto.SelectedItem.id = 1 Then
             flpPassword.Visible = True
+            insert_prof_OR_emple = INSERTAR_PROFESOR
         Else
             flpPassword.Visible = False
+            insert_prof_OR_emple = INSERTAR_EMPLEADO
         End If
     End Sub
 
