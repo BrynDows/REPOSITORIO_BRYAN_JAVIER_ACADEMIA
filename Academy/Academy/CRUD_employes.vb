@@ -55,20 +55,9 @@ Public Class CRUD_employes
     Public Sub InsertTeacher(dni As String, nombre As String, apellido As String, email As String, password As String, puesto As Puesto, telefono As String, direccion As String)
         Dim insertAccount As String = "INSERT INTO cuentasUsuario (nombre_usuario, contrasenya, rol) VALUES ('" & email & "', '" & password & "'," & puesto.id & ")"
         ExecuteQuery(insertAccount)
-        Dim insertTeacher As String = "INSERT INTO empleados VALUES('" & dni & "', '" & nombre & "', " & get_idEmail(email) & "," & puesto.id & ", '" & apellido & "', '" & telefono & "', '" & direccion & "', '" & email & "')"
+        Dim insertTeacher As String = "INSERT INTO empleados VALUES('" & dni & "', '" & nombre & "', " & email & "," & puesto.id & ", '" & apellido & "', '" & telefono & "', '" & direccion & "', '" & email & "')"
         ExecuteQuery(insertTeacher)
     End Sub
-
-    Public Function get_idEmail(email As String) As Integer
-        Dim adapter As New OleDbDataAdapter("SELECT id from cuentasUsuario where nombre_usuario= '" & email & "'", connection)
-        Dim dataset As New DataSet
-        adapter.Fill(dataset)
-
-        Dim ro As DataRow = dataset.Tables(0).Rows(0)
-
-        Return CInt(ro(0))
-    End Function
-
 
     Public Sub InsertEmploye(dni As String, nombre As String, puesto As Integer, apellido As String, telefono As String, direccion As String, email As String)
         Dim query As String = "Insert into empleados value"

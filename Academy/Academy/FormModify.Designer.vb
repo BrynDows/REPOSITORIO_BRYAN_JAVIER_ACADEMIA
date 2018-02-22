@@ -43,6 +43,9 @@ Partial Class formModify
         Me.flpApellido = New System.Windows.Forms.FlowLayoutPanel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.mtbApellido = New System.Windows.Forms.MaskedTextBox()
+        Me.flpEmail = New System.Windows.Forms.FlowLayoutPanel()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.mtbEmail = New System.Windows.Forms.MaskedTextBox()
         Me.flpIdioma = New System.Windows.Forms.FlowLayoutPanel()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.cbIdioma = New System.Windows.Forms.ComboBox()
@@ -66,6 +69,7 @@ Partial Class formModify
         Me.flpPuesto.SuspendLayout()
         Me.flpDireccion.SuspendLayout()
         Me.flpApellido.SuspendLayout()
+        Me.flpEmail.SuspendLayout()
         Me.flpIdioma.SuspendLayout()
         CType(Me.IdiomasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Academy_bdDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -84,6 +88,7 @@ Partial Class formModify
         Me.flpPricipal.Controls.Add(Me.flpPuesto)
         Me.flpPricipal.Controls.Add(Me.flpDireccion)
         Me.flpPricipal.Controls.Add(Me.flpApellido)
+        Me.flpPricipal.Controls.Add(Me.flpEmail)
         Me.flpPricipal.Controls.Add(Me.flpIdioma)
         Me.flpPricipal.Controls.Add(Me.flpTel)
         Me.flpPricipal.Controls.Add(Me.flpPassword)
@@ -270,11 +275,40 @@ Partial Class formModify
         Me.mtbApellido.Size = New System.Drawing.Size(356, 38)
         Me.mtbApellido.TabIndex = 27
         '
+        'flpEmail
+        '
+        Me.flpEmail.Controls.Add(Me.Label4)
+        Me.flpEmail.Controls.Add(Me.mtbEmail)
+        Me.flpEmail.Location = New System.Drawing.Point(3, 351)
+        Me.flpEmail.Name = "flpEmail"
+        Me.flpEmail.Size = New System.Drawing.Size(1024, 52)
+        Me.flpEmail.TabIndex = 42
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(3, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Padding = New System.Windows.Forms.Padding(200, 0, 0, 0)
+        Me.Label4.Size = New System.Drawing.Size(447, 32)
+        Me.Label4.TabIndex = 23
+        Me.Label4.Text = "Correo electrónico"
+        '
+        'mtbEmail
+        '
+        Me.mtbEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.mtbEmail.Location = New System.Drawing.Point(473, 0)
+        Me.mtbEmail.Margin = New System.Windows.Forms.Padding(20, 0, 0, 0)
+        Me.mtbEmail.Name = "mtbEmail"
+        Me.mtbEmail.Size = New System.Drawing.Size(356, 38)
+        Me.mtbEmail.TabIndex = 29
+        '
         'flpIdioma
         '
         Me.flpIdioma.Controls.Add(Me.Label6)
         Me.flpIdioma.Controls.Add(Me.cbIdioma)
-        Me.flpIdioma.Location = New System.Drawing.Point(3, 351)
+        Me.flpIdioma.Location = New System.Drawing.Point(3, 409)
         Me.flpIdioma.Name = "flpIdioma"
         Me.flpIdioma.Size = New System.Drawing.Size(1024, 52)
         Me.flpIdioma.TabIndex = 37
@@ -317,7 +351,7 @@ Partial Class formModify
         '
         Me.flpTel.Controls.Add(Me.Label3)
         Me.flpTel.Controls.Add(Me.mtbTel)
-        Me.flpTel.Location = New System.Drawing.Point(3, 409)
+        Me.flpTel.Location = New System.Drawing.Point(3, 467)
         Me.flpTel.Name = "flpTel"
         Me.flpTel.Size = New System.Drawing.Size(1024, 52)
         Me.flpTel.TabIndex = 43
@@ -346,7 +380,7 @@ Partial Class formModify
         '
         Me.flpPassword.Controls.Add(Me.Label9)
         Me.flpPassword.Controls.Add(Me.tbPass)
-        Me.flpPassword.Location = New System.Drawing.Point(3, 467)
+        Me.flpPassword.Location = New System.Drawing.Point(3, 525)
         Me.flpPassword.Name = "flpPassword"
         Me.flpPassword.Size = New System.Drawing.Size(1024, 52)
         Me.flpPassword.TabIndex = 44
@@ -423,6 +457,8 @@ Partial Class formModify
         Me.flpDireccion.PerformLayout()
         Me.flpApellido.ResumeLayout(False)
         Me.flpApellido.PerformLayout()
+        Me.flpEmail.ResumeLayout(False)
+        Me.flpEmail.PerformLayout()
         Me.flpIdioma.ResumeLayout(False)
         Me.flpIdioma.PerformLayout()
         CType(Me.IdiomasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -448,11 +484,13 @@ Partial Class formModify
     Friend WithEvents cbIdioma As ComboBox
     Friend WithEvents bDone As Button
     Friend WithEvents mtbDireccion As MaskedTextBox
+    Friend WithEvents mtbEmail As MaskedTextBox
     Friend WithEvents mtbTel As MaskedTextBox
     Friend WithEvents mtbApellido As MaskedTextBox
     Friend WithEvents mtbNombre As MaskedTextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
+    Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
@@ -461,6 +499,7 @@ Partial Class formModify
     Friend WithEvents flpPuesto As FlowLayoutPanel
     Friend WithEvents flpDireccion As FlowLayoutPanel
     Friend WithEvents flpApellido As FlowLayoutPanel
+    Friend WithEvents flpEmail As FlowLayoutPanel
     Friend WithEvents flpTel As FlowLayoutPanel
     Friend WithEvents mtbCuenta As MaskedTextBox
     Friend WithEvents Academy_bdDataSet As academy_bdDataSet
