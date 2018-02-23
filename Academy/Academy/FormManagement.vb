@@ -51,38 +51,42 @@
     End Sub
 
     Private Sub bMod_Click(sender As Object, e As EventArgs) Handles bMod.Click
+        Try
 
-        If modeTab.Equals(str_ALUMNOS) Then
-            formModify.Modo = ACTUALIZAR
-            formModify.alum_OR_Emple = ALUMNOS
-            Dim selected = dgvAlumnos.SelectedRows(0)
-            formModify.alu = New idiomasDLL.Alumno(selected.Cells(0).Value.ToString,
-                                                   selected.Cells(1).Value.ToString,
-                                                   selected.Cells(2).Value.ToString,
-                                                   selected.Cells(3).Value.ToString,
-                                                   selected.Cells(4).Value.ToString,
-                                                   selected.Cells(5).Value.ToString)
-        ElseIf modeTab.Equals(str_EMPLEADOS) Then
-            Try
+            If modeTab.Equals(str_ALUMNOS) Then
                 formModify.Modo = ACTUALIZAR
-                formModify.alum_OR_Emple = EMPLEADOS
-                Dim row = dgvProfesores.SelectedRows(0)
-                formModify.mtbDni.Text = row.Cells(0).Value.ToString
-                formModify.mtbNombre.Text = row.Cells(1).Value.ToString
-                formModify.mtbApellido.Text = row.Cells(2).Value.ToString
-                formModify.mtbTel.Text = row.Cells(3).Value.ToString
-                formModify.mtbDireccion.Text = row.Cells(4).Value.ToString
-                formModify.mtbEmail.Text = row.Cells(5).Value.ToString
-            Catch ex As ArgumentOutOfRangeException
-                MsgBox("No hay empleados", MsgBoxStyle.OkOnly + MsgBoxStyle.Information, "Vacío")
-                idiomasDLL.Errores.INSERT_IN_ERROR_LOG(ex)
-            Catch Ex As Exception
-                MsgBox("Algo ha ido mal, cierre la aplicación y vuelva a abrirla", MsgBoxStyle.OkOnly + MsgBoxStyle.Critical, "ERROR")
-                idiomasDLL.Errores.INSERT_IN_ERROR_LOG(Ex)
-            End Try
+                formModify.alum_OR_Emple = ALUMNOS
+                Dim selected = dgvAlumnos.SelectedRows(0)
+                formModify.alu = New idiomasDLL.Alumno(selected.Cells(0).Value.ToString,
+                                                       selected.Cells(1).Value.ToString,
+                                                       selected.Cells(2).Value.ToString,
+                                                       selected.Cells(3).Value.ToString,
+                                                       selected.Cells(4).Value.ToString,
+                                                       selected.Cells(5).Value.ToString)
+            ElseIf modeTab.Equals(str_EMPLEADOS) Then
+                Try
+                    formModify.Modo = ACTUALIZAR
+                    formModify.alum_OR_Emple = EMPLEADOS
+                    Dim row = dgvProfesores.SelectedRows(0)
+                    formModify.mtbDni.Text = row.Cells(0).Value.ToString
+                    formModify.mtbNombre.Text = row.Cells(1).Value.ToString
+                    formModify.mtbApellido.Text = row.Cells(2).Value.ToString
+                    formModify.mtbTel.Text = row.Cells(3).Value.ToString
+                    formModify.mtbDireccion.Text = row.Cells(4).Value.ToString
+                    formModify.mtbEmail.Text = row.Cells(5).Value.ToString
+                Catch ex As ArgumentOutOfRangeException
+                    MsgBox("No hay empleados", MsgBoxStyle.OkOnly + MsgBoxStyle.Information, "Vacío")
+                    idiomasDLL.Errores.INSERT_IN_ERROR_LOG(ex)
+                Catch Ex As Exception
+                    MsgBox("Algo ha ido mal, cierre la aplicación y vuelva a abrirla", MsgBoxStyle.OkOnly + MsgBoxStyle.Critical, "ERROR")
+                    idiomasDLL.Errores.INSERT_IN_ERROR_LOG(Ex)
+                End Try
 
-        End If
-        formModify.ShowDialog()
+            End If
+            formModify.ShowDialog()
+        Catch ex As ArgumentOutOfRangeException
+            MsgBox("¿Qué registro quieres modificar?", MsgBoxStyle.Information, "Error")
+        End Try
     End Sub
 
     ''' <summary>
@@ -127,11 +131,15 @@
 
     Private Sub bDel_Click(sender As Object, e As EventArgs) Handles bDel.Click
         If modeTab = str_ALUMNOS Then
-            Dim response = MsgBox("¿Estás seguro de que deseas eliminar este alumno?" & vbCrLf & vbCrLf & "NOTA: Esta operación no se puede deshacer.", MsgBoxStyle.YesNo + MsgBoxStyle.Exclamation, "Eliminar alumno")
+            Dim response = MsgBox("¿Estás seguro de que deseas eliminar el alumno seleccionado?" & vbCrLf & vbCrLf & "NOTA: Esta operación no se puede deshacer.", MsgBoxStyle.YesNo + MsgBoxStyle.Exclamation, "Eliminar alumno")
             If response = MsgBoxResult.Yes Then
                 Try
                     idiomasDLL.Alumnos.DeleteAlumno(dgvAlumnos.SelectedCells(0).Value.ToString)
                     LoadDataGrids()
+                Catch ex As ArgumentOutOfRangeException
+                    MsgBox("No hay ningún alumno seleccionado.", MsgBoxStyle.Information, "Error")
+                    idiomasDLL.Alumnos.CloseConnection()
+                    idiomasDLL.Errores.INSERT_IN_ERROR_LOG(ex)
                 Catch ex As Exception
                     MsgBox("Error al borrar el registro.", MsgBoxStyle.OkOnly + MsgBoxStyle.Critical, "ERROR")
                     idiomasDLL.Alumnos.CloseConnection()
@@ -144,7 +152,7 @@
                 Try
                     Dim row = dgvProfesores.SelectedRows(0)
                     crudEmployes.deleteEmployee(row.Cells(0).Value.ToString,
-                                                row.Cells(6).Value.ToString)
+                                                    row.Cells(6).Value.ToString)
                     crudEmployes.ShowTeachers(dgvProfesores)
                 Catch ex As Exception
                     MsgBox("Error al borrar el registro.", MsgBoxStyle.OkOnly + MsgBoxStyle.Critical, "ERROR")
@@ -156,13 +164,17 @@
     End Sub
 
     Private Sub bBono_Click(sender As Object, e As EventArgs) Handles bBono.Click
-        Dim selected = dgvAlumnos.SelectedRows(0)
-        FormBonos.alu = New idiomasDLL.Alumno(selected.Cells(0).Value.ToString,
-                                              selected.Cells(1).Value.ToString,
-                                              selected.Cells(2).Value.ToString,
-                                              selected.Cells(3).Value.ToString,
-                                              selected.Cells(4).Value.ToString,
-                                              selected.Cells(5).Value.ToString)
-        FormBonos.ShowDialog()
+        Try
+            Dim selected = dgvAlumnos.SelectedRows(0)
+            FormBonos.alu = New idiomasDLL.Alumno(selected.Cells(0).Value.ToString,
+                                                  selected.Cells(1).Value.ToString,
+                                                  selected.Cells(2).Value.ToString,
+                                                  selected.Cells(3).Value.ToString,
+                                                  selected.Cells(4).Value.ToString,
+                                                  selected.Cells(5).Value.ToString)
+            FormBonos.ShowDialog()
+        Catch ex As Exception
+            MsgBox("Ningún alumno seleccionado.", MsgBoxStyle.Information, "Error")
+        End Try
     End Sub
 End Class
