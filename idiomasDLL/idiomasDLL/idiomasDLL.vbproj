@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="Alumno.vb" />
     <Compile Include="Alumnos.vb" />
+    <Compile Include="Bonos.vb" />
     <Compile Include="Error.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

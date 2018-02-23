@@ -147,6 +147,13 @@
     End Sub
 
     Private Sub bBono_Click(sender As Object, e As EventArgs) Handles bBono.Click
-
+        Dim selected = dgvAlumnos.SelectedRows(0)
+        FormBonos.alu = New idiomasDLL.Alumno(selected.Cells(0).Value.ToString,
+                                              selected.Cells(1).Value.ToString,
+                                              selected.Cells(2).Value.ToString,
+                                              selected.Cells(3).Value.ToString,
+                                              selected.Cells(4).Value.ToString,
+                                              selected.Cells(5).Value.ToString)
+        FormBonos.ShowDialog()
     End Sub
 End Class
