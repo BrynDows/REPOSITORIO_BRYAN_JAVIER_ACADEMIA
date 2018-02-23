@@ -71,8 +71,6 @@
             formModify.mtbTel.Text = row.Cells(3).Value.ToString
             formModify.mtbDireccion.Text = row.Cells(4).Value.ToString
             formModify.mtbEmail.Text = row.Cells(5).Value.ToString
-            formModify.mtbCuenta.Text = row.Cells(6).Value.ToString
-            formModify.cbPuesto.Text = row.Cells(7).Value.ToString
         End If
         formModify.ShowDialog()
 
@@ -111,17 +109,34 @@
     End Sub
 
     Private Sub bDel_Click(sender As Object, e As EventArgs) Handles bDel.Click
-        Dim response = MsgBox("¿Estás seguro de que deseas eliminar este alumno?" & vbCrLf & vbCrLf & "NOTA: Esta operación no se puede deshacer.", MsgBoxStyle.YesNo + MsgBoxStyle.Exclamation, "Eliminar alumno")
-        If response = MsgBoxResult.Yes Then
-            Try
-                idiomasDLL.Alumnos.DeleteAlumno(dgvAlumnos.SelectedCells(0).Value.ToString)
-                LoadDataGrids()
-            Catch ex As Exception
-                MsgBox("Error al borrar el registro.", MsgBoxStyle.OkOnly + MsgBoxStyle.Critical, "ERROR")
-                idiomasDLL.Alumnos.CloseConnection()
-                idiomasDLL.Errores.INSERT_IN_ERROR_LOG(ex)
-            End Try
+        If modeTab = str_ALUMNOS Then
+            Dim response = MsgBox("¿Estás seguro de que deseas eliminar este alumno?" & vbCrLf & vbCrLf & "NOTA: Esta operación no se puede deshacer.", MsgBoxStyle.YesNo + MsgBoxStyle.Exclamation, "Eliminar alumno")
+            If response = MsgBoxResult.Yes Then
+                Try
+                    idiomasDLL.Alumnos.DeleteAlumno(dgvAlumnos.SelectedCells(0).Value.ToString)
+                    LoadDataGrids()
+                Catch ex As Exception
+                    MsgBox("Error al borrar el registro.", MsgBoxStyle.OkOnly + MsgBoxStyle.Critical, "ERROR")
+                    idiomasDLL.Alumnos.CloseConnection()
+                    idiomasDLL.Errores.INSERT_IN_ERROR_LOG(ex)
+                End Try
+            End If
+        ElseIf modeTab = str_EMPLEADOS Then
+            Dim response = MsgBox("¿Estás seguro de que deseas eliminar este empleado?" & vbCrLf & vbCrLf & "NOTA: Esta operación no se puede deshacer.", MsgBoxStyle.YesNo + MsgBoxStyle.Exclamation, "Eliminar alumno")
+            If response = MsgBoxResult.Yes Then
+                Try
+                    Dim row = dgvProfesores.SelectedRows(0)
+                    crudEmployes.deleteEmployee(row.Cells(0).Value.ToString,
+                                                row.Cells(6).Value.ToString)
+                    crudEmployes.ShowTeachers(dgvProfesores)
+                Catch ex As Exception
+                    MsgBox("Error al borrar el registro.", MsgBoxStyle.OkOnly + MsgBoxStyle.Critical, "ERROR")
+                    idiomasDLL.Alumnos.CloseConnection()
+                    idiomasDLL.Errores.INSERT_IN_ERROR_LOG(ex)
+                End Try
+            End If
         End If
+
     End Sub
 
 End Class

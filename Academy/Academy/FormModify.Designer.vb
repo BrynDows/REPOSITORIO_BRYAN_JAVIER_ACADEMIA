@@ -28,9 +28,6 @@ Partial Class formModify
         Me.flpDni = New System.Windows.Forms.FlowLayoutPanel()
         Me.lblDni = New System.Windows.Forms.Label()
         Me.mtbDni = New System.Windows.Forms.MaskedTextBox()
-        Me.flpCuenta = New System.Windows.Forms.FlowLayoutPanel()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.mtbCuenta = New System.Windows.Forms.MaskedTextBox()
         Me.flpNombre = New System.Windows.Forms.FlowLayoutPanel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.mtbNombre = New System.Windows.Forms.MaskedTextBox()
@@ -64,7 +61,6 @@ Partial Class formModify
         Me.IdiomasTableAdapter = New Academy.academy_bdDataSet1TableAdapters.idiomasTableAdapter()
         Me.flpPricipal.SuspendLayout()
         Me.flpDni.SuspendLayout()
-        Me.flpCuenta.SuspendLayout()
         Me.flpNombre.SuspendLayout()
         Me.flpPuesto.SuspendLayout()
         Me.flpDireccion.SuspendLayout()
@@ -83,7 +79,6 @@ Partial Class formModify
         'flpPricipal
         '
         Me.flpPricipal.Controls.Add(Me.flpDni)
-        Me.flpPricipal.Controls.Add(Me.flpCuenta)
         Me.flpPricipal.Controls.Add(Me.flpNombre)
         Me.flpPricipal.Controls.Add(Me.flpPuesto)
         Me.flpPricipal.Controls.Add(Me.flpDireccion)
@@ -128,41 +123,11 @@ Partial Class formModify
         Me.mtbDni.Size = New System.Drawing.Size(356, 38)
         Me.mtbDni.TabIndex = 17
         '
-        'flpCuenta
-        '
-        Me.flpCuenta.Controls.Add(Me.Label7)
-        Me.flpCuenta.Controls.Add(Me.mtbCuenta)
-        Me.flpCuenta.Location = New System.Drawing.Point(3, 61)
-        Me.flpCuenta.Name = "flpCuenta"
-        Me.flpCuenta.Size = New System.Drawing.Size(1024, 52)
-        Me.flpCuenta.TabIndex = 1
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.BackColor = System.Drawing.Color.SteelBlue
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(3, 0)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Padding = New System.Windows.Forms.Padding(200, 0, 0, 0)
-        Me.Label7.Size = New System.Drawing.Size(307, 32)
-        Me.Label7.TabIndex = 33
-        Me.Label7.Text = "Cuenta"
-        '
-        'mtbCuenta
-        '
-        Me.mtbCuenta.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.mtbCuenta.Location = New System.Drawing.Point(446, 0)
-        Me.mtbCuenta.Margin = New System.Windows.Forms.Padding(133, 0, 0, 0)
-        Me.mtbCuenta.Name = "mtbCuenta"
-        Me.mtbCuenta.Size = New System.Drawing.Size(317, 38)
-        Me.mtbCuenta.TabIndex = 34
-        '
         'flpNombre
         '
         Me.flpNombre.Controls.Add(Me.Label1)
         Me.flpNombre.Controls.Add(Me.mtbNombre)
-        Me.flpNombre.Location = New System.Drawing.Point(3, 119)
+        Me.flpNombre.Location = New System.Drawing.Point(3, 61)
         Me.flpNombre.Name = "flpNombre"
         Me.flpNombre.Size = New System.Drawing.Size(1024, 52)
         Me.flpNombre.TabIndex = 38
@@ -192,7 +157,7 @@ Partial Class formModify
         '
         Me.flpPuesto.Controls.Add(Me.Label8)
         Me.flpPuesto.Controls.Add(Me.cbPuesto)
-        Me.flpPuesto.Location = New System.Drawing.Point(3, 177)
+        Me.flpPuesto.Location = New System.Drawing.Point(3, 119)
         Me.flpPuesto.Name = "flpPuesto"
         Me.flpPuesto.Size = New System.Drawing.Size(1024, 52)
         Me.flpPuesto.TabIndex = 39
@@ -221,7 +186,7 @@ Partial Class formModify
         '
         Me.flpDireccion.Controls.Add(Me.Label5)
         Me.flpDireccion.Controls.Add(Me.mtbDireccion)
-        Me.flpDireccion.Location = New System.Drawing.Point(3, 235)
+        Me.flpDireccion.Location = New System.Drawing.Point(3, 177)
         Me.flpDireccion.Name = "flpDireccion"
         Me.flpDireccion.Size = New System.Drawing.Size(1024, 52)
         Me.flpDireccion.TabIndex = 40
@@ -250,7 +215,7 @@ Partial Class formModify
         '
         Me.flpApellido.Controls.Add(Me.Label2)
         Me.flpApellido.Controls.Add(Me.mtbApellido)
-        Me.flpApellido.Location = New System.Drawing.Point(3, 293)
+        Me.flpApellido.Location = New System.Drawing.Point(3, 235)
         Me.flpApellido.Name = "flpApellido"
         Me.flpApellido.Size = New System.Drawing.Size(1024, 52)
         Me.flpApellido.TabIndex = 41
@@ -279,7 +244,7 @@ Partial Class formModify
         '
         Me.flpEmail.Controls.Add(Me.Label4)
         Me.flpEmail.Controls.Add(Me.mtbEmail)
-        Me.flpEmail.Location = New System.Drawing.Point(3, 351)
+        Me.flpEmail.Location = New System.Drawing.Point(3, 293)
         Me.flpEmail.Name = "flpEmail"
         Me.flpEmail.Size = New System.Drawing.Size(1024, 52)
         Me.flpEmail.TabIndex = 42
@@ -308,7 +273,7 @@ Partial Class formModify
         '
         Me.flpIdioma.Controls.Add(Me.Label6)
         Me.flpIdioma.Controls.Add(Me.cbIdioma)
-        Me.flpIdioma.Location = New System.Drawing.Point(3, 409)
+        Me.flpIdioma.Location = New System.Drawing.Point(3, 351)
         Me.flpIdioma.Name = "flpIdioma"
         Me.flpIdioma.Size = New System.Drawing.Size(1024, 52)
         Me.flpIdioma.TabIndex = 37
@@ -351,7 +316,7 @@ Partial Class formModify
         '
         Me.flpTel.Controls.Add(Me.Label3)
         Me.flpTel.Controls.Add(Me.mtbTel)
-        Me.flpTel.Location = New System.Drawing.Point(3, 467)
+        Me.flpTel.Location = New System.Drawing.Point(3, 409)
         Me.flpTel.Name = "flpTel"
         Me.flpTel.Size = New System.Drawing.Size(1024, 52)
         Me.flpTel.TabIndex = 43
@@ -380,7 +345,7 @@ Partial Class formModify
         '
         Me.flpPassword.Controls.Add(Me.Label9)
         Me.flpPassword.Controls.Add(Me.tbPass)
-        Me.flpPassword.Location = New System.Drawing.Point(3, 525)
+        Me.flpPassword.Location = New System.Drawing.Point(3, 467)
         Me.flpPassword.Name = "flpPassword"
         Me.flpPassword.Size = New System.Drawing.Size(1024, 52)
         Me.flpPassword.TabIndex = 44
@@ -447,8 +412,6 @@ Partial Class formModify
         Me.flpPricipal.ResumeLayout(False)
         Me.flpDni.ResumeLayout(False)
         Me.flpDni.PerformLayout()
-        Me.flpCuenta.ResumeLayout(False)
-        Me.flpCuenta.PerformLayout()
         Me.flpNombre.ResumeLayout(False)
         Me.flpNombre.PerformLayout()
         Me.flpPuesto.ResumeLayout(False)
@@ -478,8 +441,6 @@ Partial Class formModify
     Friend WithEvents flpDni As FlowLayoutPanel
     Friend WithEvents lblDni As Label
     Friend WithEvents mtbDni As MaskedTextBox
-    Friend WithEvents flpCuenta As FlowLayoutPanel
-    Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents cbIdioma As ComboBox
     Friend WithEvents bDone As Button
@@ -501,7 +462,6 @@ Partial Class formModify
     Friend WithEvents flpApellido As FlowLayoutPanel
     Friend WithEvents flpEmail As FlowLayoutPanel
     Friend WithEvents flpTel As FlowLayoutPanel
-    Friend WithEvents mtbCuenta As MaskedTextBox
     Friend WithEvents Academy_bdDataSet As academy_bdDataSet
     Friend WithEvents AcademybdDataSetBindingSource As BindingSource
     Friend WithEvents AcademybdDataSetBindingSource1 As BindingSource

@@ -2,52 +2,23 @@
 
 Public Class Employe
     Public ReadOnly Property dni As String
-    Public ReadOnly Property name As String
-    Public ReadOnly Property job As Integer
-    Public ReadOnly Property account As Integer
-    Public ReadOnly Property surname As String
-    Public ReadOnly Property tel As String
-    Public ReadOnly Property address As String
+    Public ReadOnly Property nombre As String
+    Public ReadOnly Property puesto As Puesto
+    Public ReadOnly Property apellido As String
+    Public ReadOnly Property telefono As String
+    Public ReadOnly Property direccion As String
     Public ReadOnly Property email As String
+    Public ReadOnly Property user As User
 
-    ''' <summary>
-    ''' Instanciar empleado normal
-    ''' </summary>
-    ''' <param name="dni"></param>
-    ''' <param name="name"></param>
-    ''' <param name="job"></param>
-    ''' <param name="surname"></param>
-    ''' <param name="tel"></param>
-    ''' <param name="address"></param>
-    ''' <param name="email"></param>
-    Public Sub New(dni As String, name As String, job As Integer, surname As String, tel As String, address As String, email As String)
+    Public Sub New(dni As String, nombre As String, puesto As Puesto, apellido As String, telefono As String, direccion As String, email As String, user As User)
         Me.dni = dni
-        Me.name = name
-        Me.job = job
-        Me.surname = surname
-        Me.tel = tel
-        Me.address = address
+        Me.nombre = nombre
+        Me.puesto = puesto
+        Me.apellido = apellido
+        Me.telefono = telefono
+        Me.direccion = direccion
         Me.email = email
+        Me.user = user
     End Sub
-    ''' <summary>
-    ''' Instanciar Profesor
-    ''' </summary>
-    ''' <param name="dni"></param>
-    ''' <param name="name"></param>
-    ''' <param name="job"></param>
-    ''' <param name="account"></param>
-    ''' <param name="surname"></param>
-    ''' <param name="tel"></param>
-    ''' <param name="address"></param>
-    ''' <param name="email"></param>
-    Public Sub New(dni As String, name As String, job As Integer, account As Integer, surname As String, tel As String, address As String, email As String)
-        Me.dni = dni
-        Me.name = name
-        Me.job = job
-        Me.account = account
-        Me.surname = surname
-        Me.tel = tel
-        Me.address = address
-        Me.email = email
-    End Sub
+
 End Class

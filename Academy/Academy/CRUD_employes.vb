@@ -55,31 +55,54 @@ Public Class CRUD_employes
     Public Sub InsertTeacher(dni As String, nombre As String, apellido As String, email As String, password As String, puesto As Puesto, telefono As String, direccion As String)
         Dim insertAccount As String = "INSERT INTO cuentasUsuario (nombre_usuario, contrasenya, rol) VALUES ('" & email & "', '" & password & "'," & puesto.id & ")"
         ExecuteQuery(insertAccount)
-        Dim insertTeacher As String = "INSERT INTO empleados VALUES('" & dni & "', '" & nombre & "', " & email & "," & puesto.id & ", '" & apellido & "', '" & telefono & "', '" & direccion & "', '" & email & "')"
+        Dim insertTeacher As String = "INSERT INTO empleados VALUES('" & dni & "', '" & nombre & "', " & getIDAccount(email) & "," & puesto.id & ", '" & apellido & "', '" & telefono & "', '" & direccion & "', '" & email & "')"
         ExecuteQuery(insertTeacher)
     End Sub
+
+    Public Function getIDAccount(email As String) As Integer
+        Dim resu As Integer = 0
+        Dim query As String = "SELECT id FROM cuentasUsuario WHERE nombre_usuario = '" & email & "'"
+        Dim adapter As New OleDbDataAdapter(query, connection)
+        Dim dataset As New DataSet
+        adapter.Fill(dataset)
+        resu = CInt(dataset.Tables(0).Rows(0).Item(0))
+
+        Return CInt(resu)
+    End Function
 
     Public Sub InsertEmploye(dni As String, nombre As String, puesto As Puesto, apellido As String, telefono As String, direccion As String, email As String)
         Dim query As String = "INSERT INTO empleados (dni, nombre, puesto, apellido, telefono, direccion, email) VALUES ('" & dni & "','" & nombre & "'," & puesto.id & ",'" & apellido & "','" & telefono & "','" & direccion & "','" & email & "')"
         ExecuteQuery(query)
     End Sub
-
+    '------------------- aquei tamiend
     Public Sub UpdateEmployee(newEmploye As Employe)
-        Dim query As String = "UPDATE FROM empleados SET nombre =" & newEmploye.name &
-                                                  ", SET apellido =" & newEmploye.surname &
-                                                  ", SET puesto = " & newEmploye.job &
-                                                  ", SET telefono = " & newEmploye.tel &
-                                                  ", SET direccion = " & newEmploye.address &
-                                                  ", SET email = " & newEmploye.email &
-                                                  "  WHERE dni = " & newEmploye.dni
+        Dim query As String = "UPDATE FROM empleados SET nombre = '" & newEmploye.nombre & "'" &
+                                              ", SET cuenta = " & newEmploye.user.Rol &
+                                              ", SET puesto = " & newEmploye.puesto.id &
+                                              ", SET apellido = '" & newEmploye.apellido & "'" &
+                                              ", SET telefono = '" & newEmploye.telefono & "'" &
+                                              ", SET direccion = '" & newEmploye.direccion & "'" &
+                                              ", SET email = '" & newEmploye.email & "'" &
+                                              "  WHERE dni = '" & newEmploye.dni & "'"
         ExecuteQuery(query)
     End Sub
 
 
-    Public Sub deleteEmployee(dni As String)
-        Dim deleteFROM_empleadosAlumnos
-        Dim query As String = "Delete from empleados where dni = '" & dni & "'"
-        ExecuteQuery(query)
+    Public Sub deleteEmployee(dni As String, userName As String)
+        If userName.Length > 2 Then
+            Dim DELETE_cuentas As String = "DELETE FROM cuentasUsuario WHERE nombre_usuario = " & userName
+            ExecuteQuery(DELETE_cuentas)
+            Dim DELETE_empleados_idiomas As String = "DELETE FROM empleados_idiomas WHERE dni_empleado = '" & dni & "'"
+            ExecuteQuery(DELETE_empleados_idiomas)
+            Dim DELETE_empleados_alumnos As String = "DELETE FROM empleados_alumnos WHERE dni_profesor = '" & dni & "'"
+            ExecuteQuery(DELETE_empleados_alumnos)
+            Dim DELETE_Empleados As String = "DELETE FROM empleados WHERE dni = '" & dni & "'"
+            ExecuteQuery(DELETE_Empleados)
+        Else
+            Dim DELETE_empleados As String = "DELETE FROM empleados WHERE dni = " & dni & "'"
+            ExecuteQuery(DELETE_empleados)
+        End If
+
     End Sub
 
     Public Sub loadComboBoxPuestos(comboBox As ComboBox)

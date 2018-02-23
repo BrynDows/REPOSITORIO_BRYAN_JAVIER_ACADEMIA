@@ -26,7 +26,6 @@ Public Class formModify
         End If
 
         If alum_OR_Emple = ALUMNOS And Modo = ACTUALIZAR Then
-            flpCuenta.Visible = False
             flpPuesto.Visible = False
             flpPassword.Visible = False
             bDone.Text = "Modificar"
@@ -92,17 +91,42 @@ Public Class formModify
                 '
                 'Empleados
                 '
+
                 If Modo = INSERTAR And alum_OR_Emple = EMPLEADOS And prof_OR_emple = INSERTAR_PROFESOR Then
+
                     Try
                         crudEmployes.InsertTeacher(mtbDni.Text, mtbNombre.Text, mtbApellido.Text, mtbEmail.Text, tbPass.Text, cbPuesto.SelectedItem, mtbTel.Text, mtbDireccion.Text)
                         FormManagement.LoadDataGrids()
                         Me.Close()
                     Catch ex As Exception
-                        MsgBox("Error al actualizar el registro.", MsgBoxStyle.OkOnly + MsgBoxStyle.Critical, "ERROR")
+                        MsgBox("Error al insertar el registro.", MsgBoxStyle.OkOnly + MsgBoxStyle.Critical, "ERROR")
                         idiomasDLL.INSERT_IN_ERROR_LOG(ex)
                     End Try
-                ElseIf Modo = ACTUALIZAR And alum_OR_Emple = EMPLEADOS And prof_OR_emple = INSERTAR_EMPLEADO Then
-                    '  crudEmployes.InsertEmploye()
+                ElseIf Modo = INSERTAR And alum_OR_Emple = EMPLEADOS And prof_OR_emple = INSERTAR_EMPLEADO Then
+                    Try
+                        crudEmployes.InsertEmploye(mtbDni.Text, mtbNombre.Text, cbPuesto.SelectedItem, mtbApellido.Text, mtbTel.Text, mtbDireccion.Text, mtbEmail.Text)
+
+                    Catch ex As Exception
+
+                        MsgBox("Error al insertar el registro.", MsgBoxStyle.OkOnly + MsgBoxStyle.Critical, "ERROR")
+                        idiomasDLL.INSERT_IN_ERROR_LOG(ex)
+                    End Try
+                ElseIf Modo = ACTUALIZAR And alum_OR_Emple = EMPLEADOS Then
+                    'Try -----------------------------------aqui---------------------------
+                    crudEmployes.UpdateEmployee(New Employe(mtbDni.Text,
+                                                                mtbNombre.Text,
+                                                                cbPuesto.SelectedItem,
+                                                                mtbApellido.Text,
+                                                                mtbTel.Text,
+                                                                mtbDireccion.Text,
+                                                                mtbEmail.Text,
+                                                                New User(mtbEmail.Text, mtbDni.Text, cbPuesto.SelectedItem.id)
+                                                                ))
+
+                    'Catch ex As Exception
+                    '    MsgBox("Error al actualizar el registro.", MsgBoxStyle.OkOnly + MsgBoxStyle.Critical, "ERROR")
+                    '    idiomasDLL.INSERT_IN_ERROR_LOG(ex)
+                    'End Try
                 End If
             Else
                 MsgBox("La dirección de email no es válida. Revísala.", MsgBoxStyle.OkOnly + MsgBoxStyle.Exclamation, "Email incorrecto")
@@ -130,7 +154,7 @@ Public Class formModify
             Dim dni, nombre, apellido, direccion, email, telefono, password As String
             Dim cuenta As Integer
             Try
-                cuenta = CInt(mtbCuenta.Text)
+                cuenta = CInt(mtbEmail.Text)
             Catch ex As InvalidCastException
                 idiomasDLL.INSERT_IN_ERROR_LOG(ex)
             End Try
@@ -147,9 +171,11 @@ Public Class formModify
 
     Private Sub cbPuesto_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbPuesto.SelectedIndexChanged
 
-        If cbPuesto.SelectedItem.id = 1 Then
+        If cbPuesto.SelectedItem.id = 1 Or cbPuesto.SelectedItem.id = 2 Then
             flpPassword.Visible = True
+            prof_OR_emple = INSERTAR_PROFESOR
         Else
+            prof_OR_emple = INSERTAR_EMPLEADO
             flpPassword.Visible = False
         End If
     End Sub
