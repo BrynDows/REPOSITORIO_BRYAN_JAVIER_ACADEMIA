@@ -1,5 +1,7 @@
 ﻿Module modulo
     Public crudEmployes As New CRUD_employes
+    Public login As New Login
+
     Public Const EMPLEADOS As Integer = 1
     Public Const ALUMNOS As Integer = 0
 
@@ -11,4 +13,5 @@
 
     Public Const str_EMPLEADOS = "Empleados"
     Public Const str_ALUMNOS = "Alumnos"
+
 End Module
