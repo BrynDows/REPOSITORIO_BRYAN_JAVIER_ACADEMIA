@@ -47,4 +47,16 @@ Public Class Alumnos
     Public Shared Sub CloseConnection()
         connection.Close()
     End Sub
+
+    '
+    '------------------CRYSTAL REPORT
+    '
+
+    Public Shared Sub generateReport(dniLastRecord As String)
+        Dim query As String = "SELECT * FROM alumnos where dni = '" & dniLastRecord & "'"
+        Dim adapter As New OleDbDataAdapter(query, connection)
+        Dim dataset = New DataSet
+        adapter.Fill(dataset, "lastRecord")
+        dataset.WriteXml("informe.xml", XmlWriteMode.WriteSchema)
+    End Sub
 End Class
