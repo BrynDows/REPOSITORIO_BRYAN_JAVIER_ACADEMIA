@@ -367,6 +367,7 @@ Partial Class formModify
         Me.tbPass.Location = New System.Drawing.Point(348, 3)
         Me.tbPass.Multiline = True
         Me.tbPass.Name = "tbPass"
+        Me.tbPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.tbPass.Size = New System.Drawing.Size(331, 37)
         Me.tbPass.TabIndex = 23
         '

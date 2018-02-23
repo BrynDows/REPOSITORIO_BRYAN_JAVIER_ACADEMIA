@@ -131,7 +131,7 @@
                     crudEmployes.ShowTeachers(dgvProfesores)
                 Catch ex As Exception
                     MsgBox("Error al borrar el registro.", MsgBoxStyle.OkOnly + MsgBoxStyle.Critical, "ERROR")
-                    idiomasDLL.Alumnos.CloseConnection()
+                    MsgBox(ex.Message)
                     idiomasDLL.Errores.INSERT_IN_ERROR_LOG(ex)
                 End Try
             End If

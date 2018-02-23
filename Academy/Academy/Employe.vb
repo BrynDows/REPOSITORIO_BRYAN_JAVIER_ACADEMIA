@@ -9,7 +9,6 @@ Public Class Employe
     Public ReadOnly Property direccion As String
     Public ReadOnly Property email As String
     Public ReadOnly Property user As User
-
     Public Sub New(dni As String, nombre As String, puesto As Puesto, apellido As String, telefono As String, direccion As String, email As String, user As User)
         Me.dni = dni
         Me.nombre = nombre

@@ -9,7 +9,7 @@ Public Class formModify
     Public Property alum_OR_Emple As Byte
 
     Public Property prof_OR_emple As Byte
-
+    Private oldAccountEmploye As String
     Private Sub FormModify_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ToolTip1.IsBalloon = True
         mtbTel.Mask = "000000000"
@@ -23,12 +23,13 @@ Public Class formModify
         If Modo = INSERTAR Then
             bDone.Text = "Añadir"
             mtbDni.Enabled = True
+        Else
+            bDone.Text = "Modificar"
         End If
 
         If alum_OR_Emple = ALUMNOS And Modo = ACTUALIZAR Then
             flpPuesto.Visible = False
             flpPassword.Visible = False
-            bDone.Text = "Modificar"
             mtbDni.Text = alu.DNI
             mtbNombre.Text = alu.Nombre
             mtbApellido.Text = alu.Apellido
@@ -39,6 +40,7 @@ Public Class formModify
         End If
 
         If alum_OR_Emple = EMPLEADOS And Modo = ACTUALIZAR Then
+            oldAccountEmploye = mtbEmail.Text
             mtbDni.Enabled = False
         End If
         'cargar comboBox: cbPuesto
@@ -91,7 +93,6 @@ Public Class formModify
                 '
                 'Empleados
                 '
-
                 If Modo = INSERTAR And alum_OR_Emple = EMPLEADOS And prof_OR_emple = INSERTAR_PROFESOR Then
 
                     Try
@@ -105,28 +106,31 @@ Public Class formModify
                 ElseIf Modo = INSERTAR And alum_OR_Emple = EMPLEADOS And prof_OR_emple = INSERTAR_EMPLEADO Then
                     Try
                         crudEmployes.InsertEmploye(mtbDni.Text, mtbNombre.Text, cbPuesto.SelectedItem, mtbApellido.Text, mtbTel.Text, mtbDireccion.Text, mtbEmail.Text)
-
+                        FormManagement.LoadDataGrids()
+                        Me.Close()
                     Catch ex As Exception
 
                         MsgBox("Error al insertar el registro.", MsgBoxStyle.OkOnly + MsgBoxStyle.Critical, "ERROR")
                         idiomasDLL.INSERT_IN_ERROR_LOG(ex)
                     End Try
                 ElseIf Modo = ACTUALIZAR And alum_OR_Emple = EMPLEADOS Then
-                    'Try -----------------------------------aqui---------------------------
-                    crudEmployes.UpdateEmployee(New Employe(mtbDni.Text,
+                    Try
+                        crudEmployes.UpdateEmployee(New Employe(mtbDni.Text,
                                                                 mtbNombre.Text,
                                                                 cbPuesto.SelectedItem,
                                                                 mtbApellido.Text,
                                                                 mtbTel.Text,
                                                                 mtbDireccion.Text,
                                                                 mtbEmail.Text,
-                                                                New User(mtbEmail.Text, mtbDni.Text, cbPuesto.SelectedItem.id)
-                                                                ))
+                                                                New User(mtbEmail.Text, mtbDni.Text, cbPuesto.SelectedItem.id, tbPass.Text)
+                                                                ), oldAccountEmploye)
+                        FormManagement.LoadDataGrids()
+                        Me.Close()
 
-                    'Catch ex As Exception
-                    '    MsgBox("Error al actualizar el registro.", MsgBoxStyle.OkOnly + MsgBoxStyle.Critical, "ERROR")
-                    '    idiomasDLL.INSERT_IN_ERROR_LOG(ex)
-                    'End Try
+                    Catch ex As Exception
+                        MsgBox("Error al actualizar el registro.", MsgBoxStyle.OkOnly + MsgBoxStyle.Critical, "ERROR")
+                    idiomasDLL.INSERT_IN_ERROR_LOG(ex)
+                    End Try
                 End If
             Else
                 MsgBox("La dirección de email no es válida. Revísala.", MsgBoxStyle.OkOnly + MsgBoxStyle.Exclamation, "Email incorrecto")
@@ -171,13 +175,22 @@ Public Class formModify
 
     Private Sub cbPuesto_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbPuesto.SelectedIndexChanged
 
-        If cbPuesto.SelectedItem.id = 1 Or cbPuesto.SelectedItem.id = 2 Then
+        If cbPuesto.SelectedItem.id = 1 Then
             flpPassword.Visible = True
             prof_OR_emple = INSERTAR_PROFESOR
+            flpIdioma.Visible = True
         Else
             prof_OR_emple = INSERTAR_EMPLEADO
             flpPassword.Visible = False
+            flpIdioma.Visible = False
+        End If
+        If cbPuesto.SelectedItem.id = 2 Then
+            flpPassword.Visible = True
+            prof_OR_emple = INSERTAR_PROFESOR
         End If
     End Sub
 
+    Private Sub formModify_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        cbPuesto.Items.Clear()
+    End Sub
 End Class
