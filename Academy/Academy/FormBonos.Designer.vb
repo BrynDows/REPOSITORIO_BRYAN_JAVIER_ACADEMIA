@@ -24,11 +24,11 @@ Partial Class FormBonos
     Private Sub InitializeComponent()
         Me.lTitle = New System.Windows.Forms.Label()
         Me.gbSeason = New System.Windows.Forms.GroupBox()
-        Me.rbInvierno = New System.Windows.Forms.RadioButton()
         Me.rbVerano = New System.Windows.Forms.RadioButton()
+        Me.rbInvierno = New System.Windows.Forms.RadioButton()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.rbPresencial = New System.Windows.Forms.RadioButton()
         Me.rbSkype = New System.Windows.Forms.RadioButton()
+        Me.rbPresencial = New System.Windows.Forms.RadioButton()
         Me.gbLugar = New System.Windows.Forms.GroupBox()
         Me.rbDomi = New System.Windows.Forms.RadioButton()
         Me.rbEscuela = New System.Windows.Forms.RadioButton()
@@ -66,6 +66,17 @@ Partial Class FormBonos
         Me.gbSeason.TabStop = False
         Me.gbSeason.Text = "Época"
         '
+        'rbVerano
+        '
+        Me.rbVerano.AutoSize = True
+        Me.rbVerano.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbVerano.Location = New System.Drawing.Point(19, 85)
+        Me.rbVerano.Name = "rbVerano"
+        Me.rbVerano.Size = New System.Drawing.Size(132, 36)
+        Me.rbVerano.TabIndex = 1
+        Me.rbVerano.Text = "Verano"
+        Me.rbVerano.UseVisualStyleBackColor = True
+        '
         'rbInvierno
         '
         Me.rbInvierno.AutoSize = True
@@ -79,17 +90,6 @@ Partial Class FormBonos
         Me.rbInvierno.Text = "Invierno"
         Me.rbInvierno.UseVisualStyleBackColor = True
         '
-        'rbVerano
-        '
-        Me.rbVerano.AutoSize = True
-        Me.rbVerano.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rbVerano.Location = New System.Drawing.Point(19, 85)
-        Me.rbVerano.Name = "rbVerano"
-        Me.rbVerano.Size = New System.Drawing.Size(132, 36)
-        Me.rbVerano.TabIndex = 1
-        Me.rbVerano.Text = "Verano"
-        Me.rbVerano.UseVisualStyleBackColor = True
-        '
         'Panel1
         '
         Me.Panel1.Controls.Add(Me.rbSkype)
@@ -98,6 +98,17 @@ Partial Class FormBonos
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(237, 117)
         Me.Panel1.TabIndex = 3
+        '
+        'rbSkype
+        '
+        Me.rbSkype.AutoSize = True
+        Me.rbSkype.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbSkype.Location = New System.Drawing.Point(3, 70)
+        Me.rbSkype.Name = "rbSkype"
+        Me.rbSkype.Size = New System.Drawing.Size(180, 36)
+        Me.rbSkype.TabIndex = 2
+        Me.rbSkype.Text = "A distancia"
+        Me.rbSkype.UseVisualStyleBackColor = True
         '
         'rbPresencial
         '
@@ -111,17 +122,6 @@ Partial Class FormBonos
         Me.rbPresencial.TabStop = True
         Me.rbPresencial.Text = "Presencial"
         Me.rbPresencial.UseVisualStyleBackColor = True
-        '
-        'rbSkype
-        '
-        Me.rbSkype.AutoSize = True
-        Me.rbSkype.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rbSkype.Location = New System.Drawing.Point(3, 70)
-        Me.rbSkype.Name = "rbSkype"
-        Me.rbSkype.Size = New System.Drawing.Size(180, 36)
-        Me.rbSkype.TabIndex = 2
-        Me.rbSkype.Text = "A distancia"
-        Me.rbSkype.UseVisualStyleBackColor = True
         '
         'gbLugar
         '
@@ -195,7 +195,6 @@ Partial Class FormBonos
         'nudPersonas
         '
         Me.nudPersonas.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.nudPersonas.Increment = New Decimal(New Integer() {5, 0, 0, 0})
         Me.nudPersonas.Location = New System.Drawing.Point(579, 399)
         Me.nudPersonas.Maximum = New Decimal(New Integer() {6, 0, 0, 0})
         Me.nudPersonas.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
