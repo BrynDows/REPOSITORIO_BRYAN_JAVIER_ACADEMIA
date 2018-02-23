@@ -4,8 +4,6 @@ Public Class FormLogin
 
     Private actualUser As User
     Private Sub FormLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        idiomasDLL.Alumnos.generateReport("00000040A")
-        FormCrystal.Show()
         btnLogin.Enabled = False
         tbPass.Enabled = False
         For Each user As User In modulo.login.getUsers
