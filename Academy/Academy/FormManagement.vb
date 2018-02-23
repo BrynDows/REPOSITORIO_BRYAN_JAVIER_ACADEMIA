@@ -62,15 +62,24 @@
                                                    selected.Cells(4).Value.ToString,
                                                    selected.Cells(5).Value.ToString)
         ElseIf modeTab.Equals(str_EMPLEADOS) Then
-            formModify.Modo = ACTUALIZAR
-            formModify.alum_OR_Emple = EMPLEADOS
-            Dim row = dgvProfesores.SelectedRows(0)
-            formModify.mtbDni.Text = row.Cells(0).Value.ToString
-            formModify.mtbNombre.Text = row.Cells(1).Value.ToString
-            formModify.mtbApellido.Text = row.Cells(2).Value.ToString
-            formModify.mtbTel.Text = row.Cells(3).Value.ToString
-            formModify.mtbDireccion.Text = row.Cells(4).Value.ToString
-            formModify.mtbEmail.Text = row.Cells(5).Value.ToString
+            Try
+                formModify.Modo = ACTUALIZAR
+                formModify.alum_OR_Emple = EMPLEADOS
+                Dim row = dgvProfesores.SelectedRows(0)
+                formModify.mtbDni.Text = row.Cells(0).Value.ToString
+                formModify.mtbNombre.Text = row.Cells(1).Value.ToString
+                formModify.mtbApellido.Text = row.Cells(2).Value.ToString
+                formModify.mtbTel.Text = row.Cells(3).Value.ToString
+                formModify.mtbDireccion.Text = row.Cells(4).Value.ToString
+                formModify.mtbEmail.Text = row.Cells(5).Value.ToString
+            Catch ex As ArgumentOutOfRangeException
+                MsgBox("No hay empleados", MsgBoxStyle.OkOnly + MsgBoxStyle.Information, "Vacío")
+                idiomasDLL.Errores.INSERT_IN_ERROR_LOG(ex)
+            Catch Ex As Exception
+                MsgBox("Algo ha ido mal, cierre la aplicación y vuelva a abrirla", MsgBoxStyle.OkOnly + MsgBoxStyle.Critical, "ERROR")
+                idiomasDLL.Errores.INSERT_IN_ERROR_LOG(Ex)
+            End Try
+
         End If
         formModify.ShowDialog()
 

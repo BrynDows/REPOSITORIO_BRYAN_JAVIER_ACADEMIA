@@ -87,13 +87,13 @@ Public Class CRUD_employes
     Public Sub UpdateEmployee(newEmploye As Employe, oldAccount As String)
         If getIDAccount(newEmploye.email) = 0 And newEmploye.puesto.id = 1 Then
             'Actualiza empleado normal a profesor
-            Dim insertNewAccount As String = "INSERT INTO cuentasUsuario (nombre_usuario, contrasenya, rol) VALUES ( '" & newEmploye.user.Name & "'," &
+            Dim insertNewAccount As String = "INSERT INTO cuentasUsuario (nombre_usuario, contrasenya, rol) VALUES ( '" & newEmploye.user.userName & "'," &
                     "'" & newEmploye.user.password & "'," & newEmploye.puesto.id & ")"
             ExecuteQuery(insertNewAccount)
 
             Dim query As String = "UPDATE empleados SET nombre = '" & newEmploye.nombre & "'" &
                 ", puesto = " & newEmploye.puesto.id &
-                ", cuenta = " & getIDAccount(newEmploye.user.Name) &
+                ", cuenta = " & getIDAccount(newEmploye.user.userName) &
                 ", apellido = '" & newEmploye.apellido & "'" &
                 ", telefono = '" & newEmploye.telefono & "'" &
                 ", direccion = '" & newEmploye.direccion & "'" &
