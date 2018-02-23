@@ -19,6 +19,7 @@
         If user.Rol.Equals("jefe") Then
             'soy jefe y muesro las dos pestañas, profesor y alumnos
             tcModos.TabPages.Insert(0, tabProfesores)
+            tcModos.SelectedIndex = 0 ' Seleccionamos la primera tab para no liar al usuario
         End If
         LoadDataGrids()
     End Sub
@@ -73,11 +74,13 @@
             formModify.mtbEmail.Text = row.Cells(5).Value.ToString
         End If
         formModify.ShowDialog()
-
-
-
     End Sub
 
+    ''' <summary>
+    ''' Botón cerrar sesión
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
     Private Sub bLogout_Click(sender As Object, e As EventArgs) Handles bLogout.Click
         FormLogin.Show()
         Me.Close()
@@ -102,10 +105,15 @@
     ' Este evento captura los valores de la celda en la cal se ha hecho click y rellena los campos del formulario FormModify,
     ' cada obtención de dato de cada campo está rodeado de un tryCatch
     '
-
-
     Private Sub tcModos_SelectedIndexChanged(sender As Object, e As EventArgs) Handles tcModos.SelectedIndexChanged
         modeTab = tcModos.GetControl(sender.selectedIndex).Text
+        If modeTab = str_ALUMNOS Then
+            bBono.Visible = True
+            bSpecialTax.Visible = True
+        Else
+            bBono.Visible = False
+            bSpecialTax.Visible = False
+        End If
     End Sub
 
     Private Sub bDel_Click(sender As Object, e As EventArgs) Handles bDel.Click
@@ -136,7 +144,9 @@
                 End Try
             End If
         End If
-
     End Sub
 
+    Private Sub bBono_Click(sender As Object, e As EventArgs) Handles bBono.Click
+
+    End Sub
 End Class

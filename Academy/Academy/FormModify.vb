@@ -12,13 +12,10 @@ Public Class formModify
     Private oldAccountEmploye As String
     Private Sub FormModify_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ToolTip1.IsBalloon = True
-        mtbTel.Mask = "000000000"
+        mtbTel.Mask = "000000000" ' Máscara para el campo teléfono
+        mtbDni.Mask = "00000000>L" ' Máscara para el campo DNI
         'TODO: esta línea de código carga datos en la tabla 'Academy_bdDataSet1.idiomas' Puede moverla o quitarla según sea necesario.
         Me.IdiomasTableAdapter.Fill(Me.Academy_bdDataSet1.idiomas)
-
-
-        mtbTel.Mask = "000 000 000"
-        mtbDni.Mask = "00000000>L"
 
         If Modo = INSERTAR Then
             bDone.Text = "Añadir"
