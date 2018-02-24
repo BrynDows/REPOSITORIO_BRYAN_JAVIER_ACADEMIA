@@ -49,14 +49,35 @@ Public Class Alumnos
     End Sub
 
     '
-    '------------------CRYSTAL REPORT
+    '------------------CRYSTAL REPORT ÚLTIMO ALUMNO AÑADIDO
     '
-
     Public Shared Sub generateReport_lastRecord(dniLastRecord As String)
         Dim query As String = "SELECT * FROM alumnos where dni = '" & dniLastRecord & "'"
         Dim adapter As New OleDbDataAdapter(query, connection)
         Dim dataset = New DataSet
         adapter.Fill(dataset, "lastRecord")
         dataset.WriteXml("informe.xml", XmlWriteMode.WriteSchema)
+    End Sub
+    '
+    '----------------CRYSTAL REPORT TODOS LOS ALUMNOS
+    '
+
+    '
+    'CrystalReport de Todos los alumnos
+    '
+    Public Shared Sub generateReport_ALUMNOS()
+        Dim query As String = "SELECT alumnos.*, empleados.nombre, empleados.apellido 
+                                FROM alumnos, empleados, empleados_alumnos
+                                where alumnos.dni = empleados_alumnos.dni_alumno 
+                                AND empleados_alumnos.dni_profesor = empleados.dni"
+        Try
+            Dim adapter As New OleDbDataAdapter(query, connection)
+            Dim dataset = New DataSet
+            adapter.Fill(dataset, "informe_alumnos")
+            dataset.WriteXml("informe_ALUMNOS.xml", XmlWriteMode.WriteSchema)
+        Catch ex As Exception
+            idiomasDLL.Errores.INSERT_IN_ERROR_LOG(ex)
+        End Try
+
     End Sub
 End Class

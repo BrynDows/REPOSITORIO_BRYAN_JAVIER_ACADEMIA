@@ -195,6 +195,7 @@
     End Sub
 
     Private Sub InformeAlumnosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InformeAlumnosToolStripMenuItem.Click
-        'Pendiente
+        idiomasDLL.Alumnos.generateReport_ALUMNOS()
+        Form_Crystal_ALUMNOS.Show()
     End Sub
 End Class

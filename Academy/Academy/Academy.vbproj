@@ -138,6 +138,12 @@
     <Compile Include="FormInformation.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form_Crystal_ALUMNOS.Designer.vb">
+      <DependentUpon>Form_Crystal_ALUMNOS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Crystal_ALUMNOS.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form_Crystal_empleados.Designer.vb">
       <DependentUpon>Form_Crystal_empleados.vb</DependentUpon>
     </Compile>
@@ -168,6 +174,12 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Puesto.vb" />
+    <Compile Include="Report_ALUMNOS.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Report_ALUMNOS.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Report_EMPLEADOS.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -198,6 +210,9 @@
     <EmbeddedResource Include="FormInformation.resx">
       <DependentUpon>FormInformation.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_Crystal_ALUMNOS.resx">
+      <DependentUpon>Form_Crystal_ALUMNOS.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Crystal_empleados.resx">
       <DependentUpon>Form_Crystal_empleados.vb</DependentUpon>
     </EmbeddedResource>
@@ -210,6 +225,10 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_ALUMNOS.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Report_ALUMNOS.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Report_EMPLEADOS.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -269,6 +288,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="bin\Debug\informe.xml" />
+    <Content Include="bin\Debug\informe_ALUMNOS.xml" />
+    <Content Include="bin\Debug\informe_EMPLEADOS.xml" />
     <Content Include="bin\Debug\user.png" />
     <None Include="Resources\award_star_gold_2.png" />
     <None Include="Resources\medal_gold_2.png" />

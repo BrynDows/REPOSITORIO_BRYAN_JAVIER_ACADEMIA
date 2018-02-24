@@ -10,6 +10,8 @@
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'idiomasDLL.Alumnos.generateReport_ALUMNOS()
+
         ProgressBar1.Maximum = 100
         Timer1.Start()
     End Sub

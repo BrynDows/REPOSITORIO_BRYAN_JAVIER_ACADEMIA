@@ -1,0 +1,111 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="informe_empleados">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="dni" type="xs:string" minOccurs="0" />
+                <xs:element name="empleados.nombre" type="xs:string" minOccurs="0" />
+                <xs:element name="apellido" type="xs:string" minOccurs="0" />
+                <xs:element name="telefono" type="xs:string" minOccurs="0" />
+                <xs:element name="direccion" type="xs:string" minOccurs="0" />
+                <xs:element name="email" type="xs:string" minOccurs="0" />
+                <xs:element name="nombre_usuario" type="xs:string" minOccurs="0" />
+                <xs:element name="puestos.nombre" type="xs:string" minOccurs="0" />
+                <xs:element name="dni_alumno" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <informe_empleados>
+    <dni>54351578W</dni>
+    <empleados.nombre>Bryan</empleados.nombre>
+    <apellido>tiban</apellido>
+    <telefono>111 111 111</telefono>
+    <direccion>Calle de la viña</direccion>
+    <email>bryan@hotmail.com</email>
+    <nombre_usuario>bryan@hotmail.com</nombre_usuario>
+    <puestos.nombre>jefe</puestos.nombre>
+  </informe_empleados>
+  <informe_empleados>
+    <dni>22222222B</dni>
+    <empleados.nombre>erdsa</empleados.nombre>
+    <apellido>rasdsa</apellido>
+    <telefono>444 444 444</telefono>
+    <direccion>rasda</direccion>
+    <email>asdsad@hotmail.com</email>
+    <nombre_usuario>asdsad@hotmail.com</nombre_usuario>
+    <puestos.nombre>profesor</puestos.nombre>
+    <dni_alumno>00000020A</dni_alumno>
+  </informe_empleados>
+  <informe_empleados>
+    <dni>22222222B</dni>
+    <empleados.nombre>erdsa</empleados.nombre>
+    <apellido>rasdsa</apellido>
+    <telefono>444 444 444</telefono>
+    <direccion>rasda</direccion>
+    <email>asdsad@hotmail.com</email>
+    <nombre_usuario>asdsad@hotmail.com</nombre_usuario>
+    <puestos.nombre>profesor</puestos.nombre>
+    <dni_alumno>00000060A</dni_alumno>
+  </informe_empleados>
+  <informe_empleados>
+    <dni>88888888B</dni>
+    <empleados.nombre>ferikosk</empleados.nombre>
+    <apellido>dasd</apellido>
+    <telefono>999 999 999</telefono>
+    <direccion>dasd</direccion>
+    <email>Picosanto@hotmail.com</email>
+    <nombre_usuario>Picosanto@hotmail.com</nombre_usuario>
+    <puestos.nombre>profesor</puestos.nombre>
+    <dni_alumno>00000030A</dni_alumno>
+  </informe_empleados>
+  <informe_empleados>
+    <dni>88888888B</dni>
+    <empleados.nombre>ferikosk</empleados.nombre>
+    <apellido>dasd</apellido>
+    <telefono>999 999 999</telefono>
+    <direccion>dasd</direccion>
+    <email>Picosanto@hotmail.com</email>
+    <nombre_usuario>Picosanto@hotmail.com</nombre_usuario>
+    <puestos.nombre>profesor</puestos.nombre>
+    <dni_alumno>00000040A</dni_alumno>
+  </informe_empleados>
+  <informe_empleados>
+    <dni>88888888B</dni>
+    <empleados.nombre>ferikosk</empleados.nombre>
+    <apellido>dasd</apellido>
+    <telefono>999 999 999</telefono>
+    <direccion>dasd</direccion>
+    <email>Picosanto@hotmail.com</email>
+    <nombre_usuario>Picosanto@hotmail.com</nombre_usuario>
+    <puestos.nombre>profesor</puestos.nombre>
+    <dni_alumno>00000050A</dni_alumno>
+  </informe_empleados>
+  <informe_empleados>
+    <dni>33333333C</dni>
+    <empleados.nombre>b</empleados.nombre>
+    <apellido>b</apellido>
+    <telefono>b</telefono>
+    <direccion>b</direccion>
+    <email>b@hotmail.com</email>
+    <nombre_usuario>aaa@hotmail.com</nombre_usuario>
+    <puestos.nombre>profesor</puestos.nombre>
+  </informe_empleados>
+  <informe_empleados>
+    <dni>54351578S</dni>
+    <empleados.nombre>c</empleados.nombre>
+    <apellido>c</apellido>
+    <telefono>c</telefono>
+    <direccion>c</direccion>
+    <email>c@hotmail.com</email>
+    <nombre_usuario>bbb@hotmail.com</nombre_usuario>
+    <puestos.nombre>profesor</puestos.nombre>
+  </informe_empleados>
+</NewDataSet>

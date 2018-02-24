@@ -162,7 +162,7 @@ Public Class CRUD_employes
         Next
     End Sub
     '
-    'CrystalReport
+    'CrystalReport de último alumno añadido
     '
     Public Sub generateReport_EMPLEADOS()
         Dim query As String = "SELECT empleados.dni, empleados.nombre, empleados.apellido, empleados.telefono, empleados.direccion, empleados.email, cuentasUsuario.nombre_usuario, puestos.nombre, empleados_alumnos.dni_alumno
@@ -172,4 +172,5 @@ Public Class CRUD_employes
         adapter.Fill(dataset, "informe_empleados")
         dataset.WriteXml("informe_EMPLEADOS.xml", XmlWriteMode.WriteSchema)
     End Sub
+
 End Class
