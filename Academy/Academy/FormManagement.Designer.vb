@@ -46,6 +46,7 @@ Partial Class FormManagement
         Me.ToolStripDropDownButton1 = New System.Windows.Forms.ToolStripDropDownButton()
         Me.InformeAlumnosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InformeEmpleadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         Me.tcModos.SuspendLayout()
         Me.tabProfesores.SuspendLayout()
         CType(Me.dgvProfesores, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -139,7 +140,7 @@ Partial Class FormManagement
         Me.tabAlumnos.Name = "tabAlumnos"
         Me.tabAlumnos.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.tabAlumnos.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.tabAlumnos.Size = New System.Drawing.Size(1036, 651)
+        Me.tabAlumnos.Size = New System.Drawing.Size(1036, 652)
         Me.tabAlumnos.TabIndex = 1
         Me.tabAlumnos.Text = "Alumnos"
         '
@@ -159,7 +160,7 @@ Partial Class FormManagement
         Me.dgvAlumnos.RowTemplate.Height = 28
         Me.dgvAlumnos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvAlumnos.ShowEditingIcon = False
-        Me.dgvAlumnos.Size = New System.Drawing.Size(1026, 643)
+        Me.dgvAlumnos.Size = New System.Drawing.Size(1026, 644)
         Me.dgvAlumnos.TabIndex = 0
         '
         'bLogout
@@ -332,6 +333,10 @@ Partial Class FormManagement
         Me.InformeEmpleadosToolStripMenuItem.Size = New System.Drawing.Size(252, 30)
         Me.InformeEmpleadosToolStripMenuItem.Text = "Informe empleados"
         '
+        'HelpProvider1
+        '
+        Me.HelpProvider1.HelpNamespace = "X:\academiaingles\Academy\Academy\bin\Debug\Always idiomas.chm"
+        '
         'FormManagement
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -342,8 +347,10 @@ Partial Class FormManagement
         Me.Controls.Add(Me.toolStrip)
         Me.Controls.Add(Me.bLogout)
         Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.HelpButton = True
         Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "FormManagement"
+        Me.HelpProvider1.SetShowHelp(Me, True)
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Panel de gestión"
         Me.tcModos.ResumeLayout(False)
@@ -385,4 +392,5 @@ Partial Class FormManagement
     Friend WithEvents ToolStripDropDownButton1 As ToolStripDropDownButton
     Friend WithEvents InformeAlumnosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents InformeEmpleadosToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents HelpProvider1 As HelpProvider
 End Class

@@ -24,6 +24,7 @@ Partial Class FormCrystal
     Private Sub InitializeComponent()
         Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.informe1 = New Academy.informe()
+        Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         Me.SuspendLayout()
         '
         'CrystalReportViewer1
@@ -33,17 +34,25 @@ Partial Class FormCrystal
         Me.CrystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default
         Me.CrystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.CrystalReportViewer1.Location = New System.Drawing.Point(0, 0)
+        Me.CrystalReportViewer1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.CrystalReportViewer1.Name = "CrystalReportViewer1"
         Me.CrystalReportViewer1.ReportSource = Me.informe1
-        Me.CrystalReportViewer1.Size = New System.Drawing.Size(1113, 687)
+        Me.CrystalReportViewer1.Size = New System.Drawing.Size(1252, 859)
         Me.CrystalReportViewer1.TabIndex = 0
+        Me.CrystalReportViewer1.ToolPanelWidth = 225
+        '
+        'HelpProvider1
+        '
+        Me.HelpProvider1.HelpNamespace = "X:\academiaingles\Academy\Academy\bin\Debug\Always idiomas.chm"
         '
         'FormCrystal
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1113, 687)
+        Me.ClientSize = New System.Drawing.Size(1252, 859)
         Me.Controls.Add(Me.CrystalReportViewer1)
+        Me.HelpButton = True
+        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "FormCrystal"
         Me.Text = "FormCrystal"
         Me.ResumeLayout(False)
@@ -52,4 +61,5 @@ Partial Class FormCrystal
 
     Friend WithEvents CrystalReportViewer1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
     Friend WithEvents informe1 As informe
+    Friend WithEvents HelpProvider1 As HelpProvider
 End Class

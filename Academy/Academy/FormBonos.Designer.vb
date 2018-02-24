@@ -43,6 +43,7 @@ Partial Class FormBonos
         Me.tsbSalir = New System.Windows.Forms.ToolStripButton()
         Me.mcDate = New System.Windows.Forms.MonthCalendar()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         Me.Panel1.SuspendLayout()
         Me.gbLugar.SuspendLayout()
         CType(Me.nudHoras, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -272,6 +273,10 @@ Partial Class FormBonos
         Me.Label3.TabIndex = 19
         Me.Label3.Text = "Fecha de inicio"
         '
+        'HelpProvider1
+        '
+        Me.HelpProvider1.HelpNamespace = "X:\academiaingles\Academy\Academy\bin\Debug\Always idiomas.chm"
+        '
         'FormBonos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -290,6 +295,7 @@ Partial Class FormBonos
         Me.Controls.Add(Me.gbLugar)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.lTitle)
+        Me.HelpButton = True
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.MaximizeBox = False
         Me.Name = "FormBonos"
@@ -329,4 +335,5 @@ Partial Class FormBonos
     Friend WithEvents tsbSalir As ToolStripButton
     Friend WithEvents mcDate As MonthCalendar
     Friend WithEvents Label3 As Label
+    Friend WithEvents HelpProvider1 As HelpProvider
 End Class

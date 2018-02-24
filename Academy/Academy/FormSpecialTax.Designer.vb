@@ -30,6 +30,7 @@ Partial Class FormSpecialTax
         Me.rbPrepa = New System.Windows.Forms.RadioButton()
         Me.lPrice = New System.Windows.Forms.Label()
         Me.bDone = New System.Windows.Forms.Button()
+        Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -121,6 +122,10 @@ Partial Class FormSpecialTax
         Me.bDone.Text = "Asignar"
         Me.bDone.UseVisualStyleBackColor = True
         '
+        'HelpProvider1
+        '
+        Me.HelpProvider1.HelpNamespace = "X:\academiaingles\Academy\Academy\bin\Debug\Always idiomas.chm"
+        '
         'FormSpecialTax
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -133,6 +138,7 @@ Partial Class FormSpecialTax
         Me.Controls.Add(Me.cbTitu)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.lTitle)
+        Me.HelpButton = True
         Me.MaximizeBox = False
         Me.Name = "FormSpecialTax"
         Me.Text = "Asignar tarifa especial"
@@ -151,4 +157,5 @@ Partial Class FormSpecialTax
     Friend WithEvents rbPrepa As RadioButton
     Friend WithEvents lPrice As Label
     Friend WithEvents bDone As Button
+    Friend WithEvents HelpProvider1 As HelpProvider
 End Class
