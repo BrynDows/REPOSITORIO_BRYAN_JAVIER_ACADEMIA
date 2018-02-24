@@ -19,6 +19,13 @@ Public Class Bonos
         Return ret
     End Function
 
+    Public Shared Sub UpdateAlumnoBono(idBono As Integer, dniAlumno As String)
+        connection.Open()
+        Dim terminal As New OleDbCommand("UPDATE empleados_alumnos SET bono = " & idBono & " WHERE dni_alumno = '" & dniAlumno & "'", connection)
+        terminal.ExecuteNonQuery()
+        connection.Close()
+    End Sub
+
     Public Shared Sub CloseConnection()
         connection.Close()
     End Sub
