@@ -60,7 +60,7 @@ Public Class CRUD_employes
     '
     'OBTENER ID DE EMAIL
     '
-    Public Function getIDAccount(email As String) As Integer
+    Private Function getIDAccount(email As String) As Integer
         Dim resu As Integer = 0
         Try
             Dim query As String = "SELECT id FROM cuentasUsuario WHERE nombre_usuario = '" & email & "'"
