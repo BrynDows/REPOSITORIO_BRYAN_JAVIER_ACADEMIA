@@ -14,6 +14,9 @@
     Public Const str_EMPLEADOS = "Empleados"
     Public Const str_ALUMNOS = "Alumnos"
 
+    Public Const INVIERNO = True
+    Public Const VERANO = False
+
     Public Sub ExitToAPP(form As Form)
         Dim r = MsgBox("¿Está seguro de que desea salir?", 48 + 4, "Salir")
         If r = vbYes Then
