@@ -132,6 +132,18 @@
     <Compile Include="FormModify.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormInformation.Designer.vb">
+      <DependentUpon>FormInformation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormInformation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Crystal_empleados.Designer.vb">
+      <DependentUpon>Form_Crystal_empleados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Crystal_empleados.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="informe.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -156,6 +168,12 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Puesto.vb" />
+    <Compile Include="Report_EMPLEADOS.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Report_EMPLEADOS.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="User.vb" />
   </ItemGroup>
   <ItemGroup>
@@ -177,6 +195,12 @@
     <EmbeddedResource Include="FormModify.resx">
       <DependentUpon>FormModify.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormInformation.resx">
+      <DependentUpon>FormInformation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Crystal_empleados.resx">
+      <DependentUpon>Form_Crystal_empleados.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="informe.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>informe.vb</LastGenOutput>
@@ -186,6 +210,10 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_EMPLEADOS.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Report_EMPLEADOS.vb</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -242,6 +270,10 @@
     </Content>
     <Content Include="bin\Debug\informe.xml" />
     <Content Include="bin\Debug\user.png" />
+    <None Include="Resources\award_star_gold_2.png" />
+    <None Include="Resources\medal_gold_2.png" />
+    <None Include="Resources\application_view_detail.png" />
+    <None Include="Resources\door_out.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />

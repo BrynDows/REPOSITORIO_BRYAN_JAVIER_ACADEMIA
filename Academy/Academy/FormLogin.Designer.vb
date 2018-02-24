@@ -22,26 +22,68 @@ Partial Class FormLogin
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormLogin))
+        Me.NotifyIcon = New System.Windows.Forms.NotifyIcon(Me.components)
+        Me.cmstrip = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AyudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.flowPanel = New System.Windows.Forms.FlowLayoutPanel()
-        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.toolStrip = New System.Windows.Forms.ToolStrip()
+        Me.tsbInformacion = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.tsbAYdua = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.tsbSalir = New System.Windows.Forms.ToolStripButton()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel()
         Me.lNameUser = New System.Windows.Forms.Label()
         Me.lPass = New System.Windows.Forms.Label()
         Me.tbPass = New System.Windows.Forms.TextBox()
         Me.btnLogin = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStrip1.SuspendLayout()
+        Me.cmstrip.SuspendLayout()
+        Me.toolStrip.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel3.SuspendLayout()
         Me.TableLayoutPanel4.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'NotifyIcon
+        '
+        Me.NotifyIcon.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info
+        Me.NotifyIcon.BalloonTipText = "Bienvenido a Always Academy"
+        Me.NotifyIcon.BalloonTipTitle = "Always Academy"
+        Me.NotifyIcon.ContextMenuStrip = Me.cmstrip
+        Me.NotifyIcon.Icon = CType(resources.GetObject("NotifyIcon.Icon"), System.Drawing.Icon)
+        Me.NotifyIcon.Text = "Always Academy"
+        Me.NotifyIcon.Visible = True
+        '
+        'cmstrip
+        '
+        Me.cmstrip.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.cmstrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SalirToolStripMenuItem, Me.AyudaToolStripMenuItem})
+        Me.cmstrip.Name = "cmstrip"
+        Me.cmstrip.Size = New System.Drawing.Size(125, 56)
+        Me.cmstrip.Text = "Opciones"
+        '
+        'SalirToolStripMenuItem
+        '
+        Me.SalirToolStripMenuItem.Image = Global.Academy.My.Resources.Resources.door_out
+        Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
+        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(124, 26)
+        Me.SalirToolStripMenuItem.Text = "Salir"
+        '
+        'AyudaToolStripMenuItem
+        '
+        Me.AyudaToolStripMenuItem.Image = Global.Academy.My.Resources.Resources.help
+        Me.AyudaToolStripMenuItem.Name = "AyudaToolStripMenuItem"
+        Me.AyudaToolStripMenuItem.Size = New System.Drawing.Size(124, 26)
+        Me.AyudaToolStripMenuItem.Text = "Ayuda"
         '
         'flowPanel
         '
@@ -52,15 +94,49 @@ Partial Class FormLogin
         Me.flowPanel.Size = New System.Drawing.Size(338, 355)
         Me.flowPanel.TabIndex = 15
         '
-        'ToolStrip1
+        'toolStrip
         '
-        Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton2, Me.ToolStripButton1})
-        Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(1039, 27)
-        Me.ToolStrip1.TabIndex = 16
-        Me.ToolStrip1.Text = "ToolStrip1"
+        Me.toolStrip.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.toolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsbInformacion, Me.ToolStripSeparator1, Me.tsbAYdua, Me.ToolStripSeparator2, Me.tsbSalir})
+        Me.toolStrip.Location = New System.Drawing.Point(0, 0)
+        Me.toolStrip.Name = "toolStrip"
+        Me.toolStrip.Size = New System.Drawing.Size(1039, 27)
+        Me.toolStrip.TabIndex = 16
+        Me.toolStrip.Text = "ToolStrip1"
+        '
+        'tsbInformacion
+        '
+        Me.tsbInformacion.Image = Global.Academy.My.Resources.Resources.book
+        Me.tsbInformacion.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsbInformacion.Name = "tsbInformacion"
+        Me.tsbInformacion.Size = New System.Drawing.Size(113, 24)
+        Me.tsbInformacion.Text = "Información"
+        '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 27)
+        '
+        'tsbAYdua
+        '
+        Me.tsbAYdua.Image = Global.Academy.My.Resources.Resources.help
+        Me.tsbAYdua.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsbAYdua.Name = "tsbAYdua"
+        Me.tsbAYdua.Size = New System.Drawing.Size(75, 24)
+        Me.tsbAYdua.Text = "Ayuda"
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 27)
+        '
+        'tsbSalir
+        '
+        Me.tsbSalir.Image = Global.Academy.My.Resources.Resources.door_out
+        Me.tsbSalir.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsbSalir.Name = "tsbSalir"
+        Me.tsbSalir.Size = New System.Drawing.Size(62, 24)
+        Me.tsbSalir.Text = "Salir"
         '
         'TableLayoutPanel1
         '
@@ -89,6 +165,17 @@ Partial Class FormLogin
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel2.Size = New System.Drawing.Size(1033, 329)
         Me.TableLayoutPanel2.TabIndex = 17
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PictureBox1.Image = Global.Academy.My.Resources.Resources.logo_academy2
+        Me.PictureBox1.Location = New System.Drawing.Point(3, 3)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(1027, 323)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 15
+        Me.PictureBox1.TabStop = False
         '
         'TableLayoutPanel3
         '
@@ -170,35 +257,6 @@ Partial Class FormLogin
         Me.btnLogin.Text = "Acceder"
         Me.btnLogin.UseVisualStyleBackColor = True
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PictureBox1.Image = Global.Academy.My.Resources.Resources.logo_academy2
-        Me.PictureBox1.Location = New System.Drawing.Point(3, 3)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(1027, 323)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 15
-        Me.PictureBox1.TabStop = False
-        '
-        'ToolStripButton2
-        '
-        Me.ToolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton2.Image = Global.Academy.My.Resources.Resources.book
-        Me.ToolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton2.Name = "ToolStripButton2"
-        Me.ToolStripButton2.Size = New System.Drawing.Size(24, 24)
-        Me.ToolStripButton2.Text = "ToolStripButton2"
-        '
-        'ToolStripButton1
-        '
-        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton1.Image = Global.Academy.My.Resources.Resources.help
-        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(24, 24)
-        Me.ToolStripButton1.Text = "ToolStripButton1"
-        '
         'FormLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -207,26 +265,27 @@ Partial Class FormLogin
         Me.ClientSize = New System.Drawing.Size(1039, 729)
         Me.ControlBox = False
         Me.Controls.Add(Me.TableLayoutPanel1)
-        Me.Controls.Add(Me.ToolStrip1)
+        Me.Controls.Add(Me.toolStrip)
         Me.Name = "FormLogin"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Inicio de sesión"
-        Me.ToolStrip1.ResumeLayout(False)
-        Me.ToolStrip1.PerformLayout()
+        Me.cmstrip.ResumeLayout(False)
+        Me.toolStrip.ResumeLayout(False)
+        Me.toolStrip.PerformLayout()
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel2.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel3.ResumeLayout(False)
         Me.TableLayoutPanel4.ResumeLayout(False)
         Me.TableLayoutPanel4.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents flowPanel As FlowLayoutPanel
-    Friend WithEvents ToolStrip1 As ToolStrip
-    Friend WithEvents ToolStripButton2 As ToolStripButton
-    Friend WithEvents ToolStripButton1 As ToolStripButton
+    Friend WithEvents toolStrip As ToolStrip
+    Friend WithEvents tsbInformacion As ToolStripButton
+    Friend WithEvents tsbAYdua As ToolStripButton
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
     Friend WithEvents PictureBox1 As PictureBox
@@ -236,4 +295,11 @@ Partial Class FormLogin
     Friend WithEvents lPass As Label
     Friend WithEvents lNameUser As Label
     Friend WithEvents btnLogin As Button
+    Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
+    Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
+    Friend WithEvents tsbSalir As ToolStripButton
+    Friend WithEvents NotifyIcon As NotifyIcon
+    Friend WithEvents cmstrip As ContextMenuStrip
+    Friend WithEvents SalirToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AyudaToolStripMenuItem As ToolStripMenuItem
 End Class

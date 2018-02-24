@@ -59,6 +59,12 @@ Partial Class formModify
         Me.AcademybdDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.AcademybdDataSetBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.IdiomasTableAdapter = New Academy.academy_bdDataSet1TableAdapters.idiomasTableAdapter()
+        Me.toolStrip = New System.Windows.Forms.ToolStrip()
+        Me.tsbInformacion = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.tsbAYdua = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.tsbSalir = New System.Windows.Forms.ToolStripButton()
         Me.flpPricipal.SuspendLayout()
         Me.flpDni.SuspendLayout()
         Me.flpNombre.SuspendLayout()
@@ -74,6 +80,7 @@ Partial Class formModify
         CType(Me.Academy_bdDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AcademybdDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AcademybdDataSetBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.toolStrip.SuspendLayout()
         Me.SuspendLayout()
         '
         'flpPricipal
@@ -400,12 +407,57 @@ Partial Class formModify
         '
         Me.IdiomasTableAdapter.ClearBeforeFill = True
         '
+        'toolStrip
+        '
+        Me.toolStrip.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.toolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsbInformacion, Me.ToolStripSeparator1, Me.tsbAYdua, Me.ToolStripSeparator2, Me.tsbSalir})
+        Me.toolStrip.Location = New System.Drawing.Point(0, 0)
+        Me.toolStrip.Name = "toolStrip"
+        Me.toolStrip.Size = New System.Drawing.Size(1039, 27)
+        Me.toolStrip.TabIndex = 32
+        Me.toolStrip.Text = "ToolStrip1"
+        '
+        'tsbInformacion
+        '
+        Me.tsbInformacion.Image = Global.Academy.My.Resources.Resources.book
+        Me.tsbInformacion.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsbInformacion.Name = "tsbInformacion"
+        Me.tsbInformacion.Size = New System.Drawing.Size(113, 24)
+        Me.tsbInformacion.Text = "Información"
+        '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 27)
+        '
+        'tsbAYdua
+        '
+        Me.tsbAYdua.Image = Global.Academy.My.Resources.Resources.help
+        Me.tsbAYdua.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsbAYdua.Name = "tsbAYdua"
+        Me.tsbAYdua.Size = New System.Drawing.Size(75, 24)
+        Me.tsbAYdua.Text = "Ayuda"
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 27)
+        '
+        'tsbSalir
+        '
+        Me.tsbSalir.Image = Global.Academy.My.Resources.Resources.door_out
+        Me.tsbSalir.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsbSalir.Name = "tsbSalir"
+        Me.tsbSalir.Size = New System.Drawing.Size(62, 24)
+        Me.tsbSalir.Text = "Salir"
+        '
         'formModify
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.SteelBlue
         Me.ClientSize = New System.Drawing.Size(1039, 729)
+        Me.Controls.Add(Me.toolStrip)
         Me.Controls.Add(Me.flpPricipal)
         Me.Controls.Add(Me.bDone)
         Me.Name = "formModify"
@@ -434,7 +486,10 @@ Partial Class formModify
         CType(Me.Academy_bdDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AcademybdDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AcademybdDataSetBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.toolStrip.ResumeLayout(False)
+        Me.toolStrip.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents ToolTip1 As ToolTip
@@ -473,4 +528,10 @@ Partial Class formModify
     Friend WithEvents Label9 As Label
     Friend WithEvents tbPass As TextBox
     Friend WithEvents cbPuesto As ComboBox
+    Friend WithEvents toolStrip As ToolStrip
+    Friend WithEvents tsbInformacion As ToolStripButton
+    Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
+    Friend WithEvents tsbAYdua As ToolStripButton
+    Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
+    Friend WithEvents tsbSalir As ToolStripButton
 End Class

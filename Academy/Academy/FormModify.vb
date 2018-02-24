@@ -70,7 +70,7 @@ Public Class formModify
                     Try
                         idiomasDLL.Alumnos.InsertAlumno(FormManagement.user.dni, New idiomasDLL.Alumno(mtbDni.Text, mtbNombre.Text, mtbApellido.Text, mtbTel.Text, mtbEmail.Text, mtbDireccion.Text))
                         FormManagement.LoadDataGrids()
-                        idiomasDLL.Alumnos.generateReport(mtbDni.Text)
+                        idiomasDLL.Alumnos.generateReport_lastRecord(mtbDni.Text)
                         FormCrystal.Show()
                         Me.Close()
                     Catch ex As System.Data.OleDb.OleDbException
@@ -191,5 +191,14 @@ Public Class formModify
 
     Private Sub formModify_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         cbPuesto.Items.Clear()
+    End Sub
+
+    Private Sub tsbSalir_Click(sender As Object, e As EventArgs) Handles tsbSalir.Click
+        modulo.ExitToAPP(Me)
+    End Sub
+
+    Private Sub tsbInformacion_Click(sender As Object, e As EventArgs) Handles tsbInformacion.Click
+        FormInformation.Show()
+        Me.Close()
     End Sub
 End Class

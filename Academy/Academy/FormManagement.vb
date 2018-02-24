@@ -177,4 +177,24 @@
             MsgBox("Ningún alumno seleccionado.", MsgBoxStyle.Information, "Error")
         End Try
     End Sub
+
+    Private Sub tsbSalir_Click(sender As Object, e As EventArgs) Handles tsbSalir.Click
+        modulo.ExitToAPP(Me)
+    End Sub
+
+    Private Sub tsbInformacion_Click(sender As Object, e As EventArgs) Handles tsbInformacion.Click
+        FormInformation.Show()
+        Me.Close()
+
+    End Sub
+
+    Private Sub InformeEmpleadosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InformeEmpleadosToolStripMenuItem.Click
+        crudEmployes.generateReport_EMPLEADOS()
+        Form_Crystal_empleados.Show()
+
+    End Sub
+
+    Private Sub InformeAlumnosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InformeAlumnosToolStripMenuItem.Click
+        ' Pendiente
+    End Sub
 End Class
