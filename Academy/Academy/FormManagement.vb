@@ -195,6 +195,6 @@
     End Sub
 
     Private Sub InformeAlumnosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InformeAlumnosToolStripMenuItem.Click
-        ' Pendiente
+        'Pendiente
     End Sub
 End Class
