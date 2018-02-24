@@ -4,6 +4,7 @@ Public Class FormLogin
 
     Private actualUser As User
     Private Sub FormLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        NotifyIcon.ShowBalloonTip(5)
         btnLogin.Enabled = False
         tbPass.Enabled = False
         For Each user As User In modulo.login.getUsers
@@ -78,5 +79,26 @@ Public Class FormLogin
             lPass.Visible = True
             lPass.ForeColor = Color.Red
         End If
+    End Sub
+
+    Private Sub tsbSalir_Click(sender As Object, e As EventArgs) Handles tsbSalir.Click
+        modulo.ExitToAPP(Me)
+    End Sub
+
+    Private Sub tsbAYdua_Click(sender As Object, e As EventArgs) Handles tsbAYdua.Click
+        'llamar CHM
+    End Sub
+
+    Private Sub tsbInformacion_Click(sender As Object, e As EventArgs) Handles tsbInformacion.Click
+        FormInformation.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub SalirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalirToolStripMenuItem.Click
+        modulo.ExitToAPP(Me)
+    End Sub
+
+    Private Sub AyudaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AyudaToolStripMenuItem.Click
+        'CHM
     End Sub
 End Class
