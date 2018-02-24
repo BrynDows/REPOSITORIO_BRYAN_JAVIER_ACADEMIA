@@ -138,6 +138,12 @@
     <Compile Include="FormInformation.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormSpecialTax.Designer.vb">
+      <DependentUpon>FormSpecialTax.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormSpecialTax.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form_Crystal_ALUMNOS.Designer.vb">
       <DependentUpon>Form_Crystal_ALUMNOS.vb</DependentUpon>
     </Compile>
@@ -209,6 +215,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormInformation.resx">
       <DependentUpon>FormInformation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSpecialTax.resx">
+      <DependentUpon>FormSpecialTax.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Crystal_ALUMNOS.resx">
       <DependentUpon>Form_Crystal_ALUMNOS.vb</DependentUpon>

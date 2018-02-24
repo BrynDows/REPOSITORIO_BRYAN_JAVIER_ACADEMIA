@@ -198,4 +198,19 @@
         idiomasDLL.Alumnos.generateReport_ALUMNOS()
         Form_Crystal_ALUMNOS.Show()
     End Sub
+
+    Private Sub bSpecialTax_Click(sender As Object, e As EventArgs) Handles bSpecialTax.Click
+        Try
+            Dim selected = dgvAlumnos.SelectedRows(0)
+            FormSpecialTax.alu = New idiomasDLL.Alumno(selected.Cells(0).Value.ToString,
+                                                  selected.Cells(1).Value.ToString,
+                                                  selected.Cells(2).Value.ToString,
+                                                  selected.Cells(3).Value.ToString,
+                                                  selected.Cells(4).Value.ToString,
+                                                  selected.Cells(5).Value.ToString)
+            FormSpecialTax.ShowDialog()
+        Catch ex As Exception
+            MsgBox("Ningún alumno seleccionado.", MsgBoxStyle.Information, "Error")
+        End Try
+    End Sub
 End Class
