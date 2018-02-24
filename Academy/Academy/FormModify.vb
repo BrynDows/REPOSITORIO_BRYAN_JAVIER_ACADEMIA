@@ -70,7 +70,7 @@ Public Class formModify
                     Try
                         idiomasDLL.Alumnos.InsertAlumno(FormManagement.user.dni, New idiomasDLL.Alumno(mtbDni.Text, mtbNombre.Text, mtbApellido.Text, mtbTel.Text, mtbEmail.Text, mtbDireccion.Text))
                         FormManagement.LoadDataGrids()
-                        idiomasDLL.Alumnos.generateReport(mtbDni.Text)
+                        idiomasDLL.Alumnos.generateReport_lastRecord(mtbDni.Text)
                         FormCrystal.Show()
                         Me.Close()
                     Catch ex As System.Data.OleDb.OleDbException

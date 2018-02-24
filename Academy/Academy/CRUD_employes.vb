@@ -161,4 +161,15 @@ Public Class CRUD_employes
             i = i + 1
         Next
     End Sub
+    '
+    'CrystalReport
+    '
+    Public Sub generateReport_EMPLEADOS()
+        Dim query As String = "SELECT empleados.dni, empleados.nombre, empleados.apellido, empleados.telefono, empleados.direccion, empleados.email, cuentasUsuario.nombre_usuario, puestos.nombre, empleados_alumnos.dni_alumno
+                                            FROM ((empleados LEFT JOIN cuentasUsuario ON empleados.cuenta = cuentasUsuario.id) LEFT JOIN puestos ON empleados.puesto = puestos.id) LEFT JOIN empleados_alumnos ON empleados_alumnos.dni_profesor = empleados.dni"
+        Dim adapter As New OleDbDataAdapter(query, connection)
+        Dim dataset = New DataSet
+        adapter.Fill(dataset, "informe_empleados")
+        dataset.WriteXml("informe_EMPLEADOS.xml", XmlWriteMode.WriteSchema)
+    End Sub
 End Class

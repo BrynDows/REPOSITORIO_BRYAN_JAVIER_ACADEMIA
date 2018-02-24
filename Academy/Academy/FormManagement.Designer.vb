@@ -36,10 +36,15 @@ Partial Class FormManagement
         Me.bBono = New System.Windows.Forms.Button()
         Me.bAdd = New System.Windows.Forms.Button()
         Me.toolStrip = New System.Windows.Forms.ToolStrip()
-        Me.tsbInformacion = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.tsbAYdua = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
+        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
+        Me.ToolStripDropDownButton1 = New System.Windows.Forms.ToolStripDropDownButton()
+        Me.InformeAlumnosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.InformeEmpleadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tsbInformacion = New System.Windows.Forms.ToolStripButton()
+        Me.tsbAYdua = New System.Windows.Forms.ToolStripButton()
         Me.tsbSalir = New System.Windows.Forms.ToolStripButton()
         Me.tcModos.SuspendLayout()
         Me.tabProfesores.SuspendLayout()
@@ -49,6 +54,7 @@ Partial Class FormManagement
         Me.TableLayoutPanel1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.toolStrip.SuspendLayout()
+        Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'bMod
@@ -241,12 +247,60 @@ Partial Class FormManagement
         'toolStrip
         '
         Me.toolStrip.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.toolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsbInformacion, Me.ToolStripSeparator1, Me.tsbAYdua, Me.ToolStripSeparator2, Me.tsbSalir})
+        Me.toolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsbInformacion, Me.ToolStripSeparator1, Me.tsbAYdua, Me.ToolStripSeparator2, Me.tsbSalir, Me.ToolStripSeparator3})
         Me.toolStrip.Location = New System.Drawing.Point(0, 0)
         Me.toolStrip.Name = "toolStrip"
         Me.toolStrip.Size = New System.Drawing.Size(1225, 27)
         Me.toolStrip.TabIndex = 17
         Me.toolStrip.Text = "ToolStrip1"
+        '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 27)
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 27)
+        '
+        'ToolStripSeparator3
+        '
+        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 27)
+        '
+        'StatusStrip1
+        '
+        Me.StatusStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripDropDownButton1})
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 705)
+        Me.StatusStrip1.Name = "StatusStrip1"
+        Me.StatusStrip1.Size = New System.Drawing.Size(1225, 26)
+        Me.StatusStrip1.TabIndex = 18
+        Me.StatusStrip1.Text = "StatusStrip1"
+        '
+        'ToolStripDropDownButton1
+        '
+        Me.ToolStripDropDownButton1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InformeAlumnosToolStripMenuItem, Me.InformeEmpleadosToolStripMenuItem})
+        Me.ToolStripDropDownButton1.Image = Global.Academy.My.Resources.Resources.application_view_detail
+        Me.ToolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripDropDownButton1.Name = "ToolStripDropDownButton1"
+        Me.ToolStripDropDownButton1.Size = New System.Drawing.Size(151, 24)
+        Me.ToolStripDropDownButton1.Text = "Generar informe"
+        '
+        'InformeAlumnosToolStripMenuItem
+        '
+        Me.InformeAlumnosToolStripMenuItem.Image = Global.Academy.My.Resources.Resources.medal_gold_2
+        Me.InformeAlumnosToolStripMenuItem.Name = "InformeAlumnosToolStripMenuItem"
+        Me.InformeAlumnosToolStripMenuItem.Size = New System.Drawing.Size(214, 26)
+        Me.InformeAlumnosToolStripMenuItem.Text = "Informe Alumnos"
+        '
+        'InformeEmpleadosToolStripMenuItem
+        '
+        Me.InformeEmpleadosToolStripMenuItem.Image = Global.Academy.My.Resources.Resources.award_star_gold_2
+        Me.InformeEmpleadosToolStripMenuItem.Name = "InformeEmpleadosToolStripMenuItem"
+        Me.InformeEmpleadosToolStripMenuItem.Size = New System.Drawing.Size(214, 26)
+        Me.InformeEmpleadosToolStripMenuItem.Text = "Informe empleados"
         '
         'tsbInformacion
         '
@@ -256,11 +310,6 @@ Partial Class FormManagement
         Me.tsbInformacion.Size = New System.Drawing.Size(113, 24)
         Me.tsbInformacion.Text = "Información"
         '
-        'ToolStripSeparator1
-        '
-        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 27)
-        '
         'tsbAYdua
         '
         Me.tsbAYdua.Image = Global.Academy.My.Resources.Resources.help
@@ -268,11 +317,6 @@ Partial Class FormManagement
         Me.tsbAYdua.Name = "tsbAYdua"
         Me.tsbAYdua.Size = New System.Drawing.Size(75, 24)
         Me.tsbAYdua.Text = "Ayuda"
-        '
-        'ToolStripSeparator2
-        '
-        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 27)
         '
         'tsbSalir
         '
@@ -288,6 +332,7 @@ Partial Class FormManagement
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.SteelBlue
         Me.ClientSize = New System.Drawing.Size(1225, 731)
+        Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.toolStrip)
         Me.Controls.Add(Me.bLogout)
         Me.Controls.Add(Me.TableLayoutPanel1)
@@ -303,6 +348,8 @@ Partial Class FormManagement
         Me.Panel1.ResumeLayout(False)
         Me.toolStrip.ResumeLayout(False)
         Me.toolStrip.PerformLayout()
+        Me.StatusStrip1.ResumeLayout(False)
+        Me.StatusStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -326,4 +373,9 @@ Partial Class FormManagement
     Friend WithEvents tsbAYdua As ToolStripButton
     Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
     Friend WithEvents tsbSalir As ToolStripButton
+    Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
+    Friend WithEvents StatusStrip1 As StatusStrip
+    Friend WithEvents ToolStripDropDownButton1 As ToolStripDropDownButton
+    Friend WithEvents InformeAlumnosToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents InformeEmpleadosToolStripMenuItem As ToolStripMenuItem
 End Class

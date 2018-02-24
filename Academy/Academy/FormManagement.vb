@@ -175,4 +175,14 @@
         Me.Close()
 
     End Sub
+
+    Private Sub InformeEmpleadosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InformeEmpleadosToolStripMenuItem.Click
+        crudEmployes.generateReport_EMPLEADOS()
+        Form_Crystal_empleados.Show()
+
+    End Sub
+
+    Private Sub InformeAlumnosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InformeAlumnosToolStripMenuItem.Click
+        ' Pendiente
+    End Sub
 End Class

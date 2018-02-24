@@ -52,7 +52,7 @@ Public Class Alumnos
     '------------------CRYSTAL REPORT
     '
 
-    Public Shared Sub generateReport(dniLastRecord As String)
+    Public Shared Sub generateReport_lastRecord(dniLastRecord As String)
         Dim query As String = "SELECT * FROM alumnos where dni = '" & dniLastRecord & "'"
         Dim adapter As New OleDbDataAdapter(query, connection)
         Dim dataset = New DataSet

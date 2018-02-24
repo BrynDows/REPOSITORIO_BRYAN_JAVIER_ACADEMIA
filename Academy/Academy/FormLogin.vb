@@ -4,6 +4,7 @@ Public Class FormLogin
 
     Private actualUser As User
     Private Sub FormLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         NotifyIcon.ShowBalloonTip(5)
         btnLogin.Enabled = False
         tbPass.Enabled = False
