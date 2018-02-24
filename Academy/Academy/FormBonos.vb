@@ -12,7 +12,7 @@ Public Class FormBonos
         lTitle.Text = "Asignar bono al alumno " & alu.Nombre & " " & alu.Apellido
     End Sub
 
-<<<<<<< HEAD
+
     Private Sub rbSkype_CheckedChanged(sender As Object, e As EventArgs) Handles rbSkype.CheckedChanged
         If rbSkype.Checked Then
             If nudPersonas.Value > 5 Then
@@ -38,7 +38,8 @@ Public Class FormBonos
             actual = idiomasDLL.Bonos.SelectPrecio(rbInvierno.Checked, rbPresencial.Checked, rbDomi.Checked, nudHoras.Value, nudPersonas.Value)
         End If
         lPrice.Text = actual(1) & " €"
-=======
+    End Sub
+
     Private Sub tsbSalir_Click(sender As Object, e As EventArgs) Handles tsbSalir.Click
         modulo.ExitToAPP(Me)
     End Sub
@@ -46,6 +47,6 @@ Public Class FormBonos
     Private Sub tsbInformacion_Click(sender As Object, e As EventArgs) Handles tsbInformacion.Click
         FormInformation.Show()
         Me.Close()
->>>>>>> bryan
+
     End Sub
 End Class

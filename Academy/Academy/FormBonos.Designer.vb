@@ -79,16 +79,11 @@ Partial Class FormBonos
         '
         Me.rbVerano.AutoSize = True
         Me.rbVerano.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-<<<<<<< HEAD
-        Me.rbVerano.Location = New System.Drawing.Point(19, 85)
-        Me.rbVerano.Name = "rbVerano"
-        Me.rbVerano.Size = New System.Drawing.Size(132, 36)
-=======
+
         Me.rbVerano.Location = New System.Drawing.Point(17, 68)
         Me.rbVerano.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.rbVerano.Name = "rbVerano"
         Me.rbVerano.Size = New System.Drawing.Size(111, 33)
->>>>>>> bryan
         Me.rbVerano.TabIndex = 1
         Me.rbVerano.Text = "Verano"
         Me.rbVerano.UseVisualStyleBackColor = True
@@ -121,16 +116,10 @@ Partial Class FormBonos
         '
         Me.rbSkype.AutoSize = True
         Me.rbSkype.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-<<<<<<< HEAD
-        Me.rbSkype.Location = New System.Drawing.Point(3, 70)
-        Me.rbSkype.Name = "rbSkype"
-        Me.rbSkype.Size = New System.Drawing.Size(180, 36)
-=======
         Me.rbSkype.Location = New System.Drawing.Point(3, 56)
         Me.rbSkype.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.rbSkype.Name = "rbSkype"
         Me.rbSkype.Size = New System.Drawing.Size(150, 33)
->>>>>>> bryan
         Me.rbSkype.TabIndex = 2
         Me.rbSkype.Text = "A distancia"
         Me.rbSkype.UseVisualStyleBackColor = True
@@ -226,13 +215,9 @@ Partial Class FormBonos
         'nudPersonas
         '
         Me.nudPersonas.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-<<<<<<< HEAD
-        Me.nudPersonas.Location = New System.Drawing.Point(579, 399)
-=======
         Me.nudPersonas.Increment = New Decimal(New Integer() {5, 0, 0, 0})
         Me.nudPersonas.Location = New System.Drawing.Point(515, 319)
         Me.nudPersonas.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
->>>>>>> bryan
         Me.nudPersonas.Maximum = New Decimal(New Integer() {6, 0, 0, 0})
         Me.nudPersonas.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.nudPersonas.Name = "nudPersonas"
