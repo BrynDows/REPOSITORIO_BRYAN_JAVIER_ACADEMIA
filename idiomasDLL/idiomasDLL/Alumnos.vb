@@ -3,6 +3,7 @@
 Public Class Alumnos
     Private Shared ReadOnly Property connection As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=academy_bd.accdb")
 
+    ' Si se tiene rango jefe se seleccionarán todos los alumnos
     Public Shared Function SelectAllAlumnos() As DataSet
         Dim adapter As New OleDbDataAdapter("SELECT * FROM alumnos", connection)
         Dim midataset As New DataSet
@@ -10,6 +11,7 @@ Public Class Alumnos
         Return midataset
     End Function
 
+    ' Si se es profesor solo se mostrarán los alumnos de ese profesor
     Public Shared Function SelectAlumnosByProf(ByVal dniprof As String) As DataSet
         Dim adapter As New OleDbDataAdapter("SELECT alumnos.dni, alumnos.nombre, alumnos.apellido, alumnos.telefono, alumnos.email, alumnos.direccion FROM alumnos INNER JOIN empleados_alumnos ON empleados_alumnos.dni_alumno = alumnos.dni WHERE empleados_alumnos.dni_profesor = '" & dniprof & "'", connection)
         Dim midataset As New DataSet
