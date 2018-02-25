@@ -347,7 +347,6 @@ Partial Class FormManagement
         Me.tsbSalir.Size = New System.Drawing.Size(73, 29)
         Me.tsbSalir.Text = "Salir"
         '
-<<<<<<< HEAD
         'ToolStripSeparator3
         '
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
@@ -391,8 +390,6 @@ Partial Class FormManagement
         '
         Me.HelpProvider1.HelpNamespace = "ayuda.chm"
         '
-=======
->>>>>>> bryan
         'FormManagement
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
