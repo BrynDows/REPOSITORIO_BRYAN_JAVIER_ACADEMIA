@@ -26,4 +26,14 @@ Public Class FormSpecialTax
             idiomasDLL.Errores.INSERT_IN_ERROR_LOG(ex)
         End Try
     End Sub
+
+    Private Sub lTitle_Click(sender As Object, e As EventArgs) Handles lTitle.Click
+
+    End Sub
+
+    Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
+        FormManagement.Show()
+        Me.Close()
+
+    End Sub
 End Class

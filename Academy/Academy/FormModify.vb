@@ -160,7 +160,7 @@ Public Class formModify
     '
     'masked DNI
     '
-    Private Sub mtbDni_MaskInputRejected(sender As Object, e As MaskInputRejectedEventArgs) Handles mtbDni.MaskInputRejected
+    Private Sub mtbDni_MaskInputRejected(sender As Object, e As MaskInputRejectedEventArgs)
         If mtbDni.MaskFull Then
             ToolTip1.ToolTipTitle = "DNI demasiado largo"
             ToolTip1.Show("El DNI es demasiado largo.", mtbDni, 5000)
@@ -212,13 +212,24 @@ Public Class formModify
         cbPuesto.Items.Clear()
     End Sub
 
-    Private Sub tsbSalir_Click(sender As Object, e As EventArgs) Handles tsbSalir.Click
+    Private Sub tsbSalir_Click(sender As Object, e As EventArgs)
         modulo.ExitToAPP(Me)
     End Sub
 
-    Private Sub tsbInformacion_Click(sender As Object, e As EventArgs) Handles tsbInformacion.Click
+    Private Sub tsbInformacion_Click(sender As Object, e As EventArgs)
         FormInformation.Show()
         Me.Close()
     End Sub
 
+    Private Sub flpPricipal_Paint(sender As Object, e As PaintEventArgs)
+
+    End Sub
+
+    Private Sub lblDni_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub toolStrip_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles toolStrip.ItemClicked
+
+    End Sub
 End Class

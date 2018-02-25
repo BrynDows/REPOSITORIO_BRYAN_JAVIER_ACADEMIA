@@ -27,7 +27,6 @@ Partial Class FormManagement
         Me.dgvProfesores = New System.Windows.Forms.DataGridView()
         Me.tabAlumnos = New System.Windows.Forms.TabPage()
         Me.dgvAlumnos = New System.Windows.Forms.DataGridView()
-        Me.bLogout = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.bSpecialTax = New System.Windows.Forms.Button()
@@ -41,13 +40,13 @@ Partial Class FormManagement
         Me.InformeEmpleadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         Me.toolStrip = New System.Windows.Forms.ToolStrip()
+        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.tsbInformacion = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.tsbAYdua = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.tsbSalir = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.tcModos.SuspendLayout()
         Me.tabProfesores.SuspendLayout()
         CType(Me.dgvProfesores, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -137,18 +136,6 @@ Partial Class FormManagement
         Me.dgvAlumnos.ShowEditingIcon = False
         Me.dgvAlumnos.Size = New System.Drawing.Size(766, 505)
         Me.dgvAlumnos.TabIndex = 0
-        '
-        'bLogout
-        '
-        Me.bLogout.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.bLogout.AutoSize = True
-        Me.bLogout.Location = New System.Drawing.Point(911, 29)
-        Me.bLogout.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.bLogout.Name = "bLogout"
-        Me.bLogout.Size = New System.Drawing.Size(103, 27)
-        Me.bLogout.TabIndex = 7
-        Me.bLogout.Text = "Cerrar sesión"
-        Me.bLogout.UseVisualStyleBackColor = True
         '
         'TableLayoutPanel1
         '
@@ -258,40 +245,44 @@ Partial Class FormManagement
         '
         'StatusStrip1
         '
+        Me.StatusStrip1.BackColor = System.Drawing.Color.Transparent
+        Me.StatusStrip1.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.StatusStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripDropDownButton1})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 703)
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 698)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(1039, 26)
+        Me.StatusStrip1.Size = New System.Drawing.Size(1039, 31)
         Me.StatusStrip1.TabIndex = 18
         Me.StatusStrip1.Text = "StatusStrip1"
         '
         'ToolStripDropDownButton1
         '
         Me.ToolStripDropDownButton1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InformeAlumnosToolStripMenuItem, Me.InformeEmpleadosToolStripMenuItem})
+        Me.ToolStripDropDownButton1.ForeColor = System.Drawing.Color.White
         Me.ToolStripDropDownButton1.Image = Global.Academy.My.Resources.Resources.application_view_detail
         Me.ToolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripDropDownButton1.Name = "ToolStripDropDownButton1"
-        Me.ToolStripDropDownButton1.Size = New System.Drawing.Size(151, 24)
+        Me.ToolStripDropDownButton1.Size = New System.Drawing.Size(185, 29)
         Me.ToolStripDropDownButton1.Text = "Generar informe"
         '
         'InformeAlumnosToolStripMenuItem
         '
         Me.InformeAlumnosToolStripMenuItem.Image = Global.Academy.My.Resources.Resources.medal_gold_2
         Me.InformeAlumnosToolStripMenuItem.Name = "InformeAlumnosToolStripMenuItem"
-        Me.InformeAlumnosToolStripMenuItem.Size = New System.Drawing.Size(214, 26)
+        Me.InformeAlumnosToolStripMenuItem.Size = New System.Drawing.Size(253, 30)
         Me.InformeAlumnosToolStripMenuItem.Text = "Informe Alumnos"
         '
         'InformeEmpleadosToolStripMenuItem
         '
         Me.InformeEmpleadosToolStripMenuItem.Image = Global.Academy.My.Resources.Resources.award_star_gold_2
         Me.InformeEmpleadosToolStripMenuItem.Name = "InformeEmpleadosToolStripMenuItem"
-        Me.InformeEmpleadosToolStripMenuItem.Size = New System.Drawing.Size(214, 26)
+        Me.InformeEmpleadosToolStripMenuItem.Size = New System.Drawing.Size(253, 30)
         Me.InformeEmpleadosToolStripMenuItem.Text = "Informe empleados"
         '
         'HelpProvider1
         '
-        Me.HelpProvider1.HelpNamespace = "X:\academiaingles\Academy\Academy\bin\Debug\Always idiomas.chm"
+        Me.HelpProvider1.HelpNamespace = "D:\Escritorio\Instituto\DAM2\WorkSpaceVisualStudio\REPOSITORIO_BRYAN_JAVIER_ACADE" &
+    "MIA\Academy\Academy\bin\Debug\Always idiomas.chm"
         '
         'toolStrip
         '
@@ -304,6 +295,15 @@ Partial Class FormManagement
         Me.toolStrip.Size = New System.Drawing.Size(1039, 32)
         Me.toolStrip.TabIndex = 23
         Me.toolStrip.Text = "ToolStrip1"
+        '
+        'ToolStripButton1
+        '
+        Me.ToolStripButton1.ForeColor = System.Drawing.Color.White
+        Me.ToolStripButton1.Image = Global.Academy.My.Resources.Resources.arrow_undo
+        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton1.Name = "ToolStripButton1"
+        Me.ToolStripButton1.Size = New System.Drawing.Size(217, 29)
+        Me.ToolStripButton1.Text = "Cerrar sesión y volver"
         '
         'ToolStripSeparator3
         '
@@ -347,15 +347,6 @@ Partial Class FormManagement
         Me.tsbSalir.Size = New System.Drawing.Size(73, 29)
         Me.tsbSalir.Text = "Salir"
         '
-        'ToolStripButton1
-        '
-        Me.ToolStripButton1.ForeColor = System.Drawing.Color.White
-        Me.ToolStripButton1.Image = Global.Academy.My.Resources.Resources.arrow_undo
-        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(217, 29)
-        Me.ToolStripButton1.Text = "Cerrar sesión y volver"
-        '
         'FormManagement
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -366,7 +357,6 @@ Partial Class FormManagement
         Me.ControlBox = False
         Me.Controls.Add(Me.toolStrip)
         Me.Controls.Add(Me.StatusStrip1)
-        Me.Controls.Add(Me.bLogout)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.HelpButton = True
         Me.Name = "FormManagement"
@@ -393,7 +383,6 @@ Partial Class FormManagement
     Friend WithEvents tabAlumnos As TabPage
     Friend WithEvents dgvProfesores As DataGridView
     Friend WithEvents dgvAlumnos As DataGridView
-    Friend WithEvents bLogout As Button
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents StatusStrip1 As StatusStrip
     Friend WithEvents ToolStripDropDownButton1 As ToolStripDropDownButton

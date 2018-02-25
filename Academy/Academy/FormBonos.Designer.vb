@@ -28,6 +28,8 @@ Partial Class FormBonos
         Me.Label2 = New System.Windows.Forms.Label()
         Me.nudPersonas = New System.Windows.Forms.NumericUpDown()
         Me.toolStrip = New System.Windows.Forms.ToolStrip()
+        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.tsbInformacion = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.tsbAYdua = New System.Windows.Forms.ToolStripButton()
@@ -40,9 +42,6 @@ Partial Class FormBonos
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel()
-        Me.TableLayoutPanel5 = New System.Windows.Forms.TableLayoutPanel()
-        Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
-        Me.FlowLayoutPanel2 = New System.Windows.Forms.FlowLayoutPanel()
         Me.FlowLayoutPanel3 = New System.Windows.Forms.FlowLayoutPanel()
         Me.gbLugar = New System.Windows.Forms.GroupBox()
         Me.rbDomi = New System.Windows.Forms.RadioButton()
@@ -52,12 +51,13 @@ Partial Class FormBonos
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.rbSkype = New System.Windows.Forms.RadioButton()
         Me.rbPresencial = New System.Windows.Forms.RadioButton()
+        Me.TableLayoutPanel5 = New System.Windows.Forms.TableLayoutPanel()
+        Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
+        Me.FlowLayoutPanel2 = New System.Windows.Forms.FlowLayoutPanel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.lPrice = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.bDone = New System.Windows.Forms.Button()
-        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         CType(Me.nudHoras, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nudPersonas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.toolStrip.SuspendLayout()
@@ -65,14 +65,14 @@ Partial Class FormBonos
         Me.TableLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
         Me.TableLayoutPanel4.SuspendLayout()
-        Me.TableLayoutPanel5.SuspendLayout()
-        Me.FlowLayoutPanel1.SuspendLayout()
-        Me.FlowLayoutPanel2.SuspendLayout()
         Me.FlowLayoutPanel3.SuspendLayout()
         Me.gbLugar.SuspendLayout()
         Me.FlowLayoutPanel4.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        Me.TableLayoutPanel5.SuspendLayout()
+        Me.FlowLayoutPanel1.SuspendLayout()
+        Me.FlowLayoutPanel2.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
@@ -148,6 +148,19 @@ Partial Class FormBonos
         Me.toolStrip.Size = New System.Drawing.Size(1039, 32)
         Me.toolStrip.TabIndex = 17
         Me.toolStrip.Text = "ToolStrip1"
+        '
+        'ToolStripButton1
+        '
+        Me.ToolStripButton1.Image = Global.Academy.My.Resources.Resources.arrow_undo
+        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton1.Name = "ToolStripButton1"
+        Me.ToolStripButton1.Size = New System.Drawing.Size(89, 29)
+        Me.ToolStripButton1.Text = "Volver"
+        '
+        'ToolStripSeparator3
+        '
+        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 32)
         '
         'tsbInformacion
         '
@@ -282,43 +295,6 @@ Partial Class FormBonos
         Me.TableLayoutPanel4.Size = New System.Drawing.Size(507, 381)
         Me.TableLayoutPanel4.TabIndex = 20
         '
-        'TableLayoutPanel5
-        '
-        Me.TableLayoutPanel5.ColumnCount = 2
-        Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel5.Controls.Add(Me.FlowLayoutPanel1, 0, 0)
-        Me.TableLayoutPanel5.Controls.Add(Me.FlowLayoutPanel2, 1, 0)
-        Me.TableLayoutPanel5.Controls.Add(Me.Panel2, 1, 1)
-        Me.TableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel5.Location = New System.Drawing.Point(3, 482)
-        Me.TableLayoutPanel5.Name = "TableLayoutPanel5"
-        Me.TableLayoutPanel5.RowCount = 2
-        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 57.14286!))
-        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 42.85714!))
-        Me.TableLayoutPanel5.Size = New System.Drawing.Size(1033, 128)
-        Me.TableLayoutPanel5.TabIndex = 1
-        '
-        'FlowLayoutPanel1
-        '
-        Me.FlowLayoutPanel1.Controls.Add(Me.Label1)
-        Me.FlowLayoutPanel1.Controls.Add(Me.nudHoras)
-        Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(3, 3)
-        Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(510, 67)
-        Me.FlowLayoutPanel1.TabIndex = 0
-        '
-        'FlowLayoutPanel2
-        '
-        Me.FlowLayoutPanel2.Controls.Add(Me.Label2)
-        Me.FlowLayoutPanel2.Controls.Add(Me.nudPersonas)
-        Me.FlowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.FlowLayoutPanel2.Location = New System.Drawing.Point(519, 3)
-        Me.FlowLayoutPanel2.Name = "FlowLayoutPanel2"
-        Me.FlowLayoutPanel2.Size = New System.Drawing.Size(511, 67)
-        Me.FlowLayoutPanel2.TabIndex = 1
-        '
         'FlowLayoutPanel3
         '
         Me.FlowLayoutPanel3.Controls.Add(Me.gbLugar)
@@ -427,6 +403,43 @@ Partial Class FormBonos
         Me.rbPresencial.Text = "Presencial"
         Me.rbPresencial.UseVisualStyleBackColor = True
         '
+        'TableLayoutPanel5
+        '
+        Me.TableLayoutPanel5.ColumnCount = 2
+        Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel5.Controls.Add(Me.FlowLayoutPanel1, 0, 0)
+        Me.TableLayoutPanel5.Controls.Add(Me.FlowLayoutPanel2, 1, 0)
+        Me.TableLayoutPanel5.Controls.Add(Me.Panel2, 1, 1)
+        Me.TableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel5.Location = New System.Drawing.Point(3, 482)
+        Me.TableLayoutPanel5.Name = "TableLayoutPanel5"
+        Me.TableLayoutPanel5.RowCount = 2
+        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 57.14286!))
+        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 42.85714!))
+        Me.TableLayoutPanel5.Size = New System.Drawing.Size(1033, 128)
+        Me.TableLayoutPanel5.TabIndex = 1
+        '
+        'FlowLayoutPanel1
+        '
+        Me.FlowLayoutPanel1.Controls.Add(Me.Label1)
+        Me.FlowLayoutPanel1.Controls.Add(Me.nudHoras)
+        Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(3, 3)
+        Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(510, 67)
+        Me.FlowLayoutPanel1.TabIndex = 0
+        '
+        'FlowLayoutPanel2
+        '
+        Me.FlowLayoutPanel2.Controls.Add(Me.Label2)
+        Me.FlowLayoutPanel2.Controls.Add(Me.nudPersonas)
+        Me.FlowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.FlowLayoutPanel2.Location = New System.Drawing.Point(519, 3)
+        Me.FlowLayoutPanel2.Name = "FlowLayoutPanel2"
+        Me.FlowLayoutPanel2.Size = New System.Drawing.Size(511, 67)
+        Me.FlowLayoutPanel2.TabIndex = 1
+        '
         'Panel2
         '
         Me.Panel2.Controls.Add(Me.lPrice)
@@ -472,19 +485,6 @@ Partial Class FormBonos
         Me.bDone.Text = "Asignar"
         Me.bDone.UseVisualStyleBackColor = False
         '
-        'ToolStripButton1
-        '
-        Me.ToolStripButton1.Image = Global.Academy.My.Resources.Resources.arrow_undo
-        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(89, 29)
-        Me.ToolStripButton1.Text = "Volver"
-        '
-        'ToolStripSeparator3
-        '
-        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 32)
-        '
         'FormBonos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -510,11 +510,6 @@ Partial Class FormBonos
         Me.TableLayoutPanel3.ResumeLayout(False)
         Me.TableLayoutPanel3.PerformLayout()
         Me.TableLayoutPanel4.ResumeLayout(False)
-        Me.TableLayoutPanel5.ResumeLayout(False)
-        Me.FlowLayoutPanel1.ResumeLayout(False)
-        Me.FlowLayoutPanel1.PerformLayout()
-        Me.FlowLayoutPanel2.ResumeLayout(False)
-        Me.FlowLayoutPanel2.PerformLayout()
         Me.FlowLayoutPanel3.ResumeLayout(False)
         Me.gbLugar.ResumeLayout(False)
         Me.gbLugar.PerformLayout()
@@ -522,6 +517,11 @@ Partial Class FormBonos
         Me.GroupBox1.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.TableLayoutPanel5.ResumeLayout(False)
+        Me.FlowLayoutPanel1.ResumeLayout(False)
+        Me.FlowLayoutPanel1.PerformLayout()
+        Me.FlowLayoutPanel2.ResumeLayout(False)
+        Me.FlowLayoutPanel2.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.Panel3.ResumeLayout(False)
