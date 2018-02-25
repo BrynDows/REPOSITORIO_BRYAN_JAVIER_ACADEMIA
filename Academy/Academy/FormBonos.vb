@@ -13,7 +13,7 @@ Public Class FormBonos
     End Sub
 
 
-    Private Sub rbSkype_CheckedChanged(sender As Object, e As EventArgs)
+    Private Sub rbSkype_CheckedChanged(sender As Object, e As EventArgs) Handles rbSkype.CheckedChanged
         If rbSkype.Checked Then
             If nudPersonas.Value > 5 Then
                 nudPersonas.Value = 5
@@ -40,13 +40,11 @@ Public Class FormBonos
         lPrice.Text = actual(1) & " €"
     End Sub
 
-
-
     Private Sub tsbInformacion_Click(sender As Object, e As EventArgs) Handles tsbInformacion.Click
         FormInformation.ShowDialog()
     End Sub
 
-    Private Sub bDone_Click(sender As Object, e As EventArgs)
+    Private Sub bDone_Click(sender As Object, e As EventArgs) Handles bDone.Click
         Try
             idiomasDLL.Bonos.UpdateAlumnoBono(Convert.ToInt32(actual(0)), alu.DNI)
             Me.Close()
@@ -55,10 +53,6 @@ Public Class FormBonos
             idiomasDLL.Bonos.CloseConnection()
             idiomasDLL.Errores.INSERT_IN_ERROR_LOG(ex)
         End Try
-    End Sub
-
-    Private Sub bSelect_Click(sender As Object, e As EventArgs)
-        IIf(mcDate.Visible, mcDate.Visible = False, mcDate.Visible = True)
     End Sub
 
     Private Sub mcDate_DateSelected(sender As Object, e As DateRangeEventArgs) Handles mcDate.DateSelected
