@@ -11,8 +11,6 @@ Public Class formModify
     Public Property prof_OR_emple As Byte
     Private oldAccountEmploye As String
     Private Sub FormModify_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-        ToolTip1.IsBalloon = True
         mtbTel.Mask = "000000000" ' Máscara para el campo teléfono
         mtbDni.Mask = "00000000>L" ' Máscara para el campo DNI
         'TODO: esta línea de código carga datos en la tabla 'Academy_bdDataSet1.idiomas' Puede moverla o quitarla según sea necesario.
@@ -58,9 +56,7 @@ Public Class formModify
             Catch ex As Exception
                 idiomasDLL.INSERT_IN_ERROR_LOG(ex)
             End Try
-
         End If
-
     End Sub
 
     Private Sub mtbTel_MaskInputRejected(sender As Object, e As MaskInputRejectedEventArgs)
@@ -79,7 +75,7 @@ Public Class formModify
     'Button Done
     '
     Private Sub bDone_Click(sender As Object, e As EventArgs) Handles bDone.Click
-        If mtbEmail.Text.Length > 0 And mtbDireccion.Text.Length > 0 Then
+        If mtbDni.MaskFull And mtbTel.MaskFull And mtbEmail.Text.Length > 0 And mtbDireccion.Text.Length > 0 Then
             If idiomasDLL.Validaciones.isValidEmail(mtbEmail.Text) Then
                 If idiomasDLL.Validaciones.isValidName(mtbNombre.Text) And idiomasDLL.Validaciones.isValidApe(mtbApellido.Text) Then
                     If mtbDireccion.Text.Length <= 80 Then
