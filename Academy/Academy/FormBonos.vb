@@ -40,13 +40,10 @@ Public Class FormBonos
         lPrice.Text = actual(1) & " €"
     End Sub
 
-    Private Sub tsbSalir_Click(sender As Object, e As EventArgs) Handles tsbSalir.Click
-        modulo.ExitToAPP(Me)
-    End Sub
+
 
     Private Sub tsbInformacion_Click(sender As Object, e As EventArgs) Handles tsbInformacion.Click
-        FormInformation.Show()
-        Me.Close()
+        FormInformation.ShowDialog()
     End Sub
 
     Private Sub bDone_Click(sender As Object, e As EventArgs)
@@ -66,5 +63,13 @@ Public Class FormBonos
 
     Private Sub mcDate_DateSelected(sender As Object, e As DateRangeEventArgs) Handles mcDate.DateSelected
         UpdatePrice(sender, e)
+    End Sub
+
+    Private Sub tsbAYdua_Click(sender As Object, e As EventArgs) Handles tsbAYdua.Click
+        modulo.mostrar_ayuda()
+    End Sub
+
+    Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
+        Me.Close()
     End Sub
 End Class

@@ -47,6 +47,10 @@ Partial Class FormManagement
         Me.tsbAYdua = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.tsbSalir = New System.Windows.Forms.ToolStripButton()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
+        Me.lblUser = New System.Windows.Forms.Label()
         Me.tcModos.SuspendLayout()
         Me.tabProfesores.SuspendLayout()
         CType(Me.dgvProfesores, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -56,6 +60,7 @@ Partial Class FormManagement
         Me.Panel1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.toolStrip.SuspendLayout()
+        Me.FlowLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'tcModos
@@ -251,6 +256,7 @@ Partial Class FormManagement
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripDropDownButton1})
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 698)
         Me.StatusStrip1.Name = "StatusStrip1"
+        Me.StatusStrip1.Padding = New System.Windows.Forms.Padding(1, 0, 16, 0)
         Me.StatusStrip1.Size = New System.Drawing.Size(1039, 31)
         Me.StatusStrip1.TabIndex = 18
         Me.StatusStrip1.Text = "StatusStrip1"
@@ -281,8 +287,7 @@ Partial Class FormManagement
         '
         'HelpProvider1
         '
-        Me.HelpProvider1.HelpNamespace = "D:\Escritorio\Instituto\DAM2\WorkSpaceVisualStudio\REPOSITORIO_BRYAN_JAVIER_ACADE" &
-    "MIA\Academy\Academy\bin\Debug\Always idiomas.chm"
+        Me.HelpProvider1.HelpNamespace = "ayuda.chm"
         '
         'toolStrip
         '
@@ -347,48 +352,44 @@ Partial Class FormManagement
         Me.tsbSalir.Size = New System.Drawing.Size(73, 29)
         Me.tsbSalir.Text = "Salir"
         '
-        'ToolStripSeparator3
+        'Label1
         '
-        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 32)
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(3, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(82, 17)
+        Me.Label1.TabIndex = 24
+        Me.Label1.Text = "Bienvenido "
         '
-        'StatusStrip1
+        'Label2
         '
-        Me.StatusStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripDropDownButton1})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 883)
-        Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Padding = New System.Windows.Forms.Padding(1, 0, 16, 0)
-        Me.StatusStrip1.Size = New System.Drawing.Size(1378, 31)
-        Me.StatusStrip1.TabIndex = 18
-        Me.StatusStrip1.Text = "StatusStrip1"
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(133, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(166, 17)
+        Me.Label2.TabIndex = 25
+        Me.Label2.Text = ", Que tenga un buen día."
         '
-        'ToolStripDropDownButton1
+        'FlowLayoutPanel1
         '
-        Me.ToolStripDropDownButton1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InformeAlumnosToolStripMenuItem, Me.InformeEmpleadosToolStripMenuItem})
-        Me.ToolStripDropDownButton1.Image = Global.Academy.My.Resources.Resources.application_view_detail
-        Me.ToolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripDropDownButton1.Name = "ToolStripDropDownButton1"
-        Me.ToolStripDropDownButton1.Size = New System.Drawing.Size(178, 29)
-        Me.ToolStripDropDownButton1.Text = "Generar informe"
+        Me.FlowLayoutPanel1.BackColor = System.Drawing.Color.Transparent
+        Me.FlowLayoutPanel1.Controls.Add(Me.Label1)
+        Me.FlowLayoutPanel1.Controls.Add(Me.lblUser)
+        Me.FlowLayoutPanel1.Controls.Add(Me.Label2)
+        Me.FlowLayoutPanel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(461, 653)
+        Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(553, 29)
+        Me.FlowLayoutPanel1.TabIndex = 26
         '
-        'InformeAlumnosToolStripMenuItem
+        'lblUser
         '
-        Me.InformeAlumnosToolStripMenuItem.Image = Global.Academy.My.Resources.Resources.medal_gold_2
-        Me.InformeAlumnosToolStripMenuItem.Name = "InformeAlumnosToolStripMenuItem"
-        Me.InformeAlumnosToolStripMenuItem.Size = New System.Drawing.Size(252, 30)
-        Me.InformeAlumnosToolStripMenuItem.Text = "Informe Alumnos"
-        '
-        'InformeEmpleadosToolStripMenuItem
-        '
-        Me.InformeEmpleadosToolStripMenuItem.Image = Global.Academy.My.Resources.Resources.award_star_gold_2
-        Me.InformeEmpleadosToolStripMenuItem.Name = "InformeEmpleadosToolStripMenuItem"
-        Me.InformeEmpleadosToolStripMenuItem.Size = New System.Drawing.Size(252, 30)
-        Me.InformeEmpleadosToolStripMenuItem.Text = "Informe empleados"
-        '
-        'HelpProvider1
-        '
-        Me.HelpProvider1.HelpNamespace = "ayuda.chm"
+        Me.lblUser.AutoSize = True
+        Me.lblUser.Location = New System.Drawing.Point(91, 0)
+        Me.lblUser.Name = "lblUser"
+        Me.lblUser.Size = New System.Drawing.Size(36, 17)
+        Me.lblUser.TabIndex = 26
+        Me.lblUser.Text = "user"
         '
         'FormManagement
         '
@@ -398,6 +399,7 @@ Partial Class FormManagement
         Me.BackgroundImage = Global.Academy.My.Resources.Resources.fondo
         Me.ClientSize = New System.Drawing.Size(1039, 729)
         Me.ControlBox = False
+        Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Controls.Add(Me.toolStrip)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.TableLayoutPanel1)
@@ -417,6 +419,8 @@ Partial Class FormManagement
         Me.StatusStrip1.PerformLayout()
         Me.toolStrip.ResumeLayout(False)
         Me.toolStrip.PerformLayout()
+        Me.FlowLayoutPanel1.ResumeLayout(False)
+        Me.FlowLayoutPanel1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -446,4 +450,8 @@ Partial Class FormManagement
     Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
     Friend WithEvents tsbSalir As ToolStripButton
     Friend WithEvents ToolStripButton1 As ToolStripButton
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
+    Friend WithEvents lblUser As Label
 End Class

@@ -26,34 +26,36 @@ Partial Class formModify
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.flpPricipal = New System.Windows.Forms.FlowLayoutPanel()
         Me.flpDni = New System.Windows.Forms.FlowLayoutPanel()
+        Me.lblDni = New System.Windows.Forms.Label()
+        Me.mtbDni = New System.Windows.Forms.MaskedTextBox()
         Me.flpNombre = New System.Windows.Forms.FlowLayoutPanel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.mtbNombre = New System.Windows.Forms.MaskedTextBox()
-        Me.flpPuesto = New System.Windows.Forms.FlowLayoutPanel()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.cbPuesto = New System.Windows.Forms.ComboBox()
-        Me.flpDireccion = New System.Windows.Forms.FlowLayoutPanel()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.mtbDireccion = New System.Windows.Forms.MaskedTextBox()
         Me.flpApellido = New System.Windows.Forms.FlowLayoutPanel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.mtbApellido = New System.Windows.Forms.MaskedTextBox()
+        Me.flpDireccion = New System.Windows.Forms.FlowLayoutPanel()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.mtbDireccion = New System.Windows.Forms.MaskedTextBox()
         Me.flpEmail = New System.Windows.Forms.FlowLayoutPanel()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.mtbEmail = New System.Windows.Forms.MaskedTextBox()
+        Me.flpPuesto = New System.Windows.Forms.FlowLayoutPanel()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.cbPuesto = New System.Windows.Forms.ComboBox()
+        Me.flpTel = New System.Windows.Forms.FlowLayoutPanel()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.mtbTel = New System.Windows.Forms.MaskedTextBox()
         Me.flpIdioma = New System.Windows.Forms.FlowLayoutPanel()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.cbIdioma = New System.Windows.Forms.ComboBox()
         Me.IdiomasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Academy_bdDataSet1 = New Academy.academy_bdDataSet1()
-        Me.flpTel = New System.Windows.Forms.FlowLayoutPanel()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.mtbTel = New System.Windows.Forms.MaskedTextBox()
         Me.flpPassword = New System.Windows.Forms.FlowLayoutPanel()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.tbPass = New System.Windows.Forms.TextBox()
-        Me.Academy_bdDataSet = New Academy.academy_bdDataSet()
         Me.bDone = New System.Windows.Forms.Button()
+        Me.Academy_bdDataSet = New Academy.academy_bdDataSet()
         Me.AcademybdDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.AcademybdDataSetBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.IdiomasTableAdapter = New Academy.academy_bdDataSet1TableAdapters.idiomasTableAdapter()
@@ -64,21 +66,17 @@ Partial Class formModify
         Me.tsbInformacion = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.tsbAYdua = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.tsbSalir = New System.Windows.Forms.ToolStripButton()
-        Me.lblDni = New System.Windows.Forms.Label()
-        Me.mtbDni = New System.Windows.Forms.MaskedTextBox()
         Me.flpPricipal.SuspendLayout()
         Me.flpDni.SuspendLayout()
         Me.flpNombre.SuspendLayout()
-        Me.flpPuesto.SuspendLayout()
-        Me.flpDireccion.SuspendLayout()
         Me.flpApellido.SuspendLayout()
+        Me.flpDireccion.SuspendLayout()
         Me.flpEmail.SuspendLayout()
+        Me.flpPuesto.SuspendLayout()
+        Me.flpTel.SuspendLayout()
         Me.flpIdioma.SuspendLayout()
         CType(Me.IdiomasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Academy_bdDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.flpTel.SuspendLayout()
         Me.flpPassword.SuspendLayout()
         CType(Me.Academy_bdDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AcademybdDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -115,6 +113,28 @@ Partial Class formModify
         Me.flpDni.Size = New System.Drawing.Size(1024, 52)
         Me.flpDni.TabIndex = 0
         '
+        'lblDni
+        '
+        Me.lblDni.AutoSize = True
+        Me.lblDni.BackColor = System.Drawing.Color.Transparent
+        Me.lblDni.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDni.ForeColor = System.Drawing.Color.White
+        Me.lblDni.Location = New System.Drawing.Point(3, 0)
+        Me.lblDni.Name = "lblDni"
+        Me.lblDni.Padding = New System.Windows.Forms.Padding(200, 0, 0, 0)
+        Me.lblDni.Size = New System.Drawing.Size(262, 32)
+        Me.lblDni.TabIndex = 20
+        Me.lblDni.Text = "DNI"
+        '
+        'mtbDni
+        '
+        Me.mtbDni.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.mtbDni.Location = New System.Drawing.Point(468, 0)
+        Me.mtbDni.Margin = New System.Windows.Forms.Padding(200, 0, 0, 0)
+        Me.mtbDni.Name = "mtbDni"
+        Me.mtbDni.Size = New System.Drawing.Size(354, 38)
+        Me.mtbDni.TabIndex = 21
+        '
         'flpNombre
         '
         Me.flpNombre.Controls.Add(Me.Label1)
@@ -145,6 +165,96 @@ Partial Class formModify
         Me.mtbNombre.Name = "mtbNombre"
         Me.mtbNombre.Size = New System.Drawing.Size(356, 38)
         Me.mtbNombre.TabIndex = 26
+        '
+        'flpApellido
+        '
+        Me.flpApellido.Controls.Add(Me.Label2)
+        Me.flpApellido.Controls.Add(Me.mtbApellido)
+        Me.flpApellido.Location = New System.Drawing.Point(3, 219)
+        Me.flpApellido.Name = "flpApellido"
+        Me.flpApellido.Size = New System.Drawing.Size(1024, 52)
+        Me.flpApellido.TabIndex = 41
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(3, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Padding = New System.Windows.Forms.Padding(200, 0, 0, 0)
+        Me.Label2.Size = New System.Drawing.Size(319, 32)
+        Me.Label2.TabIndex = 21
+        Me.Label2.Text = "Apellido"
+        '
+        'mtbApellido
+        '
+        Me.mtbApellido.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.mtbApellido.Location = New System.Drawing.Point(467, 0)
+        Me.mtbApellido.Margin = New System.Windows.Forms.Padding(142, 0, 0, 0)
+        Me.mtbApellido.Name = "mtbApellido"
+        Me.mtbApellido.Size = New System.Drawing.Size(355, 38)
+        Me.mtbApellido.TabIndex = 27
+        '
+        'flpDireccion
+        '
+        Me.flpDireccion.Controls.Add(Me.Label5)
+        Me.flpDireccion.Controls.Add(Me.mtbDireccion)
+        Me.flpDireccion.Location = New System.Drawing.Point(3, 277)
+        Me.flpDireccion.Name = "flpDireccion"
+        Me.flpDireccion.Size = New System.Drawing.Size(1024, 52)
+        Me.flpDireccion.TabIndex = 40
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.White
+        Me.Label5.Location = New System.Drawing.Point(3, 0)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Padding = New System.Windows.Forms.Padding(200, 0, 0, 0)
+        Me.Label5.Size = New System.Drawing.Size(334, 32)
+        Me.Label5.TabIndex = 24
+        Me.Label5.Text = "Dirección"
+        '
+        'mtbDireccion
+        '
+        Me.mtbDireccion.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.mtbDireccion.Location = New System.Drawing.Point(466, 0)
+        Me.mtbDireccion.Margin = New System.Windows.Forms.Padding(126, 0, 0, 0)
+        Me.mtbDireccion.Name = "mtbDireccion"
+        Me.mtbDireccion.Size = New System.Drawing.Size(356, 38)
+        Me.mtbDireccion.TabIndex = 30
+        '
+        'flpEmail
+        '
+        Me.flpEmail.Controls.Add(Me.Label4)
+        Me.flpEmail.Controls.Add(Me.mtbEmail)
+        Me.flpEmail.Location = New System.Drawing.Point(3, 335)
+        Me.flpEmail.Name = "flpEmail"
+        Me.flpEmail.Size = New System.Drawing.Size(1024, 52)
+        Me.flpEmail.TabIndex = 42
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.White
+        Me.Label4.Location = New System.Drawing.Point(3, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Padding = New System.Windows.Forms.Padding(200, 0, 0, 0)
+        Me.Label4.Size = New System.Drawing.Size(447, 32)
+        Me.Label4.TabIndex = 23
+        Me.Label4.Text = "Correo electrónico"
+        '
+        'mtbEmail
+        '
+        Me.mtbEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.mtbEmail.Location = New System.Drawing.Point(468, 0)
+        Me.mtbEmail.Margin = New System.Windows.Forms.Padding(15, 0, 0, 0)
+        Me.mtbEmail.Name = "mtbEmail"
+        Me.mtbEmail.Size = New System.Drawing.Size(354, 38)
+        Me.mtbEmail.TabIndex = 29
         '
         'flpPuesto
         '
@@ -177,95 +287,35 @@ Partial Class formModify
         Me.cbPuesto.Size = New System.Drawing.Size(356, 39)
         Me.cbPuesto.TabIndex = 36
         '
-        'flpDireccion
+        'flpTel
         '
-        Me.flpDireccion.Controls.Add(Me.Label5)
-        Me.flpDireccion.Controls.Add(Me.mtbDireccion)
-        Me.flpDireccion.Location = New System.Drawing.Point(3, 277)
-        Me.flpDireccion.Name = "flpDireccion"
-        Me.flpDireccion.Size = New System.Drawing.Size(1024, 52)
-        Me.flpDireccion.TabIndex = 40
+        Me.flpTel.Controls.Add(Me.Label3)
+        Me.flpTel.Controls.Add(Me.mtbTel)
+        Me.flpTel.Location = New System.Drawing.Point(3, 451)
+        Me.flpTel.Name = "flpTel"
+        Me.flpTel.Size = New System.Drawing.Size(1024, 52)
+        Me.flpTel.TabIndex = 43
         '
-        'Label5
+        'Label3
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(3, 0)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Padding = New System.Windows.Forms.Padding(200, 0, 0, 0)
-        Me.Label5.Size = New System.Drawing.Size(334, 32)
-        Me.Label5.TabIndex = 24
-        Me.Label5.Text = "Dirección"
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.Location = New System.Drawing.Point(3, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Padding = New System.Windows.Forms.Padding(200, 0, 0, 0)
+        Me.Label3.Size = New System.Drawing.Size(327, 32)
+        Me.Label3.TabIndex = 22
+        Me.Label3.Text = "Teléfono"
         '
-        'mtbDireccion
+        'mtbTel
         '
-        Me.mtbDireccion.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.mtbDireccion.Location = New System.Drawing.Point(466, 0)
-        Me.mtbDireccion.Margin = New System.Windows.Forms.Padding(126, 0, 0, 0)
-        Me.mtbDireccion.Name = "mtbDireccion"
-        Me.mtbDireccion.Size = New System.Drawing.Size(356, 38)
-        Me.mtbDireccion.TabIndex = 30
-        '
-        'flpApellido
-        '
-        Me.flpApellido.Controls.Add(Me.Label2)
-        Me.flpApellido.Controls.Add(Me.mtbApellido)
-        Me.flpApellido.Location = New System.Drawing.Point(3, 219)
-        Me.flpApellido.Name = "flpApellido"
-        Me.flpApellido.Size = New System.Drawing.Size(1024, 52)
-        Me.flpApellido.TabIndex = 41
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(3, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Padding = New System.Windows.Forms.Padding(200, 0, 0, 0)
-        Me.Label2.Size = New System.Drawing.Size(319, 32)
-        Me.Label2.TabIndex = 21
-        Me.Label2.Text = "Apellido"
-        '
-        'mtbApellido
-        '
-        Me.mtbApellido.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.mtbApellido.Location = New System.Drawing.Point(467, 0)
-        Me.mtbApellido.Margin = New System.Windows.Forms.Padding(142, 0, 0, 0)
-        Me.mtbApellido.Name = "mtbApellido"
-        Me.mtbApellido.Size = New System.Drawing.Size(355, 38)
-        Me.mtbApellido.TabIndex = 27
-        '
-        'flpEmail
-        '
-        Me.flpEmail.Controls.Add(Me.Label4)
-        Me.flpEmail.Controls.Add(Me.mtbEmail)
-        Me.flpEmail.Location = New System.Drawing.Point(3, 335)
-        Me.flpEmail.Name = "flpEmail"
-        Me.flpEmail.Size = New System.Drawing.Size(1024, 52)
-        Me.flpEmail.TabIndex = 42
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(3, 0)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Padding = New System.Windows.Forms.Padding(200, 0, 0, 0)
-        Me.Label4.Size = New System.Drawing.Size(447, 32)
-        Me.Label4.TabIndex = 23
-        Me.Label4.Text = "Correo electrónico"
-        '
-        'mtbEmail
-        '
-        Me.mtbEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.mtbEmail.Location = New System.Drawing.Point(468, 0)
-        Me.mtbEmail.Margin = New System.Windows.Forms.Padding(15, 0, 0, 0)
-        Me.mtbEmail.Name = "mtbEmail"
-        Me.mtbEmail.Size = New System.Drawing.Size(354, 38)
-        Me.mtbEmail.TabIndex = 29
+        Me.mtbTel.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.mtbTel.Location = New System.Drawing.Point(472, 0)
+        Me.mtbTel.Margin = New System.Windows.Forms.Padding(139, 0, 0, 0)
+        Me.mtbTel.Name = "mtbTel"
+        Me.mtbTel.Size = New System.Drawing.Size(350, 38)
+        Me.mtbTel.TabIndex = 28
         '
         'flpIdioma
         '
@@ -311,36 +361,6 @@ Partial Class formModify
         Me.Academy_bdDataSet1.DataSetName = "academy_bdDataSet1"
         Me.Academy_bdDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'flpTel
-        '
-        Me.flpTel.Controls.Add(Me.Label3)
-        Me.flpTel.Controls.Add(Me.mtbTel)
-        Me.flpTel.Location = New System.Drawing.Point(3, 451)
-        Me.flpTel.Name = "flpTel"
-        Me.flpTel.Size = New System.Drawing.Size(1024, 52)
-        Me.flpTel.TabIndex = 43
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(3, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Padding = New System.Windows.Forms.Padding(200, 0, 0, 0)
-        Me.Label3.Size = New System.Drawing.Size(327, 32)
-        Me.Label3.TabIndex = 22
-        Me.Label3.Text = "Teléfono"
-        '
-        'mtbTel
-        '
-        Me.mtbTel.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.mtbTel.Location = New System.Drawing.Point(472, 0)
-        Me.mtbTel.Margin = New System.Windows.Forms.Padding(139, 0, 0, 0)
-        Me.mtbTel.Name = "mtbTel"
-        Me.mtbTel.Size = New System.Drawing.Size(350, 38)
-        Me.mtbTel.TabIndex = 28
-        '
         'flpPassword
         '
         Me.flpPassword.Controls.Add(Me.Label9)
@@ -374,11 +394,6 @@ Partial Class formModify
         Me.tbPass.Size = New System.Drawing.Size(349, 37)
         Me.tbPass.TabIndex = 23
         '
-        'Academy_bdDataSet
-        '
-        Me.Academy_bdDataSet.DataSetName = "academy_bdDataSet"
-        Me.Academy_bdDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'bDone
         '
         Me.bDone.Font = New System.Drawing.Font("Modern No. 20", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -389,6 +404,11 @@ Partial Class formModify
         Me.bDone.TabIndex = 31
         Me.bDone.Text = "Modificar"
         Me.bDone.UseVisualStyleBackColor = True
+        '
+        'Academy_bdDataSet
+        '
+        Me.Academy_bdDataSet.DataSetName = "academy_bdDataSet"
+        Me.Academy_bdDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'AcademybdDataSetBindingSource
         '
@@ -413,7 +433,7 @@ Partial Class formModify
         Me.toolStrip.BackColor = System.Drawing.Color.Transparent
         Me.toolStrip.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.toolStrip.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.toolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripSeparator3, Me.tsbInformacion, Me.ToolStripSeparator1, Me.tsbAYdua, Me.ToolStripSeparator2, Me.tsbSalir})
+        Me.toolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripSeparator3, Me.tsbInformacion, Me.ToolStripSeparator1, Me.tsbAYdua})
         Me.toolStrip.Location = New System.Drawing.Point(0, 0)
         Me.toolStrip.Name = "toolStrip"
         Me.toolStrip.Size = New System.Drawing.Size(1039, 35)
@@ -426,8 +446,8 @@ Partial Class formModify
         Me.ToolStripButton1.Image = Global.Academy.My.Resources.Resources.arrow_undo
         Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(222, 32)
-        Me.ToolStripButton1.Text = "Cerrar sesión y volver"
+        Me.ToolStripButton1.Size = New System.Drawing.Size(91, 32)
+        Me.ToolStripButton1.Text = "Volver"
         '
         'ToolStripSeparator3
         '
@@ -457,42 +477,6 @@ Partial Class formModify
         Me.tsbAYdua.Size = New System.Drawing.Size(92, 32)
         Me.tsbAYdua.Text = "Ayuda"
         '
-        'ToolStripSeparator2
-        '
-        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 35)
-        '
-        'tsbSalir
-        '
-        Me.tsbSalir.ForeColor = System.Drawing.Color.White
-        Me.tsbSalir.Image = Global.Academy.My.Resources.Resources.door_out
-        Me.tsbSalir.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.tsbSalir.Name = "tsbSalir"
-        Me.tsbSalir.Size = New System.Drawing.Size(74, 32)
-        Me.tsbSalir.Text = "Salir"
-        '
-        'lblDni
-        '
-        Me.lblDni.AutoSize = True
-        Me.lblDni.BackColor = System.Drawing.Color.Transparent
-        Me.lblDni.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDni.ForeColor = System.Drawing.Color.White
-        Me.lblDni.Location = New System.Drawing.Point(3, 0)
-        Me.lblDni.Name = "lblDni"
-        Me.lblDni.Padding = New System.Windows.Forms.Padding(200, 0, 0, 0)
-        Me.lblDni.Size = New System.Drawing.Size(262, 32)
-        Me.lblDni.TabIndex = 20
-        Me.lblDni.Text = "DNI"
-        '
-        'mtbDni
-        '
-        Me.mtbDni.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.mtbDni.Location = New System.Drawing.Point(468, 0)
-        Me.mtbDni.Margin = New System.Windows.Forms.Padding(200, 0, 0, 0)
-        Me.mtbDni.Name = "mtbDni"
-        Me.mtbDni.Size = New System.Drawing.Size(354, 38)
-        Me.mtbDni.TabIndex = 21
-        '
         'formModify
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -512,20 +496,20 @@ Partial Class formModify
         Me.flpDni.PerformLayout()
         Me.flpNombre.ResumeLayout(False)
         Me.flpNombre.PerformLayout()
-        Me.flpPuesto.ResumeLayout(False)
-        Me.flpPuesto.PerformLayout()
-        Me.flpDireccion.ResumeLayout(False)
-        Me.flpDireccion.PerformLayout()
         Me.flpApellido.ResumeLayout(False)
         Me.flpApellido.PerformLayout()
+        Me.flpDireccion.ResumeLayout(False)
+        Me.flpDireccion.PerformLayout()
         Me.flpEmail.ResumeLayout(False)
         Me.flpEmail.PerformLayout()
+        Me.flpPuesto.ResumeLayout(False)
+        Me.flpPuesto.PerformLayout()
+        Me.flpTel.ResumeLayout(False)
+        Me.flpTel.PerformLayout()
         Me.flpIdioma.ResumeLayout(False)
         Me.flpIdioma.PerformLayout()
         CType(Me.IdiomasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Academy_bdDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.flpTel.ResumeLayout(False)
-        Me.flpTel.PerformLayout()
         Me.flpPassword.ResumeLayout(False)
         Me.flpPassword.PerformLayout()
         CType(Me.Academy_bdDataSet, System.ComponentModel.ISupportInitialize).EndInit()
@@ -578,8 +562,6 @@ Partial Class formModify
     Friend WithEvents tsbInformacion As ToolStripButton
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
     Friend WithEvents tsbAYdua As ToolStripButton
-    Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
-    Friend WithEvents tsbSalir As ToolStripButton
     Friend WithEvents lblDni As Label
     Friend WithEvents mtbDni As MaskedTextBox
 End Class

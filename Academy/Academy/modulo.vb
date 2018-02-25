@@ -17,13 +17,16 @@
     Public Const INVIERNO = True
     Public Const VERANO = False
 
-    Public Sub ExitToAPP(form As Form)
-        Dim r = MsgBox("¿Está seguro de que desea salir?", 48 + 4, "Salir")
-        If r = vbYes Then
-            form.Close()
-        End If
-    End Sub
 
     Public showNotifyIcon = 0
+
+    Public Sub mostrar_ayuda()
+        Try
+            Process.Start("ayuda.chm")
+        Catch ex As Exception
+            idiomasDLL.Errores.INSERT_IN_ERROR_LOG(ex)
+            MsgBox("No se ha encontrado la ayuda", 64, "Navegador no encontrado")
+        End Try
+    End Sub
 
 End Module

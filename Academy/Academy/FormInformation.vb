@@ -12,7 +12,8 @@ Public Class FormInformation
 
     End Sub
 
-    Private Sub tsbSalir_Click(sender As Object, e As EventArgs)
-        modulo.ExitToAPP(Me)
+
+    Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
+        Me.Close()
     End Sub
 End Class

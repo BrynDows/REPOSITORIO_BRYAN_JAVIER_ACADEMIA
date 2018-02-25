@@ -267,6 +267,8 @@
     <None Include="academy_bdDataSet1.xss">
       <DependentUpon>academy_bdDataSet1.xsd</DependentUpon>
     </None>
+    <None Include="bin\Debug\ayuda.chm" />
+    <None Include="bin\Debug\ayuda.hnd" />
     <None Include="bin\Debug\informeDIAS.xlsx" />
     <None Include="bin\Debug\informeEVALUACIONES.xlsx" />
     <None Include="My Project\Application.myapp">

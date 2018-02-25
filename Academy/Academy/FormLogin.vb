@@ -76,6 +76,7 @@ Public Class FormLogin
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         If modulo.login.checkPassword(actualUser.userName, tbPass.Text) = True Then
+            FormManagement.lblUser.Text = actualUser.userName
             FormManagement.Show()
             Me.Close()
         Else
@@ -85,34 +86,27 @@ Public Class FormLogin
         End If
     End Sub
 
-    Private Sub tsbSalir_Click(sender As Object, e As EventArgs)
-        modulo.ExitToAPP(Me)
-    End Sub
 
-    Private Sub tsbAYdua_Click(sender As Object, e As EventArgs)
-        'llamar CHM
 
-    End Sub
 
     Private Sub tsbInformacion_Click(sender As Object, e As EventArgs)
         FormInformation.Show()
         Me.Close()
     End Sub
 
-    Private Sub SalirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalirToolStripMenuItem.Click
-        modulo.ExitToAPP(Me)
+
+    Private Sub tsbAYdua_Click_1(sender As Object, e As EventArgs) Handles tsbAYdua.Click
+        modulo.mostrar_ayuda()
     End Sub
 
-    Private Sub AyudaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AyudaToolStripMenuItem.Click
-        'CHM
+    Private Sub tsbInformacion_Click_1(sender As Object, e As EventArgs) Handles tsbInformacion.Click
+        FormInformation.ShowDialog()
     End Sub
 
-    Private Sub toolStrip_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs)
+    Private Sub tsbSalir_Click_1(sender As Object, e As EventArgs) Handles tsbSalir.Click
+        If MsgBox("¿Está seguro de que desea salir?", vbQuestion + vbYesNo) = vbYes Then
+            Me.Close()
+        End If
 
     End Sub
-
-    Private Sub toolStrip_ItemClicked_1(sender As Object, e As ToolStripItemClickedEventArgs) Handles toolStrip.ItemClicked
-
-    End Sub
-
 End Class

@@ -35,7 +35,7 @@ Partial Class Form_Crystal_ALUMNOS
         Me.CrystalReportViewer1.Location = New System.Drawing.Point(0, 0)
         Me.CrystalReportViewer1.Name = "CrystalReportViewer1"
         Me.CrystalReportViewer1.ReportSource = Me.Report_ALUMNOS1
-        Me.CrystalReportViewer1.Size = New System.Drawing.Size(1250, 683)
+        Me.CrystalReportViewer1.Size = New System.Drawing.Size(1039, 729)
         Me.CrystalReportViewer1.TabIndex = 0
         '
         'Form_Crystal_ALUMNOS
@@ -43,7 +43,7 @@ Partial Class Form_Crystal_ALUMNOS
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.ClientSize = New System.Drawing.Size(1250, 683)
+        Me.ClientSize = New System.Drawing.Size(1039, 729)
         Me.Controls.Add(Me.CrystalReportViewer1)
         Me.Name = "Form_Crystal_ALUMNOS"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

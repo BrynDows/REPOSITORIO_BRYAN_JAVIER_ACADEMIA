@@ -35,14 +35,14 @@ Partial Class Form_Crystal_empleados
         Me.CrystalReportViewer1.Location = New System.Drawing.Point(0, 0)
         Me.CrystalReportViewer1.Name = "CrystalReportViewer1"
         Me.CrystalReportViewer1.ReportSource = Me.Report_EMPLEADOS1
-        Me.CrystalReportViewer1.Size = New System.Drawing.Size(1012, 673)
+        Me.CrystalReportViewer1.Size = New System.Drawing.Size(1039, 729)
         Me.CrystalReportViewer1.TabIndex = 0
         '
         'Form_Crystal_empleados
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1012, 673)
+        Me.ClientSize = New System.Drawing.Size(1039, 729)
         Me.Controls.Add(Me.CrystalReportViewer1)
         Me.Name = "Form_Crystal_empleados"
         Me.Text = "Informe Empleados"

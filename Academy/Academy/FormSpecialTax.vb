@@ -32,8 +32,11 @@ Public Class FormSpecialTax
     End Sub
 
     Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
-        FormManagement.Show()
         Me.Close()
 
+    End Sub
+
+    Private Sub tsbInformacion_Click(sender As Object, e As EventArgs) Handles tsbInformacion.Click
+        FormInformation.Show()
     End Sub
 End Class

@@ -219,24 +219,22 @@ Public Class formModify
         cbPuesto.Items.Clear()
     End Sub
 
-    Private Sub tsbSalir_Click(sender As Object, e As EventArgs)
-        modulo.ExitToAPP(Me)
-    End Sub
+
 
     Private Sub tsbInformacion_Click(sender As Object, e As EventArgs)
         FormInformation.Show()
         Me.Close()
     End Sub
 
-    Private Sub flpPricipal_Paint(sender As Object, e As PaintEventArgs)
-
+    Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
+        Me.Close()
     End Sub
 
-    Private Sub lblDni_Click(sender As Object, e As EventArgs)
-
+    Private Sub tsbInformacion_Click_1(sender As Object, e As EventArgs) Handles tsbInformacion.Click
+        FormInformation.ShowDialog()
     End Sub
 
-    Private Sub toolStrip_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles toolStrip.ItemClicked
-
+    Private Sub tsbAYdua_Click(sender As Object, e As EventArgs) Handles tsbAYdua.Click
+        modulo.mostrar_ayuda()
     End Sub
 End Class

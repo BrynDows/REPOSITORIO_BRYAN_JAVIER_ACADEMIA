@@ -166,9 +166,7 @@
         End Try
     End Sub
 
-    Private Sub tsbSalir_Click(sender As Object, e As EventArgs)
-        modulo.ExitToAPP(Me)
-    End Sub
+
 
     Private Sub tsbInformacion_Click(sender As Object, e As EventArgs)
         FormInformation.Show()
@@ -205,5 +203,13 @@
     Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
         FormLogin.Show()
         Me.Close()
+    End Sub
+
+    Private Sub tsbInformacion_Click_1(sender As Object, e As EventArgs) Handles tsbInformacion.Click
+        FormInformation.ShowDialog()
+    End Sub
+
+    Private Sub tsbAYdua_Click(sender As Object, e As EventArgs) Handles tsbAYdua.Click
+        modulo.mostrar_ayuda()
     End Sub
 End Class

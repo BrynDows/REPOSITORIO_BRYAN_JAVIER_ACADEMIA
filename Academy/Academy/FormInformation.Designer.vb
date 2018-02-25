@@ -25,23 +25,18 @@ Partial Class FormInformation
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
-        Me.toolStrip = New System.Windows.Forms.ToolStrip()
-        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
-        Me.tsbInformacion = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.tsbAYdua = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.tsbSalir = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
         Me.LinkLabel3 = New System.Windows.Forms.LinkLabel()
+        Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
+        Me.toolStrip = New System.Windows.Forms.ToolStrip()
+        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.TableLayoutPanel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.toolStrip.SuspendLayout()
         Me.FlowLayoutPanel1.SuspendLayout()
+        Me.toolStrip.SuspendLayout()
         Me.SuspendLayout()
         '
         'RichTextBox1
@@ -88,69 +83,6 @@ Partial Class FormInformation
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 19
         Me.PictureBox1.TabStop = False
-        '
-        'HelpProvider1
-        '
-        Me.HelpProvider1.HelpNamespace = "X:\academiaingles\Academy\Academy\bin\Debug\Always idiomas.chm"
-        '
-        'toolStrip
-        '
-        Me.toolStrip.BackColor = System.Drawing.Color.Transparent
-        Me.toolStrip.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.toolStrip.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.toolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripSeparator3, Me.tsbInformacion, Me.ToolStripSeparator1, Me.tsbAYdua, Me.ToolStripSeparator2, Me.tsbSalir})
-        Me.toolStrip.Location = New System.Drawing.Point(0, 0)
-        Me.toolStrip.Name = "toolStrip"
-        Me.toolStrip.Size = New System.Drawing.Size(430, 32)
-        Me.toolStrip.TabIndex = 20
-        Me.toolStrip.Text = "ToolStrip1"
-        '
-        'ToolStripButton1
-        '
-        Me.ToolStripButton1.Image = Global.Academy.My.Resources.Resources.arrow_undo
-        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(89, 29)
-        Me.ToolStripButton1.Text = "Volver"
-        '
-        'tsbInformacion
-        '
-        Me.tsbInformacion.Image = Global.Academy.My.Resources.Resources.book
-        Me.tsbInformacion.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.tsbInformacion.Name = "tsbInformacion"
-        Me.tsbInformacion.Size = New System.Drawing.Size(138, 29)
-        Me.tsbInformacion.Text = "Información"
-        '
-        'ToolStripSeparator1
-        '
-        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 32)
-        '
-        'tsbAYdua
-        '
-        Me.tsbAYdua.Image = Global.Academy.My.Resources.Resources.help
-        Me.tsbAYdua.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.tsbAYdua.Name = "tsbAYdua"
-        Me.tsbAYdua.Size = New System.Drawing.Size(89, 29)
-        Me.tsbAYdua.Text = "Ayuda"
-        '
-        'ToolStripSeparator2
-        '
-        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 32)
-        '
-        'tsbSalir
-        '
-        Me.tsbSalir.Image = Global.Academy.My.Resources.Resources.door_out
-        Me.tsbSalir.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.tsbSalir.Name = "tsbSalir"
-        Me.tsbSalir.Size = New System.Drawing.Size(73, 29)
-        Me.tsbSalir.Text = "Salir"
-        '
-        'ToolStripSeparator3
-        '
-        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 32)
         '
         'FlowLayoutPanel1
         '
@@ -203,6 +135,35 @@ Partial Class FormInformation
         Me.LinkLabel3.Text = "LinkLabel3"
         Me.LinkLabel3.VisitedLinkColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         '
+        'HelpProvider1
+        '
+        Me.HelpProvider1.HelpNamespace = "X:\academiaingles\Academy\Academy\bin\Debug\Always idiomas.chm"
+        '
+        'toolStrip
+        '
+        Me.toolStrip.BackColor = System.Drawing.Color.Transparent
+        Me.toolStrip.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.toolStrip.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.toolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripSeparator3})
+        Me.toolStrip.Location = New System.Drawing.Point(0, 0)
+        Me.toolStrip.Name = "toolStrip"
+        Me.toolStrip.Size = New System.Drawing.Size(430, 32)
+        Me.toolStrip.TabIndex = 20
+        Me.toolStrip.Text = "ToolStrip1"
+        '
+        'ToolStripButton1
+        '
+        Me.ToolStripButton1.Image = Global.Academy.My.Resources.Resources.arrow_undo
+        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton1.Name = "ToolStripButton1"
+        Me.ToolStripButton1.Size = New System.Drawing.Size(89, 29)
+        Me.ToolStripButton1.Text = "Volver"
+        '
+        'ToolStripSeparator3
+        '
+        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 32)
+        '
         'FormInformation
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -220,10 +181,10 @@ Partial Class FormInformation
         Me.Text = "Información"
         Me.TableLayoutPanel1.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.toolStrip.ResumeLayout(False)
-        Me.toolStrip.PerformLayout()
         Me.FlowLayoutPanel1.ResumeLayout(False)
         Me.FlowLayoutPanel1.PerformLayout()
+        Me.toolStrip.ResumeLayout(False)
+        Me.toolStrip.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -235,11 +196,6 @@ Partial Class FormInformation
     Friend WithEvents toolStrip As ToolStrip
     Friend WithEvents ToolStripButton1 As ToolStripButton
     Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
-    Friend WithEvents tsbInformacion As ToolStripButton
-    Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
-    Friend WithEvents tsbAYdua As ToolStripButton
-    Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
-    Friend WithEvents tsbSalir As ToolStripButton
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
     Friend WithEvents LinkLabel1 As LinkLabel
     Friend WithEvents LinkLabel2 As LinkLabel
