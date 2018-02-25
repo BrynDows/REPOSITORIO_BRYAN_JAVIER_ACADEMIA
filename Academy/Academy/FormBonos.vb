@@ -13,7 +13,7 @@ Public Class FormBonos
     End Sub
 
 
-    Private Sub rbSkype_CheckedChanged(sender As Object, e As EventArgs) Handles rbSkype.CheckedChanged
+    Private Sub rbSkype_CheckedChanged(sender As Object, e As EventArgs)
         If rbSkype.Checked Then
             If nudPersonas.Value > 5 Then
                 nudPersonas.Value = 5
@@ -31,7 +31,7 @@ Public Class FormBonos
         UpdatePrice(sender, e)
     End Sub
 
-    Private Sub UpdatePrice(sender As Object, e As EventArgs) Handles rbEscuela.CheckedChanged, nudPersonas.ValueChanged, nudHoras.ValueChanged
+    Private Sub UpdatePrice(sender As Object, e As EventArgs) Handles nudPersonas.ValueChanged, nudHoras.ValueChanged
         If isDisabled Then
             actual = idiomasDLL.Bonos.SelectPrecio(False, rbPresencial.Checked, False, nudHoras.Value, nudPersonas.Value)
         Else
@@ -49,7 +49,7 @@ Public Class FormBonos
         Me.Close()
     End Sub
 
-    Private Sub bDone_Click(sender As Object, e As EventArgs) Handles bDone.Click
+    Private Sub bDone_Click(sender As Object, e As EventArgs)
         Try
             idiomasDLL.Bonos.UpdateAlumnoBono(Convert.ToInt32(actual(0)), alu.DNI)
             Me.Close()

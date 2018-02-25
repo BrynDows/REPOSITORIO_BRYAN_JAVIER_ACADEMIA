@@ -88,16 +88,6 @@
     End Sub
 
     ''' <summary>
-    ''' Botón cerrar sesión
-    ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <param name="e"></param>
-    Private Sub bLogout_Click(sender As Object, e As EventArgs) Handles bLogout.Click
-        FormLogin.Show()
-        Me.Close()
-    End Sub
-
-    ''' <summary>
     ''' Este método establece los campos del formulario FormModify a un texto vacío
     ''' </summary>
     Private Sub SetTextEmpty()
@@ -176,11 +166,11 @@
         End Try
     End Sub
 
-    Private Sub tsbSalir_Click(sender As Object, e As EventArgs) Handles tsbSalir.Click
+    Private Sub tsbSalir_Click(sender As Object, e As EventArgs)
         modulo.ExitToAPP(Me)
     End Sub
 
-    Private Sub tsbInformacion_Click(sender As Object, e As EventArgs) Handles tsbInformacion.Click
+    Private Sub tsbInformacion_Click(sender As Object, e As EventArgs)
         FormInformation.Show()
         Me.Close()
 
@@ -210,5 +200,10 @@
         Catch ex As Exception
             MsgBox("Ningún alumno seleccionado.", MsgBoxStyle.Information, "Error")
         End Try
+    End Sub
+
+    Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
+        FormLogin.Show()
+        Me.Close()
     End Sub
 End Class

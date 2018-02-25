@@ -85,16 +85,16 @@ Public Class FormLogin
         End If
     End Sub
 
-    Private Sub tsbSalir_Click(sender As Object, e As EventArgs) Handles tsbSalir.Click
+    Private Sub tsbSalir_Click(sender As Object, e As EventArgs)
         modulo.ExitToAPP(Me)
     End Sub
 
-    Private Sub tsbAYdua_Click(sender As Object, e As EventArgs) Handles tsbAYdua.Click
+    Private Sub tsbAYdua_Click(sender As Object, e As EventArgs)
         'llamar CHM
 
     End Sub
 
-    Private Sub tsbInformacion_Click(sender As Object, e As EventArgs) Handles tsbInformacion.Click
+    Private Sub tsbInformacion_Click(sender As Object, e As EventArgs)
         FormInformation.Show()
         Me.Close()
     End Sub
@@ -106,4 +106,13 @@ Public Class FormLogin
     Private Sub AyudaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AyudaToolStripMenuItem.Click
         'CHM
     End Sub
+
+    Private Sub toolStrip_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs)
+
+    End Sub
+
+    Private Sub toolStrip_ItemClicked_1(sender As Object, e As ToolStripItemClickedEventArgs) Handles toolStrip.ItemClicked
+
+    End Sub
+
 End Class

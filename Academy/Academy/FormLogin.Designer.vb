@@ -29,13 +29,6 @@ Partial Class FormLogin
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AyudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.flowPanel = New System.Windows.Forms.FlowLayoutPanel()
-        Me.toolStrip = New System.Windows.Forms.ToolStrip()
-        Me.tsbInformacion = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.tsbAYdua = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.tsbSalir = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -46,13 +39,19 @@ Partial Class FormLogin
         Me.tbPass = New System.Windows.Forms.TextBox()
         Me.btnLogin = New System.Windows.Forms.Button()
         Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
+        Me.toolStrip = New System.Windows.Forms.ToolStrip()
+        Me.tsbInformacion = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.tsbAYdua = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.tsbSalir = New System.Windows.Forms.ToolStripButton()
         Me.cmstrip.SuspendLayout()
-        Me.toolStrip.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel3.SuspendLayout()
         Me.TableLayoutPanel4.SuspendLayout()
+        Me.toolStrip.SuspendLayout()
         Me.SuspendLayout()
         '
         'NotifyIcon
@@ -96,56 +95,6 @@ Partial Class FormLogin
         Me.flowPanel.Size = New System.Drawing.Size(338, 355)
         Me.flowPanel.TabIndex = 15
         '
-        'toolStrip
-        '
-        Me.toolStrip.BackColor = System.Drawing.Color.Transparent
-        Me.toolStrip.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.toolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsbInformacion, Me.ToolStripSeparator1, Me.tsbAYdua, Me.ToolStripSeparator2, Me.tsbSalir, Me.ToolStripSeparator3})
-        Me.toolStrip.Location = New System.Drawing.Point(0, 0)
-        Me.toolStrip.Name = "toolStrip"
-        Me.toolStrip.Size = New System.Drawing.Size(1039, 27)
-        Me.toolStrip.TabIndex = 16
-        Me.toolStrip.Text = "ToolStrip1"
-        '
-        'tsbInformacion
-        '
-        Me.tsbInformacion.Image = Global.Academy.My.Resources.Resources.book
-        Me.tsbInformacion.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.tsbInformacion.Name = "tsbInformacion"
-        Me.tsbInformacion.Size = New System.Drawing.Size(113, 24)
-        Me.tsbInformacion.Text = "Información"
-        '
-        'ToolStripSeparator1
-        '
-        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 27)
-        '
-        'tsbAYdua
-        '
-        Me.tsbAYdua.Image = Global.Academy.My.Resources.Resources.help
-        Me.tsbAYdua.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.tsbAYdua.Name = "tsbAYdua"
-        Me.tsbAYdua.Size = New System.Drawing.Size(75, 24)
-        Me.tsbAYdua.Text = "Ayuda"
-        '
-        'ToolStripSeparator2
-        '
-        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 27)
-        '
-        'tsbSalir
-        '
-        Me.tsbSalir.Image = Global.Academy.My.Resources.Resources.door_out
-        Me.tsbSalir.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.tsbSalir.Name = "tsbSalir"
-        Me.tsbSalir.Size = New System.Drawing.Size(62, 24)
-        Me.tsbSalir.Text = "Salir"
-        '
-        'ToolStripSeparator3
-        '
-        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 27)
-        '
         'TableLayoutPanel1
         '
         Me.TableLayoutPanel1.BackColor = System.Drawing.Color.Transparent
@@ -154,12 +103,13 @@ Partial Class FormLogin
         Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel2, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel3, 0, 1)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 27)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.RowCount = 2
+        Me.TableLayoutPanel1.RowCount = 3
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 367.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1039, 702)
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1039, 729)
         Me.TableLayoutPanel1.TabIndex = 18
         '
         'TableLayoutPanel2
@@ -172,7 +122,7 @@ Partial Class FormLogin
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 1
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(1033, 329)
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(1033, 336)
         Me.TableLayoutPanel2.TabIndex = 17
         '
         'PictureBox1
@@ -181,7 +131,7 @@ Partial Class FormLogin
         Me.PictureBox1.Image = Global.Academy.My.Resources.Resources.logo_academy2
         Me.PictureBox1.Location = New System.Drawing.Point(3, 3)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(1027, 323)
+        Me.PictureBox1.Size = New System.Drawing.Size(1027, 330)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 15
         Me.PictureBox1.TabStop = False
@@ -195,7 +145,7 @@ Partial Class FormLogin
         Me.TableLayoutPanel3.Controls.Add(Me.flowPanel, 0, 0)
         Me.TableLayoutPanel3.Controls.Add(Me.TableLayoutPanel4, 1, 0)
         Me.TableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel3.Location = New System.Drawing.Point(3, 338)
+        Me.TableLayoutPanel3.Location = New System.Drawing.Point(3, 345)
         Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
         Me.TableLayoutPanel3.RowCount = 1
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
@@ -257,18 +207,69 @@ Partial Class FormLogin
         '
         'btnLogin
         '
+        Me.btnLogin.BackColor = System.Drawing.Color.White
+        Me.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnLogin.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLogin.Location = New System.Drawing.Point(70, 136)
         Me.btnLogin.Margin = New System.Windows.Forms.Padding(70, 3, 3, 3)
         Me.btnLogin.Name = "btnLogin"
-        Me.btnLogin.Size = New System.Drawing.Size(184, 50)
+        Me.btnLogin.Size = New System.Drawing.Size(184, 69)
         Me.btnLogin.TabIndex = 23
         Me.btnLogin.Text = "Acceder"
-        Me.btnLogin.UseVisualStyleBackColor = True
+        Me.btnLogin.UseVisualStyleBackColor = False
         '
         'HelpProvider1
         '
         Me.HelpProvider1.HelpNamespace = "X:\academiaingles\Academy\Academy\bin\Debug\Always idiomas.chm"
+        '
+        'toolStrip
+        '
+        Me.toolStrip.BackColor = System.Drawing.Color.Transparent
+        Me.toolStrip.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.toolStrip.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.toolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsbInformacion, Me.ToolStripSeparator1, Me.tsbAYdua, Me.ToolStripSeparator2, Me.tsbSalir})
+        Me.toolStrip.Location = New System.Drawing.Point(0, 0)
+        Me.toolStrip.Name = "toolStrip"
+        Me.toolStrip.Size = New System.Drawing.Size(1039, 32)
+        Me.toolStrip.TabIndex = 22
+        Me.toolStrip.Text = "ToolStrip1"
+        '
+        'tsbInformacion
+        '
+        Me.tsbInformacion.ForeColor = System.Drawing.Color.White
+        Me.tsbInformacion.Image = Global.Academy.My.Resources.Resources.book
+        Me.tsbInformacion.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsbInformacion.Name = "tsbInformacion"
+        Me.tsbInformacion.Size = New System.Drawing.Size(138, 29)
+        Me.tsbInformacion.Text = "Información"
+        '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 32)
+        '
+        'tsbAYdua
+        '
+        Me.tsbAYdua.ForeColor = System.Drawing.Color.White
+        Me.tsbAYdua.Image = Global.Academy.My.Resources.Resources.help
+        Me.tsbAYdua.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsbAYdua.Name = "tsbAYdua"
+        Me.tsbAYdua.Size = New System.Drawing.Size(89, 29)
+        Me.tsbAYdua.Text = "Ayuda"
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 32)
+        '
+        'tsbSalir
+        '
+        Me.tsbSalir.ForeColor = System.Drawing.Color.White
+        Me.tsbSalir.Image = Global.Academy.My.Resources.Resources.door_out
+        Me.tsbSalir.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsbSalir.Name = "tsbSalir"
+        Me.tsbSalir.Size = New System.Drawing.Size(73, 29)
+        Me.tsbSalir.Text = "Salir"
         '
         'FormLogin
         '
@@ -278,30 +279,27 @@ Partial Class FormLogin
         Me.BackgroundImage = Global.Academy.My.Resources.Resources.fondo
         Me.ClientSize = New System.Drawing.Size(1039, 729)
         Me.ControlBox = False
-        Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.toolStrip)
+        Me.Controls.Add(Me.TableLayoutPanel1)
         Me.HelpButton = True
         Me.Name = "FormLogin"
         Me.HelpProvider1.SetShowHelp(Me, True)
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Inicio de sesión"
         Me.cmstrip.ResumeLayout(False)
-        Me.toolStrip.ResumeLayout(False)
-        Me.toolStrip.PerformLayout()
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel2.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel3.ResumeLayout(False)
         Me.TableLayoutPanel4.ResumeLayout(False)
         Me.TableLayoutPanel4.PerformLayout()
+        Me.toolStrip.ResumeLayout(False)
+        Me.toolStrip.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents flowPanel As FlowLayoutPanel
-    Friend WithEvents toolStrip As ToolStrip
-    Friend WithEvents tsbInformacion As ToolStripButton
-    Friend WithEvents tsbAYdua As ToolStripButton
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
     Friend WithEvents PictureBox1 As PictureBox
@@ -311,13 +309,15 @@ Partial Class FormLogin
     Friend WithEvents lPass As Label
     Friend WithEvents lNameUser As Label
     Friend WithEvents btnLogin As Button
-    Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
-    Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
-    Friend WithEvents tsbSalir As ToolStripButton
     Friend WithEvents NotifyIcon As NotifyIcon
     Friend WithEvents cmstrip As ContextMenuStrip
     Friend WithEvents SalirToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AyudaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HelpProvider1 As HelpProvider
-    Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
+    Friend WithEvents toolStrip As ToolStrip
+    Friend WithEvents tsbInformacion As ToolStripButton
+    Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
+    Friend WithEvents tsbAYdua As ToolStripButton
+    Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
+    Friend WithEvents tsbSalir As ToolStripButton
 End Class

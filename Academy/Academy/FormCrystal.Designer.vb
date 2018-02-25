@@ -34,12 +34,10 @@ Partial Class FormCrystal
         Me.CrystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default
         Me.CrystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.CrystalReportViewer1.Location = New System.Drawing.Point(0, 0)
-        Me.CrystalReportViewer1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.CrystalReportViewer1.Name = "CrystalReportViewer1"
         Me.CrystalReportViewer1.ReportSource = Me.informe1
-        Me.CrystalReportViewer1.Size = New System.Drawing.Size(1252, 859)
+        Me.CrystalReportViewer1.Size = New System.Drawing.Size(1039, 729)
         Me.CrystalReportViewer1.TabIndex = 0
-        Me.CrystalReportViewer1.ToolPanelWidth = 225
         '
         'HelpProvider1
         '
@@ -47,14 +45,14 @@ Partial Class FormCrystal
         '
         'FormCrystal
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1252, 859)
+        Me.ClientSize = New System.Drawing.Size(1039, 729)
         Me.Controls.Add(Me.CrystalReportViewer1)
         Me.HelpButton = True
-        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "FormCrystal"
-        Me.Text = "FormCrystal"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Calendario nuevo alumno"
         Me.ResumeLayout(False)
 
     End Sub
