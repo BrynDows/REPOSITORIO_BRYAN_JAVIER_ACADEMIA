@@ -335,7 +335,7 @@ Partial Class FormManagement
         '
         'HelpProvider1
         '
-        Me.HelpProvider1.HelpNamespace = "X:\academiaingles\Academy\Academy\bin\Debug\Always idiomas.chm"
+        Me.HelpProvider1.HelpNamespace = "ayuda.chm"
         '
         'FormManagement
         '
