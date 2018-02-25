@@ -102,7 +102,7 @@ Partial Class formModify
         Me.flpPricipal.Name = "flpPricipal"
         Me.flpPricipal.Padding = New System.Windows.Forms.Padding(0, 100, 0, 0)
         Me.flpPricipal.Size = New System.Drawing.Size(1039, 729)
-        Me.flpPricipal.TabIndex = 20
+        Me.flpPricipal.TabIndex = 1
         '
         'flpDni
         '
@@ -142,7 +142,7 @@ Partial Class formModify
         Me.flpNombre.Location = New System.Drawing.Point(3, 161)
         Me.flpNombre.Name = "flpNombre"
         Me.flpNombre.Size = New System.Drawing.Size(1024, 52)
-        Me.flpNombre.TabIndex = 38
+        Me.flpNombre.TabIndex = 2
         '
         'Label1
         '
@@ -173,7 +173,7 @@ Partial Class formModify
         Me.flpApellido.Location = New System.Drawing.Point(3, 219)
         Me.flpApellido.Name = "flpApellido"
         Me.flpApellido.Size = New System.Drawing.Size(1024, 52)
-        Me.flpApellido.TabIndex = 41
+        Me.flpApellido.TabIndex = 3
         '
         'Label2
         '
@@ -203,7 +203,7 @@ Partial Class formModify
         Me.flpDireccion.Location = New System.Drawing.Point(3, 277)
         Me.flpDireccion.Name = "flpDireccion"
         Me.flpDireccion.Size = New System.Drawing.Size(1024, 52)
-        Me.flpDireccion.TabIndex = 40
+        Me.flpDireccion.TabIndex = 4
         '
         'Label5
         '
@@ -233,7 +233,7 @@ Partial Class formModify
         Me.flpEmail.Location = New System.Drawing.Point(3, 335)
         Me.flpEmail.Name = "flpEmail"
         Me.flpEmail.Size = New System.Drawing.Size(1024, 52)
-        Me.flpEmail.TabIndex = 42
+        Me.flpEmail.TabIndex = 5
         '
         'Label4
         '
@@ -263,7 +263,7 @@ Partial Class formModify
         Me.flpPuesto.Location = New System.Drawing.Point(3, 393)
         Me.flpPuesto.Name = "flpPuesto"
         Me.flpPuesto.Size = New System.Drawing.Size(1024, 52)
-        Me.flpPuesto.TabIndex = 39
+        Me.flpPuesto.TabIndex = 6
         '
         'Label8
         '
@@ -294,7 +294,7 @@ Partial Class formModify
         Me.flpTel.Location = New System.Drawing.Point(3, 451)
         Me.flpTel.Name = "flpTel"
         Me.flpTel.Size = New System.Drawing.Size(1024, 52)
-        Me.flpTel.TabIndex = 43
+        Me.flpTel.TabIndex = 7
         '
         'Label3
         '
@@ -324,7 +324,7 @@ Partial Class formModify
         Me.flpIdioma.Location = New System.Drawing.Point(3, 509)
         Me.flpIdioma.Name = "flpIdioma"
         Me.flpIdioma.Size = New System.Drawing.Size(1024, 52)
-        Me.flpIdioma.TabIndex = 37
+        Me.flpIdioma.TabIndex = 8
         '
         'Label6
         '
@@ -368,7 +368,7 @@ Partial Class formModify
         Me.flpPassword.Location = New System.Drawing.Point(3, 567)
         Me.flpPassword.Name = "flpPassword"
         Me.flpPassword.Size = New System.Drawing.Size(1024, 52)
-        Me.flpPassword.TabIndex = 44
+        Me.flpPassword.TabIndex = 9
         Me.flpPassword.Visible = False
         '
         'Label9
@@ -401,7 +401,7 @@ Partial Class formModify
         Me.bDone.Margin = New System.Windows.Forms.Padding(455, 3, 3, 3)
         Me.bDone.Name = "bDone"
         Me.bDone.Size = New System.Drawing.Size(161, 61)
-        Me.bDone.TabIndex = 31
+        Me.bDone.TabIndex = 10
         Me.bDone.Text = "Modificar"
         Me.bDone.UseVisualStyleBackColor = True
         '
