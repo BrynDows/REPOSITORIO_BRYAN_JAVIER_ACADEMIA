@@ -1,6 +1,4 @@
 ﻿Public Class FormManagement
-
-
     Public Property user As User
 
     ' Mode representa el ROl con el cual se ha accedido a este formulario,.

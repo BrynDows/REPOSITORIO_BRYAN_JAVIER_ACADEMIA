@@ -35,6 +35,7 @@ Partial Class FormLogin
         Me.tsbAYdua = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.tsbSalir = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -69,40 +70,40 @@ Partial Class FormLogin
         Me.cmstrip.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.cmstrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SalirToolStripMenuItem, Me.AyudaToolStripMenuItem})
         Me.cmstrip.Name = "cmstrip"
-        Me.cmstrip.Size = New System.Drawing.Size(140, 64)
+        Me.cmstrip.Size = New System.Drawing.Size(125, 56)
         Me.cmstrip.Text = "Opciones"
         '
         'SalirToolStripMenuItem
         '
         Me.SalirToolStripMenuItem.Image = Global.Academy.My.Resources.Resources.door_out
         Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
-        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(139, 30)
+        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(124, 26)
         Me.SalirToolStripMenuItem.Text = "Salir"
         '
         'AyudaToolStripMenuItem
         '
         Me.AyudaToolStripMenuItem.Image = Global.Academy.My.Resources.Resources.help
         Me.AyudaToolStripMenuItem.Name = "AyudaToolStripMenuItem"
-        Me.AyudaToolStripMenuItem.Size = New System.Drawing.Size(139, 30)
+        Me.AyudaToolStripMenuItem.Size = New System.Drawing.Size(124, 26)
         Me.AyudaToolStripMenuItem.Text = "Ayuda"
         '
         'flowPanel
         '
         Me.flowPanel.AutoScroll = True
         Me.flowPanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.flowPanel.Location = New System.Drawing.Point(3, 4)
-        Me.flowPanel.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.flowPanel.Location = New System.Drawing.Point(3, 3)
         Me.flowPanel.Name = "flowPanel"
-        Me.flowPanel.Size = New System.Drawing.Size(381, 443)
+        Me.flowPanel.Size = New System.Drawing.Size(338, 355)
         Me.flowPanel.TabIndex = 15
         '
         'toolStrip
         '
+        Me.toolStrip.BackColor = System.Drawing.Color.Transparent
         Me.toolStrip.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.toolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsbInformacion, Me.ToolStripSeparator1, Me.tsbAYdua, Me.ToolStripSeparator2, Me.tsbSalir})
+        Me.toolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsbInformacion, Me.ToolStripSeparator1, Me.tsbAYdua, Me.ToolStripSeparator2, Me.tsbSalir, Me.ToolStripSeparator3})
         Me.toolStrip.Location = New System.Drawing.Point(0, 0)
         Me.toolStrip.Name = "toolStrip"
-        Me.toolStrip.Size = New System.Drawing.Size(1169, 32)
+        Me.toolStrip.Size = New System.Drawing.Size(1039, 27)
         Me.toolStrip.TabIndex = 16
         Me.toolStrip.Text = "ToolStrip1"
         '
@@ -111,49 +112,54 @@ Partial Class FormLogin
         Me.tsbInformacion.Image = Global.Academy.My.Resources.Resources.book
         Me.tsbInformacion.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tsbInformacion.Name = "tsbInformacion"
-        Me.tsbInformacion.Size = New System.Drawing.Size(132, 29)
+        Me.tsbInformacion.Size = New System.Drawing.Size(113, 24)
         Me.tsbInformacion.Text = "Información"
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 32)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 27)
         '
         'tsbAYdua
         '
         Me.tsbAYdua.Image = Global.Academy.My.Resources.Resources.help
         Me.tsbAYdua.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tsbAYdua.Name = "tsbAYdua"
-        Me.tsbAYdua.Size = New System.Drawing.Size(87, 29)
+        Me.tsbAYdua.Size = New System.Drawing.Size(75, 24)
         Me.tsbAYdua.Text = "Ayuda"
         '
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 32)
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 27)
         '
         'tsbSalir
         '
         Me.tsbSalir.Image = Global.Academy.My.Resources.Resources.door_out
         Me.tsbSalir.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tsbSalir.Name = "tsbSalir"
-        Me.tsbSalir.Size = New System.Drawing.Size(69, 29)
+        Me.tsbSalir.Size = New System.Drawing.Size(62, 24)
         Me.tsbSalir.Text = "Salir"
+        '
+        'ToolStripSeparator3
+        '
+        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 27)
         '
         'TableLayoutPanel1
         '
+        Me.TableLayoutPanel1.BackColor = System.Drawing.Color.Transparent
         Me.TableLayoutPanel1.ColumnCount = 1
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel2, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel3, 0, 1)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 32)
-        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 27)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 2
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 459.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1169, 879)
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 367.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1039, 702)
         Me.TableLayoutPanel1.TabIndex = 18
         '
         'TableLayoutPanel2
@@ -162,22 +168,20 @@ Partial Class FormLogin
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel2.Controls.Add(Me.PictureBox1, 0, 0)
         Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 4)
-        Me.TableLayoutPanel2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 3)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 1
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(1163, 412)
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(1033, 329)
         Me.TableLayoutPanel2.TabIndex = 17
         '
         'PictureBox1
         '
         Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PictureBox1.Image = Global.Academy.My.Resources.Resources.logo_academy2
-        Me.PictureBox1.Location = New System.Drawing.Point(3, 4)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.PictureBox1.Location = New System.Drawing.Point(3, 3)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(1157, 404)
+        Me.PictureBox1.Size = New System.Drawing.Size(1027, 323)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 15
         Me.PictureBox1.TabStop = False
@@ -191,12 +195,11 @@ Partial Class FormLogin
         Me.TableLayoutPanel3.Controls.Add(Me.flowPanel, 0, 0)
         Me.TableLayoutPanel3.Controls.Add(Me.TableLayoutPanel4, 1, 0)
         Me.TableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel3.Location = New System.Drawing.Point(3, 424)
-        Me.TableLayoutPanel3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.TableLayoutPanel3.Location = New System.Drawing.Point(3, 338)
         Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
         Me.TableLayoutPanel3.RowCount = 1
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel3.Size = New System.Drawing.Size(1163, 451)
+        Me.TableLayoutPanel3.Size = New System.Drawing.Size(1033, 361)
         Me.TableLayoutPanel3.TabIndex = 18
         '
         'TableLayoutPanel4
@@ -208,16 +211,15 @@ Partial Class FormLogin
         Me.TableLayoutPanel4.Controls.Add(Me.tbPass, 0, 1)
         Me.TableLayoutPanel4.Controls.Add(Me.btnLogin, 0, 3)
         Me.TableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel4.Location = New System.Drawing.Point(390, 4)
-        Me.TableLayoutPanel4.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.TableLayoutPanel4.Location = New System.Drawing.Point(347, 3)
         Me.TableLayoutPanel4.Name = "TableLayoutPanel4"
         Me.TableLayoutPanel4.RowCount = 4
         Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 76.0!))
-        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 54.0!))
-        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 278.0!))
-        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25.0!))
-        Me.TableLayoutPanel4.Size = New System.Drawing.Size(381, 443)
+        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 61.0!))
+        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 43.0!))
+        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 222.0!))
+        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.TableLayoutPanel4.Size = New System.Drawing.Size(338, 355)
         Me.TableLayoutPanel4.TabIndex = 16
         '
         'lNameUser
@@ -227,40 +229,39 @@ Partial Class FormLogin
         Me.lNameUser.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.lNameUser.Location = New System.Drawing.Point(3, 0)
         Me.lNameUser.Name = "lNameUser"
-        Me.lNameUser.Padding = New System.Windows.Forms.Padding(56, 0, 0, 0)
-        Me.lNameUser.Size = New System.Drawing.Size(56, 32)
+        Me.lNameUser.Padding = New System.Windows.Forms.Padding(50, 0, 0, 0)
+        Me.lNameUser.Size = New System.Drawing.Size(50, 29)
         Me.lNameUser.TabIndex = 22
         '
         'lPass
         '
         Me.lPass.AutoSize = True
         Me.lPass.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lPass.ForeColor = System.Drawing.SystemColors.ControlDark
-        Me.lPass.Location = New System.Drawing.Point(3, 111)
+        Me.lPass.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.lPass.Location = New System.Drawing.Point(3, 90)
         Me.lPass.Name = "lPass"
-        Me.lPass.Padding = New System.Windows.Forms.Padding(56, 0, 0, 0)
-        Me.lPass.Size = New System.Drawing.Size(351, 32)
+        Me.lPass.Padding = New System.Windows.Forms.Padding(50, 0, 0, 0)
+        Me.lPass.Size = New System.Drawing.Size(297, 29)
         Me.lPass.TabIndex = 21
         Me.lPass.Text = "Introduzca contraseña"
         '
         'tbPass
         '
         Me.tbPass.Font = New System.Drawing.Font("Microsoft Sans Serif", 25.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbPass.Location = New System.Drawing.Point(3, 39)
-        Me.tbPass.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.tbPass.Location = New System.Drawing.Point(3, 32)
         Me.tbPass.MaxLength = 50
         Me.tbPass.Name = "tbPass"
         Me.tbPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.tbPass.Size = New System.Drawing.Size(373, 66)
-        Me.tbPass.TabIndex = 20
+        Me.tbPass.Size = New System.Drawing.Size(332, 56)
+        Me.tbPass.TabIndex = 0
         '
         'btnLogin
         '
         Me.btnLogin.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogin.Location = New System.Drawing.Point(79, 169)
-        Me.btnLogin.Margin = New System.Windows.Forms.Padding(79, 4, 3, 4)
+        Me.btnLogin.Location = New System.Drawing.Point(70, 136)
+        Me.btnLogin.Margin = New System.Windows.Forms.Padding(70, 3, 3, 3)
         Me.btnLogin.Name = "btnLogin"
-        Me.btnLogin.Size = New System.Drawing.Size(207, 62)
+        Me.btnLogin.Size = New System.Drawing.Size(184, 50)
         Me.btnLogin.TabIndex = 23
         Me.btnLogin.Text = "Acceder"
         Me.btnLogin.UseVisualStyleBackColor = True
@@ -271,15 +272,15 @@ Partial Class FormLogin
         '
         'FormLogin
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.ClientSize = New System.Drawing.Size(1169, 911)
+        Me.BackgroundImage = Global.Academy.My.Resources.Resources.fondo
+        Me.ClientSize = New System.Drawing.Size(1039, 729)
         Me.ControlBox = False
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.toolStrip)
         Me.HelpButton = True
-        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "FormLogin"
         Me.HelpProvider1.SetShowHelp(Me, True)
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -318,4 +319,5 @@ Partial Class FormLogin
     Friend WithEvents SalirToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AyudaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HelpProvider1 As HelpProvider
+    Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
 End Class

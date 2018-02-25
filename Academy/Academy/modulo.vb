@@ -24,4 +24,6 @@
         End If
     End Sub
 
+    Public showNotifyIcon = 0
+
 End Module

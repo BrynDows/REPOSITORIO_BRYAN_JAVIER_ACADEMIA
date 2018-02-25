@@ -11,17 +11,20 @@ Public Class formModify
     Public Property prof_OR_emple As Byte
     Private oldAccountEmploye As String
     Private Sub FormModify_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         ToolTip1.IsBalloon = True
         mtbTel.Mask = "000000000" ' Máscara para el campo teléfono
         mtbDni.Mask = "00000000>L" ' Máscara para el campo DNI
         'TODO: esta línea de código carga datos en la tabla 'Academy_bdDataSet1.idiomas' Puede moverla o quitarla según sea necesario.
         Me.IdiomasTableAdapter.Fill(Me.Academy_bdDataSet1.idiomas)
-
         If Modo = INSERTAR Then
             bDone.Text = "Añadir"
             mtbDni.Enabled = True
         Else
             bDone.Text = "Modificar"
+        End If
+        If alum_OR_Emple = ALUMNOS Then
+            flpPuesto.Visible = False
         End If
 
         If alum_OR_Emple = ALUMNOS And Modo = ACTUALIZAR Then
@@ -39,9 +42,25 @@ Public Class formModify
         If alum_OR_Emple = EMPLEADOS And Modo = ACTUALIZAR Then
             oldAccountEmploye = mtbEmail.Text
             mtbDni.Enabled = False
+            flpPuesto.Visible = True
+            'cargar comboBox: cbPuesto
+            Try
+                modulo.crudEmployes.loadComboBoxPuestos(cbPuesto)
+            Catch ex As Exception
+                idiomasDLL.INSERT_IN_ERROR_LOG(ex)
+            End Try
         End If
-        'cargar comboBox: cbPuesto
-        modulo.crudEmployes.loadComboBoxPuestos(cbPuesto)
+        If alum_OR_Emple = EMPLEADOS And Modo = INSERTAR Then
+            flpPuesto.Visible = True
+            'cargar comboBox: cbPuesto
+            Try
+                modulo.crudEmployes.loadComboBoxPuestos(cbPuesto)
+            Catch ex As Exception
+                idiomasDLL.INSERT_IN_ERROR_LOG(ex)
+            End Try
+
+        End If
+
     End Sub
 
     Private Sub mtbTel_MaskInputRejected(sender As Object, e As MaskInputRejectedEventArgs)
@@ -201,4 +220,5 @@ Public Class formModify
         FormInformation.Show()
         Me.Close()
     End Sub
+
 End Class

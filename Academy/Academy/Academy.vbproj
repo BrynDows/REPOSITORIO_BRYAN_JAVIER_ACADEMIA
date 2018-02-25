@@ -296,10 +296,12 @@
     <Content Include="bin\Debug\academy_bd.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="bin\Debug\fondo.png" />
     <Content Include="bin\Debug\informe.xml" />
     <Content Include="bin\Debug\informe_ALUMNOS.xml" />
     <Content Include="bin\Debug\informe_EMPLEADOS.xml" />
     <Content Include="bin\Debug\user.png" />
+    <None Include="Resources\arrow_undo.png" />
     <None Include="Resources\award_star_gold_2.png" />
     <None Include="Resources\medal_gold_2.png" />
     <None Include="Resources\application_view_detail.png" />

@@ -4,8 +4,11 @@ Public Class FormLogin
 
     Private actualUser As User
     Private Sub FormLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If modulo.showNotifyIcon = 0 Then
+            NotifyIcon.ShowBalloonTip(5)
+            modulo.showNotifyIcon = +1
+        End If
 
-        NotifyIcon.ShowBalloonTip(5)
         btnLogin.Enabled = False
         tbPass.Enabled = False
         For Each user As User In modulo.login.getUsers
@@ -88,6 +91,7 @@ Public Class FormLogin
 
     Private Sub tsbAYdua_Click(sender As Object, e As EventArgs) Handles tsbAYdua.Click
         'llamar CHM
+
     End Sub
 
     Private Sub tsbInformacion_Click(sender As Object, e As EventArgs) Handles tsbInformacion.Click

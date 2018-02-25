@@ -53,31 +53,33 @@ Partial Class FormBonos
         '
         'lTitle
         '
+        Me.lTitle.BackColor = System.Drawing.Color.Transparent
         Me.lTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lTitle.Location = New System.Drawing.Point(47, 54)
+        Me.lTitle.Location = New System.Drawing.Point(42, 43)
         Me.lTitle.Name = "lTitle"
-        Me.lTitle.Size = New System.Drawing.Size(611, 64)
+        Me.lTitle.Size = New System.Drawing.Size(543, 51)
         Me.lTitle.TabIndex = 0
         Me.lTitle.Text = "Asignar bono al alumno"
         '
         'Panel1
         '
+        Me.Panel1.BackColor = System.Drawing.Color.Transparent
         Me.Panel1.Controls.Add(Me.rbSkype)
         Me.Panel1.Controls.Add(Me.rbPresencial)
-        Me.Panel1.Location = New System.Drawing.Point(67, 201)
+        Me.Panel1.Location = New System.Drawing.Point(60, 161)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(237, 118)
+        Me.Panel1.Size = New System.Drawing.Size(211, 94)
         Me.Panel1.TabIndex = 3
         '
         'rbSkype
         '
         Me.rbSkype.AutoSize = True
         Me.rbSkype.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rbSkype.Location = New System.Drawing.Point(3, 70)
+        Me.rbSkype.Location = New System.Drawing.Point(3, 56)
         Me.rbSkype.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.rbSkype.Name = "rbSkype"
-        Me.rbSkype.Size = New System.Drawing.Size(180, 36)
+        Me.rbSkype.Size = New System.Drawing.Size(150, 33)
         Me.rbSkype.TabIndex = 2
         Me.rbSkype.Text = "A distancia"
         Me.rbSkype.UseVisualStyleBackColor = True
@@ -87,10 +89,10 @@ Partial Class FormBonos
         Me.rbPresencial.AutoSize = True
         Me.rbPresencial.Checked = True
         Me.rbPresencial.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rbPresencial.Location = New System.Drawing.Point(3, 28)
+        Me.rbPresencial.Location = New System.Drawing.Point(3, 22)
         Me.rbPresencial.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.rbPresencial.Name = "rbPresencial"
-        Me.rbPresencial.Size = New System.Drawing.Size(174, 36)
+        Me.rbPresencial.Size = New System.Drawing.Size(148, 33)
         Me.rbPresencial.TabIndex = 0
         Me.rbPresencial.TabStop = True
         Me.rbPresencial.Text = "Presencial"
@@ -98,14 +100,15 @@ Partial Class FormBonos
         '
         'gbLugar
         '
+        Me.gbLugar.BackColor = System.Drawing.Color.Transparent
         Me.gbLugar.Controls.Add(Me.rbDomi)
         Me.gbLugar.Controls.Add(Me.rbEscuela)
         Me.gbLugar.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gbLugar.Location = New System.Drawing.Point(67, 429)
+        Me.gbLugar.Location = New System.Drawing.Point(60, 343)
         Me.gbLugar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.gbLugar.Name = "gbLugar"
         Me.gbLugar.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.gbLugar.Size = New System.Drawing.Size(186, 132)
+        Me.gbLugar.Size = New System.Drawing.Size(165, 106)
         Me.gbLugar.TabIndex = 4
         Me.gbLugar.TabStop = False
         Me.gbLugar.Text = "Lugar"
@@ -114,10 +117,10 @@ Partial Class FormBonos
         '
         Me.rbDomi.AutoSize = True
         Me.rbDomi.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rbDomi.Location = New System.Drawing.Point(19, 85)
+        Me.rbDomi.Location = New System.Drawing.Point(17, 68)
         Me.rbDomi.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.rbDomi.Name = "rbDomi"
-        Me.rbDomi.Size = New System.Drawing.Size(157, 36)
+        Me.rbDomi.Size = New System.Drawing.Size(135, 33)
         Me.rbDomi.TabIndex = 1
         Me.rbDomi.Text = "Domicilio"
         Me.rbDomi.UseVisualStyleBackColor = True
@@ -127,10 +130,10 @@ Partial Class FormBonos
         Me.rbEscuela.AutoSize = True
         Me.rbEscuela.Checked = True
         Me.rbEscuela.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rbEscuela.Location = New System.Drawing.Point(19, 42)
+        Me.rbEscuela.Location = New System.Drawing.Point(17, 34)
         Me.rbEscuela.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.rbEscuela.Name = "rbEscuela"
-        Me.rbEscuela.Size = New System.Drawing.Size(142, 36)
+        Me.rbEscuela.Size = New System.Drawing.Size(120, 33)
         Me.rbEscuela.TabIndex = 0
         Me.rbEscuela.TabStop = True
         Me.rbEscuela.Text = "Escuela"
@@ -140,12 +143,12 @@ Partial Class FormBonos
         '
         Me.nudHoras.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.nudHoras.Increment = New Decimal(New Integer() {5, 0, 0, 0})
-        Me.nudHoras.Location = New System.Drawing.Point(580, 448)
+        Me.nudHoras.Location = New System.Drawing.Point(516, 358)
         Me.nudHoras.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.nudHoras.Maximum = New Decimal(New Integer() {15, 0, 0, 0})
         Me.nudHoras.Minimum = New Decimal(New Integer() {5, 0, 0, 0})
         Me.nudHoras.Name = "nudHoras"
-        Me.nudHoras.Size = New System.Drawing.Size(79, 35)
+        Me.nudHoras.Size = New System.Drawing.Size(70, 30)
         Me.nudHoras.TabIndex = 5
         Me.nudHoras.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.nudHoras.Value = New Decimal(New Integer() {5, 0, 0, 0})
@@ -153,32 +156,34 @@ Partial Class FormBonos
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(322, 448)
+        Me.Label1.Location = New System.Drawing.Point(286, 358)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(240, 32)
+        Me.Label1.Size = New System.Drawing.Size(206, 29)
         Me.Label1.TabIndex = 6
         Me.Label1.Text = "Número de horas:"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(419, 518)
+        Me.Label2.Location = New System.Drawing.Point(372, 414)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(143, 32)
+        Me.Label2.Size = New System.Drawing.Size(121, 29)
         Me.Label2.TabIndex = 8
         Me.Label2.Text = "Personas:"
         '
         'nudPersonas
         '
         Me.nudPersonas.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.nudPersonas.Location = New System.Drawing.Point(580, 519)
+        Me.nudPersonas.Location = New System.Drawing.Point(516, 415)
         Me.nudPersonas.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.nudPersonas.Maximum = New Decimal(New Integer() {6, 0, 0, 0})
         Me.nudPersonas.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.nudPersonas.Name = "nudPersonas"
-        Me.nudPersonas.Size = New System.Drawing.Size(79, 35)
+        Me.nudPersonas.Size = New System.Drawing.Size(70, 30)
         Me.nudPersonas.TabIndex = 7
         Me.nudPersonas.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.nudPersonas.Value = New Decimal(New Integer() {1, 0, 0, 0})
@@ -187,10 +192,10 @@ Partial Class FormBonos
         '
         Me.bDone.AutoSize = True
         Me.bDone.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.bDone.Location = New System.Drawing.Point(89, 604)
+        Me.bDone.Location = New System.Drawing.Point(79, 483)
         Me.bDone.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.bDone.Name = "bDone"
-        Me.bDone.Size = New System.Drawing.Size(137, 51)
+        Me.bDone.Size = New System.Drawing.Size(122, 41)
         Me.bDone.TabIndex = 9
         Me.bDone.Text = "Asignar"
         Me.bDone.UseVisualStyleBackColor = True
@@ -198,20 +203,23 @@ Partial Class FormBonos
         'lPrice
         '
         Me.lPrice.AutoSize = True
+        Me.lPrice.BackColor = System.Drawing.Color.Transparent
         Me.lPrice.Font = New System.Drawing.Font("Forte", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lPrice.Location = New System.Drawing.Point(521, 604)
+        Me.lPrice.Location = New System.Drawing.Point(463, 483)
         Me.lPrice.Name = "lPrice"
-        Me.lPrice.Size = New System.Drawing.Size(79, 44)
+        Me.lPrice.Size = New System.Drawing.Size(67, 37)
         Me.lPrice.TabIndex = 10
         Me.lPrice.Text = "0 €"
         '
         'toolStrip
         '
+        Me.toolStrip.BackColor = System.Drawing.Color.Transparent
+        Me.toolStrip.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.toolStrip.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.toolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsbInformacion, Me.ToolStripSeparator1, Me.tsbAYdua, Me.ToolStripSeparator2, Me.tsbSalir})
         Me.toolStrip.Location = New System.Drawing.Point(0, 0)
         Me.toolStrip.Name = "toolStrip"
-        Me.toolStrip.Size = New System.Drawing.Size(716, 32)
+        Me.toolStrip.Size = New System.Drawing.Size(1039, 30)
         Me.toolStrip.TabIndex = 17
         Me.toolStrip.Text = "ToolStrip1"
         '
@@ -220,33 +228,33 @@ Partial Class FormBonos
         Me.tsbInformacion.Image = Global.Academy.My.Resources.Resources.book
         Me.tsbInformacion.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tsbInformacion.Name = "tsbInformacion"
-        Me.tsbInformacion.Size = New System.Drawing.Size(132, 29)
+        Me.tsbInformacion.Size = New System.Drawing.Size(126, 27)
         Me.tsbInformacion.Text = "Información"
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 32)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 30)
         '
         'tsbAYdua
         '
         Me.tsbAYdua.Image = Global.Academy.My.Resources.Resources.help
         Me.tsbAYdua.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tsbAYdua.Name = "tsbAYdua"
-        Me.tsbAYdua.Size = New System.Drawing.Size(87, 29)
+        Me.tsbAYdua.Size = New System.Drawing.Size(82, 27)
         Me.tsbAYdua.Text = "Ayuda"
         '
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 32)
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 30)
         '
         'tsbSalir
         '
         Me.tsbSalir.Image = Global.Academy.My.Resources.Resources.door_out
         Me.tsbSalir.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tsbSalir.Name = "tsbSalir"
-        Me.tsbSalir.Size = New System.Drawing.Size(69, 29)
+        Me.tsbSalir.Size = New System.Drawing.Size(66, 27)
         Me.tsbSalir.Text = "Salir"
         '
         'mcDate
@@ -254,8 +262,10 @@ Partial Class FormBonos
         Me.mcDate.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.mcDate.CalendarDimensions = New System.Drawing.Size(2, 1)
         Me.mcDate.FirstDayOfWeek = System.Windows.Forms.Day.Monday
-        Me.mcDate.Location = New System.Drawing.Point(403, 159)
+        Me.mcDate.Location = New System.Drawing.Point(358, 127)
+        Me.mcDate.Margin = New System.Windows.Forms.Padding(8, 7, 8, 7)
         Me.mcDate.MaxDate = New Date(2018, 12, 31, 0, 0, 0, 0)
         Me.mcDate.MaxSelectionCount = 1
         Me.mcDate.MinDate = New Date(2018, 1, 1, 0, 0, 0, 0)
@@ -266,10 +276,11 @@ Partial Class FormBonos
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(437, 121)
+        Me.Label3.Location = New System.Drawing.Point(388, 97)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(177, 29)
+        Me.Label3.Size = New System.Drawing.Size(143, 25)
         Me.Label3.TabIndex = 19
         Me.Label3.Text = "Fecha de inicio"
         '
@@ -279,10 +290,11 @@ Partial Class FormBonos
         '
         'FormBonos
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.SteelBlue
-        Me.ClientSize = New System.Drawing.Size(716, 699)
+        Me.BackgroundImage = Global.Academy.My.Resources.Resources.fondo
+        Me.ClientSize = New System.Drawing.Size(1039, 729)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.mcDate)
         Me.Controls.Add(Me.toolStrip)

@@ -42,10 +42,12 @@ Partial Class Form_Crystal_ALUMNOS
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.ActiveBorder
         Me.ClientSize = New System.Drawing.Size(1250, 683)
         Me.Controls.Add(Me.CrystalReportViewer1)
         Me.Name = "Form_Crystal_ALUMNOS"
-        Me.Text = "Form_Crystal_ALUMNOS"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Informe Alumnos"
         Me.ResumeLayout(False)
 
     End Sub
