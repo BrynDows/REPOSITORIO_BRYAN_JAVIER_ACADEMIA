@@ -79,76 +79,83 @@ Public Class formModify
     'Button Done
     '
     Private Sub bDone_Click(sender As Object, e As EventArgs) Handles bDone.Click
-
-        If mtbNombre.Text.Length > 0 And mtbApellido.Text.Length > 0 And mtbEmail.Text.Length > 0 AndAlso mtbDireccion.Text.Length > 0 Then
+        If mtbEmail.Text.Length > 0 And mtbDireccion.Text.Length > 0 Then
             If idiomasDLL.Validaciones.isValidEmail(mtbEmail.Text) Then
-                '
-                'Alumnos
-                '
-                If Modo = INSERTAR And alum_OR_Emple = ALUMNOS Then
-                    Try
-                        idiomasDLL.Alumnos.InsertAlumno(FormManagement.user.dni, New idiomasDLL.Alumno(mtbDni.Text, mtbNombre.Text, mtbApellido.Text, mtbTel.Text, mtbEmail.Text, mtbDireccion.Text))
-                        FormManagement.LoadDataGrids()
-                        idiomasDLL.Alumnos.generateReport_lastRecord(mtbDni.Text)
-                        FormCrystal.Show()
-                        Me.Close()
-                    Catch ex As System.Data.OleDb.OleDbException
-                        MsgBox("Este alumno ya existe en la base de datos.", MsgBoxStyle.OkOnly + MsgBoxStyle.Critical, "ERROR")
-                        idiomasDLL.Alumnos.CloseConnection()
-                        idiomasDLL.Errores.INSERT_IN_ERROR_LOG(ex)
-                    End Try
-                ElseIf Modo = ACTUALIZAR And alum_OR_Emple = ALUMNOS Then
-                    Try
-                        idiomasDLL.Alumnos.UpdateAlumno(New idiomasDLL.Alumno(mtbDni.Text, mtbNombre.Text, mtbApellido.Text, mtbTel.Text, mtbEmail.Text, mtbDireccion.Text))
-                        FormManagement.LoadDataGrids()
-                        Me.Close()
-                    Catch ex As Exception
-                        MsgBox("Error al actualizar el registro.", MsgBoxStyle.OkOnly + MsgBoxStyle.Critical, "ERROR")
-                        idiomasDLL.Alumnos.CloseConnection()
-                        idiomasDLL.Errores.INSERT_IN_ERROR_LOG(ex)
-                    End Try
-                End If
-                '
-                'Empleados
-                '
-                If Modo = INSERTAR And alum_OR_Emple = EMPLEADOS And prof_OR_emple = INSERTAR_PROFESOR Then
+                If idiomasDLL.Validaciones.isValidName(mtbNombre.Text) And idiomasDLL.Validaciones.isValidApe(mtbApellido.Text) Then
+                    If mtbDireccion.Text.Length <= 80 Then
+                        '
+                        'Alumnos
+                        '
+                        If Modo = INSERTAR And alum_OR_Emple = ALUMNOS Then
+                            Try
+                                idiomasDLL.Alumnos.InsertAlumno(FormManagement.user.dni, New idiomasDLL.Alumno(mtbDni.Text, mtbNombre.Text, mtbApellido.Text, mtbTel.Text, mtbEmail.Text, mtbDireccion.Text))
+                                FormManagement.LoadDataGrids()
+                                idiomasDLL.Alumnos.generateReport_lastRecord(mtbDni.Text)
+                                FormCrystal.Show()
+                                Me.Close()
+                            Catch ex As System.Data.OleDb.OleDbException
+                                MsgBox("Este alumno ya existe en la base de datos.", MsgBoxStyle.OkOnly + MsgBoxStyle.Critical, "ERROR")
+                                idiomasDLL.Alumnos.CloseConnection()
+                                idiomasDLL.Errores.INSERT_IN_ERROR_LOG(ex)
+                            End Try
+                        ElseIf Modo = ACTUALIZAR And alum_OR_Emple = ALUMNOS Then
+                            Try
+                                idiomasDLL.Alumnos.UpdateAlumno(New idiomasDLL.Alumno(mtbDni.Text, mtbNombre.Text, mtbApellido.Text, mtbTel.Text, mtbEmail.Text, mtbDireccion.Text))
+                                FormManagement.LoadDataGrids()
+                                Me.Close()
+                            Catch ex As Exception
+                                MsgBox("Error al actualizar el registro.", MsgBoxStyle.OkOnly + MsgBoxStyle.Critical, "ERROR")
+                                idiomasDLL.Alumnos.CloseConnection()
+                                idiomasDLL.Errores.INSERT_IN_ERROR_LOG(ex)
+                            End Try
+                        End If
+                        '
+                        'Empleados
+                        '
+                        If Modo = INSERTAR And alum_OR_Emple = EMPLEADOS And prof_OR_emple = INSERTAR_PROFESOR Then
 
-                    Try
-                        crudEmployes.InsertTeacher(mtbDni.Text, mtbNombre.Text, mtbApellido.Text, mtbEmail.Text, tbPass.Text, cbPuesto.SelectedItem, mtbTel.Text, mtbDireccion.Text)
-                        FormManagement.LoadDataGrids()
-                        Me.Close()
-                    Catch ex As Exception
-                        MsgBox("Error al insertar el registro.", MsgBoxStyle.OkOnly + MsgBoxStyle.Critical, "ERROR")
-                        idiomasDLL.INSERT_IN_ERROR_LOG(ex)
-                    End Try
-                ElseIf Modo = INSERTAR And alum_OR_Emple = EMPLEADOS And prof_OR_emple = INSERTAR_EMPLEADO Then
-                    Try
-                        crudEmployes.InsertEmploye(mtbDni.Text, mtbNombre.Text, cbPuesto.SelectedItem, mtbApellido.Text, mtbTel.Text, mtbDireccion.Text, mtbEmail.Text)
-                        FormManagement.LoadDataGrids()
-                        Me.Close()
-                    Catch ex As Exception
+                            Try
+                                crudEmployes.InsertTeacher(mtbDni.Text, mtbNombre.Text, mtbApellido.Text, mtbEmail.Text, tbPass.Text, cbPuesto.SelectedItem, mtbTel.Text, mtbDireccion.Text)
+                                FormManagement.LoadDataGrids()
+                                Me.Close()
+                            Catch ex As Exception
+                                MsgBox("Error al insertar el registro.", MsgBoxStyle.OkOnly + MsgBoxStyle.Critical, "ERROR")
+                                idiomasDLL.INSERT_IN_ERROR_LOG(ex)
+                            End Try
+                        ElseIf Modo = INSERTAR And alum_OR_Emple = EMPLEADOS And prof_OR_emple = INSERTAR_EMPLEADO Then
+                            Try
+                                crudEmployes.InsertEmploye(mtbDni.Text, mtbNombre.Text, cbPuesto.SelectedItem, mtbApellido.Text, mtbTel.Text, mtbDireccion.Text, mtbEmail.Text)
+                                FormManagement.LoadDataGrids()
+                                Me.Close()
+                            Catch ex As Exception
 
-                        MsgBox("Error al insertar el registro.", MsgBoxStyle.OkOnly + MsgBoxStyle.Critical, "ERROR")
-                        idiomasDLL.INSERT_IN_ERROR_LOG(ex)
-                    End Try
-                ElseIf Modo = ACTUALIZAR And alum_OR_Emple = EMPLEADOS Then
-                    Try
-                        crudEmployes.UpdateEmployee(New Employe(mtbDni.Text,
-                                                                mtbNombre.Text,
-                                                                cbPuesto.SelectedItem,
-                                                                mtbApellido.Text,
-                                                                mtbTel.Text,
-                                                                mtbDireccion.Text,
-                                                                mtbEmail.Text,
-                                                                New User(mtbEmail.Text, mtbDni.Text, cbPuesto.SelectedItem.id, tbPass.Text)
-                                                                ), oldAccountEmploye)
-                        FormManagement.LoadDataGrids()
-                        Me.Close()
+                                MsgBox("Error al insertar el registro.", MsgBoxStyle.OkOnly + MsgBoxStyle.Critical, "ERROR")
+                                idiomasDLL.INSERT_IN_ERROR_LOG(ex)
+                            End Try
+                        ElseIf Modo = ACTUALIZAR And alum_OR_Emple = EMPLEADOS Then
+                            Try
+                                crudEmployes.UpdateEmployee(New Employe(mtbDni.Text,
+                                                                        mtbNombre.Text,
+                                                                        cbPuesto.SelectedItem,
+                                                                        mtbApellido.Text,
+                                                                        mtbTel.Text,
+                                                                        mtbDireccion.Text,
+                                                                        mtbEmail.Text,
+                                                                        New User(mtbEmail.Text, mtbDni.Text, cbPuesto.SelectedItem.id, tbPass.Text)
+                                                                        ), oldAccountEmploye)
+                                FormManagement.LoadDataGrids()
+                                Me.Close()
 
-                    Catch ex As Exception
-                        MsgBox("Error al actualizar el registro.", MsgBoxStyle.OkOnly + MsgBoxStyle.Critical, "ERROR")
-                    idiomasDLL.INSERT_IN_ERROR_LOG(ex)
-                    End Try
+                            Catch ex As Exception
+                                MsgBox("Error al actualizar el registro.", MsgBoxStyle.OkOnly + MsgBoxStyle.Critical, "ERROR")
+                                idiomasDLL.INSERT_IN_ERROR_LOG(ex)
+                            End Try
+                        End If
+                    Else
+                        MsgBox("La dirección es demasiado larga.", MsgBoxStyle.OkOnly + MsgBoxStyle.Exclamation, "Dirección demasiado larga")
+                    End If
+                Else
+                    MsgBox("El nombre y/o los apellidos no son válidos.", MsgBoxStyle.OkOnly + MsgBoxStyle.Exclamation, "Campo incorrecto")
                 End If
             Else
                 MsgBox("La dirección de email no es válida. Revísala.", MsgBoxStyle.OkOnly + MsgBoxStyle.Exclamation, "Email incorrecto")
