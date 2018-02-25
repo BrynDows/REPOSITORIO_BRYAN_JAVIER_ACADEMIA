@@ -133,7 +133,7 @@ Partial Class formModify
         Me.mtbDni.Margin = New System.Windows.Forms.Padding(200, 0, 0, 0)
         Me.mtbDni.Name = "mtbDni"
         Me.mtbDni.Size = New System.Drawing.Size(354, 38)
-        Me.mtbDni.TabIndex = 21
+        Me.mtbDni.TabIndex = 1
         '
         'flpNombre
         '
@@ -164,7 +164,7 @@ Partial Class formModify
         Me.mtbNombre.Margin = New System.Windows.Forms.Padding(145, 0, 0, 0)
         Me.mtbNombre.Name = "mtbNombre"
         Me.mtbNombre.Size = New System.Drawing.Size(356, 38)
-        Me.mtbNombre.TabIndex = 26
+        Me.mtbNombre.TabIndex = 2
         '
         'flpApellido
         '
@@ -194,7 +194,7 @@ Partial Class formModify
         Me.mtbApellido.Margin = New System.Windows.Forms.Padding(142, 0, 0, 0)
         Me.mtbApellido.Name = "mtbApellido"
         Me.mtbApellido.Size = New System.Drawing.Size(355, 38)
-        Me.mtbApellido.TabIndex = 27
+        Me.mtbApellido.TabIndex = 3
         '
         'flpDireccion
         '
@@ -224,7 +224,7 @@ Partial Class formModify
         Me.mtbDireccion.Margin = New System.Windows.Forms.Padding(126, 0, 0, 0)
         Me.mtbDireccion.Name = "mtbDireccion"
         Me.mtbDireccion.Size = New System.Drawing.Size(356, 38)
-        Me.mtbDireccion.TabIndex = 30
+        Me.mtbDireccion.TabIndex = 4
         '
         'flpEmail
         '
@@ -254,7 +254,7 @@ Partial Class formModify
         Me.mtbEmail.Margin = New System.Windows.Forms.Padding(15, 0, 0, 0)
         Me.mtbEmail.Name = "mtbEmail"
         Me.mtbEmail.Size = New System.Drawing.Size(354, 38)
-        Me.mtbEmail.TabIndex = 29
+        Me.mtbEmail.TabIndex = 5
         '
         'flpPuesto
         '
@@ -285,7 +285,7 @@ Partial Class formModify
         Me.cbPuesto.Location = New System.Drawing.Point(466, 3)
         Me.cbPuesto.Name = "cbPuesto"
         Me.cbPuesto.Size = New System.Drawing.Size(356, 39)
-        Me.cbPuesto.TabIndex = 36
+        Me.cbPuesto.TabIndex = 6
         '
         'flpTel
         '
@@ -315,7 +315,7 @@ Partial Class formModify
         Me.mtbTel.Margin = New System.Windows.Forms.Padding(139, 0, 0, 0)
         Me.mtbTel.Name = "mtbTel"
         Me.mtbTel.Size = New System.Drawing.Size(350, 38)
-        Me.mtbTel.TabIndex = 28
+        Me.mtbTel.TabIndex = 7
         '
         'flpIdioma
         '
@@ -348,7 +348,7 @@ Partial Class formModify
         Me.cbIdioma.Margin = New System.Windows.Forms.Padding(165, 0, 0, 0)
         Me.cbIdioma.Name = "cbIdioma"
         Me.cbIdioma.Size = New System.Drawing.Size(351, 39)
-        Me.cbIdioma.TabIndex = 32
+        Me.cbIdioma.TabIndex = 8
         Me.cbIdioma.ValueMember = "idioma"
         '
         'IdiomasBindingSource
@@ -392,7 +392,7 @@ Partial Class formModify
         Me.tbPass.Name = "tbPass"
         Me.tbPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.tbPass.Size = New System.Drawing.Size(349, 37)
-        Me.tbPass.TabIndex = 23
+        Me.tbPass.TabIndex = 9
         '
         'bDone
         '

@@ -109,4 +109,14 @@ Public Class FormLogin
         End If
 
     End Sub
+
+    Private Sub SalirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalirToolStripMenuItem.Click
+        If MsgBox("¿Está seguro de que desea salir?", vbQuestion + vbYesNo) = vbYes Then
+            Me.Close()
+        End If
+    End Sub
+
+    Private Sub AyudaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AyudaToolStripMenuItem.Click
+        modulo.mostrar_ayuda()
+    End Sub
 End Class
