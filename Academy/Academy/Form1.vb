@@ -1,18 +1,19 @@
-﻿Public Class Form1
-    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+﻿Imports System.Threading
 
+Public Class Form1
+    Dim cont As Integer = 0
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Timer1.Start()
+        ProgressBar1.Maximum = 100
+    End Sub
+
+    Private Sub Timer1_Tick_1(sender As Object, e As EventArgs) Handles Timer1.Tick
         ProgressBar1.Increment(1)
-        lblProgess.Text = ProgressBar1.Value & " %"
-        If ProgressBar1.Value = ProgressBar1.Maximum Then
+        lblProgess.Text = cont & " %"
+        If cont = 101 Then
             FormLogin.Show()
             Me.Close()
         End If
-    End Sub
-
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'idiomasDLL.Alumnos.generateReport_ALUMNOS()
-
-        ProgressBar1.Maximum = 100
-        Timer1.Start()
+        cont = cont + 1
     End Sub
 End Class

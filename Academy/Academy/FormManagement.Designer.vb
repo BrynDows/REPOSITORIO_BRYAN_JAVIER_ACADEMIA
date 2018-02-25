@@ -22,31 +22,31 @@ Partial Class FormManagement
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.bMod = New System.Windows.Forms.Button()
-        Me.bDel = New System.Windows.Forms.Button()
         Me.tcModos = New System.Windows.Forms.TabControl()
         Me.tabProfesores = New System.Windows.Forms.TabPage()
         Me.dgvProfesores = New System.Windows.Forms.DataGridView()
         Me.tabAlumnos = New System.Windows.Forms.TabPage()
         Me.dgvAlumnos = New System.Windows.Forms.DataGridView()
-        Me.bLogout = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.bSpecialTax = New System.Windows.Forms.Button()
         Me.bBono = New System.Windows.Forms.Button()
         Me.bAdd = New System.Windows.Forms.Button()
-        Me.toolStrip = New System.Windows.Forms.ToolStrip()
-        Me.tsbInformacion = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.tsbAYdua = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.tsbSalir = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
+        Me.bDel = New System.Windows.Forms.Button()
+        Me.bMod = New System.Windows.Forms.Button()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.ToolStripDropDownButton1 = New System.Windows.Forms.ToolStripDropDownButton()
         Me.InformeAlumnosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InformeEmpleadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
+        Me.toolStrip = New System.Windows.Forms.ToolStrip()
+        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
+        Me.tsbInformacion = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.tsbAYdua = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.tsbSalir = New System.Windows.Forms.ToolStripButton()
         Me.tcModos.SuspendLayout()
         Me.tabProfesores.SuspendLayout()
         CType(Me.dgvProfesores, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -54,35 +54,9 @@ Partial Class FormManagement
         CType(Me.dgvAlumnos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.Panel1.SuspendLayout()
-        Me.toolStrip.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
+        Me.toolStrip.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'bMod
-        '
-        Me.bMod.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.bMod.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.bMod.Location = New System.Drawing.Point(17, 174)
-        Me.bMod.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.bMod.Name = "bMod"
-        Me.bMod.Size = New System.Drawing.Size(268, 44)
-        Me.bMod.TabIndex = 4
-        Me.bMod.Text = "Modificar"
-        Me.bMod.UseVisualStyleBackColor = True
-        '
-        'bDel
-        '
-        Me.bDel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.bDel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.bDel.Location = New System.Drawing.Point(17, 258)
-        Me.bDel.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.bDel.Name = "bDel"
-        Me.bDel.Size = New System.Drawing.Size(268, 44)
-        Me.bDel.TabIndex = 5
-        Me.bDel.Text = "Eliminar"
-        Me.bDel.UseVisualStyleBackColor = True
         '
         'tcModos
         '
@@ -94,18 +68,18 @@ Partial Class FormManagement
         Me.tcModos.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.tcModos.Name = "tcModos"
         Me.tcModos.SelectedIndex = 0
-        Me.tcModos.Size = New System.Drawing.Size(1044, 697)
+        Me.tcModos.Size = New System.Drawing.Size(784, 555)
         Me.tcModos.TabIndex = 6
         Me.tcModos.Tag = ""
         '
         'tabProfesores
         '
         Me.tabProfesores.Controls.Add(Me.dgvProfesores)
-        Me.tabProfesores.Location = New System.Drawing.Point(4, 41)
+        Me.tabProfesores.Location = New System.Drawing.Point(4, 38)
         Me.tabProfesores.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.tabProfesores.Name = "tabProfesores"
         Me.tabProfesores.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.tabProfesores.Size = New System.Drawing.Size(1036, 652)
+        Me.tabProfesores.Size = New System.Drawing.Size(776, 513)
         Me.tabProfesores.TabIndex = 0
         Me.tabProfesores.Text = "Empleados"
         Me.tabProfesores.UseVisualStyleBackColor = True
@@ -115,7 +89,7 @@ Partial Class FormManagement
         Me.dgvProfesores.AllowUserToAddRows = False
         Me.dgvProfesores.AllowUserToDeleteRows = False
         Me.dgvProfesores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
-        Me.dgvProfesores.BackgroundColor = System.Drawing.Color.SteelBlue
+        Me.dgvProfesores.BackgroundColor = System.Drawing.Color.White
         Me.dgvProfesores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvProfesores.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvProfesores.GridColor = System.Drawing.Color.SteelBlue
@@ -128,19 +102,19 @@ Partial Class FormManagement
         Me.dgvProfesores.RowTemplate.Height = 28
         Me.dgvProfesores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvProfesores.ShowEditingIcon = False
-        Me.dgvProfesores.Size = New System.Drawing.Size(1030, 648)
+        Me.dgvProfesores.Size = New System.Drawing.Size(770, 509)
         Me.dgvProfesores.TabIndex = 0
         '
         'tabAlumnos
         '
         Me.tabAlumnos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.tabAlumnos.Controls.Add(Me.dgvAlumnos)
-        Me.tabAlumnos.Location = New System.Drawing.Point(4, 41)
+        Me.tabAlumnos.Location = New System.Drawing.Point(4, 38)
         Me.tabAlumnos.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.tabAlumnos.Name = "tabAlumnos"
         Me.tabAlumnos.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.tabAlumnos.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.tabAlumnos.Size = New System.Drawing.Size(1036, 652)
+        Me.tabAlumnos.Size = New System.Drawing.Size(776, 513)
         Me.tabAlumnos.TabIndex = 1
         Me.tabAlumnos.Text = "Alumnos"
         '
@@ -148,7 +122,7 @@ Partial Class FormManagement
         '
         Me.dgvAlumnos.AllowUserToAddRows = False
         Me.dgvAlumnos.AllowUserToDeleteRows = False
-        Me.dgvAlumnos.BackgroundColor = System.Drawing.Color.SteelBlue
+        Me.dgvAlumnos.BackgroundColor = System.Drawing.Color.White
         Me.dgvAlumnos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvAlumnos.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvAlumnos.Location = New System.Drawing.Point(3, 2)
@@ -160,41 +134,29 @@ Partial Class FormManagement
         Me.dgvAlumnos.RowTemplate.Height = 28
         Me.dgvAlumnos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvAlumnos.ShowEditingIcon = False
-        Me.dgvAlumnos.Size = New System.Drawing.Size(1026, 644)
+        Me.dgvAlumnos.Size = New System.Drawing.Size(766, 505)
         Me.dgvAlumnos.TabIndex = 0
-        '
-        'bLogout
-        '
-        Me.bLogout.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.bLogout.AutoSize = True
-        Me.bLogout.Location = New System.Drawing.Point(1234, 36)
-        Me.bLogout.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.bLogout.Name = "bLogout"
-        Me.bLogout.Size = New System.Drawing.Size(116, 34)
-        Me.bLogout.TabIndex = 7
-        Me.bLogout.Text = "Cerrar sesión"
-        Me.bLogout.UseVisualStyleBackColor = True
         '
         'TableLayoutPanel1
         '
         Me.TableLayoutPanel1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TableLayoutPanel1.BackColor = System.Drawing.Color.SteelBlue
+        Me.TableLayoutPanel1.BackColor = System.Drawing.Color.Transparent
         Me.TableLayoutPanel1.ColumnCount = 2
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 77.27941!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.72059!))
         Me.TableLayoutPanel1.Controls.Add(Me.tcModos, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Panel1, 1, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(12, 79)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(11, 63)
         Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 701.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 701.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1360, 701)
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 559.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 559.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1023, 559)
         Me.TableLayoutPanel1.TabIndex = 8
         '
         'Panel1
@@ -205,67 +167,156 @@ Partial Class FormManagement
         Me.Panel1.Controls.Add(Me.bDel)
         Me.Panel1.Controls.Add(Me.bMod)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel1.Location = New System.Drawing.Point(1053, 2)
+        Me.Panel1.Location = New System.Drawing.Point(793, 2)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(304, 697)
+        Me.Panel1.Size = New System.Drawing.Size(227, 555)
         Me.Panel1.TabIndex = 7
         '
         'bSpecialTax
         '
         Me.bSpecialTax.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.bSpecialTax.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.bSpecialTax.Location = New System.Drawing.Point(17, 422)
-        Me.bSpecialTax.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.bSpecialTax.BackColor = System.Drawing.Color.White
+        Me.bSpecialTax.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.bSpecialTax.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.bSpecialTax.Location = New System.Drawing.Point(15, 402)
         Me.bSpecialTax.Name = "bSpecialTax"
-        Me.bSpecialTax.Size = New System.Drawing.Size(268, 44)
+        Me.bSpecialTax.Size = New System.Drawing.Size(195, 72)
         Me.bSpecialTax.TabIndex = 7
         Me.bSpecialTax.Text = "Asignar tarifa especial"
-        Me.bSpecialTax.UseVisualStyleBackColor = True
+        Me.bSpecialTax.UseVisualStyleBackColor = False
         '
         'bBono
         '
         Me.bBono.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.bBono.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.bBono.Location = New System.Drawing.Point(17, 338)
-        Me.bBono.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.bBono.BackColor = System.Drawing.Color.White
+        Me.bBono.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.bBono.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.bBono.Location = New System.Drawing.Point(15, 324)
         Me.bBono.Name = "bBono"
-        Me.bBono.Size = New System.Drawing.Size(268, 44)
+        Me.bBono.Size = New System.Drawing.Size(195, 72)
         Me.bBono.TabIndex = 6
         Me.bBono.Text = "Asignar bono"
-        Me.bBono.UseVisualStyleBackColor = True
+        Me.bBono.UseVisualStyleBackColor = False
         '
         'bAdd
         '
         Me.bAdd.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.bAdd.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.bAdd.Location = New System.Drawing.Point(17, 95)
-        Me.bAdd.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.bAdd.BackColor = System.Drawing.Color.White
+        Me.bAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.bAdd.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.bAdd.Location = New System.Drawing.Point(15, 90)
         Me.bAdd.Name = "bAdd"
-        Me.bAdd.Size = New System.Drawing.Size(268, 44)
+        Me.bAdd.Size = New System.Drawing.Size(195, 72)
         Me.bAdd.TabIndex = 3
         Me.bAdd.Text = "Añadir"
-        Me.bAdd.UseVisualStyleBackColor = True
+        Me.bAdd.UseVisualStyleBackColor = False
+        '
+        'bDel
+        '
+        Me.bDel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.bDel.BackColor = System.Drawing.Color.White
+        Me.bDel.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.bDel.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.bDel.Location = New System.Drawing.Point(15, 246)
+        Me.bDel.Name = "bDel"
+        Me.bDel.Size = New System.Drawing.Size(195, 72)
+        Me.bDel.TabIndex = 5
+        Me.bDel.Text = "Eliminar"
+        Me.bDel.UseVisualStyleBackColor = False
+        '
+        'bMod
+        '
+        Me.bMod.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.bMod.BackColor = System.Drawing.Color.White
+        Me.bMod.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.bMod.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.bMod.Location = New System.Drawing.Point(15, 168)
+        Me.bMod.Name = "bMod"
+        Me.bMod.Size = New System.Drawing.Size(195, 72)
+        Me.bMod.TabIndex = 4
+        Me.bMod.Text = "Modificar"
+        Me.bMod.UseVisualStyleBackColor = False
+        '
+        'StatusStrip1
+        '
+        Me.StatusStrip1.BackColor = System.Drawing.Color.Transparent
+        Me.StatusStrip1.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.StatusStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripDropDownButton1})
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 698)
+        Me.StatusStrip1.Name = "StatusStrip1"
+        Me.StatusStrip1.Size = New System.Drawing.Size(1039, 31)
+        Me.StatusStrip1.TabIndex = 18
+        Me.StatusStrip1.Text = "StatusStrip1"
+        '
+        'ToolStripDropDownButton1
+        '
+        Me.ToolStripDropDownButton1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InformeAlumnosToolStripMenuItem, Me.InformeEmpleadosToolStripMenuItem})
+        Me.ToolStripDropDownButton1.ForeColor = System.Drawing.Color.White
+        Me.ToolStripDropDownButton1.Image = Global.Academy.My.Resources.Resources.application_view_detail
+        Me.ToolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripDropDownButton1.Name = "ToolStripDropDownButton1"
+        Me.ToolStripDropDownButton1.Size = New System.Drawing.Size(185, 29)
+        Me.ToolStripDropDownButton1.Text = "Generar informe"
+        '
+        'InformeAlumnosToolStripMenuItem
+        '
+        Me.InformeAlumnosToolStripMenuItem.Image = Global.Academy.My.Resources.Resources.medal_gold_2
+        Me.InformeAlumnosToolStripMenuItem.Name = "InformeAlumnosToolStripMenuItem"
+        Me.InformeAlumnosToolStripMenuItem.Size = New System.Drawing.Size(253, 30)
+        Me.InformeAlumnosToolStripMenuItem.Text = "Informe Alumnos"
+        '
+        'InformeEmpleadosToolStripMenuItem
+        '
+        Me.InformeEmpleadosToolStripMenuItem.Image = Global.Academy.My.Resources.Resources.award_star_gold_2
+        Me.InformeEmpleadosToolStripMenuItem.Name = "InformeEmpleadosToolStripMenuItem"
+        Me.InformeEmpleadosToolStripMenuItem.Size = New System.Drawing.Size(253, 30)
+        Me.InformeEmpleadosToolStripMenuItem.Text = "Informe empleados"
+        '
+        'HelpProvider1
+        '
+        Me.HelpProvider1.HelpNamespace = "D:\Escritorio\Instituto\DAM2\WorkSpaceVisualStudio\REPOSITORIO_BRYAN_JAVIER_ACADE" &
+    "MIA\Academy\Academy\bin\Debug\Always idiomas.chm"
         '
         'toolStrip
         '
+        Me.toolStrip.BackColor = System.Drawing.Color.Transparent
+        Me.toolStrip.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.toolStrip.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.toolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsbInformacion, Me.ToolStripSeparator1, Me.tsbAYdua, Me.ToolStripSeparator2, Me.tsbSalir, Me.ToolStripSeparator3})
+        Me.toolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripSeparator3, Me.tsbInformacion, Me.ToolStripSeparator1, Me.tsbAYdua, Me.ToolStripSeparator2, Me.tsbSalir})
         Me.toolStrip.Location = New System.Drawing.Point(0, 0)
         Me.toolStrip.Name = "toolStrip"
-        Me.toolStrip.Size = New System.Drawing.Size(1378, 32)
-        Me.toolStrip.TabIndex = 17
+        Me.toolStrip.Size = New System.Drawing.Size(1039, 32)
+        Me.toolStrip.TabIndex = 23
         Me.toolStrip.Text = "ToolStrip1"
+        '
+        'ToolStripButton1
+        '
+        Me.ToolStripButton1.ForeColor = System.Drawing.Color.White
+        Me.ToolStripButton1.Image = Global.Academy.My.Resources.Resources.arrow_undo
+        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton1.Name = "ToolStripButton1"
+        Me.ToolStripButton1.Size = New System.Drawing.Size(217, 29)
+        Me.ToolStripButton1.Text = "Cerrar sesión y volver"
+        '
+        'ToolStripSeparator3
+        '
+        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 32)
         '
         'tsbInformacion
         '
+        Me.tsbInformacion.ForeColor = System.Drawing.Color.White
         Me.tsbInformacion.Image = Global.Academy.My.Resources.Resources.book
         Me.tsbInformacion.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tsbInformacion.Name = "tsbInformacion"
-        Me.tsbInformacion.Size = New System.Drawing.Size(132, 29)
+        Me.tsbInformacion.Size = New System.Drawing.Size(138, 29)
         Me.tsbInformacion.Text = "Información"
         '
         'ToolStripSeparator1
@@ -275,10 +326,11 @@ Partial Class FormManagement
         '
         'tsbAYdua
         '
+        Me.tsbAYdua.ForeColor = System.Drawing.Color.White
         Me.tsbAYdua.Image = Global.Academy.My.Resources.Resources.help
         Me.tsbAYdua.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tsbAYdua.Name = "tsbAYdua"
-        Me.tsbAYdua.Size = New System.Drawing.Size(87, 29)
+        Me.tsbAYdua.Size = New System.Drawing.Size(89, 29)
         Me.tsbAYdua.Text = "Ayuda"
         '
         'ToolStripSeparator2
@@ -288,12 +340,14 @@ Partial Class FormManagement
         '
         'tsbSalir
         '
+        Me.tsbSalir.ForeColor = System.Drawing.Color.White
         Me.tsbSalir.Image = Global.Academy.My.Resources.Resources.door_out
         Me.tsbSalir.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tsbSalir.Name = "tsbSalir"
-        Me.tsbSalir.Size = New System.Drawing.Size(69, 29)
+        Me.tsbSalir.Size = New System.Drawing.Size(73, 29)
         Me.tsbSalir.Text = "Salir"
         '
+<<<<<<< HEAD
         'ToolStripSeparator3
         '
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
@@ -337,18 +391,20 @@ Partial Class FormManagement
         '
         Me.HelpProvider1.HelpNamespace = "ayuda.chm"
         '
+=======
+>>>>>>> bryan
         'FormManagement
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.SteelBlue
-        Me.ClientSize = New System.Drawing.Size(1378, 914)
-        Me.Controls.Add(Me.StatusStrip1)
+        Me.BackgroundImage = Global.Academy.My.Resources.Resources.fondo
+        Me.ClientSize = New System.Drawing.Size(1039, 729)
+        Me.ControlBox = False
         Me.Controls.Add(Me.toolStrip)
-        Me.Controls.Add(Me.bLogout)
+        Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.HelpButton = True
-        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "FormManagement"
         Me.HelpProvider1.SetShowHelp(Me, True)
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -360,37 +416,37 @@ Partial Class FormManagement
         CType(Me.dgvAlumnos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
-        Me.toolStrip.ResumeLayout(False)
-        Me.toolStrip.PerformLayout()
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
+        Me.toolStrip.ResumeLayout(False)
+        Me.toolStrip.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents bMod As Button
-    Friend WithEvents bDel As Button
     Friend WithEvents tcModos As TabControl
     Friend WithEvents tabProfesores As TabPage
     Friend WithEvents tabAlumnos As TabPage
     Friend WithEvents dgvProfesores As DataGridView
     Friend WithEvents dgvAlumnos As DataGridView
-    Friend WithEvents bLogout As Button
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents bAdd As Button
-    Friend WithEvents bBono As Button
-    Friend WithEvents bSpecialTax As Button
-    Friend WithEvents toolStrip As ToolStrip
-    Friend WithEvents tsbInformacion As ToolStripButton
-    Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
-    Friend WithEvents tsbAYdua As ToolStripButton
-    Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
-    Friend WithEvents tsbSalir As ToolStripButton
-    Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
     Friend WithEvents StatusStrip1 As StatusStrip
     Friend WithEvents ToolStripDropDownButton1 As ToolStripDropDownButton
     Friend WithEvents InformeAlumnosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents InformeEmpleadosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HelpProvider1 As HelpProvider
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents bSpecialTax As Button
+    Friend WithEvents bBono As Button
+    Friend WithEvents bAdd As Button
+    Friend WithEvents bDel As Button
+    Friend WithEvents bMod As Button
+    Friend WithEvents toolStrip As ToolStrip
+    Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
+    Friend WithEvents tsbInformacion As ToolStripButton
+    Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
+    Friend WithEvents tsbAYdua As ToolStripButton
+    Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
+    Friend WithEvents tsbSalir As ToolStripButton
+    Friend WithEvents ToolStripButton1 As ToolStripButton
 End Class

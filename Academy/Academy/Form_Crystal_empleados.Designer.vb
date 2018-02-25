@@ -45,7 +45,7 @@ Partial Class Form_Crystal_empleados
         Me.ClientSize = New System.Drawing.Size(1012, 673)
         Me.Controls.Add(Me.CrystalReportViewer1)
         Me.Name = "Form_Crystal_empleados"
-        Me.Text = "Form_Crystal_empleados"
+        Me.Text = "Informe Empleados"
         Me.ResumeLayout(False)
 
     End Sub

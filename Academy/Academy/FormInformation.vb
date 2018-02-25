@@ -12,7 +12,7 @@ Public Class FormInformation
 
     End Sub
 
-    Private Sub tsbSalir_Click(sender As Object, e As EventArgs) Handles tsbSalir.Click
+    Private Sub tsbSalir_Click(sender As Object, e As EventArgs)
         modulo.ExitToAPP(Me)
     End Sub
 End Class
