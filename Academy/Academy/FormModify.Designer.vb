@@ -484,6 +484,7 @@ Partial Class formModify
         Me.BackColor = System.Drawing.Color.SteelBlue
         Me.BackgroundImage = Global.Academy.My.Resources.Resources.fondo
         Me.ClientSize = New System.Drawing.Size(1039, 729)
+        Me.ControlBox = False
         Me.Controls.Add(Me.toolStrip)
         Me.Controls.Add(Me.flpPricipal)
         Me.HelpButton = True

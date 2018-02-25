@@ -29,9 +29,19 @@
     <apellido>tiban</apellido>
     <telefono>111 111 111</telefono>
     <direccion>Calle de la viña</direccion>
-    <email>bryan@hotmail.com</email>
+    <email>bryan_tbab@hotmail.com</email>
     <nombre_usuario>bryan@hotmail.com</nombre_usuario>
     <puestos.nombre>jefe</puestos.nombre>
+  </informe_empleados>
+  <informe_empleados>
+    <dni>55565545T</dni>
+    <empleados.nombre>Javi</empleados.nombre>
+    <apellido>Hurtado</apellido>
+    <telefono>676787898</telefono>
+    <direccion>Calle</direccion>
+    <email>webmaster@javi-h.com</email>
+    <nombre_usuario>webmaster@javi-h.com</nombre_usuario>
+    <puestos.nombre>profesor</puestos.nombre>
   </informe_empleados>
   <informe_empleados>
     <dni>22222222B</dni>
@@ -63,7 +73,7 @@
     <direccion>dasd</direccion>
     <email>Picosanto@hotmail.com</email>
     <nombre_usuario>Picosanto@hotmail.com</nombre_usuario>
-    <puestos.nombre>profesor</puestos.nombre>
+    <puestos.nombre>recepcionista</puestos.nombre>
     <dni_alumno>00000030A</dni_alumno>
   </informe_empleados>
   <informe_empleados>
@@ -74,7 +84,7 @@
     <direccion>dasd</direccion>
     <email>Picosanto@hotmail.com</email>
     <nombre_usuario>Picosanto@hotmail.com</nombre_usuario>
-    <puestos.nombre>profesor</puestos.nombre>
+    <puestos.nombre>recepcionista</puestos.nombre>
     <dni_alumno>00000040A</dni_alumno>
   </informe_empleados>
   <informe_empleados>
@@ -85,7 +95,7 @@
     <direccion>dasd</direccion>
     <email>Picosanto@hotmail.com</email>
     <nombre_usuario>Picosanto@hotmail.com</nombre_usuario>
-    <puestos.nombre>profesor</puestos.nombre>
+    <puestos.nombre>recepcionista</puestos.nombre>
     <dni_alumno>00000050A</dni_alumno>
   </informe_empleados>
   <informe_empleados>

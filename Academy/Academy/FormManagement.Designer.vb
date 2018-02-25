@@ -40,17 +40,15 @@ Partial Class FormManagement
         Me.InformeEmpleadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         Me.toolStrip = New System.Windows.Forms.ToolStrip()
-        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.tsbInformacion = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.tsbAYdua = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.tsbSalir = New System.Windows.Forms.ToolStripButton()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.lblUser = New System.Windows.Forms.Label()
+        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.tcModos.SuspendLayout()
         Me.tabProfesores.SuspendLayout()
         CType(Me.dgvProfesores, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -294,21 +292,12 @@ Partial Class FormManagement
         Me.toolStrip.BackColor = System.Drawing.Color.Transparent
         Me.toolStrip.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.toolStrip.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.toolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripSeparator3, Me.tsbInformacion, Me.ToolStripSeparator1, Me.tsbAYdua, Me.ToolStripSeparator2, Me.tsbSalir})
+        Me.toolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripSeparator3, Me.tsbInformacion, Me.ToolStripSeparator1, Me.tsbAYdua})
         Me.toolStrip.Location = New System.Drawing.Point(0, 0)
         Me.toolStrip.Name = "toolStrip"
         Me.toolStrip.Size = New System.Drawing.Size(1039, 32)
         Me.toolStrip.TabIndex = 23
         Me.toolStrip.Text = "ToolStrip1"
-        '
-        'ToolStripButton1
-        '
-        Me.ToolStripButton1.ForeColor = System.Drawing.Color.White
-        Me.ToolStripButton1.Image = Global.Academy.My.Resources.Resources.arrow_undo
-        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(217, 29)
-        Me.ToolStripButton1.Text = "Cerrar sesión y volver"
         '
         'ToolStripSeparator3
         '
@@ -337,20 +326,6 @@ Partial Class FormManagement
         Me.tsbAYdua.Name = "tsbAYdua"
         Me.tsbAYdua.Size = New System.Drawing.Size(89, 29)
         Me.tsbAYdua.Text = "Ayuda"
-        '
-        'ToolStripSeparator2
-        '
-        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 32)
-        '
-        'tsbSalir
-        '
-        Me.tsbSalir.ForeColor = System.Drawing.Color.White
-        Me.tsbSalir.Image = Global.Academy.My.Resources.Resources.door_out
-        Me.tsbSalir.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.tsbSalir.Name = "tsbSalir"
-        Me.tsbSalir.Size = New System.Drawing.Size(73, 29)
-        Me.tsbSalir.Text = "Salir"
         '
         'Label1
         '
@@ -390,6 +365,15 @@ Partial Class FormManagement
         Me.lblUser.Size = New System.Drawing.Size(36, 17)
         Me.lblUser.TabIndex = 26
         Me.lblUser.Text = "user"
+        '
+        'ToolStripButton1
+        '
+        Me.ToolStripButton1.ForeColor = System.Drawing.Color.White
+        Me.ToolStripButton1.Image = Global.Academy.My.Resources.Resources.arrow_undo
+        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton1.Name = "ToolStripButton1"
+        Me.ToolStripButton1.Size = New System.Drawing.Size(217, 29)
+        Me.ToolStripButton1.Text = "Cerrar sesión y volver"
         '
         'FormManagement
         '
@@ -447,11 +431,9 @@ Partial Class FormManagement
     Friend WithEvents tsbInformacion As ToolStripButton
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
     Friend WithEvents tsbAYdua As ToolStripButton
-    Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
-    Friend WithEvents tsbSalir As ToolStripButton
-    Friend WithEvents ToolStripButton1 As ToolStripButton
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
     Friend WithEvents lblUser As Label
+    Friend WithEvents ToolStripButton1 As ToolStripButton
 End Class

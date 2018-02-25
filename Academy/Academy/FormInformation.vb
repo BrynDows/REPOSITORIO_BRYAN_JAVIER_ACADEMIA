@@ -16,4 +16,17 @@ Public Class FormInformation
     Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
         Me.Close()
     End Sub
+
+
+    Private Sub llEmbajada_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles llEmbajada.LinkClicked
+        modulo.ShowLink(URL:="https://www.gov.uk/world/organisations/british-embassy-madrid.es")
+    End Sub
+
+    Private Sub lDiccionario_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles lDiccionario.LinkClicked
+        modulo.ShowLink(URL:="https://www.collinsdictionary.com/es/")
+    End Sub
+
+    Private Sub llAlways_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles llAlways.LinkClicked
+        modulo.ShowLink(URL:="http://www.always-idiomas.com/")
+    End Sub
 End Class

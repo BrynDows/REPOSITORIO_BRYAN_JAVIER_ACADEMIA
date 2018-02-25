@@ -33,8 +33,6 @@ Partial Class FormBonos
         Me.tsbInformacion = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.tsbAYdua = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.tsbSalir = New System.Windows.Forms.ToolStripButton()
         Me.mcDate = New System.Windows.Forms.MonthCalendar()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
@@ -142,7 +140,7 @@ Partial Class FormBonos
         Me.toolStrip.BackColor = System.Drawing.Color.Transparent
         Me.toolStrip.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.toolStrip.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.toolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripSeparator3, Me.tsbInformacion, Me.ToolStripSeparator1, Me.tsbAYdua, Me.ToolStripSeparator2, Me.tsbSalir})
+        Me.toolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripSeparator3, Me.tsbInformacion, Me.ToolStripSeparator1, Me.tsbAYdua})
         Me.toolStrip.Location = New System.Drawing.Point(0, 0)
         Me.toolStrip.Name = "toolStrip"
         Me.toolStrip.Size = New System.Drawing.Size(1039, 32)
@@ -183,19 +181,6 @@ Partial Class FormBonos
         Me.tsbAYdua.Size = New System.Drawing.Size(89, 29)
         Me.tsbAYdua.Text = "Ayuda"
         '
-        'ToolStripSeparator2
-        '
-        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 32)
-        '
-        'tsbSalir
-        '
-        Me.tsbSalir.Image = Global.Academy.My.Resources.Resources.door_out
-        Me.tsbSalir.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.tsbSalir.Name = "tsbSalir"
-        Me.tsbSalir.Size = New System.Drawing.Size(73, 29)
-        Me.tsbSalir.Text = "Salir"
-        '
         'mcDate
         '
         Me.mcDate.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
@@ -226,7 +211,7 @@ Partial Class FormBonos
         '
         'HelpProvider1
         '
-        Me.HelpProvider1.HelpNamespace = "X:\academiaingles\Academy\Academy\bin\Debug\Always idiomas.chm"
+        Me.HelpProvider1.HelpNamespace = "ayuda.chm"
         '
         'TableLayoutPanel1
         '
@@ -540,8 +525,6 @@ Partial Class FormBonos
     Friend WithEvents tsbInformacion As ToolStripButton
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
     Friend WithEvents tsbAYdua As ToolStripButton
-    Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
-    Friend WithEvents tsbSalir As ToolStripButton
     Friend WithEvents mcDate As MonthCalendar
     Friend WithEvents Label3 As Label
     Friend WithEvents HelpProvider1 As HelpProvider

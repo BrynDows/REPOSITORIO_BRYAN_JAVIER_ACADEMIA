@@ -176,13 +176,13 @@
 
     Private Sub InformeEmpleadosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InformeEmpleadosToolStripMenuItem.Click
         crudEmployes.generateReport_EMPLEADOS()
-        Form_Crystal_empleados.Show()
+        Form_Crystal_empleados.ShowDialog()
 
     End Sub
 
     Private Sub InformeAlumnosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InformeAlumnosToolStripMenuItem.Click
         idiomasDLL.Alumnos.generateReport_ALUMNOS()
-        Form_Crystal_ALUMNOS.Show()
+        Form_Crystal_ALUMNOS.ShowDialog()
     End Sub
 
     Private Sub bSpecialTax_Click(sender As Object, e As EventArgs) Handles bSpecialTax.Click
@@ -201,8 +201,10 @@
     End Sub
 
     Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
-        FormLogin.Show()
-        Me.Close()
+        If MsgBox("¿Está seguro de que desea salir?", vbQuestion + vbYesNo) = vbYes Then
+            FormLogin.Show()
+            Me.Close()
+        End If
     End Sub
 
     Private Sub tsbInformacion_Click_1(sender As Object, e As EventArgs) Handles tsbInformacion.Click

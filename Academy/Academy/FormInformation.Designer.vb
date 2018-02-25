@@ -26,9 +26,9 @@ Partial Class FormInformation
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
-        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
-        Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
-        Me.LinkLabel3 = New System.Windows.Forms.LinkLabel()
+        Me.llEmbajada = New System.Windows.Forms.LinkLabel()
+        Me.lDiccionario = New System.Windows.Forms.LinkLabel()
+        Me.llAlways = New System.Windows.Forms.LinkLabel()
         Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         Me.toolStrip = New System.Windows.Forms.ToolStrip()
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
@@ -86,9 +86,9 @@ Partial Class FormInformation
         '
         'FlowLayoutPanel1
         '
-        Me.FlowLayoutPanel1.Controls.Add(Me.LinkLabel1)
-        Me.FlowLayoutPanel1.Controls.Add(Me.LinkLabel2)
-        Me.FlowLayoutPanel1.Controls.Add(Me.LinkLabel3)
+        Me.FlowLayoutPanel1.Controls.Add(Me.llEmbajada)
+        Me.FlowLayoutPanel1.Controls.Add(Me.lDiccionario)
+        Me.FlowLayoutPanel1.Controls.Add(Me.llAlways)
         Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.FlowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(4, 447)
@@ -96,44 +96,44 @@ Partial Class FormInformation
         Me.FlowLayoutPanel1.Size = New System.Drawing.Size(422, 88)
         Me.FlowLayoutPanel1.TabIndex = 20
         '
-        'LinkLabel1
+        'llEmbajada
         '
-        Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LinkLabel1.LinkColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.LinkLabel1.Location = New System.Drawing.Point(3, 0)
-        Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(90, 20)
-        Me.LinkLabel1.TabIndex = 0
-        Me.LinkLabel1.TabStop = True
-        Me.LinkLabel1.Text = "LinkLabel1"
-        Me.LinkLabel1.VisitedLinkColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.llEmbajada.AutoSize = True
+        Me.llEmbajada.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.llEmbajada.LinkColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.llEmbajada.Location = New System.Drawing.Point(3, 0)
+        Me.llEmbajada.Name = "llEmbajada"
+        Me.llEmbajada.Size = New System.Drawing.Size(152, 20)
+        Me.llEmbajada.TabIndex = 0
+        Me.llEmbajada.TabStop = True
+        Me.llEmbajada.Text = "Embajada británica"
+        Me.llEmbajada.VisitedLinkColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         '
-        'LinkLabel2
+        'lDiccionario
         '
-        Me.LinkLabel2.AutoSize = True
-        Me.LinkLabel2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LinkLabel2.LinkColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.LinkLabel2.Location = New System.Drawing.Point(3, 20)
-        Me.LinkLabel2.Name = "LinkLabel2"
-        Me.LinkLabel2.Size = New System.Drawing.Size(90, 20)
-        Me.LinkLabel2.TabIndex = 1
-        Me.LinkLabel2.TabStop = True
-        Me.LinkLabel2.Text = "LinkLabel2"
-        Me.LinkLabel2.VisitedLinkColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.lDiccionario.AutoSize = True
+        Me.lDiccionario.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lDiccionario.LinkColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.lDiccionario.Location = New System.Drawing.Point(3, 20)
+        Me.lDiccionario.Name = "lDiccionario"
+        Me.lDiccionario.Size = New System.Drawing.Size(150, 20)
+        Me.lDiccionario.TabIndex = 1
+        Me.lDiccionario.TabStop = True
+        Me.lDiccionario.Text = "Diccionario Collins"
+        Me.lDiccionario.VisitedLinkColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         '
-        'LinkLabel3
+        'llAlways
         '
-        Me.LinkLabel3.AutoSize = True
-        Me.LinkLabel3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LinkLabel3.LinkColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.LinkLabel3.Location = New System.Drawing.Point(3, 40)
-        Me.LinkLabel3.Name = "LinkLabel3"
-        Me.LinkLabel3.Size = New System.Drawing.Size(90, 20)
-        Me.LinkLabel3.TabIndex = 2
-        Me.LinkLabel3.TabStop = True
-        Me.LinkLabel3.Text = "LinkLabel3"
-        Me.LinkLabel3.VisitedLinkColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.llAlways.AutoSize = True
+        Me.llAlways.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.llAlways.LinkColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.llAlways.Location = New System.Drawing.Point(3, 40)
+        Me.llAlways.Name = "llAlways"
+        Me.llAlways.Size = New System.Drawing.Size(125, 20)
+        Me.llAlways.TabIndex = 2
+        Me.llAlways.TabStop = True
+        Me.llAlways.Text = "Always idiomas"
+        Me.llAlways.VisitedLinkColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         '
         'HelpProvider1
         '
@@ -197,7 +197,7 @@ Partial Class FormInformation
     Friend WithEvents ToolStripButton1 As ToolStripButton
     Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
-    Friend WithEvents LinkLabel1 As LinkLabel
-    Friend WithEvents LinkLabel2 As LinkLabel
-    Friend WithEvents LinkLabel3 As LinkLabel
+    Friend WithEvents llEmbajada As LinkLabel
+    Friend WithEvents lDiccionario As LinkLabel
+    Friend WithEvents llAlways As LinkLabel
 End Class
