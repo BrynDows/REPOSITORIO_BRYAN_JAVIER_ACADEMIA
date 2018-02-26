@@ -115,7 +115,13 @@ Public Class formModify
                                 FormCrystal.Show()
                                 Me.Close()
                             Catch ex As System.Data.OleDb.OleDbException
-                                MsgBox("Este alumno ya existe en la base de datos.", MsgBoxStyle.OkOnly + MsgBoxStyle.Critical, "ERROR")
+                                MsgBox("Error al insertar el alumno.", MsgBoxStyle.Critical, "Error")
+                                idiomasDLL.Alumnos.CloseConnection()
+                                idiomasDLL.Errores.INSERT_IN_ERROR_LOG(ex)
+                            Catch ex As Exception
+                                If MsgBox("Parece que no tienes instalado Crystal Report. Este programa es necesario para generar el informe. Pulsa aceptar para descargarlo.", MsgBoxStyle.Critical + MsgBoxStyle.YesNo, "ERROR") = MsgBoxResult.Yes Then
+                                    Process.Start("http://downloads.businessobjects.com/akdlm/cr4vs2010/CRforVS_13_0_22.exe")
+                                End If
                                 idiomasDLL.Alumnos.CloseConnection()
                                 idiomasDLL.Errores.INSERT_IN_ERROR_LOG(ex)
                             End Try
