@@ -187,16 +187,16 @@ Public Class CRUD_employes
         End Try
     End Sub
     '
-    'CrystalReport de último alumno añadido
+    'CrystalReport empleados de la BD v2
     '
     Public Sub generateReport_EMPLEADOS()
         Try
-            Dim query As String = "SELECT empleados.dni, empleados.nombre, empleados.apellido, empleados.telefono, empleados.direccion, empleados.email, cuentasUsuario.nombre_usuario, puestos.nombre, empleados_alumnos.dni_alumno
-                                            FROM ((empleados LEFT JOIN cuentasUsuario ON empleados.cuenta = cuentasUsuario.id) LEFT JOIN puestos ON empleados.puesto = puestos.id) LEFT JOIN empleados_alumnos ON empleados_alumnos.dni_profesor = empleados.dni"
+            Dim query As String = "SELECT empleados.dni, empleados.nombre, empleados.apellido, empleados.email, empleados.telefono, empleados.direccion, puestos.nombre, empleados_idiomas.id_idioma, idiomas.idioma
+                                    FROM ((empleados LEFT JOIN puestos ON empleados.puesto = puestos.id) LEFT JOIN empleados_idiomas ON empleados.dni = empleados_idiomas.dni_empleado) LEFT JOIN idiomas ON empleados_idiomas.id_idioma = idiomas.id"
             Dim adapter As New OleDbDataAdapter(query, connection)
             Dim dataset = New DataSet
-            adapter.Fill(dataset, "informe_empleados")
-            dataset.WriteXml("informe_EMPLEADOS.xml", XmlWriteMode.WriteSchema)
+            adapter.Fill(dataset, "informe_empleados_v2")
+            dataset.WriteXml("informe_EMPLEADOS_v2.xml", XmlWriteMode.WriteSchema)
         Catch ex As Exception
             idiomasDLL.Errores.INSERT_IN_ERROR_LOG(ex)
         End Try
