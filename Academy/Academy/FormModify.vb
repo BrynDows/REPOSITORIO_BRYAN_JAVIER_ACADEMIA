@@ -105,7 +105,7 @@ Public Class formModify
                         '
                         If Modo = INSERTAR And alum_OR_Emple = ALUMNOS Then
                             Try
-                                If FormManagement.user.Rol.Equeals("administrador") Then
+                                If FormManagement.user.Rol.Equals("administrador") Then
                                     idiomasDLL.Alumnos.InsertAlumno(profes(cbIdioma.SelectedIndex), New idiomasDLL.Alumno(mtbDni.Text, mtbNombre.Text, mtbApellido.Text, mtbTel.Text, mtbEmail.Text, mtbDireccion.Text))
                                 Else
                                     idiomasDLL.Alumnos.InsertAlumno(FormManagement.user.dni, New idiomasDLL.Alumno(mtbDni.Text, mtbNombre.Text, mtbApellido.Text, mtbTel.Text, mtbEmail.Text, mtbDireccion.Text))

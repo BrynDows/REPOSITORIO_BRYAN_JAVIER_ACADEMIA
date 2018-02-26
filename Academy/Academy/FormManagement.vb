@@ -14,7 +14,7 @@
 
     Private Sub FormManagement_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         tcModos.TabPages.Remove(tabProfesores)
-        If user.Rol.Equeals("administrador") Then
+        If user.Rol.Equals("administrador") Then
             'soy jefe y muesro las dos pestañas, profesor y alumnos
             tcModos.TabPages.Insert(0, tabProfesores)
             tcModos.SelectedIndex = 0 ' Seleccionamos la primera tab para no liar al usuario
@@ -26,7 +26,7 @@
     ''' Cargar datos en los datagrid
     ''' </summary>
     Public Sub LoadDataGrids()
-        If user.Rol.Equeals("administrador") Then
+        If user.Rol.Equals("administrador") Then
             dgvAlumnos.DataSource = idiomasDLL.Alumnos.SelectAllAlumnos
             dgvAlumnos.DataMember = "alumnos"
             'mostrar profesores
