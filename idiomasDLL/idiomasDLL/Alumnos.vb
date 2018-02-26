@@ -73,18 +73,21 @@ Public Class Alumnos
     '
 
     '
-    'CrystalReport de Todos los alumnos
+    'CrystalReport de Todos los alumnos, profesor asignado, idioma, hora de inicio y hora de fin: V.2
     '
     Public Shared Sub generateReport_ALUMNOS()
-        Dim query As String = "SELECT alumnos.*, empleados.nombre, empleados.apellido 
-                                FROM alumnos, empleados, empleados_alumnos
-                                where alumnos.dni = empleados_alumnos.dni_alumno 
-                                AND empleados_alumnos.dni_profesor = empleados.dni"
+        Dim query As String = "Select alumnos.*, empleados_alumnos.dni_profesor, empleados.nombre, empleados_idiomas.hora_inicio, empleados_idiomas.hora_fin, bonos.id, tax_especial.id, idiomas.idioma
+                                FROM (((((alumnos LEFT JOIN empleados_alumnos ON alumnos.dni = empleados_alumnos.dni_alumno) 
+                                LEFT JOIN empleados ON empleados.dni = empleados_alumnos.dni_profesor) 
+                                LEFT JOIN empleados_idiomas ON empleados.dni = empleados_idiomas.dni_empleado) 
+                                LEFT JOIN idiomas ON empleados_idiomas.id_idioma = idiomas.id) 
+                                LEFT JOIN bonos ON empleados_alumnos.bono = bonos.id) LEFT JOIN tax_especial ON empleados_alumnos.tarifa_especial = tax_especial.id
+                                "
         Try
             Dim adapter As New OleDbDataAdapter(query, connection)
             Dim dataset = New DataSet
-            adapter.Fill(dataset, "informe_alumnos")
-            dataset.WriteXml("informe_ALUMNOS.xml", XmlWriteMode.WriteSchema)
+            adapter.Fill(dataset, "informe_alumnos_v2")
+            dataset.WriteXml("informe_ALUMNOS_v2.xml", XmlWriteMode.WriteSchema)
         Catch ex As Exception
             idiomasDLL.Errores.INSERT_IN_ERROR_LOG(ex)
         End Try

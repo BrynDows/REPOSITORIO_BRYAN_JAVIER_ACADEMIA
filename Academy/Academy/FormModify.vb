@@ -256,4 +256,11 @@ Public Class formModify
     Private Sub tsbAYdua_Click(sender As Object, e As EventArgs) Handles tsbAYdua.Click
         modulo.mostrar_ayuda()
     End Sub
+    Private Sub mtbApellido_MaskInputRejected(sender As Object, e As MaskInputRejectedEventArgs) Handles mtbApellido.MaskInputRejected
+
+    End Sub
+
+    Private Sub mtbEmail_MaskInputRejected(sender As Object, e As MaskInputRejectedEventArgs) Handles mtbEmail.MaskInputRejected
+
+    End Sub
 End Class

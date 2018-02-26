@@ -176,7 +176,7 @@ Partial Class formModify
         Me.flpApellido.Location = New System.Drawing.Point(3, 275)
         Me.flpApellido.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.flpApellido.Name = "flpApellido"
-        Me.flpApellido.Size = New System.Drawing.Size(1152, 65)
+        Me.flpApellido.Size = New System.Drawing.Size(1024, 52)
         Me.flpApellido.TabIndex = 3
         '
         'Label2
@@ -207,7 +207,7 @@ Partial Class formModify
         Me.flpDireccion.Location = New System.Drawing.Point(3, 348)
         Me.flpDireccion.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.flpDireccion.Name = "flpDireccion"
-        Me.flpDireccion.Size = New System.Drawing.Size(1152, 65)
+        Me.flpDireccion.Size = New System.Drawing.Size(1024, 52)
         Me.flpDireccion.TabIndex = 4
         '
         'Label5
@@ -333,6 +333,7 @@ Partial Class formModify
         Me.flpIdioma.Location = New System.Drawing.Point(3, 640)
         Me.flpIdioma.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.flpIdioma.Name = "flpIdioma"
+        Me.flpIdioma.Size = New System.Drawing.Size(1024, 52)
         Me.flpIdioma.Size = New System.Drawing.Size(1152, 65)
         Me.flpIdioma.TabIndex = 8
         '
@@ -357,6 +358,7 @@ Partial Class formModify
         Me.cbIdioma.Location = New System.Drawing.Point(530, 0)
         Me.cbIdioma.Margin = New System.Windows.Forms.Padding(186, 0, 0, 0)
         Me.cbIdioma.Name = "cbIdioma"
+        Me.cbIdioma.Size = New System.Drawing.Size(351, 39)
         Me.cbIdioma.Size = New System.Drawing.Size(394, 45)
         Me.cbIdioma.TabIndex = 8
         Me.cbIdioma.ValueMember = "idioma"
@@ -378,6 +380,7 @@ Partial Class formModify
         Me.flpPassword.Location = New System.Drawing.Point(3, 713)
         Me.flpPassword.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.flpPassword.Name = "flpPassword"
+        Me.flpPassword.Size = New System.Drawing.Size(1024, 52)
         Me.flpPassword.Size = New System.Drawing.Size(1152, 65)
         Me.flpPassword.TabIndex = 9
         Me.flpPassword.Visible = False
@@ -403,7 +406,6 @@ Partial Class formModify
         Me.tbPass.Multiline = True
         Me.tbPass.Name = "tbPass"
         Me.tbPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.tbPass.Size = New System.Drawing.Size(392, 45)
         Me.tbPass.TabIndex = 9
         '
         'bDone
