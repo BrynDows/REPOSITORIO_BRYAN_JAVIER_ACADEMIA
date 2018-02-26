@@ -101,15 +101,9 @@ Partial Class formModify
         Me.flpPricipal.Location = New System.Drawing.Point(0, 0)
         Me.flpPricipal.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.flpPricipal.Name = "flpPricipal"
-<<<<<<< HEAD
-        Me.flpPricipal.Padding = New System.Windows.Forms.Padding(0, 100, 0, 0)
-        Me.flpPricipal.Size = New System.Drawing.Size(1039, 729)
-        Me.flpPricipal.TabIndex = 1
-=======
         Me.flpPricipal.Padding = New System.Windows.Forms.Padding(0, 125, 0, 0)
         Me.flpPricipal.Size = New System.Drawing.Size(1168, 947)
         Me.flpPricipal.TabIndex = 20
->>>>>>> master_BK
         '
         'flpDni
         '
@@ -140,11 +134,7 @@ Partial Class formModify
         Me.mtbDni.Location = New System.Drawing.Point(529, 0)
         Me.mtbDni.Margin = New System.Windows.Forms.Padding(225, 0, 0, 0)
         Me.mtbDni.Name = "mtbDni"
-<<<<<<< HEAD
-        Me.mtbDni.Size = New System.Drawing.Size(354, 38)
-=======
         Me.mtbDni.Size = New System.Drawing.Size(398, 44)
->>>>>>> Javi2
         Me.mtbDni.TabIndex = 1
         '
         'flpNombre
@@ -154,11 +144,7 @@ Partial Class formModify
         Me.flpNombre.Location = New System.Drawing.Point(3, 202)
         Me.flpNombre.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.flpNombre.Name = "flpNombre"
-<<<<<<< HEAD
-        Me.flpNombre.Size = New System.Drawing.Size(1024, 52)
-=======
         Me.flpNombre.Size = New System.Drawing.Size(1152, 65)
->>>>>>> master_BK
         Me.flpNombre.TabIndex = 2
         '
         'Label1
@@ -180,11 +166,7 @@ Partial Class formModify
         Me.mtbNombre.Location = New System.Drawing.Point(527, 0)
         Me.mtbNombre.Margin = New System.Windows.Forms.Padding(163, 0, 0, 0)
         Me.mtbNombre.Name = "mtbNombre"
-<<<<<<< HEAD
-        Me.mtbNombre.Size = New System.Drawing.Size(356, 38)
-=======
         Me.mtbNombre.Size = New System.Drawing.Size(400, 44)
->>>>>>> Javi2
         Me.mtbNombre.TabIndex = 2
         '
         'flpApellido
@@ -194,11 +176,7 @@ Partial Class formModify
         Me.flpApellido.Location = New System.Drawing.Point(3, 275)
         Me.flpApellido.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.flpApellido.Name = "flpApellido"
-<<<<<<< HEAD
         Me.flpApellido.Size = New System.Drawing.Size(1024, 52)
-=======
-        Me.flpApellido.Size = New System.Drawing.Size(1152, 65)
->>>>>>> master_BK
         Me.flpApellido.TabIndex = 3
         '
         'Label2
@@ -219,11 +197,7 @@ Partial Class formModify
         Me.mtbApellido.Location = New System.Drawing.Point(523, 0)
         Me.mtbApellido.Margin = New System.Windows.Forms.Padding(160, 0, 0, 0)
         Me.mtbApellido.Name = "mtbApellido"
-<<<<<<< HEAD
-        Me.mtbApellido.Size = New System.Drawing.Size(355, 38)
-=======
         Me.mtbApellido.Size = New System.Drawing.Size(399, 44)
->>>>>>> Javi2
         Me.mtbApellido.TabIndex = 3
         '
         'flpDireccion
@@ -233,11 +207,7 @@ Partial Class formModify
         Me.flpDireccion.Location = New System.Drawing.Point(3, 348)
         Me.flpDireccion.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.flpDireccion.Name = "flpDireccion"
-<<<<<<< HEAD
         Me.flpDireccion.Size = New System.Drawing.Size(1024, 52)
-=======
-        Me.flpDireccion.Size = New System.Drawing.Size(1152, 65)
->>>>>>> master_BK
         Me.flpDireccion.TabIndex = 4
         '
         'Label5
@@ -258,11 +228,7 @@ Partial Class formModify
         Me.mtbDireccion.Location = New System.Drawing.Point(527, 0)
         Me.mtbDireccion.Margin = New System.Windows.Forms.Padding(142, 0, 0, 0)
         Me.mtbDireccion.Name = "mtbDireccion"
-<<<<<<< HEAD
-        Me.mtbDireccion.Size = New System.Drawing.Size(356, 38)
-=======
         Me.mtbDireccion.Size = New System.Drawing.Size(400, 44)
->>>>>>> Javi2
         Me.mtbDireccion.TabIndex = 4
         '
         'flpEmail
@@ -272,11 +238,7 @@ Partial Class formModify
         Me.flpEmail.Location = New System.Drawing.Point(3, 421)
         Me.flpEmail.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.flpEmail.Name = "flpEmail"
-<<<<<<< HEAD
-        Me.flpEmail.Size = New System.Drawing.Size(1024, 52)
-=======
         Me.flpEmail.Size = New System.Drawing.Size(1152, 65)
->>>>>>> master_BK
         Me.flpEmail.TabIndex = 5
         '
         'Label4
@@ -297,11 +259,7 @@ Partial Class formModify
         Me.mtbEmail.Location = New System.Drawing.Point(532, 0)
         Me.mtbEmail.Margin = New System.Windows.Forms.Padding(17, 0, 0, 0)
         Me.mtbEmail.Name = "mtbEmail"
-<<<<<<< HEAD
-        Me.mtbEmail.Size = New System.Drawing.Size(354, 38)
-=======
         Me.mtbEmail.Size = New System.Drawing.Size(398, 44)
->>>>>>> Javi2
         Me.mtbEmail.TabIndex = 5
         '
         'flpPuesto
@@ -311,11 +269,7 @@ Partial Class formModify
         Me.flpPuesto.Location = New System.Drawing.Point(3, 494)
         Me.flpPuesto.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.flpPuesto.Name = "flpPuesto"
-<<<<<<< HEAD
-        Me.flpPuesto.Size = New System.Drawing.Size(1024, 52)
-=======
         Me.flpPuesto.Size = New System.Drawing.Size(1152, 65)
->>>>>>> master_BK
         Me.flpPuesto.TabIndex = 6
         '
         'Label8
@@ -338,11 +292,7 @@ Partial Class formModify
         Me.cbPuesto.Location = New System.Drawing.Point(527, 4)
         Me.cbPuesto.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.cbPuesto.Name = "cbPuesto"
-<<<<<<< HEAD
-        Me.cbPuesto.Size = New System.Drawing.Size(356, 39)
-=======
         Me.cbPuesto.Size = New System.Drawing.Size(400, 45)
->>>>>>> Javi2
         Me.cbPuesto.TabIndex = 6
         '
         'flpTel
@@ -352,11 +302,7 @@ Partial Class formModify
         Me.flpTel.Location = New System.Drawing.Point(3, 567)
         Me.flpTel.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.flpTel.Name = "flpTel"
-<<<<<<< HEAD
-        Me.flpTel.Size = New System.Drawing.Size(1024, 52)
-=======
         Me.flpTel.Size = New System.Drawing.Size(1152, 65)
->>>>>>> master_BK
         Me.flpTel.TabIndex = 7
         '
         'Label3
@@ -377,11 +323,7 @@ Partial Class formModify
         Me.mtbTel.Location = New System.Drawing.Point(530, 0)
         Me.mtbTel.Margin = New System.Windows.Forms.Padding(156, 0, 0, 0)
         Me.mtbTel.Name = "mtbTel"
-<<<<<<< HEAD
-        Me.mtbTel.Size = New System.Drawing.Size(350, 38)
-=======
         Me.mtbTel.Size = New System.Drawing.Size(393, 44)
->>>>>>> Javi2
         Me.mtbTel.TabIndex = 7
         '
         'flpIdioma
@@ -391,11 +333,8 @@ Partial Class formModify
         Me.flpIdioma.Location = New System.Drawing.Point(3, 640)
         Me.flpIdioma.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.flpIdioma.Name = "flpIdioma"
-<<<<<<< HEAD
         Me.flpIdioma.Size = New System.Drawing.Size(1024, 52)
-=======
         Me.flpIdioma.Size = New System.Drawing.Size(1152, 65)
->>>>>>> master_BK
         Me.flpIdioma.TabIndex = 8
         '
         'Label6
@@ -419,11 +358,8 @@ Partial Class formModify
         Me.cbIdioma.Location = New System.Drawing.Point(530, 0)
         Me.cbIdioma.Margin = New System.Windows.Forms.Padding(186, 0, 0, 0)
         Me.cbIdioma.Name = "cbIdioma"
-<<<<<<< HEAD
         Me.cbIdioma.Size = New System.Drawing.Size(351, 39)
-=======
         Me.cbIdioma.Size = New System.Drawing.Size(394, 45)
->>>>>>> Javi2
         Me.cbIdioma.TabIndex = 8
         Me.cbIdioma.ValueMember = "idioma"
         '
@@ -444,11 +380,8 @@ Partial Class formModify
         Me.flpPassword.Location = New System.Drawing.Point(3, 713)
         Me.flpPassword.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.flpPassword.Name = "flpPassword"
-<<<<<<< HEAD
         Me.flpPassword.Size = New System.Drawing.Size(1024, 52)
-=======
         Me.flpPassword.Size = New System.Drawing.Size(1152, 65)
->>>>>>> master_BK
         Me.flpPassword.TabIndex = 9
         Me.flpPassword.Visible = False
         '
@@ -473,11 +406,6 @@ Partial Class formModify
         Me.tbPass.Multiline = True
         Me.tbPass.Name = "tbPass"
         Me.tbPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-<<<<<<< HEAD
-        Me.tbPass.Size = New System.Drawing.Size(349, 37)
-=======
-        Me.tbPass.Size = New System.Drawing.Size(392, 45)
->>>>>>> Javi2
         Me.tbPass.TabIndex = 9
         '
         'bDone
@@ -486,11 +414,7 @@ Partial Class formModify
         Me.bDone.Location = New System.Drawing.Point(512, 786)
         Me.bDone.Margin = New System.Windows.Forms.Padding(512, 4, 3, 4)
         Me.bDone.Name = "bDone"
-<<<<<<< HEAD
-        Me.bDone.Size = New System.Drawing.Size(161, 61)
-=======
         Me.bDone.Size = New System.Drawing.Size(181, 76)
->>>>>>> master_BK
         Me.bDone.TabIndex = 10
         Me.bDone.Text = "Modificar"
         Me.bDone.UseVisualStyleBackColor = True
