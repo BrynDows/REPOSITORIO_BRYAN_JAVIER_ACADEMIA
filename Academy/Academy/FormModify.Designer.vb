@@ -99,18 +99,20 @@ Partial Class formModify
         Me.flpPricipal.Controls.Add(Me.bDone)
         Me.flpPricipal.Dock = System.Windows.Forms.DockStyle.Fill
         Me.flpPricipal.Location = New System.Drawing.Point(0, 0)
+        Me.flpPricipal.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.flpPricipal.Name = "flpPricipal"
-        Me.flpPricipal.Padding = New System.Windows.Forms.Padding(0, 100, 0, 0)
-        Me.flpPricipal.Size = New System.Drawing.Size(1039, 729)
+        Me.flpPricipal.Padding = New System.Windows.Forms.Padding(0, 125, 0, 0)
+        Me.flpPricipal.Size = New System.Drawing.Size(1168, 947)
         Me.flpPricipal.TabIndex = 20
         '
         'flpDni
         '
         Me.flpDni.Controls.Add(Me.lblDni)
         Me.flpDni.Controls.Add(Me.mtbDni)
-        Me.flpDni.Location = New System.Drawing.Point(3, 103)
+        Me.flpDni.Location = New System.Drawing.Point(3, 129)
+        Me.flpDni.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.flpDni.Name = "flpDni"
-        Me.flpDni.Size = New System.Drawing.Size(1024, 52)
+        Me.flpDni.Size = New System.Drawing.Size(1152, 65)
         Me.flpDni.TabIndex = 0
         '
         'lblDni
@@ -121,27 +123,32 @@ Partial Class formModify
         Me.lblDni.ForeColor = System.Drawing.Color.White
         Me.lblDni.Location = New System.Drawing.Point(3, 0)
         Me.lblDni.Name = "lblDni"
-        Me.lblDni.Padding = New System.Windows.Forms.Padding(200, 0, 0, 0)
-        Me.lblDni.Size = New System.Drawing.Size(262, 32)
+        Me.lblDni.Padding = New System.Windows.Forms.Padding(225, 0, 0, 0)
+        Me.lblDni.Size = New System.Drawing.Size(298, 38)
         Me.lblDni.TabIndex = 20
         Me.lblDni.Text = "DNI"
         '
         'mtbDni
         '
         Me.mtbDni.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.mtbDni.Location = New System.Drawing.Point(468, 0)
-        Me.mtbDni.Margin = New System.Windows.Forms.Padding(200, 0, 0, 0)
+        Me.mtbDni.Location = New System.Drawing.Point(529, 0)
+        Me.mtbDni.Margin = New System.Windows.Forms.Padding(225, 0, 0, 0)
         Me.mtbDni.Name = "mtbDni"
+<<<<<<< HEAD
         Me.mtbDni.Size = New System.Drawing.Size(354, 38)
+=======
+        Me.mtbDni.Size = New System.Drawing.Size(398, 44)
+>>>>>>> Javi2
         Me.mtbDni.TabIndex = 1
         '
         'flpNombre
         '
         Me.flpNombre.Controls.Add(Me.Label1)
         Me.flpNombre.Controls.Add(Me.mtbNombre)
-        Me.flpNombre.Location = New System.Drawing.Point(3, 161)
+        Me.flpNombre.Location = New System.Drawing.Point(3, 202)
+        Me.flpNombre.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.flpNombre.Name = "flpNombre"
-        Me.flpNombre.Size = New System.Drawing.Size(1024, 52)
+        Me.flpNombre.Size = New System.Drawing.Size(1152, 65)
         Me.flpNombre.TabIndex = 38
         '
         'Label1
@@ -152,27 +159,32 @@ Partial Class formModify
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(3, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Padding = New System.Windows.Forms.Padding(200, 0, 0, 0)
-        Me.Label1.Size = New System.Drawing.Size(315, 32)
+        Me.Label1.Padding = New System.Windows.Forms.Padding(225, 0, 0, 0)
+        Me.Label1.Size = New System.Drawing.Size(358, 38)
         Me.Label1.TabIndex = 20
         Me.Label1.Text = "Nombre"
         '
         'mtbNombre
         '
         Me.mtbNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.mtbNombre.Location = New System.Drawing.Point(466, 0)
-        Me.mtbNombre.Margin = New System.Windows.Forms.Padding(145, 0, 0, 0)
+        Me.mtbNombre.Location = New System.Drawing.Point(527, 0)
+        Me.mtbNombre.Margin = New System.Windows.Forms.Padding(163, 0, 0, 0)
         Me.mtbNombre.Name = "mtbNombre"
+<<<<<<< HEAD
         Me.mtbNombre.Size = New System.Drawing.Size(356, 38)
+=======
+        Me.mtbNombre.Size = New System.Drawing.Size(400, 44)
+>>>>>>> Javi2
         Me.mtbNombre.TabIndex = 2
         '
         'flpApellido
         '
         Me.flpApellido.Controls.Add(Me.Label2)
         Me.flpApellido.Controls.Add(Me.mtbApellido)
-        Me.flpApellido.Location = New System.Drawing.Point(3, 219)
+        Me.flpApellido.Location = New System.Drawing.Point(3, 275)
+        Me.flpApellido.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.flpApellido.Name = "flpApellido"
-        Me.flpApellido.Size = New System.Drawing.Size(1024, 52)
+        Me.flpApellido.Size = New System.Drawing.Size(1152, 65)
         Me.flpApellido.TabIndex = 41
         '
         'Label2
@@ -182,27 +194,32 @@ Partial Class formModify
         Me.Label2.ForeColor = System.Drawing.Color.White
         Me.Label2.Location = New System.Drawing.Point(3, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Padding = New System.Windows.Forms.Padding(200, 0, 0, 0)
-        Me.Label2.Size = New System.Drawing.Size(319, 32)
+        Me.Label2.Padding = New System.Windows.Forms.Padding(225, 0, 0, 0)
+        Me.Label2.Size = New System.Drawing.Size(357, 38)
         Me.Label2.TabIndex = 21
         Me.Label2.Text = "Apellido"
         '
         'mtbApellido
         '
         Me.mtbApellido.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.mtbApellido.Location = New System.Drawing.Point(467, 0)
-        Me.mtbApellido.Margin = New System.Windows.Forms.Padding(142, 0, 0, 0)
+        Me.mtbApellido.Location = New System.Drawing.Point(523, 0)
+        Me.mtbApellido.Margin = New System.Windows.Forms.Padding(160, 0, 0, 0)
         Me.mtbApellido.Name = "mtbApellido"
+<<<<<<< HEAD
         Me.mtbApellido.Size = New System.Drawing.Size(355, 38)
+=======
+        Me.mtbApellido.Size = New System.Drawing.Size(399, 44)
+>>>>>>> Javi2
         Me.mtbApellido.TabIndex = 3
         '
         'flpDireccion
         '
         Me.flpDireccion.Controls.Add(Me.Label5)
         Me.flpDireccion.Controls.Add(Me.mtbDireccion)
-        Me.flpDireccion.Location = New System.Drawing.Point(3, 277)
+        Me.flpDireccion.Location = New System.Drawing.Point(3, 348)
+        Me.flpDireccion.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.flpDireccion.Name = "flpDireccion"
-        Me.flpDireccion.Size = New System.Drawing.Size(1024, 52)
+        Me.flpDireccion.Size = New System.Drawing.Size(1152, 65)
         Me.flpDireccion.TabIndex = 40
         '
         'Label5
@@ -212,27 +229,32 @@ Partial Class formModify
         Me.Label5.ForeColor = System.Drawing.Color.White
         Me.Label5.Location = New System.Drawing.Point(3, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Padding = New System.Windows.Forms.Padding(200, 0, 0, 0)
-        Me.Label5.Size = New System.Drawing.Size(334, 32)
+        Me.Label5.Padding = New System.Windows.Forms.Padding(225, 0, 0, 0)
+        Me.Label5.Size = New System.Drawing.Size(379, 38)
         Me.Label5.TabIndex = 24
         Me.Label5.Text = "Dirección"
         '
         'mtbDireccion
         '
         Me.mtbDireccion.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.mtbDireccion.Location = New System.Drawing.Point(466, 0)
-        Me.mtbDireccion.Margin = New System.Windows.Forms.Padding(126, 0, 0, 0)
+        Me.mtbDireccion.Location = New System.Drawing.Point(527, 0)
+        Me.mtbDireccion.Margin = New System.Windows.Forms.Padding(142, 0, 0, 0)
         Me.mtbDireccion.Name = "mtbDireccion"
+<<<<<<< HEAD
         Me.mtbDireccion.Size = New System.Drawing.Size(356, 38)
+=======
+        Me.mtbDireccion.Size = New System.Drawing.Size(400, 44)
+>>>>>>> Javi2
         Me.mtbDireccion.TabIndex = 4
         '
         'flpEmail
         '
         Me.flpEmail.Controls.Add(Me.Label4)
         Me.flpEmail.Controls.Add(Me.mtbEmail)
-        Me.flpEmail.Location = New System.Drawing.Point(3, 335)
+        Me.flpEmail.Location = New System.Drawing.Point(3, 421)
+        Me.flpEmail.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.flpEmail.Name = "flpEmail"
-        Me.flpEmail.Size = New System.Drawing.Size(1024, 52)
+        Me.flpEmail.Size = New System.Drawing.Size(1152, 65)
         Me.flpEmail.TabIndex = 42
         '
         'Label4
@@ -242,27 +264,32 @@ Partial Class formModify
         Me.Label4.ForeColor = System.Drawing.Color.White
         Me.Label4.Location = New System.Drawing.Point(3, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Padding = New System.Windows.Forms.Padding(200, 0, 0, 0)
-        Me.Label4.Size = New System.Drawing.Size(447, 32)
+        Me.Label4.Padding = New System.Windows.Forms.Padding(225, 0, 0, 0)
+        Me.Label4.Size = New System.Drawing.Size(509, 38)
         Me.Label4.TabIndex = 23
         Me.Label4.Text = "Correo electrónico"
         '
         'mtbEmail
         '
         Me.mtbEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.mtbEmail.Location = New System.Drawing.Point(468, 0)
-        Me.mtbEmail.Margin = New System.Windows.Forms.Padding(15, 0, 0, 0)
+        Me.mtbEmail.Location = New System.Drawing.Point(532, 0)
+        Me.mtbEmail.Margin = New System.Windows.Forms.Padding(17, 0, 0, 0)
         Me.mtbEmail.Name = "mtbEmail"
+<<<<<<< HEAD
         Me.mtbEmail.Size = New System.Drawing.Size(354, 38)
+=======
+        Me.mtbEmail.Size = New System.Drawing.Size(398, 44)
+>>>>>>> Javi2
         Me.mtbEmail.TabIndex = 5
         '
         'flpPuesto
         '
         Me.flpPuesto.Controls.Add(Me.Label8)
         Me.flpPuesto.Controls.Add(Me.cbPuesto)
-        Me.flpPuesto.Location = New System.Drawing.Point(3, 393)
+        Me.flpPuesto.Location = New System.Drawing.Point(3, 494)
+        Me.flpPuesto.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.flpPuesto.Name = "flpPuesto"
-        Me.flpPuesto.Size = New System.Drawing.Size(1024, 52)
+        Me.flpPuesto.Size = New System.Drawing.Size(1152, 65)
         Me.flpPuesto.TabIndex = 39
         '
         'Label8
@@ -273,8 +300,8 @@ Partial Class formModify
         Me.Label8.ForeColor = System.Drawing.Color.White
         Me.Label8.Location = New System.Drawing.Point(3, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Padding = New System.Windows.Forms.Padding(200, 0, 19, 0)
-        Me.Label8.Size = New System.Drawing.Size(457, 32)
+        Me.Label8.Padding = New System.Windows.Forms.Padding(225, 0, 21, 0)
+        Me.Label8.Size = New System.Drawing.Size(518, 38)
         Me.Label8.TabIndex = 35
         Me.Label8.Text = "Puesto de trabajo"
         '
@@ -282,18 +309,24 @@ Partial Class formModify
         '
         Me.cbPuesto.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbPuesto.FormattingEnabled = True
-        Me.cbPuesto.Location = New System.Drawing.Point(466, 3)
+        Me.cbPuesto.Location = New System.Drawing.Point(527, 4)
+        Me.cbPuesto.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.cbPuesto.Name = "cbPuesto"
+<<<<<<< HEAD
         Me.cbPuesto.Size = New System.Drawing.Size(356, 39)
+=======
+        Me.cbPuesto.Size = New System.Drawing.Size(400, 45)
+>>>>>>> Javi2
         Me.cbPuesto.TabIndex = 6
         '
         'flpTel
         '
         Me.flpTel.Controls.Add(Me.Label3)
         Me.flpTel.Controls.Add(Me.mtbTel)
-        Me.flpTel.Location = New System.Drawing.Point(3, 451)
+        Me.flpTel.Location = New System.Drawing.Point(3, 567)
+        Me.flpTel.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.flpTel.Name = "flpTel"
-        Me.flpTel.Size = New System.Drawing.Size(1024, 52)
+        Me.flpTel.Size = New System.Drawing.Size(1152, 65)
         Me.flpTel.TabIndex = 43
         '
         'Label3
@@ -303,27 +336,32 @@ Partial Class formModify
         Me.Label3.ForeColor = System.Drawing.Color.White
         Me.Label3.Location = New System.Drawing.Point(3, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Padding = New System.Windows.Forms.Padding(200, 0, 0, 0)
-        Me.Label3.Size = New System.Drawing.Size(327, 32)
+        Me.Label3.Padding = New System.Windows.Forms.Padding(225, 0, 0, 0)
+        Me.Label3.Size = New System.Drawing.Size(368, 38)
         Me.Label3.TabIndex = 22
         Me.Label3.Text = "Teléfono"
         '
         'mtbTel
         '
         Me.mtbTel.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.mtbTel.Location = New System.Drawing.Point(472, 0)
-        Me.mtbTel.Margin = New System.Windows.Forms.Padding(139, 0, 0, 0)
+        Me.mtbTel.Location = New System.Drawing.Point(530, 0)
+        Me.mtbTel.Margin = New System.Windows.Forms.Padding(156, 0, 0, 0)
         Me.mtbTel.Name = "mtbTel"
+<<<<<<< HEAD
         Me.mtbTel.Size = New System.Drawing.Size(350, 38)
+=======
+        Me.mtbTel.Size = New System.Drawing.Size(393, 44)
+>>>>>>> Javi2
         Me.mtbTel.TabIndex = 7
         '
         'flpIdioma
         '
         Me.flpIdioma.Controls.Add(Me.Label6)
         Me.flpIdioma.Controls.Add(Me.cbIdioma)
-        Me.flpIdioma.Location = New System.Drawing.Point(3, 509)
+        Me.flpIdioma.Location = New System.Drawing.Point(3, 640)
+        Me.flpIdioma.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.flpIdioma.Name = "flpIdioma"
-        Me.flpIdioma.Size = New System.Drawing.Size(1024, 52)
+        Me.flpIdioma.Size = New System.Drawing.Size(1152, 65)
         Me.flpIdioma.TabIndex = 37
         '
         'Label6
@@ -333,8 +371,8 @@ Partial Class formModify
         Me.Label6.ForeColor = System.Drawing.Color.White
         Me.Label6.Location = New System.Drawing.Point(3, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Padding = New System.Windows.Forms.Padding(200, 0, 0, 0)
-        Me.Label6.Size = New System.Drawing.Size(300, 32)
+        Me.Label6.Padding = New System.Windows.Forms.Padding(225, 0, 0, 0)
+        Me.Label6.Size = New System.Drawing.Size(338, 38)
         Me.Label6.TabIndex = 25
         Me.Label6.Text = "Idioma"
         '
@@ -344,10 +382,14 @@ Partial Class formModify
         Me.cbIdioma.DisplayMember = "idioma"
         Me.cbIdioma.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbIdioma.FormattingEnabled = True
-        Me.cbIdioma.Location = New System.Drawing.Point(471, 0)
-        Me.cbIdioma.Margin = New System.Windows.Forms.Padding(165, 0, 0, 0)
+        Me.cbIdioma.Location = New System.Drawing.Point(530, 0)
+        Me.cbIdioma.Margin = New System.Windows.Forms.Padding(186, 0, 0, 0)
         Me.cbIdioma.Name = "cbIdioma"
+<<<<<<< HEAD
         Me.cbIdioma.Size = New System.Drawing.Size(351, 39)
+=======
+        Me.cbIdioma.Size = New System.Drawing.Size(394, 45)
+>>>>>>> Javi2
         Me.cbIdioma.TabIndex = 8
         Me.cbIdioma.ValueMember = "idioma"
         '
@@ -365,9 +407,10 @@ Partial Class formModify
         '
         Me.flpPassword.Controls.Add(Me.Label9)
         Me.flpPassword.Controls.Add(Me.tbPass)
-        Me.flpPassword.Location = New System.Drawing.Point(3, 567)
+        Me.flpPassword.Location = New System.Drawing.Point(3, 713)
+        Me.flpPassword.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.flpPassword.Name = "flpPassword"
-        Me.flpPassword.Size = New System.Drawing.Size(1024, 52)
+        Me.flpPassword.Size = New System.Drawing.Size(1152, 65)
         Me.flpPassword.TabIndex = 44
         Me.flpPassword.Visible = False
         '
@@ -378,30 +421,35 @@ Partial Class formModify
         Me.Label9.ForeColor = System.Drawing.Color.White
         Me.Label9.Location = New System.Drawing.Point(3, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Padding = New System.Windows.Forms.Padding(200, 0, 120, 0)
-        Me.Label9.Size = New System.Drawing.Size(459, 32)
+        Me.Label9.Padding = New System.Windows.Forms.Padding(225, 0, 135, 0)
+        Me.Label9.Size = New System.Drawing.Size(522, 38)
         Me.Label9.TabIndex = 22
         Me.Label9.Text = "Password"
         '
         'tbPass
         '
         Me.tbPass.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbPass.Location = New System.Drawing.Point(468, 3)
+        Me.tbPass.Location = New System.Drawing.Point(531, 4)
+        Me.tbPass.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.tbPass.MaxLength = 50
         Me.tbPass.Multiline = True
         Me.tbPass.Name = "tbPass"
         Me.tbPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+<<<<<<< HEAD
         Me.tbPass.Size = New System.Drawing.Size(349, 37)
+=======
+        Me.tbPass.Size = New System.Drawing.Size(392, 45)
+>>>>>>> Javi2
         Me.tbPass.TabIndex = 9
         '
         'bDone
         '
         Me.bDone.Font = New System.Drawing.Font("Modern No. 20", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.bDone.Location = New System.Drawing.Point(455, 625)
-        Me.bDone.Margin = New System.Windows.Forms.Padding(455, 3, 3, 3)
+        Me.bDone.Location = New System.Drawing.Point(512, 786)
+        Me.bDone.Margin = New System.Windows.Forms.Padding(512, 4, 3, 4)
         Me.bDone.Name = "bDone"
-        Me.bDone.Size = New System.Drawing.Size(161, 61)
-        Me.bDone.TabIndex = 31
+        Me.bDone.Size = New System.Drawing.Size(181, 76)
+        Me.bDone.TabIndex = 10
         Me.bDone.Text = "Modificar"
         Me.bDone.UseVisualStyleBackColor = True
         '
@@ -436,7 +484,7 @@ Partial Class formModify
         Me.toolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripSeparator3, Me.tsbInformacion, Me.ToolStripSeparator1, Me.tsbAYdua})
         Me.toolStrip.Location = New System.Drawing.Point(0, 0)
         Me.toolStrip.Name = "toolStrip"
-        Me.toolStrip.Size = New System.Drawing.Size(1039, 35)
+        Me.toolStrip.Size = New System.Drawing.Size(1168, 39)
         Me.toolStrip.TabIndex = 32
         Me.toolStrip.Text = "ToolStrip1"
         '
@@ -446,13 +494,13 @@ Partial Class formModify
         Me.ToolStripButton1.Image = Global.Academy.My.Resources.Resources.arrow_undo
         Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(91, 32)
+        Me.ToolStripButton1.Size = New System.Drawing.Size(105, 36)
         Me.ToolStripButton1.Text = "Volver"
         '
         'ToolStripSeparator3
         '
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 35)
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 39)
         '
         'tsbInformacion
         '
@@ -460,13 +508,13 @@ Partial Class formModify
         Me.tsbInformacion.Image = Global.Academy.My.Resources.Resources.book
         Me.tsbInformacion.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tsbInformacion.Name = "tsbInformacion"
-        Me.tsbInformacion.Size = New System.Drawing.Size(141, 32)
+        Me.tsbInformacion.Size = New System.Drawing.Size(167, 36)
         Me.tsbInformacion.Text = "Información"
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 35)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 39)
         '
         'tsbAYdua
         '
@@ -474,20 +522,22 @@ Partial Class formModify
         Me.tsbAYdua.Image = Global.Academy.My.Resources.Resources.help
         Me.tsbAYdua.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tsbAYdua.Name = "tsbAYdua"
-        Me.tsbAYdua.Size = New System.Drawing.Size(92, 32)
+        Me.tsbAYdua.Size = New System.Drawing.Size(106, 36)
         Me.tsbAYdua.Text = "Ayuda"
         '
         'formModify
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AcceptButton = Me.bDone
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.SteelBlue
         Me.BackgroundImage = Global.Academy.My.Resources.Resources.fondo
-        Me.ClientSize = New System.Drawing.Size(1039, 729)
+        Me.ClientSize = New System.Drawing.Size(1168, 947)
         Me.ControlBox = False
         Me.Controls.Add(Me.toolStrip)
         Me.Controls.Add(Me.flpPricipal)
         Me.HelpButton = True
+        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "formModify"
         Me.HelpProvider1.SetShowHelp(Me, False)
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
