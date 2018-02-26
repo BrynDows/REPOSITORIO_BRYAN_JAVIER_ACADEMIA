@@ -47,7 +47,7 @@ Partial Class formModify
         Me.Label3 = New System.Windows.Forms.Label()
         Me.mtbTel = New System.Windows.Forms.MaskedTextBox()
         Me.flpIdioma = New System.Windows.Forms.FlowLayoutPanel()
-        Me.Label6 = New System.Windows.Forms.Label()
+        Me.lIdiomas = New System.Windows.Forms.Label()
         Me.cbIdioma = New System.Windows.Forms.ComboBox()
         Me.IdiomasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Academy_bdDataSet1 = New Academy.academy_bdDataSet1()
@@ -328,7 +328,7 @@ Partial Class formModify
         '
         'flpIdioma
         '
-        Me.flpIdioma.Controls.Add(Me.Label6)
+        Me.flpIdioma.Controls.Add(Me.lIdiomas)
         Me.flpIdioma.Controls.Add(Me.cbIdioma)
         Me.flpIdioma.Location = New System.Drawing.Point(3, 640)
         Me.flpIdioma.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
@@ -336,17 +336,17 @@ Partial Class formModify
         Me.flpIdioma.Size = New System.Drawing.Size(1152, 65)
         Me.flpIdioma.TabIndex = 8
         '
-        'Label6
+        'lIdiomas
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(3, 0)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Padding = New System.Windows.Forms.Padding(225, 0, 0, 0)
-        Me.Label6.Size = New System.Drawing.Size(338, 38)
-        Me.Label6.TabIndex = 25
-        Me.Label6.Text = "Idioma"
+        Me.lIdiomas.AutoSize = True
+        Me.lIdiomas.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lIdiomas.ForeColor = System.Drawing.Color.White
+        Me.lIdiomas.Location = New System.Drawing.Point(3, 0)
+        Me.lIdiomas.Name = "lIdiomas"
+        Me.lIdiomas.Padding = New System.Windows.Forms.Padding(225, 0, 0, 0)
+        Me.lIdiomas.Size = New System.Drawing.Size(338, 38)
+        Me.lIdiomas.TabIndex = 25
+        Me.lIdiomas.Text = "Idioma"
         '
         'cbIdioma
         '
@@ -547,7 +547,7 @@ Partial Class formModify
     Friend WithEvents mtbTel As MaskedTextBox
     Friend WithEvents mtbApellido As MaskedTextBox
     Friend WithEvents mtbNombre As MaskedTextBox
-    Friend WithEvents Label6 As Label
+    Friend WithEvents lIdiomas As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label

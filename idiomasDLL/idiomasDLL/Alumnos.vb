@@ -19,6 +19,14 @@ Public Class Alumnos
         Return midataset
     End Function
 
+    ' Obtener profesores para combobox
+    Public Shared Function SelectAllProfes() As DataSet
+        Dim adapter As New OleDbDataAdapter("SELECT dni, nombre FROM empleados WHERE puesto = 1", connection)
+        Dim midataset As New DataSet
+        adapter.Fill(midataset, "profes")
+        Return midataset
+    End Function
+
     Public Shared Sub InsertAlumno(ByVal dniprof As String, ByVal alu As Alumno)
         connection.Open()
         Dim terminal As New OleDbCommand("INSERT INTO alumnos VALUES ('" & alu.DNI & "', '" & alu.Nombre & "', '" & alu.Apellido &

@@ -10,30 +10,41 @@ Public Class formModify
 
     Public Property prof_OR_emple As Byte
     Private oldAccountEmploye As String
+    Private profes As String()
+
     Private Sub FormModify_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         mtbTel.Mask = "000000000" ' Máscara para el campo teléfono
         mtbDni.Mask = "00000000>L" ' Máscara para el campo DNI
-        'TODO: esta línea de código carga datos en la tabla 'Academy_bdDataSet1.idiomas' Puede moverla o quitarla según sea necesario.
-        Me.IdiomasTableAdapter.Fill(Me.Academy_bdDataSet1.idiomas)
+
+        flpIdioma.Visible = True
+        flpIdioma.Enabled = True
         If Modo = INSERTAR Then
             bDone.Text = "Añadir"
             mtbDni.Enabled = True
             If alum_OR_Emple = ALUMNOS Then
                 Me.Text = "Añadir nuevo alumno"
+                lIdiomas.Text = "Profesores"
             Else
                 Me.Text = "Añadir nuevo empleado"
+                lIdiomas.Text = "Idioma"
             End If
         Else
             bDone.Text = "Modificar"
             If alum_OR_Emple = ALUMNOS Then
                 Me.Text = "Modificar datos del alumno"
+                lIdiomas.Text = "Profesores"
             Else
-                Me.Text = "Modificar datos deñ empleado"
+                Me.Text = "Modificar datos del empleado"
+                lIdiomas.Text = "Idiomas"
             End If
         End If
         If alum_OR_Emple = ALUMNOS Then
             flpPuesto.Visible = False
             flpPassword.Visible = False
+            cbIdioma.DataSource = idiomasDLL.Alumnos.SelectAllProfes.Tables(0)
+            cbIdioma.DisplayMember = "nombre"
+            profes = (From id In idiomasDLL.Alumnos.SelectAllProfes.Tables(0).AsEnumerable
+                      Select id.Field(Of String)("dni")).ToArray
         End If
 
         If alum_OR_Emple = ALUMNOS And Modo = ACTUALIZAR Then
@@ -49,9 +60,15 @@ Public Class formModify
         End If
 
         If alum_OR_Emple = EMPLEADOS Then
+            'TODO: esta línea de código carga datos en la tabla 'Academy_bdDataSet1.idiomas' Puede moverla o quitarla según sea necesario.
+            Me.IdiomasTableAdapter.Fill(Me.Academy_bdDataSet1.idiomas)
+            cbIdioma.DataSource = IdiomasBindingSource
+            cbIdioma.DisplayMember = "idioma"
+            cbIdioma.Enabled = True
             If Modo = ACTUALIZAR Then
                 oldAccountEmploye = mtbEmail.Text
                 mtbDni.Enabled = False
+                cbIdioma.Enabled = False
             End If
             flpPuesto.Visible = True
             'cargar comboBox: cbPuesto
@@ -88,7 +105,11 @@ Public Class formModify
                         '
                         If Modo = INSERTAR And alum_OR_Emple = ALUMNOS Then
                             Try
-                                idiomasDLL.Alumnos.InsertAlumno(FormManagement.user.dni, New idiomasDLL.Alumno(mtbDni.Text, mtbNombre.Text, mtbApellido.Text, mtbTel.Text, mtbEmail.Text, mtbDireccion.Text))
+                                If FormManagement.user.Rol.Equals("jefe") Then
+                                    idiomasDLL.Alumnos.InsertAlumno(profes(cbIdioma.SelectedIndex), New idiomasDLL.Alumno(mtbDni.Text, mtbNombre.Text, mtbApellido.Text, mtbTel.Text, mtbEmail.Text, mtbDireccion.Text))
+                                Else
+                                    idiomasDLL.Alumnos.InsertAlumno(FormManagement.user.dni, New idiomasDLL.Alumno(mtbDni.Text, mtbNombre.Text, mtbApellido.Text, mtbTel.Text, mtbEmail.Text, mtbDireccion.Text))
+                                End If
                                 FormManagement.LoadDataGrids()
                                 idiomasDLL.Alumnos.generateReport_lastRecord(mtbDni.Text)
                                 FormCrystal.Show()
@@ -115,7 +136,7 @@ Public Class formModify
                         If Modo = INSERTAR And alum_OR_Emple = EMPLEADOS And prof_OR_emple = INSERTAR_PROFESOR Then
 
                             Try
-                                crudEmployes.InsertTeacher(mtbDni.Text, mtbNombre.Text, mtbApellido.Text, mtbEmail.Text, tbPass.Text, cbPuesto.SelectedItem, mtbTel.Text, mtbDireccion.Text)
+                                crudEmployes.InsertTeacher(mtbDni.Text, mtbNombre.Text, mtbApellido.Text, mtbEmail.Text, tbPass.Text, cbPuesto.SelectedItem, mtbTel.Text, mtbDireccion.Text, cbIdioma.SelectedItem.ToString)
                                 FormManagement.LoadDataGrids()
                                 Me.Close()
                             Catch ex As Exception
