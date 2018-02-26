@@ -58,11 +58,12 @@ Public Class CRUD_employes
     'INSERT PROFESOR
     '
     Public Sub InsertTeacher(dni As String, nombre As String, apellido As String, email As String, password As String, puesto As Puesto, telefono As String, direccion As String, idioma As String)
+        MsgBox(getIDIdioma(idioma) & ", " & idioma)
         Dim insertAccount As String = "INSERT INTO cuentasUsuario (nombre_usuario, contrasenya, rol) VALUES ('" & email & "', '" & password & "'," & puesto.id & ")"
         ExecuteQuery(insertAccount)
         Dim insertTeacher As String = "INSERT INTO empleados VALUES('" & dni & "', '" & nombre & "', " & getIDAccount(email) & "," & puesto.id & ", '" & apellido & "', '" & telefono & "', '" & direccion & "', '" & email & "')"
         ExecuteQuery(insertTeacher)
-        MsgBox(getIDIdioma(idioma))
+
         Dim insertIdioma As String = "INSERT INTO empleados_idiomas(dni_empleado, id_idioma) VALUES('" & dni & "'," & getIDIdioma(idioma) & ")"
         ExecuteQuery(insertIdioma)
 
@@ -73,7 +74,7 @@ Public Class CRUD_employes
     Private Function getIDIdioma(idioma As String) As Integer
         Dim resu As Integer = 0
         Try
-            Dim query As String = "SELECT id FROM idiomas WHERE idioma = " & idioma
+            Dim query As String = "SELECT id FROM idiomas WHERE idioma = ('" & idioma & "')"
             Dim adapter As New OleDbDataAdapter(query, connection)
             Dim dataset As New DataSet
             adapter.Fill(dataset)
