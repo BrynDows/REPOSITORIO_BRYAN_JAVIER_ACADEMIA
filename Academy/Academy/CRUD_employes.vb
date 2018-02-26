@@ -57,7 +57,6 @@ Public Class CRUD_employes
     '
     'INSERT PROFESOR
     '
-<<<<<<< HEAD
     Public Sub InsertTeacher(dni As String, nombre As String, apellido As String, email As String, password As String, puesto As Puesto, telefono As String, direccion As String, idioma As String)
         Dim insertAccount As String = "INSERT INTO cuentasUsuario (nombre_usuario, contrasenya, rol) VALUES ('" & email & "', '" & password & "'," & puesto.id & ")"
         ExecuteQuery(insertAccount)
@@ -65,17 +64,7 @@ Public Class CRUD_employes
         ExecuteQuery(insertTeacher)
         Dim insertIdioma As String = "INSERT INTO empleados_idiomas(dni_empleado, id_idioma) VALUES('" & dni & "', '" & idioma & "')"
         ExecuteQuery(insertIdioma)
-=======
-    Public Sub InsertTeacher(dni As String, nombre As String, apellido As String, email As String, password As String, puesto As Puesto, telefono As String, direccion As String)
-        Try
-            Dim insertAccount As String = "INSERT INTO cuentasUsuario (nombre_usuario, contrasenya, rol) VALUES ('" & email & "', '" & password & "'," & puesto.id & ")"
-            ExecuteQuery(insertAccount)
-            Dim insertTeacher As String = "INSERT INTO empleados VALUES('" & dni & "', '" & nombre & "', " & getIDAccount(email) & "," & puesto.id & ", '" & apellido & "', '" & telefono & "', '" & direccion & "', '" & email & "')"
-            ExecuteQuery(insertTeacher)
-        Catch ex As Exception
-            idiomasDLL.Errores.INSERT_IN_ERROR_LOG(ex)
-        End Try
->>>>>>> master_BK
+
     End Sub
     '
     'OBTENER ID DE EMAIL
