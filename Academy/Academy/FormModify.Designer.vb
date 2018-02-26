@@ -113,7 +113,7 @@ Partial Class formModify
         Me.flpDni.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.flpDni.Name = "flpDni"
         Me.flpDni.Size = New System.Drawing.Size(1152, 65)
-        Me.flpDni.TabIndex = 0
+        Me.flpDni.TabIndex = 1
         '
         'lblDni
         '
@@ -149,7 +149,7 @@ Partial Class formModify
         Me.flpNombre.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.flpNombre.Name = "flpNombre"
         Me.flpNombre.Size = New System.Drawing.Size(1152, 65)
-        Me.flpNombre.TabIndex = 38
+        Me.flpNombre.TabIndex = 2
         '
         'Label1
         '
@@ -185,7 +185,7 @@ Partial Class formModify
         Me.flpApellido.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.flpApellido.Name = "flpApellido"
         Me.flpApellido.Size = New System.Drawing.Size(1152, 65)
-        Me.flpApellido.TabIndex = 41
+        Me.flpApellido.TabIndex = 3
         '
         'Label2
         '
@@ -220,7 +220,7 @@ Partial Class formModify
         Me.flpDireccion.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.flpDireccion.Name = "flpDireccion"
         Me.flpDireccion.Size = New System.Drawing.Size(1152, 65)
-        Me.flpDireccion.TabIndex = 40
+        Me.flpDireccion.TabIndex = 4
         '
         'Label5
         '
@@ -255,7 +255,7 @@ Partial Class formModify
         Me.flpEmail.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.flpEmail.Name = "flpEmail"
         Me.flpEmail.Size = New System.Drawing.Size(1152, 65)
-        Me.flpEmail.TabIndex = 42
+        Me.flpEmail.TabIndex = 5
         '
         'Label4
         '
@@ -290,7 +290,7 @@ Partial Class formModify
         Me.flpPuesto.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.flpPuesto.Name = "flpPuesto"
         Me.flpPuesto.Size = New System.Drawing.Size(1152, 65)
-        Me.flpPuesto.TabIndex = 39
+        Me.flpPuesto.TabIndex = 6
         '
         'Label8
         '
@@ -327,7 +327,7 @@ Partial Class formModify
         Me.flpTel.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.flpTel.Name = "flpTel"
         Me.flpTel.Size = New System.Drawing.Size(1152, 65)
-        Me.flpTel.TabIndex = 43
+        Me.flpTel.TabIndex = 7
         '
         'Label3
         '
@@ -362,7 +362,7 @@ Partial Class formModify
         Me.flpIdioma.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.flpIdioma.Name = "flpIdioma"
         Me.flpIdioma.Size = New System.Drawing.Size(1152, 65)
-        Me.flpIdioma.TabIndex = 37
+        Me.flpIdioma.TabIndex = 8
         '
         'Label6
         '
@@ -411,7 +411,7 @@ Partial Class formModify
         Me.flpPassword.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.flpPassword.Name = "flpPassword"
         Me.flpPassword.Size = New System.Drawing.Size(1152, 65)
-        Me.flpPassword.TabIndex = 44
+        Me.flpPassword.TabIndex = 9
         Me.flpPassword.Visible = False
         '
         'Label9
