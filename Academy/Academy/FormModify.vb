@@ -128,6 +128,7 @@ Public Class formModify
                         ElseIf Modo = ACTUALIZAR And alum_OR_Emple = ALUMNOS Then
                             Try
                                 idiomasDLL.Alumnos.UpdateAlumno(New idiomasDLL.Alumno(mtbDni.Text, mtbNombre.Text, mtbApellido.Text, mtbTel.Text, mtbEmail.Text, mtbDireccion.Text))
+                                idiomasDLL.Alumnos.UpdateAlumnoIdioma(mtbDni.Text, profes(cbIdioma.SelectedIndex))
                                 FormManagement.LoadDataGrids()
                                 Me.Close()
                             Catch ex As Exception
