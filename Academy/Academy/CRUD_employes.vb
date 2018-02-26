@@ -62,10 +62,29 @@ Public Class CRUD_employes
         ExecuteQuery(insertAccount)
         Dim insertTeacher As String = "INSERT INTO empleados VALUES('" & dni & "', '" & nombre & "', " & getIDAccount(email) & "," & puesto.id & ", '" & apellido & "', '" & telefono & "', '" & direccion & "', '" & email & "')"
         ExecuteQuery(insertTeacher)
-        Dim insertIdioma As String = "INSERT INTO empleados_idiomas(dni_empleado, id_idioma) VALUES('" & dni & "', '" & idioma & "')"
+        MsgBox(getIDIdioma(idioma))
+        Dim insertIdioma As String = "INSERT INTO empleados_idiomas(dni_empleado, id_idioma) VALUES('" & dni & "'," & getIDIdioma(idioma) & ")"
         ExecuteQuery(insertIdioma)
 
     End Sub
+    '
+    'Obtener Id idioma
+    '
+    Private Function getIDIdioma(idioma As String) As Integer
+        Dim resu As Integer = 0
+        Try
+            Dim query As String = "SELECT id FROM idiomas WHERE idioma = " & idioma
+            Dim adapter As New OleDbDataAdapter(query, connection)
+            Dim dataset As New DataSet
+            adapter.Fill(dataset)
+            resu = CInt(dataset.Tables(0).Rows(0).Item(0))
+        Catch ex As Exception
+            resu = 0
+            idiomasDLL.Errores.INSERT_IN_ERROR_LOG(ex)
+        End Try
+        Return resu
+    End Function
+
     '
     'OBTENER ID DE EMAIL
     '

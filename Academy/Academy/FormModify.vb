@@ -142,7 +142,7 @@ Public Class formModify
                         If Modo = INSERTAR And alum_OR_Emple = EMPLEADOS And prof_OR_emple = INSERTAR_PROFESOR Then
 
                             Try
-                                crudEmployes.InsertTeacher(mtbDni.Text, mtbNombre.Text, mtbApellido.Text, mtbEmail.Text, tbPass.Text, cbPuesto.SelectedItem, mtbTel.Text, mtbDireccion.Text, cbIdioma.SelectedItem.ToString)
+                                crudEmployes.InsertTeacher(mtbDni.Text, mtbNombre.Text, mtbApellido.Text, mtbEmail.Text, tbPass.Text, cbPuesto.SelectedItem, mtbTel.Text, mtbDireccion.Text, cbIdioma.Text)
                                 FormManagement.LoadDataGrids()
                                 Me.Close()
                             Catch ex As Exception
@@ -226,7 +226,6 @@ Public Class formModify
     End Sub
 
     Private Sub cbPuesto_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbPuesto.SelectedIndexChanged
-
         If cbPuesto.SelectedItem.id = 1 Then
             flpPassword.Visible = True
             prof_OR_emple = INSERTAR_PROFESOR
@@ -244,6 +243,7 @@ Public Class formModify
 
     Private Sub formModify_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         cbPuesto.Items.Clear()
+        tbPass.Text = ""
     End Sub
 
     Private Sub tsbInformacion_Click(sender As Object, e As EventArgs)
