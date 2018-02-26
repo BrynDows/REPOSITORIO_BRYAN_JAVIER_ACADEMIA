@@ -18,11 +18,22 @@ Public Class formModify
         If Modo = INSERTAR Then
             bDone.Text = "Añadir"
             mtbDni.Enabled = True
+            If alum_OR_Emple = ALUMNOS Then
+                Me.Text = "Añadir nuevo alumno"
+            Else
+                Me.Text = "Añadir nuevo empleado"
+            End If
         Else
             bDone.Text = "Modificar"
+            If alum_OR_Emple = ALUMNOS Then
+                Me.Text = "Modificar datos del alumno"
+            Else
+                Me.Text = "Modificar datos deñ empleado"
+            End If
         End If
         If alum_OR_Emple = ALUMNOS Then
             flpPuesto.Visible = False
+            flpPassword.Visible = False
         End If
 
         If alum_OR_Emple = ALUMNOS And Modo = ACTUALIZAR Then
@@ -37,18 +48,11 @@ Public Class formModify
             mtbDni.Enabled = False
         End If
 
-        If alum_OR_Emple = EMPLEADOS And Modo = ACTUALIZAR Then
-            oldAccountEmploye = mtbEmail.Text
-            mtbDni.Enabled = False
-            flpPuesto.Visible = True
-            'cargar comboBox: cbPuesto
-            Try
-                modulo.crudEmployes.loadComboBoxPuestos(cbPuesto)
-            Catch ex As Exception
-                idiomasDLL.INSERT_IN_ERROR_LOG(ex)
-            End Try
-        End If
-        If alum_OR_Emple = EMPLEADOS And Modo = INSERTAR Then
+        If alum_OR_Emple = EMPLEADOS Then
+            If Modo = ACTUALIZAR Then
+                oldAccountEmploye = mtbEmail.Text
+                mtbDni.Enabled = False
+            End If
             flpPuesto.Visible = True
             'cargar comboBox: cbPuesto
             Try
@@ -214,8 +218,6 @@ Public Class formModify
     Private Sub formModify_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         cbPuesto.Items.Clear()
     End Sub
-
-
 
     Private Sub tsbInformacion_Click(sender As Object, e As EventArgs)
         FormInformation.Show()
